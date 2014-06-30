@@ -105,7 +105,7 @@ Be sure to explain how some of your suggestions are related to user feedback.
 |A reasoned and detailed explanation of how objectives have been met for a problem of adequate complexity with less SMART objectives|A reasoned and detailed explanation of how objectives have been met for a problem of adequate complexity with SMART objectives.|A reasoned and detailed explanation of how objectives have been met for a complex problem with SMART objectives.|
 | |A reasoned and detailed explanation of how objectives have been met for a complex problem with less SMART objectives| |
 
-| | |
+|  |  |
 |--|--|
 |**Additional mark**|Clear evidence of genuine user feedback authenticated by assessor|
 |**Additional mark**|Thorough analysis of user feedback and/or evidence of continual interaction with user during the development of the system|
