@@ -64,7 +64,7 @@ You need to explain what is meant by each term and indicate, with evidence, whet
 
 ##Mark Scheme
 |0-2 marks|3-4 marks|5-6 marks|7-8 marks|
-|-|-|-|-|
+|---------|---------|---------|---------|
 |No test plan|Test plan with at least typical and erroneous data|A nearly complete test plan showing expected results|A well designed test plan showing expected results|
 |Limited evidence of test output|supported by annotated test output|supported by selected samples of carefully annotated and cross-referenced test output|supported by selected samples of carefully annotated and cross-referenced hard copy showing test runs that prove the reliability and robustness of the candidate’s system|
 |Only tested using typical data| |Incomplete testing, e.g. omitting a boundary test|All significant aspects thoroughly tested using typical, boundary and erroneous data|
