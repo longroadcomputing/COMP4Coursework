@@ -1,0 +1,18 @@
+%using these commands will provide nicely formatted code that has syntax highlighting colours
+%similar to idle
+
+%you can include python code in a paragraph of text
+Functions like \pythoninline{print()}, \pythoninline{input()} and \pythoninline{len()} exist so that you can make use of functionality that would have been daunting to write as a beginner and that would still be time consuming now.
+
+%you can also include a code listing from an external file
+%the lastline argument is optional
+\begin{figure}[H]
+    \pythonfile[firstline=5,lastline=5]{./tex/function_programs/print_function.py}
+    \caption{The print() function} \label{fig:print_function}
+\end{figure}
+
+
+%if needed you can write code directly
+\begin{python}
+print("hello world")
+\end{python}

@@ -1,0 +1,75 @@
+%example algorithm showing input, output and change variable value
+\begin{algorithm}[H]
+\label{fig:repeat_pseudo_example}
+    \caption{Repeat Loop}
+\begin{algorithmic}[1]
+\SET{$total$}{$0$}
+\State
+\Repeat
+    \SEND{$"Please\ enter\ a\ number\ (0 to finish)"$}
+    \RECEIVE{$number$}
+    \SET{$total$}{$total + number$}
+\Until{$number = 0$}
+\end{algorithmic}
+\end{algorithm}
+
+%example algorithm showing if-else statement
+\begin{algorithm}[H]
+    \caption{15 Certificate decision with else condition}
+\begin{algorithmic}[1]
+\SEND{$"Please\ enter\ your\ age:\ "$}
+\RECEIVE{$"your\_age"$}
+\If{$your\_age \geq 15$}
+\SEND{$"You\ are\ old\ enough\ to\ go\ and\ see\ this\ film"$}
+\Else
+\SEND{$"You\ are\ not\ old\ enough\ to\ go\ and\ see\ this\ film"$}
+\EndIf
+\end{algorithmic}
+\end{algorithm}
+
+%example algorithm showing if-elif-else statement
+\begin{algorithm}[H]
+    \caption{Deciding which team won}
+\begin{algorithmic}[1]
+\If{$team\_one\_score > team\_two\_score$}
+\SET{$winner$}{$team\_one$}
+\ElsIf{$team\_one\_score < team\_two\_score$}
+\SET{$winner$}{$team\_two$}
+\Else
+\SET{$winner$}{$"Draw"$}
+\EndIf
+\EndIf
+\end{algorithmic}
+\end{algorithm}
+
+%example algorithm showing while loop
+\begin{algorithm}[H]
+\label{fig:repeat_as_while_pseudo_example_2}
+    \caption{While Loop Representation}
+\begin{algorithmic}[1]
+\SET{$total$}{$0$}
+\SET{$finished$}{$false$}
+\State
+\While{$not finished$}
+    \SEND{$"Please\ enter\ a\ number\ (0 to finish)"$}
+    \RECEIVE{$number$}
+    \SET{$total$}{$total + number$}
+    \If{$number = 0$}
+        \SET{$finished$}{$true$}
+    \EndIf
+\EndWhile
+\end{algorithmic}
+\end{algorithm}
+
+%example algorithm showing for loop
+\begin{algorithm}[H]
+\label{fig:for_pseudo_example}
+    \caption{For Loop in pseudocode}
+\begin{algorithmic}[1]
+\SET{$sequence$}{$[0,1,2,3,4,5]$}
+\State
+\For{$item$}{$sequence$}
+    \SEND{$item$}
+\EndFor
+\end{algorithmic}
+\end{algorithm}

@@ -1,0 +1,20 @@
+%cross referencing is easy - imagine you have an image (evidence):
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{./tex/function_images/print_function.pdf}
+    \caption{The result of executing the print() function} \label{fig:print_function_result}
+\end{figure}
+
+%notice that there is a label: \label{fig:print_function_result}
+%this can be used to get figure and page numbers
+
+%This figure can be cross referenced as evidence in a table
+%\ref{} will give the figure number
+%\pageref{} will give the page number
+
+\begin{center}
+    \begin{tabular}{|p{4cm}|p{8.5cm}|}
+        \hline
+        \textbf{Result} & \textbf{Evidence} \\ \hline
+        Works as expected  & Figure \ref{fig:print_function_result} on page \pageref{fig:print_function_result}. \\ \hline
+    \end{tabular}
+\end{center}

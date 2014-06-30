@@ -1,0 +1,21 @@
+%using these commands will provide nicely formatted code that has nice syntax highlighting colours
+
+%you can include sql code in a paragraph of text
+To implement the product entity we must use the \textbf{\sqlinline{create table}} statement. Notice, that the statement is called \sqlinline{create table} and not \sqlinline{create entity} - this is because entity is used to refer to the abstract representation and table to refer to the actual implementation.
+
+%you can also include a code listing from an external file
+%the lastline argument is optional
+\begin{figure}[H]
+    \sqlfile[firstline=5,lastline=5]{./tex/sql_example.py}
+    \caption{Example SQL} \label{fig:sql_example}
+\end{figure}
+
+
+%if needed you can write code directly
+\begin{sql}
+CREATE TABLE Product(
+    ProductID integer,
+    Name text,
+    Price real,
+    Primary Key(ProductID));
+\end{sql}

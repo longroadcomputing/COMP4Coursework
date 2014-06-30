@@ -1,0 +1,22 @@
+%using these commands will provide nicely formatted code that has nice syntax highlighting colours
+
+%you can include html code in a paragraph of text
+Notice the gap between \htmlinline{<body>} and \htmlinline{</body>} - this is where the content of each page will go.
+
+%you can also include a code listing from an external file
+%the lastline argument is optional
+\begin{figure}[H]
+    \htmlfile{./tex/server_side_programs/get_name.html}
+    \caption{Form Example} \label{fig:form_example}
+\end{figure}
+
+
+%if needed you can write code directly
+\begin{html}
+<html>
+    <head>
+    </head>
+    <body>
+    </body>
+</html>
+\end{html}

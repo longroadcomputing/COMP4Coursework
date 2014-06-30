@@ -1,0 +1,167 @@
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage{fancybox}
+\usepackage{graphicx}
+\usepackage{parskip}
+\usepackage{mathtools}
+\usepackage{hyperref}
+\usepackage{marvosym}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{algpseudocode}
+\usepackage{algorithm}
+\usepackage{comment}
+\usepackage{calc}
+\usepackage{longtable}
+\usepackage{pdflscape}
+%set up commands for Haggis pseudocode
+\algnewcommand\algorithmicset{\textbf{SET}}
+\algnewcommand\algorithmicto{\textbf{TO}}
+\algnewcommand\SET[2]{\State\algorithmicset\ #1 \algorithmicto\ #2}
+\algnewcommand\algorithmicreceive{\textbf{RECEIVE}}
+\algnewcommand\algorithmicfromkeyboard{\textbf{FROM KEYBOARD}}
+\algnewcommand\RECEIVE[1]{\State\algorithmicreceive\ #1 \algorithmicfromkeyboard}
+\algnewcommand\algorithmicsend{\textbf{SEND}}
+\algnewcommand\algorithmictodisplay{\textbf{TO DISPLAY}}
+\algnewcommand\SEND[1]{\State\algorithmicsend\ #1 \algorithmictodisplay}
+\algrenewcommand\algorithmicwhile{\textbf{WHILE}}
+\algrenewcommand\algorithmicfor{\textbf{FOR}}
+\algrenewtext{For}[2]{\algorithmicfor\ \textbf{EACH}\ #1 \textbf{IN}\ #2 \textbf{DO}}
+\algrenewcommand\algorithmicend{\textbf{END}}
+\algrenewcommand\algorithmicdo{\textbf{DO}}
+\algrenewcommand\algorithmicif{\textbf{IF}}
+\algrenewtext{ElsIf}[1]{\textbf{ELSE}\ \algorithmicif\ #1\ \textbf{THEN}}
+\algrenewtext{Else}{\textbf{ELSE}}
+\algrenewcommand\algorithmicthen{\textbf{THEN}}
+\algrenewcommand\algorithmicrepeat{\textbf{REPEAT}}
+\algrenewcommand\algorithmicuntil{\textbf{UNTIL}}
+%set up code for boxes
+\newenvironment{fminipage}
+{\begin{Sbox}\begin{minipage}}
+{\end{minipage}\end{Sbox}\fbox{\TheSbox}}
+
+%headings
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+%listings styles
+\usepackage{xcolor}
+\definecolor{keywords}{HTML}{900090}
+\definecolor{orangekeywords}{HTML}{FF7700}
+\definecolor{comments}{HTML}{DD0000}
+\definecolor{text}{HTML}{00AA00}
+\definecolor{codeno}{HTML}{000000}
+\definecolor{htmlkeywords}{HTML}{2F719E}
+\definecolor{htmltext}{HTML}{E45451}
+%Python idle style for highlighting
+\newcommand\idlestyle{\lstset{
+    language=Python,
+    showspaces=false,
+    showtabs=false,
+    breaklines=true,
+    showstringspaces=false,
+    breakatwhitespace=true,
+    emph={import,from,class,def,for,while,if,is,in,elif,else,not,and,or,break,continue,return,True,False,None,access,as,del,except,exec,finally,global,import,lambda,pass,raise,try,assert,repeat,until,with},
+    morekeywords={input,int,float,str,len,range},
+    commentstyle=\color{comments},
+    keywordstyle=\color{keywords}\bfseries,
+    emphstyle=\color{orangekeywords}\bfseries,
+    stringstyle=\color{text},
+    morecomment=[s][\color{text}]{"""}{"""},
+    morecomment=[s][\color{text}]{'''}{'''},
+    basicstyle=\ttfamily,
+    frame=tb,
+    numbers=left,
+    numberstyle=\tiny\color{codeno},
+    extendedchars=true,
+    inputencoding=utf8,
+    literate={£}{{\pounds}}1
+}}
+%Python environment
+\lstnewenvironment{python}[1][]
+{
+    \idlestyle
+    \lstset{#1}
+}
+{}
+%Python for external files
+\newcommand\pythonfile[2][]{{
+    \idlestyle
+    \lstinputlisting[#1]{#2}
+}}
+%Python in line
+\newcommand\pythoninline[1]{{\idlestyle\lstinline!#1!}}
+
+%sql style for highlighting
+\newcommand\sqlstyle{\lstset{
+    language=SQL,
+    showspaces=false,
+    showtabs=false,
+    breaklines=true,
+    showstringspaces=false,
+    breakatwhitespace=true,
+    stringstyle=\color{text},
+    morecomment=[s][\color{text}]{"""}{"""},
+    morecomment=[s][\color{text}]{'''}{'''},
+    basicstyle=\ttfamily,
+    frame=tb,
+    numbers=left,
+    numberstyle=\tiny\color{codeno},
+    extendedchars=true,
+    inputencoding=utf8,
+    literate={£}{{\pounds}}1,
+    keywordstyle=\color{orangekeywords}\bfseries,
+    morekeywords={text,real,null,blob,references,pragma},
+}}
+
+%SQL environment
+\lstnewenvironment{sql}[1][]
+{
+    \sqlstyle
+    \lstset{#1}
+}
+{}
+%SQL for external files
+\newcommand\sqlfile[2][]{{
+    \sqlstyle
+    \lstinputlisting[#1]{#2}
+}}
+%SQL in line
+\newcommand\sqlinline[1]{{\sqlstyle\lstinline!#1!}}
+
+%html style for highlighting
+\newcommand\htmlstyle{\lstset{
+    language=HTML,
+    showspaces=false,
+    showtabs=false,
+    breaklines=true,
+    showstringspaces=false,
+    breakatwhitespace=true,
+    stringstyle=\color{htmltext},
+    morecomment=[s][\color{text}]{"""}{"""},
+    morecomment=[s][\color{text}]{'''}{'''},
+    basicstyle=\ttfamily,
+    frame=tb,
+    numbers=left,
+    numberstyle=\tiny\color{codeno},
+    extendedchars=true,
+    inputencoding=utf8,
+    literate={£}{{\pounds}}1,
+    keywordstyle=\color{htmlkeywords}\bfseries,
+    morekeywords={text,real,null,blob,references,pragma},
+}}
+
+%html environment
+\lstnewenvironment{html}[1][]
+{
+    \htmlstyle
+    \lstset{#1}
+}
+{}
+%html for external files
+\newcommand\htmlfile[2][]{{
+    \htmlstyle
+    \lstinputlisting[#1]{#2}
+}}
+%html in line
+\newcommand\htmlinline[1]{{\htmlstyle\lstinline!#1!}}

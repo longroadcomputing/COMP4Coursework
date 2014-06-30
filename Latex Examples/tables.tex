@@ -1,0 +1,38 @@
+%this code creates a centred table with two columns - one 4cm wide, the other 8.5cm wide
+%the ampersand & symbol is used to separate columns
+%\\ indicates the end of the row
+%\hline puts a line under the previous row
+
+\begin{center}
+    \begin{tabular}{|p{4cm}|p{8.5cm}|}
+        \hline
+        \textbf{Purpose} & \textbf{Example} \\ \hline
+        Create a function that returns a result  &
+        {\begin{python}[frame=none,numbers=none]
+def get_formatted_name(first, last, gender):
+    if gender == "F":
+        name = "Ms. {0} {1}".format(first,last)
+    elif gender == "M":
+        name = "Mr. {0} {1}".format(first,last)
+    else:
+        name = "{0} {1}".format(first,last)
+    return name
+        \end{python}}
+        \\
+        \hline
+    \end{tabular}
+\end{center}
+
+%this code creates a three column table with the text aligned to the left of each column
+\begin{center}
+\begin{tabular}{|l|l|l|}
+    \hline
+    \textbf{Syntax} & \textbf{Example} & \textbf{Sequence Generated} \\ \hline
+    \pythoninline{range(stop)} & \pythoninline{range(6)} & \pythoninline{[0,1,2,3,4,5]} \\ \hline
+    \pythoninline{range(start,stop)} & \pythoninline{range(2,7)} & \pythoninline{[2,3,4,5,6]} \\ \hline
+    \pythoninline{range(start,stop,step)} & \pythoninline{range(0,10,3)} & \pythoninline{[0,3,6,9]} \\ \hline
+    \pythoninline{range(start,stop,-step)} & \pythoninline{range(5,0,-1)} & \pythoninline{[5,4,3,2,1]} \\
+    \hline
+\end{tabular}
+\label{tab:range_examples}
+\end{center}
