@@ -304,10 +304,10 @@ However, you should use the table format below:
 </table>
 
 ##Mark Scheme
-|0-3 marks|4-6 marks|7-9 marks|10-12 marks|
-|-|-|-|-|
-|not feasible design|less than feasible design|feasible design|effective design|
-|poor reporting of criteria for design|detailed reporting of all criteria for design|detailed reporting of all criteria for design|detailed reporting of all criteria for design in the context of the problem being solved|
+0-3 marks|4-6 marks|7-9 marks|10-12 marks
+-|-|-|-
+not feasible design|less than feasible design|feasible design|effective design
+poor reporting of criteria for design|detailed reporting of all criteria for design|detailed reporting of all criteria for design|detailed reporting of all criteria for design in the context of the problem being solved
 
 [1]: images/flowchartsymbols.png
 [2]: images/bookingflowchart.png
