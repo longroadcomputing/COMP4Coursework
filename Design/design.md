@@ -318,5 +318,5 @@ However, you should use the table format below:
 [7]: images/userinterfacesample.png
 [8]: images/heirarchychart.png
 [9]: images/structurechart.png
-[10]: pseudo-code guide?
-[11]: diagram application
+[10]: http://filestore.aqa.org.uk/subjects/AQA-GCSE-COMPSCI-W-TRB-PSEU.PDF
+[11]: http://www.libreoffice.org/discover/draw/
