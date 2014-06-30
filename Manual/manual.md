@@ -90,7 +90,7 @@ If you meet the complexity criteria but not the quality of communication criteri
 ###Quality of Communication Criteria
 
 |Projects in Mark Band 1-2|Projects in Mark Band 3-4|Projects in Mark Band 5-6|Projects in Mark Band 7-8|Projects in Mark Band 9-10|
-|-|-|-|-|-|
+|-------------------------|-------------------------|---------------------------|-------------------------|--------------------------|
 |**QWC1** Text has been word processed.|**QWC1** Text has been word processed.|**QWC1** Text has been word processed.|**QWC1** Text has been word processed using appropriate headers and footers.|**QWC1** Text has been word processed using appropriate headers and footers.|
 |**QWC2** There may be some errors of spelling, punctuation and grammar.|**QWC2** There are few, if any, errors of spelling, punctuation and grammar.|**QWC2** There are few, if any, errors of spelling, punctuation and grammar. If there are, the meaning is just about clear.|**QWC2** There are few, if any, errors of spelling, punctuation and grammar. If there are, the meaning is mostly clear.|**QWC2** There are few, if any, errors of spelling, punctuation and grammar. If there are, the meaning is still clear.|
 |**QWC3** The candidate may have selected and used a form and style of writing which has many deficiencies. Ideas are not always clearly expressed.|**QWC3** The candidate has selected and used a form and style of writing which may have many deficiencies.|**QWC3** The candidate has selected and used a form and style of writing which may have some deficiencies.|**QWC3** The candidate has selected and used a form and style of writing appropriate to the purpose and has expressed ideas clearly and fluently.|**QWC3** The candidate has selected and used a form and style of writing appropriate to the purpose and has expressed ideas clearly and fluently.|
@@ -99,7 +99,7 @@ If you meet the complexity criteria but not the quality of communication criteri
 
 ##User Manual Criteria
 |0 marks|1-2 marks|3-4 marks|5-6 marks|7-8 marks|9-10 marks|
-|-|-|-|-|-|-|
+|-------|---------|---------|---------|---------|----------|
 |Candidate has not provided anything useful|Meet 3/5 quality of written communication criteria|Meet 4/5 quality of written communication criteria|Meet 4/5 quality of written communication criteria|Meet 4/5 quality of written communication criteria|Meet 4/5 quality of written communication criteria|
 | |An inadequate description of how to use the system|A description of how to use the system provided but of a nature that would not enable easy use of the system|A description of how to use the syste that is just about adequate and which includes at least one of the following:|A fairly detailed description of how to use the system, some samples of actual screen displays in use and some samples of error messages and error recovery procedures, but without being comprehensive|A detailed description of how to use the system including the necessary number of samples of actual screen displays in use|
 | |At least one of the following:|At least one of the following:|some samples of actual screen displays in use|At least two of the following:|Samples of error messages|

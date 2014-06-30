@@ -167,7 +167,7 @@ Look at the possible methods of solutions such as writing a program, customising
 
 ##Mark Scheme
 |0-3 marks|4-6 marks|7-9 marks|10-12 marks|
-|-|-|-|-|
+|---------|---------|---------|-----------|
 |Some evidence of an investigation, but somewhat lacking in structure|Evidence of a structured investigation, but with gaps that hinder full understanding|Evidence of a well structured investigation|Evidence of an extensive, well-structured investigation|
 |Some attempt at documenting system requirements| The set of system requirements falls short of being comprehensive by omission or lack of depth so that only one third to one half of the comprehensive set of system requirements are covered| The set of system requirements falls just short of being comprehensive because of some omissions or some lack of depth|A comprehensive set of system requirements, fully meeting a real end user’s needs|
 |Some attempt at understanding a real end user's needs| Real end user's needs addressed, but with some omissions so that only one third to one half are considered| The majority, but not all of a real end user’s needs are addressed| High level of understanding of a real end user’s needs|

@@ -116,7 +116,7 @@ Here you should include all of your program code. The listing should be separate
 ##Mark Scheme
 
 |0-1 marks|2-3 marks|4-5 marks|6-7 marks|
-|-|-|-|-|
+|---------|---------|---------|---------|
 |Complete code listings which are not self-documenting or fully annotated|Self-documenting code listings or fully annotated code listings|Self-documenting code listings or fully annotated code listings|Candidate-written code/scripts listing that is self-documenting and/or well annotated, easy to follow (very easy to comprehend).
 | | |Some technical aspects described|Explanation of the modular structure of all the code|
 | | | |Reference to the design section|

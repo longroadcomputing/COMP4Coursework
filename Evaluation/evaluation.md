@@ -46,13 +46,13 @@ In the previous section you have shown whether you satisfied each objective of p
 
 There is a good example of this on page **274-275** of the textbook.
 
-###Explain.
+###Explain
 For each objective you should explain why the solution you have developed is effective/not effective. There are two points that must be considered:
 
 - How do you judge effectiveness?
 - How do you prove that solution is effective?
 
-###Judge.
+###Judge
 You will have to develop a range of criteria for your objectives to judge there effectiveness. This is difficult to provide examples for in the general sense but consider a situation where one of the objectives is: Provide an overview of a students progress.
 
 Possible effectiveness criteria might be:
@@ -62,7 +62,7 @@ Possible effectiveness criteria might be:
 - Have visualisations (graphs) been provided to aid comprehension?
 - Is it possible to navigate to more detailed information on a particular area?
 
-###Prove.
+###Prove
 Similar to section one you will need to evidence your assertions that your solution is effective. When designing questionnaires etc. You should consider including questions that will allow you to complete this section as well as the first rather than having two separate questionnaires.
 
 ##Learnability
@@ -101,12 +101,12 @@ Be sure to explain how some of your suggestions are related to user feedback.
 
 ##Mark Scheme
 |1 mark|2 marks|3 marks|
-|-|-|-|
+|------|-------|-------|
 |A reasoned and detailed explanation of how objectives have been met for a problem of adequate complexity with less SMART objectives|A reasoned and detailed explanation of how objectives have been met for a problem of adequate complexity with SMART objectives.|A reasoned and detailed explanation of how objectives have been met for a complex problem with SMART objectives.|
 | |A reasoned and detailed explanation of how objectives have been met for a complex problem with less SMART objectives| |
 
 | | |
-|-|-|
+|--|--|
 |**Additional mark**|Clear evidence of genuine user feedback authenticated by assessor|
 |**Additional mark**|Thorough analysis of user feedback and/or evidence of continual interaction with user during the development of the system|
 |**Additional mark**|Full and realistic suggestions as to how improvements and/or extensions are related to user feedback|
