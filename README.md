@@ -1,6 +1,11 @@
 #COMP4 Coursework
 
 ##Introduction
+The Computing project is most likely the most challenging piece of work you will produce this year. As well as having to create a suitable program for your client you will have to produce a report that covers the main stages of the **software development lifecycle** (as they are described in the specification).
+
+It is this report that gains the majority of marks for unit (**55/75**) and therefore it is very important that you approach it with the right mindset. If you prepare properly and have a plan in place then producing the document is reasonably straight-forward, if somewhat time consuming.
+
+Follow the guidance given here and stick to the deadlines and you will produce a piece of software and a report that you will be both proud of and that will gain a good grade.
 
 ##Deadlines for 2014-2015
 It is expected that you will submit each coursework section by the relevant deadline given below. Your document should be submitted to the appropriate **coursework submission link** on the **COMP4** [**Long Road Moodle**][9] page.
