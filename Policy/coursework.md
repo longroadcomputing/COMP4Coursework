@@ -49,7 +49,7 @@
 - Having work for other courses is **not** grounds for an extension. You have had the guidance notes and deadlines since the start of the year.
 
 ####Lost work
-- Loosing work is unfortunate but is **not** grounds for an extension. If you have been following appropriate version control and back-up strategies as [suggested][3] then you should be able to recover from the majority of situations quickly.
+- Losing work is unfortunate but is **not** grounds for an extension. If you have been following appropriate version control and back-up strategies as [suggested][3] then you should be able to recover from the majority of situations quickly.
 
 ####Holidays
 - Going on holiday is not a reason to grant an extension. You have had the guidance notes and deadlines since the start of the year.
