@@ -1,3 +1,12 @@
+\documentclass[12pt]{report}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\usepackage{listings}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+\begin{document}
+
 \chapter{Analysis}
 
 \section{Introduction}
@@ -20,7 +29,7 @@ There are a number of problems with the current system. One of the problems is t
 
 \subsection{Section appendix}
 
-
+\includepdf[pages={-}]{./Interview/interview_questions.pdf}
 
 \section{Investigation}
 
@@ -28,7 +37,12 @@ There are a number of problems with the current system. One of the problems is t
 
 \subsubsection{Data sources and destinations}
 
+In the current system, there are multiple data sources. The client and his colleagues as well as members of the AV crew for the church can enter data into the spreadsheet by using a computer in the office and accessing the on the server.
+
 \subsubsection{Algorithms}
+
+In the current system, there are only a few, very simple algorithms in place.
+
 
 \subsubsection{Data flow diagram}
 
@@ -92,5 +106,6 @@ There are a number of problems with the current system. One of the problems is t
 
 \subsection{Alternative solutions}
 
->>>>>>> FETCH_HEAD
 \subsection{Justification of chosen solution}
+
+\end{document}

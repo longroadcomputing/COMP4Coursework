@@ -1,0 +1,363 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.9.11)  17 SEP 2014 18:03
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**analysis.tex
+(./analysis.tex
+LaTeX2e <2014/05/01>
+Babel <3.9k> and hyphenation patterns for 78 languages loaded.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/04/25 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/05/08 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+ (/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+) (/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count88
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2013/08/25 v0.4v Insert pages of external PDF documents (AM)
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count89
+\calc@Bcount=\count90
+\calc@Adimen=\dimen105
+\calc@Bdimen=\dimen106
+\calc@Askip=\skip43
+\calc@Bskip=\skip44
+LaTeX Info: Redefining \setlength on input line 75.
+LaTeX Info: Redefining \addtolength on input line 76.
+\calc@Ccount=\count91
+\calc@Cskip=\skip45
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2013/10/06 v2.0d eso-pic (RN)
+ (/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/atbegshi.sty
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+ (/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)) (/usr/local/texlive/2014/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+)) (/usr/local/texlive/2014/texmf-dist/tex/latex/pdfpages/pppdftex.def
+File: pppdftex.def 2013/08/25 v0.4v Pdfpages driver for pdfTeX (AM)
+)
+\AM@pagebox=\box26
+\AM@toc@title=\toks15
+\c@AM@survey=\count92
+\AM@templatesizebox=\box27
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count93
+\lst@gtempboxa=\box28
+\lst@token=\toks16
+\lst@length=\count94
+\lst@currlwidth=\dimen107
+\lst@column=\count95
+\lst@pos=\count96
+\lst@lostspace=\dimen108
+\lst@width=\dimen109
+\lst@newlines=\count97
+\lst@lineno=\count98
+\lst@maxwidth=\dimen110
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2014/03/04 1.5c (Carsten Heinz)
+\c@lstnumber=\count99
+\lst@skipnumbers=\count100
+\lst@framebox=\box29
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2014/03/04 1.5c listings configuration
+))
+Package: listings 2014/03/04 1.5c (Carsten Heinz)
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating environment
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count101
+\float@exts=\toks17
+\float@box=\box30
+\@float@everytoks=\toks18
+\@floatcapt=\box31
+)
+\@float@every@algorithm=\toks19
+\c@algorithm=\count102
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/algorithms/algorithmic.sty
+Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
+\c@ALC@unique=\count103
+\c@ALC@line=\count104
+\c@ALC@rem=\count105
+\c@ALC@depth=\count106
+\ALC@tlm=\skip46
+\algorithmicindent=\skip47
+) (/Users/joel/Google Drive/A levels/Computing/Github/COMP4Coursework/Analysis/.texpadtmp/analysis.aux)
+\openout1 = `analysis.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+ (/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count107
+\scratchdimen=\dimen111
+\scratchbox=\box32
+\nofMPsegments=\count108
+\nofMParguments=\count109
+\everyMPshowfont=\toks20
+\MPscratchCnt=\count110
+\MPscratchDim=\dimen112
+\MPnumerator=\count111
+\makeMPintoPDFobject=\count112
+\everyMPtoPDFconversion=\toks21
+) (/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO)
+ (/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+ (/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+)) (/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+ (/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+ (/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+\AtBeginShipoutBox=\box33
+\c@lstlisting=\count113
+
+Chapter 1.
+[1
+
+
+{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] <./Interview/interview_questions.pdf, id=8, 597.50786pt x 845.01837pt>
+File: ./Interview/interview_questions.pdf Graphic file (type pdf)
+ <use ./Interview/interview_questions.pdf>
+Package pdftex.def Info: ./Interview/interview_questions.pdf used on input line 32.
+(pdftex.def)             Requested size: 597.5064pt x 845.01631pt.
+File: ./Interview/interview_questions.pdf Graphic file (type pdf)
+ <use ./Interview/interview_questions.pdf>
+Package pdftex.def Info: ./Interview/interview_questions.pdf used on input line 32.
+(pdftex.def)             Requested size: 597.5064pt x 845.01631pt.
+ [2] <./Interview/interview_questions.pdf, id=14, page=1, 597.50786pt x 845.01837pt>
+File: ./Interview/interview_questions.pdf Graphic file (type pdf)
+ <use ./Interview/interview_questions.pdf, page 1>
+Package pdftex.def Info: ./Interview/interview_questions.pdf, page1 used on input line 32.
+(pdftex.def)             Requested size: 597.5064pt x 845.01631pt.
+File: ./Interview/interview_questions.pdf Graphic file (type pdf)
+ <use ./Interview/interview_questions.pdf, page 1>
+Package pdftex.def Info: ./Interview/interview_questions.pdf, page1 used on input line 32.
+(pdftex.def)             Requested size: 562.12244pt x 794.97498pt.
+File: ./Interview/interview_questions.pdf Graphic file (type pdf)
+ <use ./Interview/interview_questions.pdf, page 1>
+Package pdftex.def Info: ./Interview/interview_questions.pdf, page1 used on input line 32.
+(pdftex.def)             Requested size: 562.12244pt x 794.97498pt.
+File: ./Interview/interview_questions.pdf Graphic file (type pdf)
+ <use ./Interview/interview_questions.pdf, page 1>
+Package pdftex.def Info: ./Interview/interview_questions.pdf, page1 used on input line 32.
+(pdftex.def)             Requested size: 562.12244pt x 794.97498pt.
+File: ./Interview/interview_questions.pdf Graphic file (type pdf)
+ <use ./Interview/interview_questions.pdf, page 1>
+Package pdftex.def Info: ./Interview/interview_questions.pdf, page1 used on input line 32.
+(pdftex.def)             Requested size: 562.12244pt x 794.97498pt.
+ [3 <./Interview/interview_questions.pdf>] <./Interview/interview_questions.pdf, id=50, page=2, 597.50786pt x 845.01837pt>
+File: ./Interview/interview_questions.pdf Graphic file (type pdf)
+ <use ./Interview/interview_questions.pdf, page 2>
+Package pdftex.def Info: ./Interview/interview_questions.pdf, page2 used on input line 32.
+(pdftex.def)             Requested size: 562.12244pt x 794.97498pt.
+File: ./Interview/interview_questions.pdf Graphic file (type pdf)
+ <use ./Interview/interview_questions.pdf, page 2>
+Package pdftex.def Info: ./Interview/interview_questions.pdf, page2 used on input line 32.
+(pdftex.def)             Requested size: 562.12244pt x 794.97498pt.
+File: ./Interview/interview_questions.pdf Graphic file (type pdf)
+ <use ./Interview/interview_questions.pdf, page 2>
+Package pdftex.def Info: ./Interview/interview_questions.pdf, page2 used on input line 32.
+(pdftex.def)             Requested size: 562.12244pt x 794.97498pt.
+ [4 <./Interview/interview_questions.pdf>] <./Interview/interview_questions.pdf, id=54, page=3, 597.50786pt x 845.01837pt>
+File: ./Interview/interview_questions.pdf Graphic file (type pdf)
+ <use ./Interview/interview_questions.pdf, page 3>
+Package pdftex.def Info: ./Interview/interview_questions.pdf, page3 used on input line 32.
+(pdftex.def)             Requested size: 562.12244pt x 794.97498pt.
+File: ./Interview/interview_questions.pdf Graphic file (type pdf)
+ <use ./Interview/interview_questions.pdf, page 3>
+Package pdftex.def Info: ./Interview/interview_questions.pdf, page3 used on input line 32.
+(pdftex.def)             Requested size: 562.12244pt x 794.97498pt.
+File: ./Interview/interview_questions.pdf Graphic file (type pdf)
+ <use ./Interview/interview_questions.pdf, page 3>
+Package pdftex.def Info: ./Interview/interview_questions.pdf, page3 used on input line 32.
+(pdftex.def)             Requested size: 562.12244pt x 794.97498pt.
+ [5 <./Interview/interview_questions.pdf>]
+./analysis.tex:51: Undefined control sequence.
+l.51 \SET
+         {$total$}{$0$}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 51.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 51.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 51.
+./analysis.tex:52: Undefined control sequence.
+l.52 \State
+           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./analysis.tex:53: Undefined control sequence.
+l.53 \Repeat
+            
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./analysis.tex:54: Undefined control sequence.
+l.54     \SEND
+              {$"Please\ enter\ a\ number\ (0 to finish)"$}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./analysis.tex:55: Undefined control sequence.
+l.55     \RECEIVE
+                 {$number$}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./analysis.tex:56: Undefined control sequence.
+l.56     \SET
+             {$total$}{$total + number$}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./analysis.tex:57: Undefined control sequence.
+l.57 \Until
+           {$number = 0$}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+./analysis.tex:58: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.58 \end{algorithmic}
+                      
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[6]
+Overfull \vbox (326.93343pt too high) has occurred while \output is active []
+
+ [7] (/Users/joel/Google Drive/A levels/Computing/Github/COMP4Coursework/Analysis/.texpadtmp/analysis.aux) ) 
+Here is how much of TeX's memory you used:
+ 4172 strings out of 493117
+ 60987 string characters out of 6135433
+ 131015 words of memory out of 5000000
+ 7592 multiletter control sequences out of 15000+600000
+ 8500 words of font info for 30 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 40i,18n,46p,727b,418s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb>
+Output written on "/Users/joel/Google Drive/A levels/Computing/Github/COMP4Coursework/Analysis/.texpadtmp/analysis.pdf" (7 pages, 109719 bytes).
+PDF statistics:
+ 78 PDF objects out of 1000 (max. 8388607)
+ 51 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+
