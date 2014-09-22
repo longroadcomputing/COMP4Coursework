@@ -1,9 +1,32 @@
 \documentclass[12pt]{report}
 \usepackage{graphicx}
 \usepackage{pdfpages}
-\usepackage{listings}
 \usepackage{algorithm}
 \usepackage{algorithmic}
+\usepackage{labelcas}
+
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true
+  tabsize=3
+}
 
 \begin{document}
 
@@ -27,9 +50,24 @@ The current system consists of multiple excel spreed sheets. There is one spread
 
 There are a number of problems with the current system. One of the problems is that there is no notification system to tell you when information is getting outdated or something is changed. For example, if an item is bought or sold, the total costings for that item will be updated and no-one will be notified. Another problem is that the current system doesn't show the PAT testings for all the items, these tests go out of date every 6 months and there is no way of being notified when a new PAT test is needed on an item.
 
+\newpage
+
 \subsection{Section appendix}
 
-\includepdf[pages={-}]{./Interview/interview_questions.pdf}
+\begin{figure}[H]
+    \caption{Interview Questions (pg 1)} \label{fig: Interview Questions}
+    \includegraphics[page=1,width=\textwidth]{./Interview/interview_questions.pdf}
+\end{figure}
+
+\begin{figure}[H]
+    \caption{Interview Questions (pg 2)} \label{fig: Interview Questions}
+    \includegraphics[page=2,width=\textwidth]{./Interview/interview_questions.pdf}
+\end{figure}
+
+\begin{figure}[H]
+    \caption{Interview Questions (pg 3)} \label{fig: Interview Questions}
+    \includegraphics[page=3,width=\textwidth]{./Interview/interview_questions.pdf}
+\end{figure}
 
 \section{Investigation}
 
@@ -41,12 +79,54 @@ In the current system, there are multiple data sources. The client and his colle
 
 \subsubsection{Algorithms}
 
-In the current system, there are only a few, very simple algorithms in place.
+In the current system, there are only a few algorithms in place.
+\bigskip
+
+Algorithm 1, When new item is bought:
+\begin{lstlisting}
+IF Item = NewItem DO
+        Enter Item into Spreadsheet
+    ELIF Item = ItemMatch Do
+        Update Item Quantity
+\end{lstlisting}
+\bigskip
+
+Algorithm 2, When an item is sold or replaced:
+\begin{lstlisting}
+IF Item = Sold OR Item = Damaged or Item = Stolen DO
+    Update Quantity
+    IF Item = Stolen OR Item = Damaged DO
+        Claim Insurance
+\end{lstlisting}
 
 
-\subsubsection{Data flow diagram}
+
+\subsubsection{Data flow diagram (part 1)}
+
+\begin{figure}[H]
+    \caption{Flow Diagram Key.} \label{fig:print_function_result}
+    \includegraphics[width=\textwidth]{./DFD_analysis_key.pdf}
+\end{figure}
+
+\begin{figure}[H]
+    \caption{Entering a new item.} \label{fig:print_function_result}
+    \includegraphics[width=50mm,scale=0.5]{./DFD_analysis_new_item.pdf}
+\end{figure}
+
+\newpage
+
+\subsubsection{Data flow diagram (part 2)}
+
+\begin{figure}[H]
+    \caption{Flow Diagram Key.} \label{fig:print_function_result}
+    \includegraphics[width=50mm,scale=0.5]{./DFD_analysis_update_item.pdf}
+\end{figure}
+
+\newpage
 
 \subsubsection{Input Forms, Output Forms, Report Formats}
+
+Josh's current system only has one input form, this is the application excel. The system has 
 
 \subsection{The proposed system}
 

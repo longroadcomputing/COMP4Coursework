@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.9.11)  17 SEP 2014 18:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.9.11)  19 SEP 2014 20:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -93,63 +93,78 @@ File: pppdftex.def 2013/08/25 v0.4v Pdfpages driver for pdfTeX (AM)
 \AM@toc@title=\toks15
 \c@AM@survey=\count92
 \AM@templatesizebox=\box27
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating environment
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count93
+\float@exts=\toks16
+\float@box=\box28
+\@float@everytoks=\toks17
+\@floatcapt=\box29
+)
+\@float@every@algorithm=\toks18
+\c@algorithm=\count94
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/algorithms/algorithmic.sty
+Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
+\c@ALC@unique=\count95
+\c@ALC@line=\count96
+\c@ALC@rem=\count97
+\c@ALC@depth=\count98
+\ALC@tlm=\skip46
+\algorithmicindent=\skip47
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/labelcas/labelcas.sty
+Package: labelcas 2006/08/14 v1.12 check label-existence and fork accordingly
 ) (/usr/local/texlive/2014/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count93
-\lst@gtempboxa=\box28
-\lst@token=\toks16
-\lst@length=\count94
+\lst@mode=\count99
+\lst@gtempboxa=\box30
+\lst@token=\toks19
+\lst@length=\count100
 \lst@currlwidth=\dimen107
-\lst@column=\count95
-\lst@pos=\count96
+\lst@column=\count101
+\lst@pos=\count102
 \lst@lostspace=\dimen108
 \lst@width=\dimen109
-\lst@newlines=\count97
-\lst@lineno=\count98
+\lst@newlines=\count103
+\lst@lineno=\count104
 \lst@maxwidth=\dimen110
  (/usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2014/03/04 1.5c (Carsten Heinz)
-\c@lstnumber=\count99
-\lst@skipnumbers=\count100
-\lst@framebox=\box29
+\c@lstnumber=\count105
+\lst@skipnumbers=\count106
+\lst@framebox=\box31
 ) (/usr/local/texlive/2014/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2014/03/04 1.5c listings configuration
 ))
 Package: listings 2014/03/04 1.5c (Carsten Heinz)
- (/usr/local/texlive/2014/texmf-dist/tex/latex/algorithms/algorithm.sty
-Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating environment
- (/usr/local/texlive/2014/texmf-dist/tex/latex/float/float.sty
-Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count101
-\float@exts=\toks17
-\float@box=\box30
-\@float@everytoks=\toks18
-\@floatcapt=\box31
+ (/Users/joel/Google Drive/A levels/Computing/Github/COMP4Coursework/Analysis/.texpadtmp/analysis.aux
+
+LaTeX Warning: Label `fig: Interview Questions' multiply defined.
+
+
+LaTeX Warning: Label `fig: Interview Questions' multiply defined.
+
+
+LaTeX Warning: Label `fig:print_function_result' multiply defined.
+
+
+LaTeX Warning: Label `fig:print_function_result' multiply defined.
+
 )
-\@float@every@algorithm=\toks19
-\c@algorithm=\count102
-) (/usr/local/texlive/2014/texmf-dist/tex/latex/algorithms/algorithmic.sty
-Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
-\c@ALC@unique=\count103
-\c@ALC@line=\count104
-\c@ALC@rem=\count105
-\c@ALC@depth=\count106
-\ALC@tlm=\skip46
-\algorithmicindent=\skip47
-) (/Users/joel/Google Drive/A levels/Computing/Github/COMP4Coursework/Analysis/.texpadtmp/analysis.aux)
 \openout1 = `analysis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
  (/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count107
@@ -203,161 +218,66 @@ Chapter 1.
 [1
 
 
-{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] <./Interview/interview_questions.pdf, id=8, 597.50786pt x 845.01837pt>
-File: ./Interview/interview_questions.pdf Graphic file (type pdf)
- <use ./Interview/interview_questions.pdf>
-Package pdftex.def Info: ./Interview/interview_questions.pdf used on input line 32.
-(pdftex.def)             Requested size: 597.5064pt x 845.01631pt.
-File: ./Interview/interview_questions.pdf Graphic file (type pdf)
- <use ./Interview/interview_questions.pdf>
-Package pdftex.def Info: ./Interview/interview_questions.pdf used on input line 32.
-(pdftex.def)             Requested size: 597.5064pt x 845.01631pt.
- [2] <./Interview/interview_questions.pdf, id=14, page=1, 597.50786pt x 845.01837pt>
+{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] <./Interview/interview_questions.pdf, id=11, page=1, 597.23125pt x 845.1575pt>
 File: ./Interview/interview_questions.pdf Graphic file (type pdf)
  <use ./Interview/interview_questions.pdf, page 1>
-Package pdftex.def Info: ./Interview/interview_questions.pdf, page1 used on input line 32.
-(pdftex.def)             Requested size: 597.5064pt x 845.01631pt.
-File: ./Interview/interview_questions.pdf Graphic file (type pdf)
- <use ./Interview/interview_questions.pdf, page 1>
-Package pdftex.def Info: ./Interview/interview_questions.pdf, page1 used on input line 32.
-(pdftex.def)             Requested size: 562.12244pt x 794.97498pt.
-File: ./Interview/interview_questions.pdf Graphic file (type pdf)
- <use ./Interview/interview_questions.pdf, page 1>
-Package pdftex.def Info: ./Interview/interview_questions.pdf, page1 used on input line 32.
-(pdftex.def)             Requested size: 562.12244pt x 794.97498pt.
-File: ./Interview/interview_questions.pdf Graphic file (type pdf)
- <use ./Interview/interview_questions.pdf, page 1>
-Package pdftex.def Info: ./Interview/interview_questions.pdf, page1 used on input line 32.
-(pdftex.def)             Requested size: 562.12244pt x 794.97498pt.
-File: ./Interview/interview_questions.pdf Graphic file (type pdf)
- <use ./Interview/interview_questions.pdf, page 1>
-Package pdftex.def Info: ./Interview/interview_questions.pdf, page1 used on input line 32.
-(pdftex.def)             Requested size: 562.12244pt x 794.97498pt.
- [3 <./Interview/interview_questions.pdf>] <./Interview/interview_questions.pdf, id=50, page=2, 597.50786pt x 845.01837pt>
+Package pdftex.def Info: ./Interview/interview_questions.pdf, page1 used on input line 59.
+(pdftex.def)             Requested size: 390.0pt x 551.89929pt.
+
+Overfull \vbox (59.94928pt too high) has occurred while \output is active []
+
+ [3 <./Interview/interview_questions.pdf>] <./Interview/interview_questions.pdf, id=24, page=2, 597.23125pt x 845.1575pt>
 File: ./Interview/interview_questions.pdf Graphic file (type pdf)
  <use ./Interview/interview_questions.pdf, page 2>
-Package pdftex.def Info: ./Interview/interview_questions.pdf, page2 used on input line 32.
-(pdftex.def)             Requested size: 562.12244pt x 794.97498pt.
-File: ./Interview/interview_questions.pdf Graphic file (type pdf)
- <use ./Interview/interview_questions.pdf, page 2>
-Package pdftex.def Info: ./Interview/interview_questions.pdf, page2 used on input line 32.
-(pdftex.def)             Requested size: 562.12244pt x 794.97498pt.
-File: ./Interview/interview_questions.pdf Graphic file (type pdf)
- <use ./Interview/interview_questions.pdf, page 2>
-Package pdftex.def Info: ./Interview/interview_questions.pdf, page2 used on input line 32.
-(pdftex.def)             Requested size: 562.12244pt x 794.97498pt.
- [4 <./Interview/interview_questions.pdf>] <./Interview/interview_questions.pdf, id=54, page=3, 597.50786pt x 845.01837pt>
+Package pdftex.def Info: ./Interview/interview_questions.pdf, page2 used on input line 64.
+(pdftex.def)             Requested size: 390.0pt x 551.89929pt.
+
+Overfull \vbox (26.39929pt too high) has occurred while \output is active []
+
+ [4 <./Interview/interview_questions.pdf>] <./Interview/interview_questions.pdf, id=37, page=3, 597.23125pt x 845.1575pt>
 File: ./Interview/interview_questions.pdf Graphic file (type pdf)
  <use ./Interview/interview_questions.pdf, page 3>
-Package pdftex.def Info: ./Interview/interview_questions.pdf, page3 used on input line 32.
-(pdftex.def)             Requested size: 562.12244pt x 794.97498pt.
-File: ./Interview/interview_questions.pdf Graphic file (type pdf)
- <use ./Interview/interview_questions.pdf, page 3>
-Package pdftex.def Info: ./Interview/interview_questions.pdf, page3 used on input line 32.
-(pdftex.def)             Requested size: 562.12244pt x 794.97498pt.
-File: ./Interview/interview_questions.pdf Graphic file (type pdf)
- <use ./Interview/interview_questions.pdf, page 3>
-Package pdftex.def Info: ./Interview/interview_questions.pdf, page3 used on input line 32.
-(pdftex.def)             Requested size: 562.12244pt x 794.97498pt.
- [5 <./Interview/interview_questions.pdf>]
-./analysis.tex:51: Undefined control sequence.
-l.51 \SET
-         {$total$}{$0$}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+Package pdftex.def Info: ./Interview/interview_questions.pdf, page3 used on input line 69.
+(pdftex.def)             Requested size: 390.0pt x 551.89929pt.
 
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 51.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 51.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 51.
-./analysis.tex:52: Undefined control sequence.
-l.52 \State
-           
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+Overfull \vbox (26.39929pt too high) has occurred while \output is active []
 
-./analysis.tex:53: Undefined control sequence.
-l.53 \Repeat
-            
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+ [5 <./Interview/interview_questions.pdf>] <./DFD_analysis_key.pdf, id=50, 545.94707pt x 151.24966pt>
+File: ./DFD_analysis_key.pdf Graphic file (type pdf)
+ <use ./DFD_analysis_key.pdf>
+Package pdftex.def Info: ./DFD_analysis_key.pdf used on input line 108.
+(pdftex.def)             Requested size: 390.0pt x 108.04575pt.
+ [6] <./DFD_analysis_new_item.pdf, id=55, 167.04773pt x 316.53076pt>
+File: ./DFD_analysis_new_item.pdf Graphic file (type pdf)
+ <use ./DFD_analysis_new_item.pdf>
+Package pdftex.def Info: ./DFD_analysis_new_item.pdf used on input line 113.
+(pdftex.def)             Requested size: 83.52365pt x 158.26498pt.
+ [7 <./DFD_analysis_key.pdf> <./DFD_analysis_new_item.pdf>] <./DFD_analysis_update_item.pdf, id=90, 139.84143pt x 305.0539pt>
+File: ./DFD_analysis_update_item.pdf Graphic file (type pdf)
+ <use ./DFD_analysis_update_item.pdf>
+Package pdftex.def Info: ./DFD_analysis_update_item.pdf used on input line 122.
+(pdftex.def)             Requested size: 69.92053pt x 152.52657pt.
+ [8 <./DFD_analysis_update_item.pdf>]
+Overfull \vbox (304.68343pt too high) has occurred while \output is active []
 
-./analysis.tex:54: Undefined control sequence.
-l.54     \SEND
-              {$"Please\ enter\ a\ number\ (0 to finish)"$}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+ [9] (/Users/joel/Google Drive/A levels/Computing/Github/COMP4Coursework/Analysis/.texpadtmp/analysis.aux)
 
-./analysis.tex:55: Undefined control sequence.
-l.55     \RECEIVE
-                 {$number$}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+LaTeX Warning: There were multiply-defined labels.
 
-./analysis.tex:56: Undefined control sequence.
-l.56     \SET
-             {$total$}{$total + number$}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./analysis.tex:57: Undefined control sequence.
-l.57 \Until
-           {$number = 0$}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-./analysis.tex:58: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.58 \end{algorithmic}
-                      
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[6]
-Overfull \vbox (326.93343pt too high) has occurred while \output is active []
-
- [7] (/Users/joel/Google Drive/A levels/Computing/Github/COMP4Coursework/Analysis/.texpadtmp/analysis.aux) ) 
+ ) 
 Here is how much of TeX's memory you used:
- 4172 strings out of 493117
- 60987 string characters out of 6135433
- 131015 words of memory out of 5000000
- 7592 multiletter control sequences out of 15000+600000
- 8500 words of font info for 30 fonts, out of 8000000 for 9000
+ 4165 strings out of 493117
+ 61420 string characters out of 6135433
+ 140041 words of memory out of 5000000
+ 7585 multiletter control sequences out of 15000+600000
+ 6530 words of font info for 24 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,18n,46p,727b,418s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-Output written on "/Users/joel/Google Drive/A levels/Computing/Github/COMP4Coursework/Analysis/.texpadtmp/analysis.pdf" (7 pages, 109719 bytes).
+ 38i,6n,39p,727b,912s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on "/Users/joel/Google Drive/A levels/Computing/Github/COMP4Coursework/Analysis/.texpadtmp/analysis.pdf" (9 pages, 140624 bytes).
 PDF statistics:
- 78 PDF objects out of 1000 (max. 8388607)
- 51 compressed objects within 1 object stream
+ 127 PDF objects out of 1000 (max. 8388607)
+ 87 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
