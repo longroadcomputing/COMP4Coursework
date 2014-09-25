@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.9.25)  25 SEP 2014 13:02
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.9.25)  25 SEP 2014 13:35
 entering extended mode
-**analysis.tex
-(U:\Github\COMP4Coursework\Analysis\analysis.tex
+**U:/Github/COMP4Coursework/Analysis/analysis.tex
+(U:/Github/COMP4Coursework/Analysis/analysis.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -31,22 +31,40 @@ File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
+No file analysis.aux.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+Chapter 1.
+[1
+
+
+{C:/Users/34771/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 ! Undefined control sequence.
-l.3 \definecolor
-                {dkgreen}{rgb}{0,0.6,0}
+l.27 \includepdf
+                [pages=-]{./Interview/interview_questions.pdf}
 ? 
 ! Emergency stop.
-l.3 \definecolor
-                {dkgreen}{rgb}{0,0.6,0}
+l.27 \includepdf
+                [pages=-]{./Interview/interview_questions.pdf}
 End of file on the terminal!
 
  
 Here is how much of TeX's memory you used:
- 217 strings out of 493921
- 2373 string characters out of 3144876
- 49031 words of memory out of 3000000
- 3601 multiletter control sequences out of 15000+200000
- 3938 words of font info for 15 fonts, out of 3000000 for 9000
+ 227 strings out of 493921
+ 2509 string characters out of 3144876
+ 52031 words of memory out of 3000000
+ 3607 multiletter control sequences out of 15000+200000
+ 5755 words of font info for 21 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 22i,0n,19p,140b,36s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 22i,4n,19p,763b,113s stack positions out of 5000i,500n,10000p,200000b,50000s
 !  ==> Fatal error occurred, no output PDF file produced!
