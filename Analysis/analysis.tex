@@ -1,4 +1,4 @@
-\documentclass[12pt]{report}
+\documentclass[a4paper,12pt]{report}
 \usepackage{graphicx}
 \usepackage{pdfpages}
 \usepackage{algorithm}
@@ -50,24 +50,9 @@ The current system consists of multiple excel spreed sheets. There is one spread
 
 There are a number of problems with the current system. One of the problems is that there is no notification system to tell you when information is getting outdated or something is changed. For example, if an item is bought or sold, the total costings for that item will be updated and no-one will be notified. Another problem is that the current system doesn't show the PAT testings for all the items, these tests go out of date every 6 months and there is no way of being notified when a new PAT test is needed on an item.
 
-\newpage
-
 \subsection{Section appendix}
 
-\begin{figure}[H]
-    \caption{Interview Questions (pg 1)} \label{fig: Interview Questions}
-    \includegraphics[page=1,width=\textwidth]{./Interview/interview_questions.pdf}
-\end{figure}
-
-\begin{figure}[H]
-    \caption{Interview Questions (pg 2)} \label{fig: Interview Questions}
-    \includegraphics[page=2,width=\textwidth]{./Interview/interview_questions.pdf}
-\end{figure}
-
-\begin{figure}[H]
-    \caption{Interview Questions (pg 3)} \label{fig: Interview Questions}
-    \includegraphics[page=3,width=\textwidth]{./Interview/interview_questions.pdf}
-\end{figure}
+\includepdf[pages=-]{./Interview/interview_questions.pdf}
 
 \section{Investigation}
 
@@ -105,12 +90,12 @@ IF Item = Sold OR Item = Damaged or Item = Stolen DO
 
 \begin{figure}[H]
     \caption{Flow Diagram Key.} \label{fig:print_function_result}
-    \includegraphics[width=\textwidth]{./DFD_analysis_key.pdf}
+    \includegraphics[width=\textwidth]{./Dataflow/DFD_analysis_key.pdf}
 \end{figure}
 
 \begin{figure}[H]
     \caption{Entering a new item.} \label{fig:print_function_result}
-    \includegraphics[width=50mm,scale=0.5]{./DFD_analysis_new_item.pdf}
+    \includegraphics[width=50mm,scale=0.5]{./Dataflow/DFD_analysis_new_item.pdf}
 \end{figure}
 
 \newpage
@@ -119,20 +104,53 @@ IF Item = Sold OR Item = Damaged or Item = Stolen DO
 
 \begin{figure}[H]
     \caption{Flow Diagram Key.} \label{fig:print_function_result}
-    \includegraphics[width=50mm,scale=0.5]{./DFD_analysis_update_item.pdf}
+    \includegraphics[width=50mm,scale=0.5]{./Dataflow/DFD_analysis_update_item.pdf}
 \end{figure}
 
 \newpage
 
 \subsubsection{Input Forms, Output Forms, Report Formats}
 
-Josh's current system only has one input form, this is the application excel. The system has 
+Josh's current system only has one input form, this is an electronic form which is the application excel. Josh also has two ouput forms - an invoice form for when he hires out equipment to a third party and a quote sheet to show the value of a piece of equipment when he needs to insure it.
+
+Below is an example of the input method used to insert data into the current system.
+
+
+
+
+Below is an example of one of Josh's Invoice forms. The headings show Product Name, Loan Rate, Length of Loan and Total Cost.
+
+Here is an example of a quote sheet that Josh has given me.
+
+\newpage
 
 \subsection{The proposed system}
 
 \subsubsection{Data sources and destinations}
 
+The Following table shows the proposed data and their respective sources and destinations.
+
+\begin{figure}[H]
+    \caption{Data sources and destinations} \label{fig: Data sources and destinations}
+    \includegraphics[page=1,width=\textwidth]{./DataS&D/data_sources_&_destinations.pdf}
+\end{figure}
+
 \subsubsection{Data flow diagram}
+
+\begin{figure}[H]
+    \caption{Flow Diagram Key.} \label{fig:print_function_result}
+    \includegraphics[width=\textwidth]{./Dataflow/DFD_analysis_key.pdf}
+\end{figure}
+
+\begin{figure}[H]
+    \caption{Enter New Item.} \label{fig:print_function_result}
+    \includegraphics[width=\textwidth]{./Dataflow/Data_flow_new.pdf}
+\end{figure}
+
+\begin{figure}[H]
+    \caption{Enter New Item.} \label{fig:print_function_result}
+    \includegraphics[width=\textwidth]{./Dataflow/Data_flow_update.pdf}
+\end{figure}
 
 \subsubsection{Data dictionary}
 
