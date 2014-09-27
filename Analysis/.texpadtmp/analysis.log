@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.9.11)  19 SEP 2014 20:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.9.11)  24 SEP 2014 20:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -139,10 +139,13 @@ File: listings.cfg 2014/03/04 1.5c listings configuration
 Package: listings 2014/03/04 1.5c (Carsten Heinz)
  (/Users/joel/Google Drive/A levels/Computing/Github/COMP4Coursework/Analysis/.texpadtmp/analysis.aux
 
-LaTeX Warning: Label `fig: Interview Questions' multiply defined.
+LaTeX Warning: Label `fig:print_function_result' multiply defined.
 
 
-LaTeX Warning: Label `fig: Interview Questions' multiply defined.
+LaTeX Warning: Label `fig:print_function_result' multiply defined.
+
+
+LaTeX Warning: Label `fig:print_function_result' multiply defined.
 
 
 LaTeX Warning: Label `fig:print_function_result' multiply defined.
@@ -218,66 +221,118 @@ Chapter 1.
 [1
 
 
-{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] <./Interview/interview_questions.pdf, id=11, page=1, 597.23125pt x 845.1575pt>
+{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] <./Interview/interview_questions.pdf, id=8, 597.50786pt x 845.01837pt>
+File: ./Interview/interview_questions.pdf Graphic file (type pdf)
+ <use ./Interview/interview_questions.pdf>
+Package pdftex.def Info: ./Interview/interview_questions.pdf used on input line 55.
+(pdftex.def)             Requested size: 597.5064pt x 845.01631pt.
+File: ./Interview/interview_questions.pdf Graphic file (type pdf)
+ <use ./Interview/interview_questions.pdf>
+Package pdftex.def Info: ./Interview/interview_questions.pdf used on input line 55.
+(pdftex.def)             Requested size: 597.5064pt x 845.01631pt.
+ [2] <./Interview/interview_questions.pdf, id=14, page=1, 597.50786pt x 845.01837pt>
 File: ./Interview/interview_questions.pdf Graphic file (type pdf)
  <use ./Interview/interview_questions.pdf, page 1>
-Package pdftex.def Info: ./Interview/interview_questions.pdf, page1 used on input line 59.
-(pdftex.def)             Requested size: 390.0pt x 551.89929pt.
-
-Overfull \vbox (59.94928pt too high) has occurred while \output is active []
-
- [3 <./Interview/interview_questions.pdf>] <./Interview/interview_questions.pdf, id=24, page=2, 597.23125pt x 845.1575pt>
+Package pdftex.def Info: ./Interview/interview_questions.pdf, page1 used on input line 55.
+(pdftex.def)             Requested size: 597.5064pt x 845.01631pt.
+File: ./Interview/interview_questions.pdf Graphic file (type pdf)
+ <use ./Interview/interview_questions.pdf, page 1>
+Package pdftex.def Info: ./Interview/interview_questions.pdf, page1 used on input line 55.
+(pdftex.def)             Requested size: 597.53374pt x 845.055pt.
+File: ./Interview/interview_questions.pdf Graphic file (type pdf)
+ <use ./Interview/interview_questions.pdf, page 1>
+Package pdftex.def Info: ./Interview/interview_questions.pdf, page1 used on input line 55.
+(pdftex.def)             Requested size: 597.53374pt x 845.055pt.
+File: ./Interview/interview_questions.pdf Graphic file (type pdf)
+ <use ./Interview/interview_questions.pdf, page 1>
+Package pdftex.def Info: ./Interview/interview_questions.pdf, page1 used on input line 55.
+(pdftex.def)             Requested size: 597.53374pt x 845.055pt.
+File: ./Interview/interview_questions.pdf Graphic file (type pdf)
+ <use ./Interview/interview_questions.pdf, page 1>
+Package pdftex.def Info: ./Interview/interview_questions.pdf, page1 used on input line 55.
+(pdftex.def)             Requested size: 597.53374pt x 845.055pt.
+ [3 <./Interview/interview_questions.pdf>] <./Interview/interview_questions.pdf, id=44, page=2, 597.50786pt x 845.01837pt>
 File: ./Interview/interview_questions.pdf Graphic file (type pdf)
  <use ./Interview/interview_questions.pdf, page 2>
-Package pdftex.def Info: ./Interview/interview_questions.pdf, page2 used on input line 64.
-(pdftex.def)             Requested size: 390.0pt x 551.89929pt.
-
-Overfull \vbox (26.39929pt too high) has occurred while \output is active []
-
- [4 <./Interview/interview_questions.pdf>] <./Interview/interview_questions.pdf, id=37, page=3, 597.23125pt x 845.1575pt>
+Package pdftex.def Info: ./Interview/interview_questions.pdf, page2 used on input line 55.
+(pdftex.def)             Requested size: 597.53374pt x 845.055pt.
+File: ./Interview/interview_questions.pdf Graphic file (type pdf)
+ <use ./Interview/interview_questions.pdf, page 2>
+Package pdftex.def Info: ./Interview/interview_questions.pdf, page2 used on input line 55.
+(pdftex.def)             Requested size: 597.53374pt x 845.055pt.
+File: ./Interview/interview_questions.pdf Graphic file (type pdf)
+ <use ./Interview/interview_questions.pdf, page 2>
+Package pdftex.def Info: ./Interview/interview_questions.pdf, page2 used on input line 55.
+(pdftex.def)             Requested size: 597.53374pt x 845.055pt.
+ [4 <./Interview/interview_questions.pdf>] <./Interview/interview_questions.pdf, id=56, page=3, 597.50786pt x 845.01837pt>
 File: ./Interview/interview_questions.pdf Graphic file (type pdf)
  <use ./Interview/interview_questions.pdf, page 3>
-Package pdftex.def Info: ./Interview/interview_questions.pdf, page3 used on input line 69.
-(pdftex.def)             Requested size: 390.0pt x 551.89929pt.
-
-Overfull \vbox (26.39929pt too high) has occurred while \output is active []
-
- [5 <./Interview/interview_questions.pdf>] <./DFD_analysis_key.pdf, id=50, 545.94707pt x 151.24966pt>
-File: ./DFD_analysis_key.pdf Graphic file (type pdf)
- <use ./DFD_analysis_key.pdf>
-Package pdftex.def Info: ./DFD_analysis_key.pdf used on input line 108.
+Package pdftex.def Info: ./Interview/interview_questions.pdf, page3 used on input line 55.
+(pdftex.def)             Requested size: 597.53374pt x 845.055pt.
+File: ./Interview/interview_questions.pdf Graphic file (type pdf)
+ <use ./Interview/interview_questions.pdf, page 3>
+Package pdftex.def Info: ./Interview/interview_questions.pdf, page3 used on input line 55.
+(pdftex.def)             Requested size: 597.53374pt x 845.055pt.
+File: ./Interview/interview_questions.pdf Graphic file (type pdf)
+ <use ./Interview/interview_questions.pdf, page 3>
+Package pdftex.def Info: ./Interview/interview_questions.pdf, page3 used on input line 55.
+(pdftex.def)             Requested size: 597.53374pt x 845.055pt.
+ [5 <./Interview/interview_questions.pdf>] <./Dataflow/DFD_analysis_key.pdf, id=68, 545.94707pt x 151.24966pt>
+File: ./Dataflow/DFD_analysis_key.pdf Graphic file (type pdf)
+ <use ./Dataflow/DFD_analysis_key.pdf>
+Package pdftex.def Info: ./Dataflow/DFD_analysis_key.pdf used on input line 93.
 (pdftex.def)             Requested size: 390.0pt x 108.04575pt.
- [6] <./DFD_analysis_new_item.pdf, id=55, 167.04773pt x 316.53076pt>
-File: ./DFD_analysis_new_item.pdf Graphic file (type pdf)
- <use ./DFD_analysis_new_item.pdf>
-Package pdftex.def Info: ./DFD_analysis_new_item.pdf used on input line 113.
+ <./Dataflow/DFD_analysis_new_item.pdf, id=69, 167.04773pt x 316.53076pt>
+File: ./Dataflow/DFD_analysis_new_item.pdf Graphic file (type pdf)
+ <use ./Dataflow/DFD_analysis_new_item.pdf>
+Package pdftex.def Info: ./Dataflow/DFD_analysis_new_item.pdf used on input line 98.
 (pdftex.def)             Requested size: 83.52365pt x 158.26498pt.
- [7 <./DFD_analysis_key.pdf> <./DFD_analysis_new_item.pdf>] <./DFD_analysis_update_item.pdf, id=90, 139.84143pt x 305.0539pt>
-File: ./DFD_analysis_update_item.pdf Graphic file (type pdf)
- <use ./DFD_analysis_update_item.pdf>
-Package pdftex.def Info: ./DFD_analysis_update_item.pdf used on input line 122.
+ [6 <./Dataflow/DFD_analysis_key.pdf>] [7 <./Dataflow/DFD_analysis_new_item.pdf>] <./Dataflow/DFD_analysis_update_item.pdf, id=108, 139.84143pt x 305.0539pt>
+File: ./Dataflow/DFD_analysis_update_item.pdf Graphic file (type pdf)
+ <use ./Dataflow/DFD_analysis_update_item.pdf>
+Package pdftex.def Info: ./Dataflow/DFD_analysis_update_item.pdf used on input line 107.
 (pdftex.def)             Requested size: 69.92053pt x 152.52657pt.
- [8 <./DFD_analysis_update_item.pdf>]
-Overfull \vbox (304.68343pt too high) has occurred while \output is active []
+ [8 <./Dataflow/DFD_analysis_update_item.pdf>] [9] <./DataS&D/data_sources_&_destinations.pdf, id=133, page=1, 464.62425pt x 564.69pt>
+File: ./DataS&D/data_sources_&_destinations.pdf Graphic file (type pdf)
+ <use ./DataS&D/data_sources_&_destinations.pdf, page 1>
+Package pdftex.def Info: ./DataS&D/data_sources_&_destinations.pdf, page1 used on input line 135.
+(pdftex.def)             Requested size: 390.0pt x 474.01755pt.
+File: ./Dataflow/DFD_analysis_key.pdf Graphic file (type pdf)
+ <use ./Dataflow/DFD_analysis_key.pdf>
+Package pdftex.def Info: ./Dataflow/DFD_analysis_key.pdf used on input line 142.
+(pdftex.def)             Requested size: 390.0pt x 108.04575pt.
+ [10 <./DataS&D/data_sources_&_destinations.pdf>] <./Dataflow/Data_flow_new.pdf, id=160, 461.61923pt x 380.25575pt>
+File: ./Dataflow/Data_flow_new.pdf Graphic file (type pdf)
+ <use ./Dataflow/Data_flow_new.pdf>
+Package pdftex.def Info: ./Dataflow/Data_flow_new.pdf used on input line 147.
+(pdftex.def)             Requested size: 390.0pt x 321.27516pt.
+ <./Dataflow/Data_flow_update.pdf, id=161, 517.32297pt x 228.05843pt>
+File: ./Dataflow/Data_flow_update.pdf Graphic file (type pdf)
 
- [9] (/Users/joel/Google Drive/A levels/Computing/Github/COMP4Coursework/Analysis/.texpadtmp/analysis.aux)
+<use ./Dataflow/Data_flow_update.pdf>
+Package pdftex.def Info: ./Dataflow/Data_flow_update.pdf used on input line 152.
+(pdftex.def)             Requested size: 390.0pt x 171.93076pt.
+ [11 <./Dataflow/Data_flow_new.pdf>] [12 <./Dataflow/Data_flow_update.pdf>]
+Overfull \vbox (168.68343pt too high) has occurred while \output is active []
+
+ [13] (/Users/joel/Google Drive/A levels/Computing/Github/COMP4Coursework/Analysis/.texpadtmp/analysis.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4165 strings out of 493117
- 61420 string characters out of 6135433
- 140041 words of memory out of 5000000
- 7585 multiletter control sequences out of 15000+600000
+ 4187 strings out of 493117
+ 62254 string characters out of 6135433
+ 141059 words of memory out of 5000000
+ 7601 multiletter control sequences out of 15000+600000
  6530 words of font info for 24 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,6n,39p,727b,912s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 40i,18n,46p,727b,912s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on "/Users/joel/Google Drive/A levels/Computing/Github/COMP4Coursework/Analysis/.texpadtmp/analysis.pdf" (9 pages, 140624 bytes).
+Output written on "/Users/joel/Google Drive/A levels/Computing/Github/COMP4Coursework/Analysis/.texpadtmp/analysis.pdf" (13 pages, 275672 bytes).
 PDF statistics:
- 127 PDF objects out of 1000 (max. 8388607)
- 87 compressed objects within 1 object stream
+ 208 PDF objects out of 1000 (max. 8388607)
+ 143 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
 
