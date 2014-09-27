@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 \documentclass[a4paper,12pt]{report}
 \usepackage{graphicx}
 \usepackage{pdfpages}
@@ -29,8 +28,6 @@
   tabsize=3
 }
 
-=======
->>>>>>> FETCH_HEAD
 \begin{document}
 
 \chapter{Analysis}
@@ -159,32 +156,61 @@ The Following table shows the proposed data and their respective sources and des
 
 \subsubsection{Volumetrics}
 
-I have chosen to start off with only 20 Item Records along with 20 Loan Records and 20 PAT Test Records. In total there will be 60 Records.  I have chosen this number of records as my Client and I had previously agreed that this would be a suitable number of records to start with in order for him to get used to the system and train up other colleagues to know how to use it also. This can be increased as time goes by
+I have chosen to start off with only 20 Item Records along with 20 Loan Records and 20 PAT Test Records. In total there will be 60 Records.  I have chosen this number of records as my Client and I had previously agreed that this would be a suitable number of records to start with in order for him to get used to the system and train up other colleagues to know how to use it also. This can be increased as time goes by.
 
-the Item Records Database, Loan Records Database and the PAT Test Records Database will store 18 fields of data for each item combined. Each field should take up 1KB of hard disk space. With this the required initial storage space will be:
+The Item Records Database, Loan Records Database and the PAT Test Records Database will store 18 fields of combined data. Each field should take up 1KB of hard disk space. With this the required initial storage space will be:
 
+18KB * 60 = 1080KB
 
+1080KB / 1024 = 1.05MB
 
+If the rest of database managemnent system took up 28MB, the client would need 19.05MB of space for 60 records, with 18 fields of data
+
+\newpage
 
 \section{Objectives}
 
 \subsection{General Objectives}
 
 \begin{itemize}
-	\item Easily understandable layout and structure for records
-	\item Ability to sort items
-	\item Easy to locate items
-	\item
-	\item Easy structure for input and outputs
+	\item Easily understandable layout and structure for records.
+	\item Easy structure for input and outputs.
+	\item Easy viewing of records
 \end{itemize}
 
 \subsection{Specific Objectives}
 
-Record viewing
+Record viewing:
 \begin{itemize}
-	\item 
+    \item Clear labels for data attributes.
+    \item Next and Preious record buttons.
+    \item Edit button so data cannot be changed accidentally.
+    \item Submit button to save data changes (if any) to the current record.
+    \item First and Last record buttons to jump to respective record.
+\end{itemize}
+
+\noindent Data input:
+\begin{itemize}
+    \item Data fields become editable
+    \item Drop down selection for location selection
+    \item Changes saved immediately after editng has finished (ie submit button pressed)
+\end{itemize}
+
+\noindent Data output:
+\begin{itemize}
+    \item Print button and functionality
+    \item Export records to PDF
+    \item Print/Export a batch of records to PDF
+\end{itemize}
+
+
 
 \subsection{Core Objectives}
+
+\begin{itemize}
+    \item 
+\end{itemize}
+
 
 \subsection{Other Objectives}
 

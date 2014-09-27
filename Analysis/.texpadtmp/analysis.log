@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.9.11)  24 SEP 2014 20:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.9.11)  27 SEP 2014 13:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -313,26 +313,33 @@ File: ./Dataflow/Data_flow_update.pdf Graphic file (type pdf)
 Package pdftex.def Info: ./Dataflow/Data_flow_update.pdf used on input line 152.
 (pdftex.def)             Requested size: 390.0pt x 171.93076pt.
  [11 <./Dataflow/Data_flow_new.pdf>] [12 <./Dataflow/Data_flow_update.pdf>]
-Overfull \vbox (168.68343pt too high) has occurred while \output is active []
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 176.
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 176.
+ [13]
+Overfull \vbox (9.55008pt too high) has occurred while \output is active []
 
- [13] (/Users/joel/Google Drive/A levels/Computing/Github/COMP4Coursework/Analysis/.texpadtmp/analysis.aux)
+ [14] (/Users/joel/Google Drive/A levels/Computing/Github/COMP4Coursework/Analysis/.texpadtmp/analysis.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4187 strings out of 493117
- 62254 string characters out of 6135433
+ 4205 strings out of 493117
+ 62571 string characters out of 6135433
  141059 words of memory out of 5000000
- 7601 multiletter control sequences out of 15000+600000
- 6530 words of font info for 24 fonts, out of 8000000 for 9000
+ 7616 multiletter control sequences out of 15000+600000
+ 6787 words of font info for 25 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  40i,18n,46p,727b,912s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on "/Users/joel/Google Drive/A levels/Computing/Github/COMP4Coursework/Analysis/.texpadtmp/analysis.pdf" (13 pages, 275672 bytes).
+</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on "/Users/joel/Google Drive/A levels/Computing/Github/COMP4Coursework/Analysis/.texpadtmp/analysis.pdf" (14 pages, 284801 bytes).
 PDF statistics:
- 208 PDF objects out of 1000 (max. 8388607)
- 143 compressed objects within 2 object streams
+ 215 PDF objects out of 1000 (max. 8388607)
+ 148 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  61 words of extra memory for PDF output out of 10000 (max. 10000000)
 
