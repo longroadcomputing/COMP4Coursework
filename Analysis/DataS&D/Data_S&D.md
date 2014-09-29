@@ -8,6 +8,7 @@
 |Josh|SubTotal|Real|Database - Item Records|
 |Josh|OnLoan|Text|Database - Item Records|
 |-|-|-|-|
+|Josh|LoanID|Integer|Database - Loan Records|
 |Database - Item Records|ItemID|Integer|Database - Loan Records|
 |Database - Item Records|ItemName|Text|Database - Loan Records|
 |Josh|LoanRate|Real|Database - Loan Records|
@@ -16,6 +17,7 @@
 |Josh|LoanTime|Time|Database - Loan Records|
 |Josh|LoanCost|Real|Database - Loan Records|
 |-|-|-|-|
+|Josh|TestID|Integer|Database - PAT test records|
 |Database - Item Records|ItemID|Integer|Database - PAT test Records|
 |Database - Item Records|ItemName|Text|Database - PAT test Records|
 |Database - Item Records|LastTest|Date|Next PAT Test Calculation|

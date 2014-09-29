@@ -84,9 +84,7 @@ IF Item = Sold OR Item = Damaged or Item = Stolen DO
         Claim Insurance
 \end{lstlisting}
 
-
-
-\subsubsection{Data flow diagram (part 1)}
+\subsubsection{Data flow diagrams}
 
 \begin{figure}[H]
     \caption{Flow Diagram Key.} \label{fig:print_function_result}
@@ -95,16 +93,12 @@ IF Item = Sold OR Item = Damaged or Item = Stolen DO
 
 \begin{figure}[H]
     \caption{Entering a new item.} \label{fig:print_function_result}
-    \includegraphics[width=50mm,scale=0.5]{./Dataflow/DFD_analysis_new_item.pdf}
+    \includegraphics[width=125px]{./Dataflow/DFD_analysis_new_item.pdf}
 \end{figure}
-
-\newpage
-
-\subsubsection{Data flow diagram (part 2)}
 
 \begin{figure}[H]
     \caption{Flow Diagram Key.} \label{fig:print_function_result}
-    \includegraphics[width=50mm,scale=0.5]{./Dataflow/DFD_analysis_update_item.pdf}
+    \includegraphics[width=125px]{./Dataflow/DFD_analysis_update_item.pdf}
 \end{figure}
 
 \newpage
@@ -132,7 +126,7 @@ The Following table shows the proposed data and their respective sources and des
 
 \begin{figure}[H]
     \caption{Data sources and destinations} \label{fig: Data sources and destinations}
-    \includegraphics[page=1,width=\textwidth]{./DataS&D/data_sources_&_destinations.pdf}
+    \includegraphics[page=1,width=380px]{./DataS&D/Data_S&D.pdf}
 \end{figure}
 
 \subsubsection{Data flow diagram}
@@ -153,6 +147,12 @@ The Following table shows the proposed data and their respective sources and des
 \end{figure}
 
 \subsubsection{Data dictionary}
+
+\begin{figure}[H]
+    \caption{Data Dictionary.} \label{fig:data_dictionary}
+    \includegraphics[width=\textwidth]{./Dictionary/Data_dictionary.pdf}
+\end{figure}
+
 
 \subsubsection{Volumetrics}
 
@@ -204,25 +204,49 @@ Record viewing:
 \end{itemize}
 
 
-
 \subsection{Core Objectives}
 
 \begin{itemize}
-    \item 
+    \item Viewing of Item/Loan/PAT-test Records
+    \item Item/Loan/PAT-test data input
+    \item Item/Loan/PAT-test data editing
+    \item Sending of Loan Invoices
 \end{itemize}
 
-
 \subsection{Other Objectives}
+
+\begin{itemize}
+    \item Printing records/invoices
+    \item Exporting records/invoices to PDF
+\end{itemize}
 
 \section{ER Diagrams and Descriptions}
 
 \subsection{ER Diagram}
 
+\begin{figure}[H]
+    \caption{ER Diagrams.} \label{fig:ER Diagrams}
+    \includegraphics[width=\textwidth]{./ER_Diagrams/ER_Diagrams.pdf}
+\end{figure}
+
 \subsection{Entity Descriptions}
+
+Item(\underline{ItemID},Name,Location,Value,Quantity,SubTotal,OnLoan, \emph{PATNeeded})
+
+Loan(\underline{LoanID},\emph{ItemID},\emph{ItemName},LoanRate,LoanStartDate,LoanEndDate,LoanTime,LoanCost)
+
+PATTest(\underline{TestID},\emph{ItemID},\emph{ItemName},LastTest,NextTest)
 
 \section{Object Analysis}
 
 \subsection{Object Listing}
+
+\begin{itemize}
+    \item Client
+    \item Item
+    \item Loan
+    \item PAT test
+\end{itemize}
 
 \subsection{Relationship diagrams}
 
