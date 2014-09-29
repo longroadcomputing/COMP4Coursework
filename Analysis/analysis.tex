@@ -1,4 +1,12 @@
 \documentclass[a4paper,12pt]{report}
+
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{labelcas}
+\usepackage{listings}
+\usepackage{color}
 \usepackage{graphicx}
 \usepackage{pdfpages}
 \usepackage{algorithm}
@@ -28,6 +36,7 @@
   tabsize=3
 }
 
+
 \begin{document}
 
 \chapter{Analysis}
@@ -36,11 +45,11 @@
 
 \subsection{Client Identification}
 
-My client is Josh Campbell, he is 24 years old. He uses computers regularly for deisgn work, so has experience of computer systems. He uses his computer to design flyers, handouts, banners and visual graphics for projection, as well as surfing the web, email and various social media networks.He rarely uses hard copies other than to preview hes work before sending it off to print. Josh uses a 2012 Mac Pro with the latest version of Apple's operating system, OS X (10.9).
+My client is Josh Campbell, he is 24 years old. He uses computers regularly for deisgn work, so has experience of computer systems. He uses his computer to design flyers, handouts, banners and visual graphics for projection, as well as surfing the web, email and various social media networks.He rarely uses hard copies other than to preview hes work before sending it off to print. Josh uses a 2012 Mac Pro with the latest version of Apple's operating system, OS X (10.9).\\
 
-Josh is the head of the media department for Cambridge Community Church. This involves being responcible for the large amount of Audio and Visual equipment used on the churches Sunday services. This currently invloves spreadsheet with limited info on each item. 
+\noindent Josh is the head of the media department for Cambridge Community Church. This involves being responcible for the large amount of Audio and Visual equipment used on the churches Sunday services. This currently invloves spreadsheet with limited info on each item. \\
 
-Josh would like to have a database management system to be able to hold information about each item and their various attributes. He would likke this database to be lovated on the churches central server so that it can be accessed by all staff if it it deemed necessary. He would use this database to store location, value and insurance details incase of damage or theft.he would like all of the information kept as a virtual copy as well as a hard copy to kept as a visual backup in case of harddrive failure or corruption. He would also like to keep the location of each item as up to date as possible and if the location changes, he would like to be notified by email when it is entered/updated in the system.
+\noindent Josh would like to have a database management system to be able to hold information about each item and their various attributes. He would likke this database to be lovated on the churches central server so that it can be accessed by all staff if it it deemed necessary. He would use this database to store location, value and insurance details incase of damage or theft.he would like all of the information kept as a virtual copy as well as a hard copy to kept as a visual backup in case of harddrive failure or corruption. He would also like to keep the location of each item as up to date as possible and if the location changes, he would like to be notified by email when it is entered/updated in the system.
 
 \subsection{Define the current system}
 
@@ -93,28 +102,25 @@ IF Item = Sold OR Item = Damaged or Item = Stolen DO
 
 \begin{figure}[H]
     \caption{Entering a new item.} \label{fig:print_function_result}
-    \includegraphics[width=125px]{./Dataflow/DFD_analysis_new_item.pdf}
+    \centerline{\includegraphics[width=125px]{./Dataflow/DFD_analysis_new_item.pdf}}
 \end{figure}
 
 \begin{figure}[H]
     \caption{Flow Diagram Key.} \label{fig:print_function_result}
-    \includegraphics[width=125px]{./Dataflow/DFD_analysis_update_item.pdf}
+    \centerline{\includegraphics[width=125px]{./Dataflow/DFD_analysis_update_item.pdf}}
 \end{figure}
 
 \newpage
 
 \subsubsection{Input Forms, Output Forms, Report Formats}
 
-Josh's current system only has one input form, this is an electronic form which is the application excel. Josh also has two ouput forms - an invoice form for when he hires out equipment to a third party and a quote sheet to show the value of a piece of equipment when he needs to insure it.
+Josh's current system only has one input form, this is an electronic form which is the application excel. Josh also has two ouput forms - an invoice form for when he hires out equipment to a third party and a quote sheet to show the value of a piece of equipment when he needs to insure it.\\
 
-Below is an example of the input method used to insert data into the current system.
+\noindent Below is an example of the input method used to insert data into the current system.\\
 
+\noindent Below is an example of one of Josh's Invoice forms.\\
 
-
-
-Below is an example of one of Josh's Invoice forms. The headings show Product Name, Loan Rate, Length of Loan and Total Cost.
-
-Here is an example of a quote sheet that Josh has given me.
+\noindent The following is an example of a quote sheet that Josh has given me.\\
 
 \newpage
 
@@ -126,7 +132,7 @@ The Following table shows the proposed data and their respective sources and des
 
 \begin{figure}[H]
     \caption{Data sources and destinations} \label{fig: Data sources and destinations}
-    \includegraphics[page=1,width=380px]{./DataS&D/Data_S&D.pdf}
+    \centerline{\includegraphics[page=1,width=350px]{./DataS&D/Data_S&D.pdf}}
 \end{figure}
 
 \subsubsection{Data flow diagram}
@@ -146,6 +152,8 @@ The Following table shows the proposed data and their respective sources and des
     \includegraphics[width=\textwidth]{./Dataflow/Data_flow_update.pdf}
 \end{figure}
 
+
+
 \subsubsection{Data dictionary}
 
 \begin{figure}[H]
@@ -156,9 +164,9 @@ The Following table shows the proposed data and their respective sources and des
 
 \subsubsection{Volumetrics}
 
-I have chosen to start off with only 20 Item Records along with 20 Loan Records and 20 PAT Test Records. In total there will be 60 Records.  I have chosen this number of records as my Client and I had previously agreed that this would be a suitable number of records to start with in order for him to get used to the system and train up other colleagues to know how to use it also. This can be increased as time goes by.
+I have chosen to start off with only 20 Item Records along with 20 Loan Records and 20 PAT Test Records. In total there will be 60 Records.  I have chosen this number of records as my Client and I had previously agreed that this would be a suitable number of records to start with in order for him to get used to the system and train up other colleagues to know how to use it also. This can be increased as time goes by.\\
 
-The Item Records Database, Loan Records Database and the PAT Test Records Database will store 18 fields of combined data. Each field should take up 1KB of hard disk space. With this the required initial storage space will be:
+\noindent The Item Records Database, Loan Records Database and the PAT Test Records Database will store 18 fields of combined data. Each field should take up 1KB of hard disk space. With this the required initial storage space will be:
 
 18KB * 60 = 1080KB
 
@@ -226,16 +234,19 @@ Record viewing:
 
 \begin{figure}[H]
     \caption{ER Diagrams.} \label{fig:ER Diagrams}
-    \includegraphics[width=\textwidth]{./ER_Diagrams/ER_Diagrams.pdf}
+    \centerline{\includegraphics[width=250px]{./ER_Diagrams/ER_Diagrams.pdf}}
 \end{figure}
+
+\newpage
 
 \subsection{Entity Descriptions}
 
-Item(\underline{ItemID},Name,Location,Value,Quantity,SubTotal,OnLoan, \emph{PATNeeded})
+Item(\underline{ItemID}, Name, Location, Value, Quantity, SubTotal, OnLoan,\\
+\noindent \emph{PATNeeded})\\
 
-Loan(\underline{LoanID},\emph{ItemID},\emph{ItemName},LoanRate,LoanStartDate,LoanEndDate,LoanTime,LoanCost)
+\noindent Loan(\underline{LoanID}, \emph{ItemID}, \emph{ItemName}, LoanRate, LoanStartDate, LoanEndDate, LoanTime, LoanCost)\\
 
-PATTest(\underline{TestID},\emph{ItemID},\emph{ItemName},LastTest,NextTest)
+\noindent PATTest(\underline{TestID}, \emph{ItemID}, \emph{ItemName}, LastTest, NextTest)
 
 \section{Object Analysis}
 
@@ -250,7 +261,14 @@ PATTest(\underline{TestID},\emph{ItemID},\emph{ItemName},LastTest,NextTest)
 
 \subsection{Relationship diagrams}
 
+\begin{figure}[H]
+    \caption{Relatioship Diagra.} \label{fig:relationship_diadram}
+    \includegraphics[width=\textwidth]{./Relationship_Diagrams/Relationships_diagrams.pdf}
+\end{figure}
+
 \subsection{Class definitions}
+
+
 
 \section{Other Abstractions and Graphs}
 

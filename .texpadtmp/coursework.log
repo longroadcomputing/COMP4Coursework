@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.9.11)  17 SEP 2014 17:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.9.11)  29 SEP 2014 13:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -9,8 +9,8 @@ LaTeX2e <2014/05/01>
 Babel <3.9k> and hyphenation patterns for 78 languages loaded.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
-(/usr/local/texlive/2014/texmf-dist/tex/latex/base/size10.clo
-File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@chapter=\count80
@@ -551,17 +551,11 @@ Package: pdflscape 2008/08/11 v0.10 Display of landscape pages in PDF (HO)
 Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 80.
-) (/usr/local/texlive/2014/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
-\fancy@headwidth=\skip59
-\f@ncyO@elh=\skip60
-\f@ncyO@erh=\skip61
-\f@ncyO@olh=\skip62
-\f@ncyO@orh=\skip63
-\f@ncyO@elf=\skip64
-\f@ncyO@erf=\skip65
-\f@ncyO@olf=\skip66
-\f@ncyO@orf=\skip67
-) (/usr/local/texlive/2014/texmf-dist/tex/latex/xcolor/xcolor.sty
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2013/08/25 v0.4v Insert pages of external PDF documents (AM)
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2013/10/06 v2.0d eso-pic (RN)
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
  (/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
@@ -576,7 +570,353 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
-)) (/Users/joel/Google Drive/A levels/Computing/Github/COMP4Coursework/.texpadtmp/coursework.aux (/Users/joel/Google Drive/A levels/Computing/Github/COMP4Coursework/.texpadtmp/./Analysis/analysis.aux))
+)) (/usr/local/texlive/2014/texmf-dist/tex/latex/pdfpages/pppdftex.def
+File: pppdftex.def 2013/08/25 v0.4v Pdfpages driver for pdfTeX (AM)
+)
+\AM@pagebox=\box39
+\AM@toc@title=\toks32
+\c@AM@survey=\count138
+\AM@templatesizebox=\box40
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/algorithms/algorithmic.sty
+Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
+\c@ALC@unique=\count139
+\c@ALC@line=\count140
+\c@ALC@rem=\count141
+\c@ALC@depth=\count142
+\ALC@tlm=\skip59
+
+
+/usr/local/texlive/2014/texmf-dist/tex/latex/algorithms/algorithmic.sty:51: LaTeX Error: Command \algorithmicindent already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.51 \newlength{\algorithmicindent}
+                                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/usr/local/texlive/2014/texmf-dist/tex/latex/algorithms/algorithmic.sty:52: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.52 \setlength{\algorithmicindent}{0pt}
+                                        
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+/usr/local/texlive/2014/texmf-dist/tex/latex/algorithms/algorithmic.sty:53: Missing number, treated as zero.
+<to be read again> 
+                   \let 
+l.53 \define@key{ALG}{indent}
+                             {\setlength{\algorithmicindent}{#1}}
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+/usr/local/texlive/2014/texmf-dist/tex/latex/algorithms/algorithmic.sty:53: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \let 
+l.53 \define@key{ALG}{indent}
+                             {\setlength{\algorithmicindent}{#1}}
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+
+/usr/local/texlive/2014/texmf-dist/tex/latex/algorithms/algorithmic.sty:66: LaTeX Error: Command \algorithmicrequire already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.66 ...nd{\algorithmicrequire}{\textbf{Require:}}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/usr/local/texlive/2014/texmf-dist/tex/latex/algorithms/algorithmic.sty:67: LaTeX Error: Command \algorithmicensure already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.67 ...mand{\algorithmicensure}{\textbf{Ensure:}}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/usr/local/texlive/2014/texmf-dist/tex/latex/algorithms/algorithmic.sty:68: LaTeX Error: Command \algorithmiccomment already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.68 \newcommand{\algorithmiccomment}[1]{\{#1\}}
+                                                
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/usr/local/texlive/2014/texmf-dist/tex/latex/algorithms/algorithmic.sty:69: LaTeX Error: Command \algorithmicend already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.69 \newcommand{\algorithmicend}{\textbf{end}}
+                                               
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/usr/local/texlive/2014/texmf-dist/tex/latex/algorithms/algorithmic.sty:70: LaTeX Error: Command \algorithmicif already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.70 \newcommand{\algorithmicif}{\textbf{if}}
+                                             
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/usr/local/texlive/2014/texmf-dist/tex/latex/algorithms/algorithmic.sty:71: LaTeX Error: Command \algorithmicthen already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.71 \newcommand{\algorithmicthen}{\textbf{then}}
+                                                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/usr/local/texlive/2014/texmf-dist/tex/latex/algorithms/algorithmic.sty:72: LaTeX Error: Command \algorithmicelse already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.72 \newcommand{\algorithmicelse}{\textbf{else}}
+                                                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/usr/local/texlive/2014/texmf-dist/tex/latex/algorithms/algorithmic.sty:75: LaTeX Error: Command \algorithmicfor already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.75 \newcommand{\algorithmicfor}{\textbf{for}}
+                                               
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/usr/local/texlive/2014/texmf-dist/tex/latex/algorithms/algorithmic.sty:76: LaTeX Error: Command \algorithmicforall already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.76 ...mand{\algorithmicforall}{\textbf{for all}}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/usr/local/texlive/2014/texmf-dist/tex/latex/algorithms/algorithmic.sty:77: LaTeX Error: Command \algorithmicdo already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.77 \newcommand{\algorithmicdo}{\textbf{do}}
+                                             
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/usr/local/texlive/2014/texmf-dist/tex/latex/algorithms/algorithmic.sty:79: LaTeX Error: Command \algorithmicwhile already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.79 ...command{\algorithmicwhile}{\textbf{while}}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/usr/local/texlive/2014/texmf-dist/tex/latex/algorithms/algorithmic.sty:81: LaTeX Error: Command \algorithmicloop already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.81 \newcommand{\algorithmicloop}{\textbf{loop}}
+                                                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/usr/local/texlive/2014/texmf-dist/tex/latex/algorithms/algorithmic.sty:83: LaTeX Error: Command \algorithmicrepeat already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.83 ...mmand{\algorithmicrepeat}{\textbf{repeat}}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/usr/local/texlive/2014/texmf-dist/tex/latex/algorithms/algorithmic.sty:84: LaTeX Error: Command \algorithmicuntil already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.84 ...command{\algorithmicuntil}{\textbf{until}}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/usr/local/texlive/2014/texmf-dist/tex/latex/algorithms/algorithmic.sty:86: LaTeX Error: Command \algorithmicreturn already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.86 ...mmand{\algorithmicreturn}{\textbf{return}}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/usr/local/texlive/2014/texmf-dist/tex/latex/algorithms/algorithmic.sty:229: LaTeX Error: Command \algorithmic already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.229 {\end{list}}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/labelcas/labelcas.sty
+Package: labelcas 2006/08/14 v1.12 check label-existence and fork accordingly
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+\fancy@headwidth=\skip60
+\f@ncyO@elh=\skip61
+\f@ncyO@erh=\skip62
+\f@ncyO@olh=\skip63
+\f@ncyO@orh=\skip64
+\f@ncyO@elf=\skip65
+\f@ncyO@erf=\skip66
+\f@ncyO@olf=\skip67
+\f@ncyO@orf=\skip68
+))
+./coursework.tex:2: Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.2 \include{settings}
+                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+./coursework.tex:2: Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.2 \include{settings}
+                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[1
+
+
+{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (/Users/joel/Google Drive/A levels/Computing/Github/COMP4Coursework/.texpadtmp/coursework.aux (/Users/joel/Google Drive/A levels/Computing/Github/COMP4Coursework/.texpadtmp/./Analysis/analysis.aux
+
+LaTeX Warning: Label `fig:print_function_result' multiply defined.
+
+
+LaTeX Warning: Label `fig:print_function_result' multiply defined.
+
+
+LaTeX Warning: Label `fig:print_function_result' multiply defined.
+
+
+LaTeX Warning: Label `fig:print_function_result' multiply defined.
+
+
+LaTeX Warning: Label `fig:print_function_result' multiply defined.
+
+))
 \openout1 = `coursework.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
@@ -593,20 +933,20 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
-\c@lstlisting=\count138
+\c@lstlisting=\count143
  (/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count139
+\scratchcounter=\count144
 \scratchdimen=\dimen134
-\scratchbox=\box39
-\nofMPsegments=\count140
-\nofMParguments=\count141
-\everyMPshowfont=\toks32
-\MPscratchCnt=\count142
+\scratchbox=\box41
+\nofMPsegments=\count145
+\nofMParguments=\count146
+\everyMPshowfont=\toks33
+\MPscratchCnt=\count147
 \MPscratchDim=\dimen135
-\MPnumerator=\count143
-\makeMPintoPDFobject=\count144
-\everyMPtoPDFconversion=\toks33
+\MPnumerator=\count148
+\makeMPintoPDFobject=\count149
+\everyMPtoPDFconversion=\toks34
 ) (/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
  (/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/grfext.sty
@@ -618,14 +958,14 @@ Package grfext Info: Graphics extension search list:
  (/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-\AtBeginShipoutBox=\box40
+\AtBeginShipoutBox=\box42
 Package hyperref Info: Link coloring OFF on input line 3.
  (/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
  (/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count145
+\c@section@level=\count150
 )
 LaTeX Info: Redefining \ref on input line 3.
 LaTeX Info: Redefining \pageref on input line 3.
@@ -636,9 +976,7 @@ LaTeX Info: Redefining \nameref on input line 3.
 
  [1
 
-
-
-{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (/Users/joel/Google Drive/A levels/Computing/Github/COMP4Coursework/.texpadtmp/coursework.toc)
+] (/Users/joel/Google Drive/A levels/Computing/Github/COMP4Coursework/.texpadtmp/coursework.toc)
 \tf@toc=\write6
 \openout6 = `coursework.toc'.
 
@@ -659,102 +997,302 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1 \documentclass
-                  [12pt]{report}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-./Analysis/analysis.tex:2: LaTeX Error: Can be used only in preamble.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2 \usepackage
-               {graphicx}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-./Analysis/analysis.tex:3: LaTeX Error: Can be used only in preamble.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.3 \usepackage
-               {pdfpages}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-./Analysis/analysis.tex:5: LaTeX Error: Can be used only in preamble.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.5 \begin{document}
+l.1 \begin{document}
                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
+Chapter 1.
 [2
 
-]
-Chapter 1.
-[3
 
-]
-./Analysis/analysis.tex:29: Undefined control sequence.
-l.29 \includepdf
-                [pages={-}]{./Interview/interview_questions.pdf}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+] <./Analysis/Interview/interview_questions.pdf, id=175, 597.50786pt x 845.01837pt>
+File: ./Analysis/Interview/interview_questions.pdf Graphic file (type pdf)
+ <use ./Analysis/Interview/interview_questions.pdf>
+Package pdftex.def Info: ./Analysis/Interview/interview_questions.pdf used on input line 25.
+(pdftex.def)             Requested size: 597.5064pt x 845.01631pt.
+File: ./Analysis/Interview/interview_questions.pdf Graphic file (type pdf)
+ <use ./Analysis/Interview/interview_questions.pdf>
+Package pdftex.def Info: ./Analysis/Interview/interview_questions.pdf used on input line 25.
+(pdftex.def)             Requested size: 597.5064pt x 845.01631pt.
 
-./Analysis/analysis.tex:29: Missing $ inserted.
-<inserted text> 
-                $
-l.29 \includepdf[pages={-}]{./Interview/interview_
-                                                  questions.pdf}
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
 
-./Analysis/analysis.tex:29: Extra }, or forgotten $.
-l.29 ...={-}]{./Interview/interview_questions.pdf}
-                                                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
 
-./Analysis/analysis.tex:30: Missing $ inserted.
-<inserted text> 
-                $
-l.30 
-     
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+[3] <./Analysis/Interview/interview_questions.pdf, id=183, page=1, 597.50786pt x 845.01837pt>
+File: ./Analysis/Interview/interview_questions.pdf Graphic file (type pdf)
+ <use ./Analysis/Interview/interview_questions.pdf, page 1>
+Package pdftex.def Info: ./Analysis/Interview/interview_questions.pdf, page1 used on input line 25.
+(pdftex.def)             Requested size: 597.5064pt x 845.01631pt.
+File: ./Analysis/Interview/interview_questions.pdf Graphic file (type pdf)
+ <use ./Analysis/Interview/interview_questions.pdf, page 1>
+Package pdftex.def Info: ./Analysis/Interview/interview_questions.pdf, page1 used on input line 25.
+(pdftex.def)             Requested size: 597.53374pt x 845.055pt.
+File: ./Analysis/Interview/interview_questions.pdf Graphic file (type pdf)
+ <use ./Analysis/Interview/interview_questions.pdf, page 1>
+Package pdftex.def Info: ./Analysis/Interview/interview_questions.pdf, page1 used on input line 25.
+(pdftex.def)             Requested size: 597.53374pt x 845.055pt.
+File: ./Analysis/Interview/interview_questions.pdf Graphic file (type pdf)
+ <use ./Analysis/Interview/interview_questions.pdf, page 1>
+Package pdftex.def Info: ./Analysis/Interview/interview_questions.pdf, page1 used on input line 25.
+(pdftex.def)             Requested size: 597.53374pt x 845.055pt.
+File: ./Analysis/Interview/interview_questions.pdf Graphic file (type pdf)
+ <use ./Analysis/Interview/interview_questions.pdf, page 1>
+Package pdftex.def Info: ./Analysis/Interview/interview_questions.pdf, page1 used on input line 25.
+(pdftex.def)             Requested size: 597.53374pt x 845.055pt.
+ [4 <./Analysis/Interview/interview_questions.pdf>] <./Analysis/Interview/interview_questions.pdf, id=214, page=2, 597.50786pt x 845.01837pt>
+File: ./Analysis/Interview/interview_questions.pdf Graphic file (type pdf)
+ <use ./Analysis/Interview/interview_questions.pdf, page 2>
+Package pdftex.def Info: ./Analysis/Interview/interview_questions.pdf, page2 used on input line 25.
+(pdftex.def)             Requested size: 597.53374pt x 845.055pt.
+File: ./Analysis/Interview/interview_questions.pdf Graphic file (type pdf)
+ <use ./Analysis/Interview/interview_questions.pdf, page 2>
+Package pdftex.def Info: ./Analysis/Interview/interview_questions.pdf, page2 used on input line 25.
+(pdftex.def)             Requested size: 597.53374pt x 845.055pt.
+File: ./Analysis/Interview/interview_questions.pdf Graphic file (type pdf)
+ <use ./Analysis/Interview/interview_questions.pdf, page 2>
+Package pdftex.def Info: ./Analysis/Interview/interview_questions.pdf, page2 used on input line 25.
+(pdftex.def)             Requested size: 597.53374pt x 845.055pt.
+ [5 <./Analysis/Interview/interview_questions.pdf>] <./Analysis/Interview/interview_questions.pdf, id=228, page=3, 597.50786pt x 845.01837pt>
+File: ./Analysis/Interview/interview_questions.pdf Graphic file (type pdf)
+ <use ./Analysis/Interview/interview_questions.pdf, page 3>
+Package pdftex.def Info: ./Analysis/Interview/interview_questions.pdf, page3 used on input line 25.
+(pdftex.def)             Requested size: 597.53374pt x 845.055pt.
+File: ./Analysis/Interview/interview_questions.pdf Graphic file (type pdf)
+ <use ./Analysis/Interview/interview_questions.pdf, page 3>
+Package pdftex.def Info: ./Analysis/Interview/interview_questions.pdf, page3 used on input line 25.
+(pdftex.def)             Requested size: 597.53374pt x 845.055pt.
+File: ./Analysis/Interview/interview_questions.pdf Graphic file (type pdf)
+ <use ./Analysis/Interview/interview_questions.pdf, page 3>
+Package pdftex.def Info: ./Analysis/Interview/interview_questions.pdf, page3 used on input line 25.
+(pdftex.def)             Requested size: 597.53374pt x 845.055pt.
+ [6 <./Analysis/Interview/interview_questions.pdf>] <./Analysis/Dataflow/DFD_analysis_key.pdf, id=241, 545.94707pt x 151.24966pt>
+File: ./Analysis/Dataflow/DFD_analysis_key.pdf Graphic file (type pdf)
+ <use ./Analysis/Dataflow/DFD_analysis_key.pdf>
+Package pdftex.def Info: ./Analysis/Dataflow/DFD_analysis_key.pdf used on input line 61.
+(pdftex.def)             Requested size: 390.0pt x 108.04575pt.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 105.
-[4]
-Overfull \vbox (353.23543pt too high) has occurred while \output is active []
 
- [5]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 105.
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[7] <./Analysis/Dataflow/DFD_analysis_new_item.pdf, id=259, 167.04773pt x 316.53076pt>
+File: ./Analysis/Dataflow/DFD_analysis_new_item.pdf Graphic file (type pdf)
+ <use ./Analysis/Dataflow/DFD_analysis_new_item.pdf>
+Package pdftex.def Info: ./Analysis/Dataflow/DFD_analysis_new_item.pdf used on input line 66.
+(pdftex.def)             Requested size: 125.46921pt x 237.74522pt.
+ <./Analysis/Dataflow/DFD_analysis_update_item.pdf, id=260, 139.84143pt x 305.0539pt>
+File: ./Analysis/Dataflow/DFD_analysis_update_item.pdf Graphic file (type pdf)
+ <use ./Analysis/Dataflow/DFD_analysis_update_item.pdf>
+Package pdftex.def Info: ./Analysis/Dataflow/DFD_analysis_update_item.pdf used on input line 71.
+(pdftex.def)             Requested size: 125.46921pt x 273.7081pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[8pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.73 
+     pdfTeX warning (ext4): destination with the same identifier (name{figure.1.2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.73 
+      <./Analysis/Dataflow/DFD_analysis_key.pdf> <./Analysis/Dataflow/DFD_analysis_new_item.pdf>]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[9pdfTeX warning (ext4): destination with the same identifier (name{figure.1.3}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.74 \newpage
+              <./Analysis/Dataflow/DFD_analysis_update_item.pdf>]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[10] <./Analysis/DataS&D/Data_S&D.pdf, id=327, page=1, 465.6674pt x 620.14958pt>
+File: ./Analysis/DataS&D/Data_S&D.pdf Graphic file (type pdf)
+ <use ./Analysis/DataS&D/Data_S&D.pdf, page 1>
+Package pdftex.def Info: ./Analysis/DataS&D/Data_S&D.pdf, page1 used on input line 99.
+(pdftex.def)             Requested size: 381.42639pt x 507.96765pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[11]
+File: ./Analysis/Dataflow/DFD_analysis_key.pdf Graphic file (type pdf)
+ <use ./Analysis/Dataflow/DFD_analysis_key.pdf>
+Package pdftex.def Info: ./Analysis/Dataflow/DFD_analysis_key.pdf used on input line 106.
+(pdftex.def)             Requested size: 390.0pt x 108.04575pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[12pdfTeX warning (ext4): destination with the same identifier (name{figure.1.4}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.108 
+       <./Analysis/DataS&D/Data_S&D.pdf>] <./Analysis/Dataflow/Data_flow_new.pdf, id=361, 461.61923pt x 380.25575pt>
+File: ./Analysis/Dataflow/Data_flow_new.pdf Graphic file (type pdf)
+ <use ./Analysis/Dataflow/Data_flow_new.pdf>
+Package pdftex.def Info: ./Analysis/Dataflow/Data_flow_new.pdf used on input line 111.
+(pdftex.def)             Requested size: 390.0pt x 321.27516pt.
+ <./Analysis/Dataflow/Data_flow_update.pdf, id=362, 517.32297pt x 228.05843pt>
+File: ./Analysis/Dataflow/Data_flow_update.pdf Graphic file (type pdf)
+ <use ./Analysis/Dataflow/Data_flow_update.pdf>
+Package pdftex.def Info: ./Analysis/Dataflow/Data_flow_update.pdf used on input line 116.
+(pdftex.def)             Requested size: 390.0pt x 171.93076pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[13pdfTeX warning (ext4): destination with the same identifier (name{figure.1.5}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.118 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.1.6}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.118 
+       <./Analysis/Dataflow/Data_flow_new.pdf>] <./Analysis/Dictionary/Data_dictionary.pdf, id=382, 514.40944pt x 476.72774pt>
+File: ./Analysis/Dictionary/Data_dictionary.pdf Graphic file (type pdf)
+ <use ./Analysis/Dictionary/Data_dictionary.pdf>
+Package pdftex.def Info: ./Analysis/Dictionary/Data_dictionary.pdf used on input line 123.
+(pdftex.def)             Requested size: 390.0pt x 361.42937pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[14pdfTeX warning (ext4): destination with the same identifier (name{figure.1.7}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.125 
+       <./Analysis/Dataflow/Data_flow_update.pdf>]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[15pdfTeX warning (ext4): destination with the same identifier (name{figure.1.8}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.132 
+       <./Analysis/Dictionary/Data_dictionary.pdf>]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[16]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 146.
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 146.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[17] <./Analysis/ER_Diagrams/ER_Diagrams.pdf, id=440, 299.09894pt x 284.97546pt>
+File: ./Analysis/ER_Diagrams/ER_Diagrams.pdf Graphic file (type pdf)
+ <use ./Analysis/ER_Diagrams/ER_Diagrams.pdf>
+Package pdftex.def Info: ./Analysis/ER_Diagrams/ER_Diagrams.pdf used on input line 199.
+(pdftex.def)             Requested size: 390.0pt x 371.58559pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[18]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[19pdfTeX warning (ext4): destination with the same identifier (name{figure.1.9}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.202 \newpage
+               <./Analysis/ER_Diagrams/ER_Diagrams.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 206--208
+
+ []
+
+
+Overfull \hbox (0.26591pt too wide) in paragraph at lines 209--210
+\OT1/cmr/m/n/12 Loan($[]$, \OT1/cmr/m/it/12 ItemID\OT1/cmr/m/n/12 , \OT1/cmr/m/it/12 Item-Name\OT1/cmr/m/n/12 , Loan-Rate, LoanStart-Date, Loa-nEnd-Date,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 209--210
+
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 256.
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[20]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[21]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 256.
  (/Users/joel/Google Drive/A levels/Computing/Github/COMP4Coursework/.texpadtmp/coursework.aux (/Users/joel/Google Drive/A levels/Computing/Github/COMP4Coursework/.texpadtmp/./Analysis/analysis.aux)
 Runaway argument?
-{\contentsline {subsectio 
-/Users/joel/Google Drive/A levels/Computing/Github/COMP4Coursework/.texpadtmp/coursework.aux:19: File ended while scanning use of \@writefile.
+{{ 
+/Users/joel/Google Drive/A levels/Computing/Github/COMP4Coursework/.texpadtmp/coursework.aux:19: File ended while scanning use of \@newl@bel.
 <inserted text> 
                 \par 
 l.19 \@input{./Analysis/analysis.aux}
@@ -765,32 +1303,35 @@ I'll try to recover; but if the error is serious,
 you'd better type `E' or `X' now and fix your file.
 
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 105.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 105.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 256.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 256.
 Package rerunfilecheck Info: File `coursework.out' has not changed.
 (rerunfilecheck)             Checksum: <no file>.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 105.
- ) )
-(\end occurred inside a group at level 2)
 
-### simple group (level 2) entered at line 29 ({)
-### semi simple group (level 1) entered at line 5 (\begingroup)
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 256.
+ ) )
+(\end occurred inside a group at level 1)
+
+### semi simple group (level 1) entered at line 1 (\begingroup)
 ### bottom level
 (\end occurred when \iftrue on line 11 was incomplete)
 (\end occurred when \ifnum on line 11 was incomplete) 
 Here is how much of TeX's memory you used:
- 9913 strings out of 493117
- 142680 string characters out of 6135433
- 249462 words of memory out of 5000000
- 13186 multiletter control sequences out of 15000+600000
- 10235 words of font info for 37 fonts, out of 8000000 for 9000
+ 10974 strings out of 493117
+ 158620 string characters out of 6135433
+ 269894 words of memory out of 5000000
+ 14174 multiletter control sequences out of 15000+600000
+ 11706 words of font info for 42 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,11n,45p,759b,427s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on "/Users/joel/Google Drive/A levels/Computing/Github/COMP4Coursework/.texpadtmp/coursework.pdf" (6 pages, 101623 bytes).
+ 44i,18n,48p,759b,1114s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on "/Users/joel/Google Drive/A levels/Computing/Github/COMP4Coursework/.texpadtmp/coursework.pdf" (23 pages, 345346 bytes).
 PDF statistics:
- 251 PDF objects out of 1000 (max. 8388607)
- 233 compressed objects within 3 object streams
- 49 named destinations out of 1000 (max. 500000)
- 273 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 513 PDF objects out of 1000 (max. 8388607)
+ 422 compressed objects within 5 object streams
+ 84 named destinations out of 1000 (max. 500000)
+ 343 words of extra memory for PDF output out of 10000 (max. 10000000)
 
