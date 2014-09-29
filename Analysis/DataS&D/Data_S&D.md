@@ -20,5 +20,5 @@
 |Josh|TestID|Integer|Database - PAT test records|
 |Database - Item Records|ItemID|Integer|Database - PAT test Records|
 |Database - Item Records|ItemName|Text|Database - PAT test Records|
-|Database - Item Records|LastTest|Date|Next PAT Test Calculation|
+|Database - Item Records|LastTest|Date|Next PAT test Calculation, Database PAT test Records|
 |Next PAT Test Calculation|NextTest|Data|Database - PAT test Records|

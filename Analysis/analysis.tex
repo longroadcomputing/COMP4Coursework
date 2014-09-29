@@ -102,7 +102,7 @@ IF Item = Sold OR Item = Damaged or Item = Stolen DO
 
 \begin{figure}[H]
     \caption{Entering a new item.} \label{fig:print_function_result}
-    \centerline{\includegraphics[width=125px]{./Dataflow/DFD_analysis_new_item.pdf}}
+    \centerline{\includegraphics[width=130px]{./Dataflow/DFD_analysis_new_item.pdf}}
 \end{figure}
 
 \begin{figure}[H]
@@ -114,13 +114,7 @@ IF Item = Sold OR Item = Damaged or Item = Stolen DO
 
 \subsubsection{Input Forms, Output Forms, Report Formats}
 
-Josh's current system only has one input form, this is an electronic form which is the application excel. Josh also has two ouput forms - an invoice form for when he hires out equipment to a third party and a quote sheet to show the value of a piece of equipment when he needs to insure it.\\
-
-\noindent Below is an example of the input method used to insert data into the current system.\\
-
-\noindent Below is an example of one of Josh's Invoice forms.\\
-
-\noindent The following is an example of a quote sheet that Josh has given me.\\
+Unfortunately Josh has no output forms To give me for this section as the inputs are all done by him on his own machine and he doesn't have any sample quote sheets or invoices I can use\\
 
 \newpage
 
@@ -132,7 +126,7 @@ The Following table shows the proposed data and their respective sources and des
 
 \begin{figure}[H]
     \caption{Data sources and destinations} \label{fig: Data sources and destinations}
-    \centerline{\includegraphics[page=1,width=350px]{./DataS&D/Data_S&D.pdf}}
+    \centerline{\includegraphics[page=1,width=300px]{./DataS&D/Data_S&D.pdf}}
 \end{figure}
 
 \subsubsection{Data flow diagram}
@@ -161,6 +155,7 @@ The Following table shows the proposed data and their respective sources and des
     \includegraphics[width=\textwidth]{./Dictionary/Data_dictionary.pdf}
 \end{figure}
 
+\newpage
 
 \subsubsection{Volumetrics}
 
@@ -207,6 +202,7 @@ Record viewing:
     \item Print button and functionality
     \item Export records to PDF
     \item Print/Export a batch of records to PDF
+    \item Email notifications when new item is entered into database or an item is updated, the details and who entered/updated.
 \end{itemize}
 
 
@@ -260,12 +256,23 @@ Item(\underline{ItemID}, Name, Location, Value, Quantity, SubTotal, OnLoan,\\
 \subsection{Relationship diagrams}
 
 \begin{figure}[H]
-    \caption{Relatioship Diagra.} \label{fig:relationship_diadram}
+    \caption{Relatioship Diagram.} \label{fig:relationship_diadram}
     \includegraphics[width=\textwidth]{./Relationship_Diagrams/Relationships_diagrams.pdf}
 \end{figure}
 
+\newpage
+
 \subsection{Class definitions}
 
+\begin{figure}[H]
+    \caption{Class Diagram Key.} \label{fig:relationship_diagram}
+    \centerline{\includegraphics[width=100px]{./Class_Definitions/Class_definition_key.pdf}}
+\end{figure}
+
+\begin{figure}[H]
+    \caption{Class Diagrams.} \label{fig:relationship_diagram}
+    \centerline{\includegraphics[width=\textwidth]{./Class_Definitions/Class_diagrams.pdf}}
+\end{figure}
 
 
 \section{Other Abstractions and Graphs}
@@ -274,6 +281,16 @@ Item(\underline{ItemID}, Name, Location, Value, Quantity, SubTotal, OnLoan,\\
 
 \subsection{Hardware}
 
+Presetly, Josh uses a custom built, 2008 MacPro Desktop Computer. This is primarily used as a file server for images, audio and video files a well as a backup for his current work desktop. My system will need to be compatible with this system.\\
+
+\noindent Computer Specs
+\begin{itemize}
+    \item 15" LCD Display at either 1280x960 or 1280x720
+    \item 16.00GB DDR3 RAM
+    \item 2x Intel\textregistered Core\texttrademark Xeon Quad-Core Processor
+    \item 661-4449 Apple Mac Pro A1186 Motherboard
+    \item 
+\end{itemize}
 \subsection{Software}
 
 \subsection{Time}
