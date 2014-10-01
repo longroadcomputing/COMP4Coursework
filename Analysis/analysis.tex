@@ -20,7 +20,7 @@ There are a number of problems with the current system. One of the problems is t
 
 \subsection{Section appendix}
 
-
+\includepdf[pages=-]{./Analysis/Interview/interview_questions.pdf}
 \section{Investigation}
 
 \subsection{The current system}
@@ -34,47 +34,67 @@ In the current system, there are multiple data sources. The client and his colle
 In the current system, there are only a few algorithms in place.
 \bigskip
 
-Algorithm 1, When new item is bought:
-\begin{lstlisting}
-IF Item = NewItem DO
-        Enter Item into Spreadsheet
-    ELIF Item = ItemMatch Do
-        Update Item Quantity
-\end{lstlisting}
-\bigskip
+\begin{algorithm}[H]
+    \caption{Algorithm 1, When new item is bought:}
+\begin{algorithmic}[1]
+\If{$Item = NewItem$}
+    \SET{$Action$}{$Enter New Item$}
+\ElsIf{$Item = ItemMatch$}
+    \SET{$Action$}{$Update Item$}
+\EndIf
+\end{algorithmic}
+\end{algorithm}
 
-Algorithm 2, When an item is sold or replaced:
-\begin{lstlisting}
-IF Item = Sold OR Item = Damaged or Item = Stolen DO
-    Update Quantity
-    IF Item = Stolen OR Item = Damaged DO
-        Claim Insurance
-\end{lstlisting}
+\begin{algorithm}[H]
+    \caption{Algorithm 2, When an item is sold or replaced:}
+\begin{algorithmic}[1]
+\If{$Item = Sold$}
+    \SET{$Action$}{$Update Quantity$}
+\ElsIf{$Item = Damaged$}
+    \SET{$Action$}{$Update Quantity$}
+    \SET{$Action$}{$File Insurance Claim$}
+\ElsIf{$Item = Stolen$}
+    \SET{$Action$}{$File Insurance Claim$}
+\EndIf
+\end{algorithmic}
+\end{algorithm}
 
 \subsubsection{Data flow diagrams}
 
 \begin{figure}[H]
-    \caption{Flow Diagram Key.} \label{fig:print_function_result}
     \includegraphics[width=\textwidth]{./Analysis/Dataflow/DFD_analysis_key.pdf}
-\end{figure}
-
-\begin{figure}[H]
-    \caption{Entering a new item.} \label{fig:print_function_result}
-    \centerline{\includegraphics[width=130px]{./Analysis/Dataflow/DFD_analysis_new_item.pdf}}
-\end{figure}
-
-\begin{figure}[H]
     \caption{Flow Diagram Key.} \label{fig:print_function_result}
+\end{figure}
+
+\begin{figure}[H]
+    \centerline{\includegraphics[width=130px]{./Analysis/Dataflow/DFD_analysis_new_item.pdf}}
+    \caption{Entering a new item.} \label{fig:print_function_result}
+\end{figure}
+
+\begin{figure}[H]
     \centerline{\includegraphics[width=125px]{./Analysis/Dataflow/DFD_analysis_update_item.pdf}}
+    \caption{Flow Diagram Key.} \label{fig:print_function_result}
 \end{figure}
 
 \newpage
 
 \subsubsection{Input Forms, Output Forms, Report Formats}
 
-Unfortunately Josh has no output forms To give me for this section as the inputs are all done by him on his own machine and he doesn't have any sample quote sheets or invoices I can use\\
+Josh has provided me with a screenshot of him entering some data into his current system. I have boxed out confidential information such as item values and their respective sub total values:\\
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{./Analysis/Forms/enter_data.png}
+    \caption{Josh Entering Item Name.} \label{fig:print_function_result}
+\end{figure}
 
 \newpage
+
+\noindent Here is an screen shot showing the calculation used to get the Sub-Total Value:
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{./Analysis/Forms/sub_total_calc.png}
+    \caption{Sub-Total Calculation.} \label{fig:print_function_result}
+\end{figure}\\
 
 \subsection{The proposed system}
 
@@ -82,16 +102,14 @@ Unfortunately Josh has no output forms To give me for this section as the inputs
 
 The Following table shows the proposed data and their respective sources and destinations.
 
-\begin{figure}[H]
-    \caption{Data sources and destinations} \label{fig: Data sources and destinations}
-    \centerline{\includegraphics[page=1,width=300px]{./Analysis/DataS&D/Data_S&D.pdf}}
-\end{figure}
+\includepdf[pages=-]{./Analysis/DataS&D/Data_S&D.pdf}
+
 
 \subsubsection{Data flow diagram}
 
 \begin{figure}[H]
-    \caption{Flow Diagram Key.} \label{fig:print_function_result}
     \includegraphics[width=\textwidth]{./Analysis/Dataflow/DFD_analysis_key.pdf}
+    \caption{Flow Diagram Key.} \label{fig:print_function_result}
 \end{figure}
 
 \begin{figure}[H]
@@ -100,8 +118,8 @@ The Following table shows the proposed data and their respective sources and des
 \end{figure}
 
 \begin{figure}[H]
-    \caption{Enter New Item.} \label{fig:print_function_result}
     \includegraphics[width=\textwidth]{./Analysis/Dataflow/Data_flow_update.pdf}
+    \caption{Enter New Item.} \label{fig:print_function_result}
 \end{figure}
 
 
@@ -109,8 +127,8 @@ The Following table shows the proposed data and their respective sources and des
 \subsubsection{Data dictionary}
 
 \begin{figure}[H]
-    \caption{Data Dictionary.} \label{fig:data_dictionary}
     \includegraphics[width=\textwidth]{./Analysis/Dictionary/Data_dictionary.pdf}
+    \caption{Data Dictionary.} \label{fig:data_dictionary}
 \end{figure}
 
 \newpage
@@ -185,8 +203,8 @@ Record viewing:
 \subsection{ER Diagram}
 
 \begin{figure}[H]
-    \caption{ER Diagrams.} \label{fig:ER Diagrams}
     \centerline{\includegraphics[width=250px]{./Analysis/ER_Diagrams/ER_Diagrams.pdf}}
+    \caption{ER Diagrams.} \label{fig:ER Diagrams}
 \end{figure}
 
 \newpage
@@ -214,8 +232,8 @@ Item(\underline{ItemID}, Name, Location, Value, Quantity, SubTotal, OnLoan,\\
 \subsection{Relationship diagrams}
 
 \begin{figure}[H]
-    \caption{Relatioship Diagram.} \label{fig:relationship_diadram}
     \includegraphics[width=\textwidth]{./Analysis/Relationship_Diagrams/Relationships_diagrams.pdf}
+    \caption{Relatioship Diagram.} \label{fig:relationship_diadram}
 \end{figure}
 
 \newpage
@@ -223,13 +241,13 @@ Item(\underline{ItemID}, Name, Location, Value, Quantity, SubTotal, OnLoan,\\
 \subsection{Class definitions}
 
 \begin{figure}[H]
-    \caption{Class Diagram Key.} \label{fig:relationship_diagram}
     \centerline{\includegraphics[width=100px]{./Analysis/Class_Definitions/Class_definition_key.pdf}}
+    \caption{Class Diagram Key.} \label{fig:relationship_diagram}
 \end{figure}
 
 \begin{figure}[H]
-    \caption{Class Diagrams.} \label{fig:relationship_diagram}
     \centerline{\includegraphics[width=\textwidth]{./Analysis/Class_Definitions/Class_diagrams.pdf}}
+    \caption{Class Diagrams.} \label{fig:relationship_diagram}
 \end{figure}
 
 \newpage
@@ -270,16 +288,113 @@ Josh has said that there is no deadline requirement for the proposed system to b
 
 \subsection{User Knowledge}
 
+Josh posses a qualification in A level Media studies as well as 2 years use of comuters during his degree. He has substantial understanding of how to use computers as his job requires he uses one most of the time. Josh also has required knowledge of how to use many variaties of applications. He uses Adobe Creative Suite for most of his job as he designs various forms of media. He also has knowledge of Apple's Final Cut Pro application as well as many others.\\
+
+\noindent When designing and implementing the proposed system, Josh's experience with computers will have to be considered. Josh tends to use the internet browser Google Chrome for all his web-browsing and research as well as a third party mail application called. By designing the system similarly to these applications, it should make it easier to understand how the system works and get used to using it a lot faster than it would if the system had a primitive design.\\
+
+\noindent There will also be a full manual included to aid Josh with learning and understaning the familiar interface, the functionality of the new system and how to use certain features.
+
 \subsection{Access restrictions}
+
+The proposed system is primarily to be accessed by Josh himself. However, he can see it being an advantage if other people had access to the system.\\
+
+\noindent For this reason, we have agreed that having the database password protected is the best way fo Josh to control who can do what with the data. He will be able to distribute usernames and passwords to other colleagues who he feels should have different access levels (Admin or standard). This reduces the risk of records being deleted that shouldn't have been. It also allows Josh to monitor who has entered new data, or updated existing data.
+
+\noindent Users should be able to change their passwords to a more memorable one when they log into the system for the first time.
 
 \section{Limitations}
 
 \subsection{Areas which will not be included in computerisation}
 
+Initial buying of new items will not be included in the computerisation as this is still done either in person or over the world wide web. Similarly, intial sales of items will not be included in the computerisation, it will only be once the item has been bought/sold that the data will be updated to coincide with the quantity changes.
+
 \subsection{Areas considered for future computerisation}
+
+The process of an external client of Josh's buying and receiving an item could be included in the system as it would be easier to produce an invoice and quote sheet from the data already in the system rather than query the database and hand draft an email to be sent. The system could be included if I have time at the end and have the relevant knowledge in order to accomplish the task
 
 \section{Solutions}
 
 \subsection{Alternative solutions}
 
+
+
+\textbf{Custom made database:}
+
+Advantages
+\begin{itemize}
+    \item No need to install addidtional software, only a simple database management system such as "Microsoft Access" or "Filemaker".
+\end{itemize}
+
+Disadvantages
+\begin{itemize}
+    \item Database managment systems often cost a substantial amount of money for a license.\\
+\end{itemize} \hline
+
+
+
+\textbf{Web based application:}\\
+
+Advantages
+\begin{itemize}
+    \item Easily accessible by other users. Doesn't rely on one machine.
+    \item Can have 'Cloud based' storage of files.
+    \item More than one user can be logged on at a time.
+\end{itemize}
+
+Disadvantages
+\begin{itemize}
+    \item Website or server hosting can be expensive.
+    \item More advanced security methods will be required due to the system being constantly online and therefore vulnerable to attack.
+    \item Better networking knowledge required to compensate for the security implications and risks.\\
+\end{itemize}\hline
+
+\newpage
+
+\textbf{Terminal or Command based application:}\\
+
+Advantages
+\begin{itemize}
+    \item More power efficient as it isn't graphics heavy, much easier to desgin as the interface is just text.
+    \item Fast efficient opperation provided the client has knowledge of terminal and shell commands.
+\end{itemize}
+
+Disadvantages
+\begin{itemize}
+    \item Careful error handeling needed as the user could enter any known/valid command.
+    \item Training is required so that the client knows what commands to use when.
+    \item There are often commands that the client don't know about that could potentially corrupt his computer.\\
+\end{itemize}\hline
+
+
+
+\textbf{Python destop application with a GUI:}\\
+
+Advantages
+\begin{itemize}
+    \item Designed and layout can be client specific.
+    \item Minimal error with radio buttons and other widgets.
+    \item Easy to understand layout as data can be formatted to fit the clients requirements.
+    \item Easy to visualise what is happening with graphs and tables.
+\end{itemize}
+
+Disadvantages
+\begin{itemize}
+    \item More time needed to build the interface and sql database compaired to a command based application.
+    \item More resources needed from the computer for graphical visualistaion and database storage 
+    \item Programming the graphical interface could prove a difficult task\\
+\end{itemize}\hline
+
+
 \subsection{Justification of chosen solution}
+
+
+I have chosen to use the \emph{'Python Desktop Application with a GUI'} solution. \\
+
+\noindent These are my reasons:
+
+\begin{itemize}
+    \item The application takes up no physical space apart from the computer it is installed on.
+    \item I already have the required language knowledge needed to program a database and a GUI in Python
+    \item Using a custom made desktop application is faster for Josh to manage his inventory than the current spreadsheet based system.
+    \item Backup can be made and data can be restored easily in the event of corruption or unresolvable data loss
+\end{itemize}

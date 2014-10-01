@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.9.11)  19 SEP 2014 11:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.9.11)  1 OCT 2014 13:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -24,23 +24,29 @@ File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
-) (/usr/local/texlive/2014/texmf-dist/tex/latex/algorithms/algorithm.sty
-Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating environment
- (/usr/local/texlive/2014/texmf-dist/tex/latex/float/float.sty
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count88
 \float@exts=\toks14
 \float@box=\box26
 \@float@everytoks=\toks15
 \@floatcapt=\box27
-) (/usr/local/texlive/2014/texmf-dist/tex/latex/base/ifthen.sty
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )
 \@float@every@algorithm=\toks16
 \c@algorithm=\count89
-) (/usr/local/texlive/2014/texmf-dist/tex/latex/algorithms/algorithmic.sty
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/algorithms/algorithmic.sty
 Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
- (/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/keyval.sty
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/05/08 v1.15 key=value parser (DPC)
 \KV@toks@=\toks17
 )
@@ -50,7 +56,9 @@ Package: keyval 2014/05/08 v1.15 key=value parser (DPC)
 \c@ALC@depth=\count93
 \ALC@tlm=\skip43
 \algorithmicindent=\skip44
-) (/Users/joel/Google Drive/A levels/Computing/Github/COMP4Coursework/Latex Examples/.texpadtmp/algorithms_pseudocode.aux)
+)
+(/Users/joel/Dropbox/A levels/Computing/Github/COMP4Coursework/Latex Examples/.
+texpadtmp/algorithms_pseudocode.aux)
 \openout1 = `algorithms_pseudocode.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
@@ -67,7 +75,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
 LaTeX Font Info:    ... okay on input line 5.
 
 ./algorithms_pseudocode.tex:12: Undefined control sequence.
-l.12 \set
+l.12 \SET
          {$total$}{$0$}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -82,7 +90,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 12.
 ./algorithms_pseudocode.tex:13: Undefined control sequence.
-l.13 \state
+l.13 \State
            
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -90,13 +98,17 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./algorithms_pseudocode.tex:14: Extra \fi.
-l.14 \repeat
+./algorithms_pseudocode.tex:14: Undefined control sequence.
+l.14 \Repeat
             
-I'm ignoring this; it doesn't match any \if.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
 ./algorithms_pseudocode.tex:15: Undefined control sequence.
-l.15     \send
+l.15     \SEND
               {$"Please\ enter\ a\ number\ (0 to finish)"$}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -105,7 +117,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ./algorithms_pseudocode.tex:16: Undefined control sequence.
-l.16     \recieve
+l.16     \RECEIVE
                  {$number$}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -114,7 +126,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ./algorithms_pseudocode.tex:17: Undefined control sequence.
-l.17     \set
+l.17     \SET
              {$total$}{$total + number$}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -123,7 +135,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ./algorithms_pseudocode.tex:18: Undefined control sequence.
-l.18 \until
+l.18 \Until
            {$number = 0$}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -132,7 +144,8 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-./algorithms_pseudocode.tex:19: LaTeX Error: Something's wrong--perhaps a missing \item.
+./algorithms_pseudocode.tex:19: LaTeX Error: Something's wrong--perhaps a missi
+ng \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -143,22 +156,373 @@ l.19 \end{algorithmic}
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
+./algorithms_pseudocode.tex:26: Undefined control sequence.
+l.26 \SEND
+          {$"Please\ enter\ your\ age:\ "$}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./algorithms_pseudocode.tex:27: Undefined control sequence.
+l.27 \RECEIVE
+             {$"your\_age"$}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./algorithms_pseudocode.tex:28: Undefined control sequence.
+l.28 \If
+        {$your\_age \geq 15$}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./algorithms_pseudocode.tex:29: Undefined control sequence.
+l.29 \SEND
+          {$"You\ are\ old\ enough\ to\ go\ and\ see\ this\ film"$}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./algorithms_pseudocode.tex:30: Undefined control sequence.
+l.30 \Else
+          
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./algorithms_pseudocode.tex:31: Undefined control sequence.
+l.31 \SEND
+          {$"You\ are\ not\ old\ enough\ to\ go\ and\ see\ this\ film"$}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./algorithms_pseudocode.tex:32: Undefined control sequence.
+l.32 \EndIf
+           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+./algorithms_pseudocode.tex:33: LaTeX Error: Something's wrong--perhaps a missi
+ng \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.33 \end{algorithmic}
+                      
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--33
+[]$\OT1/cmr/m/n/12 "\OML/cmm/m/it/12 Please enter your age \OT1/cmr/m/n/12 :  "
+$ $"\OML/cmm/m/it/12 your[]age\OT1/cmr/m/n/12 "$ $\OML/cmm/m/it/12 your[]age \O
+MS/cmsy/m/n/12 ^^U
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--33
+\OT1/cmr/m/n/12 15$ $"\OML/cmm/m/it/12 You are old enough to go and see this fi
+lm\OT1/cmr/m/n/12 "$
+ []
+
+./algorithms_pseudocode.tex:40: Undefined control sequence.
+l.40 \If
+        {$team\_one\_score > team\_two\_score$}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./algorithms_pseudocode.tex:41: Undefined control sequence.
+l.41 \SET
+         {$winner$}{$team\_one$}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./algorithms_pseudocode.tex:42: Undefined control sequence.
+l.42 \ElsIf
+           {$team\_one\_score < team\_two\_score$}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./algorithms_pseudocode.tex:43: Undefined control sequence.
+l.43 \SET
+         {$winner$}{$team\_two$}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./algorithms_pseudocode.tex:44: Undefined control sequence.
+l.44 \Else
+          
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./algorithms_pseudocode.tex:45: Undefined control sequence.
+l.45 \SET
+         {$winner$}{$"Draw"$}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./algorithms_pseudocode.tex:46: Undefined control sequence.
+l.46 \EndIf
+           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./algorithms_pseudocode.tex:47: Undefined control sequence.
+l.47 \EndIf
+           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+./algorithms_pseudocode.tex:48: LaTeX Error: Something's wrong--perhaps a missi
+ng \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.48 \end{algorithmic}
+                      
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./algorithms_pseudocode.tex:56: Undefined control sequence.
+l.56 \SET
+         {$total$}{$0$}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./algorithms_pseudocode.tex:57: Undefined control sequence.
+l.57 \SET
+         {$finished$}{$false$}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./algorithms_pseudocode.tex:58: Undefined control sequence.
+l.58 \State
+           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./algorithms_pseudocode.tex:59: Undefined control sequence.
+l.59 \While
+           {$not finished$}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./algorithms_pseudocode.tex:60: Undefined control sequence.
+l.60     \SEND
+              {$"Please\ enter\ a\ number\ (0 to finish)"$}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./algorithms_pseudocode.tex:61: Undefined control sequence.
+l.61     \RECEIVE
+                 {$number$}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./algorithms_pseudocode.tex:62: Undefined control sequence.
+l.62     \SET
+             {$total$}{$total + number$}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./algorithms_pseudocode.tex:63: Undefined control sequence.
+l.63     \If
+            {$number = 0$}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./algorithms_pseudocode.tex:64: Undefined control sequence.
+l.64         \SET
+                 {$finished$}{$true$}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./algorithms_pseudocode.tex:65: Undefined control sequence.
+l.65     \EndIf
+               
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./algorithms_pseudocode.tex:66: Undefined control sequence.
+l.66 \EndWhile
+              
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+./algorithms_pseudocode.tex:67: LaTeX Error: Something's wrong--perhaps a missi
+ng \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.67 \end{algorithmic}
+                      
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./algorithms_pseudocode.tex:75: Undefined control sequence.
+l.75 \SET
+         {$sequence$}{$[0,1,2,3,4,5]$}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./algorithms_pseudocode.tex:76: Undefined control sequence.
+l.76 \State
+           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./algorithms_pseudocode.tex:77: Undefined control sequence.
+l.77 \For
+         {$item$}{$sequence$}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./algorithms_pseudocode.tex:78: Undefined control sequence.
+l.78     \SEND
+              {$item$}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./algorithms_pseudocode.tex:79: Undefined control sequence.
+l.79 \EndFor
+            
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+./algorithms_pseudocode.tex:80: LaTeX Error: Something's wrong--perhaps a missi
+ng \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.80 \end{algorithmic}
+                      
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 [1
 
-{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (/Users/joel/Google Drive/A levels/Computing/Github/COMP4Coursework/Latex Examples/.texpadtmp/algorithms_pseudocode.aux) ) 
+{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+(/Users/joel/Dropbox/A levels/Computing/Github/COMP4Coursework/Latex Examples/.
+texpadtmp/algorithms_pseudocode.aux) ) 
 Here is how much of TeX's memory you used:
- 550 strings out of 493117
- 7290 string characters out of 6135433
- 59788 words of memory out of 5000000
- 4070 multiletter control sequences out of 15000+600000
+ 553 strings out of 493117
+ 7335 string characters out of 6135433
+ 62788 words of memory out of 5000000
+ 4073 multiletter control sequences out of 15000+600000
  6683 words of font info for 24 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 23i,4n,19p,166b,329s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-Output written on "/Users/joel/Google Drive/A levels/Computing/Github/COMP4Coursework/Latex Examples/.texpadtmp/algorithms_pseudocode.pdf" (1 page, 30974 bytes).
+ 23i,5n,19p,172b,329s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2014/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2014/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2014/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2014/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmsy10.pfb>
+Output written on "/Users/joel/Dropbox/A levels/Computing/Github/COMP4Coursewor
+k/Latex Examples/.texpadtmp/algorithms_pseudocode.pdf" (1 page, 46679 bytes).
 PDF statistics:
- 20 PDF objects out of 1000 (max. 8388607)
- 13 compressed objects within 1 object stream
+ 24 PDF objects out of 1000 (max. 8388607)
+ 16 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
