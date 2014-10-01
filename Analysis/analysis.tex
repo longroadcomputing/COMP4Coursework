@@ -1,44 +1,3 @@
-\documentclass[a4paper,12pt]{report}
-
-\usepackage{graphicx}
-\usepackage{pdfpages}
-\usepackage{algorithm}
-\usepackage{algorithmic}
-\usepackage{labelcas}
-\usepackage{listings}
-\usepackage{color}
-\usepackage{graphicx}
-\usepackage{pdfpages}
-\usepackage{algorithm}
-\usepackage{algorithmic}
-\usepackage{labelcas}
-
-\usepackage{listings}
-\usepackage{color}
-
-\definecolor{dkgreen}{rgb}{0,0.6,0}
-\definecolor{gray}{rgb}{0.5,0.5,0.5}
-\definecolor{mauve}{rgb}{0.58,0,0.82}
-
-\lstset{frame=tb,
-  aboveskip=3mm,
-  belowskip=3mm,
-  showstringspaces=false,
-  columns=flexible,
-  basicstyle={\small\ttfamily},
-  numbers=none,
-  numberstyle=\tiny\color{gray},
-  keywordstyle=\color{blue},
-  commentstyle=\color{dkgreen},
-  stringstyle=\color{mauve},
-  breaklines=true,
-  breakatwhitespace=true
-  tabsize=3
-}
-
-
-\begin{document}
-
 \chapter{Analysis}
 
 \section{Introduction}
@@ -61,7 +20,6 @@ There are a number of problems with the current system. One of the problems is t
 
 \subsection{Section appendix}
 
-\includepdf[pages=-]{./Interview/interview_questions.pdf}
 
 \section{Investigation}
 
@@ -97,17 +55,17 @@ IF Item = Sold OR Item = Damaged or Item = Stolen DO
 
 \begin{figure}[H]
     \caption{Flow Diagram Key.} \label{fig:print_function_result}
-    \includegraphics[width=\textwidth]{./Dataflow/DFD_analysis_key.pdf}
+    \includegraphics[width=\textwidth]{./Analysis/Dataflow/DFD_analysis_key.pdf}
 \end{figure}
 
 \begin{figure}[H]
     \caption{Entering a new item.} \label{fig:print_function_result}
-    \centerline{\includegraphics[width=130px]{./Dataflow/DFD_analysis_new_item.pdf}}
+    \centerline{\includegraphics[width=130px]{./Analysis/Dataflow/DFD_analysis_new_item.pdf}}
 \end{figure}
 
 \begin{figure}[H]
     \caption{Flow Diagram Key.} \label{fig:print_function_result}
-    \centerline{\includegraphics[width=125px]{./Dataflow/DFD_analysis_update_item.pdf}}
+    \centerline{\includegraphics[width=125px]{./Analysis/Dataflow/DFD_analysis_update_item.pdf}}
 \end{figure}
 
 \newpage
@@ -126,24 +84,24 @@ The Following table shows the proposed data and their respective sources and des
 
 \begin{figure}[H]
     \caption{Data sources and destinations} \label{fig: Data sources and destinations}
-    \centerline{\includegraphics[page=1,width=300px]{./DataS&D/Data_S&D.pdf}}
+    \centerline{\includegraphics[page=1,width=300px]{./Analysis/DataS&D/Data_S&D.pdf}}
 \end{figure}
 
 \subsubsection{Data flow diagram}
 
 \begin{figure}[H]
     \caption{Flow Diagram Key.} \label{fig:print_function_result}
-    \includegraphics[width=\textwidth]{./Dataflow/DFD_analysis_key.pdf}
+    \includegraphics[width=\textwidth]{./Analysis/Dataflow/DFD_analysis_key.pdf}
 \end{figure}
 
 \begin{figure}[H]
     \caption{Enter New Item.} \label{fig:print_function_result}
-    \includegraphics[width=\textwidth]{./Dataflow/Data_flow_new.pdf}
+    \includegraphics[width=\textwidth]{./Analysis/Dataflow/Data_flow_new.pdf}
 \end{figure}
 
 \begin{figure}[H]
     \caption{Enter New Item.} \label{fig:print_function_result}
-    \includegraphics[width=\textwidth]{./Dataflow/Data_flow_update.pdf}
+    \includegraphics[width=\textwidth]{./Analysis/Dataflow/Data_flow_update.pdf}
 \end{figure}
 
 
@@ -152,7 +110,7 @@ The Following table shows the proposed data and their respective sources and des
 
 \begin{figure}[H]
     \caption{Data Dictionary.} \label{fig:data_dictionary}
-    \includegraphics[width=\textwidth]{./Dictionary/Data_dictionary.pdf}
+    \includegraphics[width=\textwidth]{./Analysis/Dictionary/Data_dictionary.pdf}
 \end{figure}
 
 \newpage
@@ -228,7 +186,7 @@ Record viewing:
 
 \begin{figure}[H]
     \caption{ER Diagrams.} \label{fig:ER Diagrams}
-    \centerline{\includegraphics[width=250px]{./ER_Diagrams/ER_Diagrams.pdf}}
+    \centerline{\includegraphics[width=250px]{./Analysis/ER_Diagrams/ER_Diagrams.pdf}}
 \end{figure}
 
 \newpage
@@ -257,7 +215,7 @@ Item(\underline{ItemID}, Name, Location, Value, Quantity, SubTotal, OnLoan,\\
 
 \begin{figure}[H]
     \caption{Relatioship Diagram.} \label{fig:relationship_diadram}
-    \includegraphics[width=\textwidth]{./Relationship_Diagrams/Relationships_diagrams.pdf}
+    \includegraphics[width=\textwidth]{./Analysis/Relationship_Diagrams/Relationships_diagrams.pdf}
 \end{figure}
 
 \newpage
@@ -266,12 +224,12 @@ Item(\underline{ItemID}, Name, Location, Value, Quantity, SubTotal, OnLoan,\\
 
 \begin{figure}[H]
     \caption{Class Diagram Key.} \label{fig:relationship_diagram}
-    \centerline{\includegraphics[width=100px]{./Class_Definitions/Class_definition_key.pdf}}
+    \centerline{\includegraphics[width=100px]{./Analysis/Class_Definitions/Class_definition_key.pdf}}
 \end{figure}
 
 \begin{figure}[H]
     \caption{Class Diagrams.} \label{fig:relationship_diagram}
-    \centerline{\includegraphics[width=\textwidth]{./Class_Definitions/Class_diagrams.pdf}}
+    \centerline{\includegraphics[width=\textwidth]{./Analysis/Class_Definitions/Class_diagrams.pdf}}
 \end{figure}
 
 \newpage
@@ -325,5 +283,3 @@ Josh has said that there is no deadline requirement for the proposed system to b
 \subsection{Alternative solutions}
 
 \subsection{Justification of chosen solution}
-
-\end{document}
