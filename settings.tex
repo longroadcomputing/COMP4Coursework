@@ -14,27 +14,42 @@
 \usepackage{calc}
 \usepackage{longtable}
 \usepackage{pdflscape}
-%set up commands for Haggis pseudocode
-\algnewcommand\algorithmicset{\textbf{SET}}
+%set up commands for AQA pseudocode
+\algnewcommand\algorithmicassign{\textbf{$\gets$}}
 \algnewcommand\algorithmicto{\textbf{TO}}
-\algnewcommand\SET[2]{\State\algorithmicset\ #1 \algorithmicto\ #2}
+\algnewcommand\algorithmicnot{\textbf{NOT}}
+\algnewcommand\algorithmicand{\textbf{AND}}
+\algnewcommand\SET[2]{\State#1 \algorithmicassign\ #2}
 \algnewcommand\algorithmicreceive{\textbf{RECEIVE}}
-\algnewcommand\algorithmicfromkeyboard{\textbf{FROM KEYBOARD}}
-\algnewcommand\RECEIVE[1]{\State\algorithmicreceive\ #1 \algorithmicfromkeyboard}
-\algnewcommand\algorithmicsend{\textbf{SEND}}
+\algnewcommand\algorithmicfromkeyboard{\textbf{USERINPUT}}
+\algnewcommand\RECEIVE[1]{\State #1 \algorithmicassign\ \algorithmicfromkeyboard}
+\algnewcommand\algorithmicsend{\textbf{OUTPUT}}
 \algnewcommand\algorithmictodisplay{\textbf{TO DISPLAY}}
-\algnewcommand\SEND[1]{\State\algorithmicsend\ #1 \algorithmictodisplay}
+\algnewcommand\SEND[1]{\State\algorithmicsend\ #1}
 \algrenewcommand\algorithmicwhile{\textbf{WHILE}}
 \algrenewcommand\algorithmicfor{\textbf{FOR}}
-\algrenewtext{For}[2]{\algorithmicfor\ \textbf{EACH}\ #1 \textbf{IN}\ #2 \textbf{DO}}
+\algrenewtext{For}[3]{\algorithmicfor\ #1 \algorithmicassign\ #2 \textbf{TO}\ #3}
+\algrenewtext{ForAll}[2]{\algorithmicfor\textbf{EACH}\ #1 \textbf{IN}\ #2}
 \algrenewcommand\algorithmicend{\textbf{END}}
-\algrenewcommand\algorithmicdo{\textbf{DO}}
+\algrenewtext{EndWhile}{\algorithmicend\algorithmicwhile}
+\algrenewtext{EndFor}{\algorithmicend\algorithmicfor}
+\algrenewcommand\algorithmicdo{}
 \algrenewcommand\algorithmicif{\textbf{IF}}
 \algrenewtext{ElsIf}[1]{\textbf{ELSE}\ \algorithmicif\ #1\ \textbf{THEN}}
 \algrenewtext{Else}{\textbf{ELSE}}
+\algrenewtext{EndIf}{\algorithmicend\algorithmicif}
 \algrenewcommand\algorithmicthen{\textbf{THEN}}
 \algrenewcommand\algorithmicrepeat{\textbf{REPEAT}}
 \algrenewcommand\algorithmicuntil{\textbf{UNTIL}}
+\algnewcommand\algorithmiccase{\textbf{CASE}}
+\algnewcommand\algorithmicof{\textbf{OF}}
+\algnewcommand\Case[1]{\State\algorithmiccase\ #1 \algorithmicof}
+\algnewcommand\EndCase{\State\algorithmicend\algorithmiccase}
+\algnewcommand\CaseItem[2]{\State\ #1\ :\ #2}
+\algnewcommand\Send[1]{\algorithmicsend\ #1}
+\algrenewcommand\algorithmicfunction{\textbf{FUNCTION}}
+\algrenewtext{EndFunction}{\algorithmicend\algorithmicfunction}
+\algrenewcommand\Return{\State\textbf{RETURN}\ }
 %set up code for boxes
 \newenvironment{fminipage}
 {\begin{Sbox}\begin{minipage}}
