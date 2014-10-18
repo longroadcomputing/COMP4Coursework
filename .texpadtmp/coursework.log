@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.9.11)  2 OCT 2014 14:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.18)  18 OCT 2014 21:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -642,10 +642,16 @@ File: pppdftex.def 2013/08/25 v0.4v Pdfpages driver for pdfTeX (AM)
 \f@ncyO@olf=\skip66
 \f@ncyO@orf=\skip67
 ))
-(/Users/joel/Dropbox/Apps/Texpad/A levels/Computing/Github/COMP4Coursework/.tex
-padtmp/coursework.aux
-(/Users/joel/Dropbox/Apps/Texpad/A levels/Computing/Github/COMP4Coursework/.tex
-padtmp/./Analysis/analysis.aux
+(/Users/joelbutcher/Dropbox/Apps/Texpad/Computing/Github/COMP4Coursework/.texpa
+dtmp/coursework.aux
+(/Users/joelbutcher/Dropbox/Apps/Texpad/Computing/Github/COMP4Coursework/.texpa
+dtmp/./Analysis/analysis.aux
+
+LaTeX Warning: Label `fig: Interview Questions' multiply defined.
+
+
+LaTeX Warning: Label `fig: Interview Questions' multiply defined.
+
 
 LaTeX Warning: Label `fig:print_function_result' multiply defined.
 
@@ -671,16 +677,16 @@ LaTeX Warning: Label `fig:print_function_result' multiply defined.
 LaTeX Warning: Label `fig:relationship_diagram' multiply defined.
 
 )
-(/Users/joel/Dropbox/Apps/Texpad/A levels/Computing/Github/COMP4Coursework/.tex
-padtmp/./Design/design.aux)
-(/Users/joel/Dropbox/Apps/Texpad/A levels/Computing/Github/COMP4Coursework/.tex
-padtmp/./Testing/testing.aux)
-(/Users/joel/Dropbox/Apps/Texpad/A levels/Computing/Github/COMP4Coursework/.tex
-padtmp/./Maintenance/maintenance.aux)
-(/Users/joel/Dropbox/Apps/Texpad/A levels/Computing/Github/COMP4Coursework/.tex
-padtmp/./Manual/manual.aux)
-(/Users/joel/Dropbox/Apps/Texpad/A levels/Computing/Github/COMP4Coursework/.tex
-padtmp/./Evaluation/evaluation.aux))
+(/Users/joelbutcher/Dropbox/Apps/Texpad/Computing/Github/COMP4Coursework/.texpa
+dtmp/./Design/design.aux)
+(/Users/joelbutcher/Dropbox/Apps/Texpad/Computing/Github/COMP4Coursework/.texpa
+dtmp/./Testing/testing.aux)
+(/Users/joelbutcher/Dropbox/Apps/Texpad/Computing/Github/COMP4Coursework/.texpa
+dtmp/./Maintenance/maintenance.aux)
+(/Users/joelbutcher/Dropbox/Apps/Texpad/Computing/Github/COMP4Coursework/.texpa
+dtmp/./Manual/manual.aux)
+(/Users/joelbutcher/Dropbox/Apps/Texpad/Computing/Github/COMP4Coursework/.texpa
+dtmp/./Evaluation/evaluation.aux))
 \openout1 = `coursework.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
@@ -742,10 +748,10 @@ LaTeX Info: Redefining \ref on input line 3.
 LaTeX Info: Redefining \pageref on input line 3.
 LaTeX Info: Redefining \nameref on input line 3.
 
-(/Users/joel/Dropbox/Apps/Texpad/A levels/Computing/Github/COMP4Coursework/.tex
-padtmp/coursework.out)
-(/Users/joel/Dropbox/Apps/Texpad/A levels/Computing/Github/COMP4Coursework/.tex
-padtmp/coursework.out)
+(/Users/joelbutcher/Dropbox/Apps/Texpad/Computing/Github/COMP4Coursework/.texpa
+dtmp/coursework.out)
+(/Users/joelbutcher/Dropbox/Apps/Texpad/Computing/Github/COMP4Coursework/.texpa
+dtmp/coursework.out)
 \@outlinefile=\write5
 \openout5 = `coursework.out'.
 
@@ -754,12 +760,12 @@ padtmp/coursework.out)
 
 
 {/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-(/Users/joel/Dropbox/Apps/Texpad/A levels/Computing/Github/COMP4Coursework/.tex
-padtmp/coursework.tocpdfTeX warning (ext4): destination with the same identifie
-r (name{page.1}) has been already used, duplicate ignored
+(/Users/joelbutcher/Dropbox/Apps/Texpad/Computing/Github/COMP4Coursework/.texpa
+dtmp/coursework.tocpdfTeX warning (ext4): destination with the same identifier 
+(name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.40 ...umberline {1.9}Solutions}{28}{section.1.9}
+l.40 ...ternative solutions}{28}{subsection.1.8.1}
                                                    [1
 
 ]
@@ -806,20 +812,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--10
 
 
 ]
-<./Analysis/Interview/interview_questions.pdf, id=718, 597.50786pt x 845.01837p
-t>
-File: ./Analysis/Interview/interview_questions.pdf Graphic file (type pdf)
- <use ./Analysis/Interview/interview_questions.pdf>
-Package pdftex.def Info: ./Analysis/Interview/interview_questions.pdf used on i
-nput line 23.
-(pdftex.def)             Requested size: 597.5064pt x 845.01631pt.
-File: ./Analysis/Interview/interview_questions.pdf Graphic file (type pdf)
-
-<use ./Analysis/Interview/interview_questions.pdf>
-Package pdftex.def Info: ./Analysis/Interview/interview_questions.pdf used on i
-nput line 23.
-(pdftex.def)             Requested size: 597.5064pt x 845.01631pt.
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -827,87 +819,78 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [6]
-<./Analysis/Interview/interview_questions.pdf, id=726, page=1, 597.50786pt x 84
+<./Analysis/Interview/interview_questions.pdf, id=718, page=1, 597.50786pt x 84
 5.01837pt>
 File: ./Analysis/Interview/interview_questions.pdf Graphic file (type pdf)
  <use ./Analysis/Interview/interview_questions.pdf, page 1>
 Package pdftex.def Info: ./Analysis/Interview/interview_questions.pdf, page1 us
-ed on input line 23.
-(pdftex.def)             Requested size: 597.5064pt x 845.01631pt.
-File: ./Analysis/Interview/interview_questions.pdf Graphic file (type pdf)
+ed on input line 29.
+(pdftex.def)             Requested size: 390.0pt x 551.55055pt.
 
-<use ./Analysis/Interview/interview_questions.pdf, page 1>
-Package pdftex.def Info: ./Analysis/Interview/interview_questions.pdf, page1 us
-ed on input line 23.
-(pdftex.def)             Requested size: 597.53374pt x 845.055pt.
-File: ./Analysis/Interview/interview_questions.pdf Graphic file (type pdf)
-
-<use ./Analysis/Interview/interview_questions.pdf, page 1>
-Package pdftex.def Info: ./Analysis/Interview/interview_questions.pdf, page1 us
-ed on input line 23.
-(pdftex.def)             Requested size: 597.53374pt x 845.055pt.
-File: ./Analysis/Interview/interview_questions.pdf Graphic file (type pdf)
-
-<use ./Analysis/Interview/interview_questions.pdf, page 1>
-Package pdftex.def Info: ./Analysis/Interview/interview_questions.pdf, page1 us
-ed on input line 23.
-(pdftex.def)             Requested size: 597.53374pt x 845.055pt.
-File: ./Analysis/Interview/interview_questions.pdf Graphic file (type pdf)
-
-<use ./Analysis/Interview/interview_questions.pdf, page 1>
-Package pdftex.def Info: ./Analysis/Interview/interview_questions.pdf, page1 us
-ed on input line 23.
-(pdftex.def)             Requested size: 597.53374pt x 845.055pt.
- [7 <./Analysis/Interview/interview_questions.pdf>]
-<./Analysis/Interview/interview_questions.pdf, id=757, page=2, 597.50786pt x 84
+<./Analysis/Interview/interview_questions.pdf, id=719, page=2, 597.50786pt x 84
 5.01837pt>
 File: ./Analysis/Interview/interview_questions.pdf Graphic file (type pdf)
  <use ./Analysis/Interview/interview_questions.pdf, page 2>
 Package pdftex.def Info: ./Analysis/Interview/interview_questions.pdf, page2 us
-ed on input line 23.
-(pdftex.def)             Requested size: 597.53374pt x 845.055pt.
-File: ./Analysis/Interview/interview_questions.pdf Graphic file (type pdf)
+ed on input line 34.
+(pdftex.def)             Requested size: 390.0pt x 551.55055pt.
 
-<use ./Analysis/Interview/interview_questions.pdf, page 2>
-Package pdftex.def Info: ./Analysis/Interview/interview_questions.pdf, page2 us
-ed on input line 23.
-(pdftex.def)             Requested size: 597.53374pt x 845.055pt.
-File: ./Analysis/Interview/interview_questions.pdf Graphic file (type pdf)
 
-<use ./Analysis/Interview/interview_questions.pdf, page 2>
-Package pdftex.def Info: ./Analysis/Interview/interview_questions.pdf, page2 us
-ed on input line 23.
-(pdftex.def)             Requested size: 597.53374pt x 845.055pt.
- [8 <./Analysis/Interview/interview_questions.pdf>]
-<./Analysis/Interview/interview_questions.pdf, id=770, page=3, 597.50786pt x 84
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[7pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1}
+) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.36 
+      <./Analysis/Interview/interview_questions.pdf>]
+<./Analysis/Interview/interview_questions.pdf, id=751, page=3, 597.50786pt x 84
 5.01837pt>
 File: ./Analysis/Interview/interview_questions.pdf Graphic file (type pdf)
  <use ./Analysis/Interview/interview_questions.pdf, page 3>
 Package pdftex.def Info: ./Analysis/Interview/interview_questions.pdf, page3 us
-ed on input line 23.
-(pdftex.def)             Requested size: 597.53374pt x 845.055pt.
-File: ./Analysis/Interview/interview_questions.pdf Graphic file (type pdf)
+ed on input line 39.
+(pdftex.def)             Requested size: 390.0pt x 551.55055pt.
 
-<use ./Analysis/Interview/interview_questions.pdf, page 3>
-Package pdftex.def Info: ./Analysis/Interview/interview_questions.pdf, page3 us
-ed on input line 23.
-(pdftex.def)             Requested size: 597.53374pt x 845.055pt.
-File: ./Analysis/Interview/interview_questions.pdf Graphic file (type pdf)
 
-<use ./Analysis/Interview/interview_questions.pdf, page 3>
-Package pdftex.def Info: ./Analysis/Interview/interview_questions.pdf, page3 us
-ed on input line 23.
-(pdftex.def)             Requested size: 597.53374pt x 845.055pt.
- [9 <./Analysis/Interview/interview_questions.pdf>]
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[8pdfTeX warning (ext4): destination with the same identifier (name{figure.1.2}
+) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.41 
+      <./Analysis/Interview/interview_questions.pdf>]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[9pdfTeX warning (ext4): destination with the same identifier (name{figure.1.3}
+) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.47 
+      <./Analysis/Interview/interview_questions.pdf>]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 38.
+put line 54.
 
-<./Analysis/Dataflow/DFD_analysis_key.pdf, id=783, 545.94707pt x 151.24966pt>
+<./Analysis/Dataflow/DFD_analysis_key.pdf, id=778, 545.94707pt x 151.24966pt>
 File: ./Analysis/Dataflow/DFD_analysis_key.pdf Graphic file (type pdf)
 
 <use ./Analysis/Dataflow/DFD_analysis_key.pdf>
 Package pdftex.def Info: ./Analysis/Dataflow/DFD_analysis_key.pdf used on input
- line 65.
+ line 81.
 (pdftex.def)             Requested size: 390.0pt x 108.04575pt.
 
 
@@ -917,20 +900,20 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [10]
-<./Analysis/Dataflow/DFD_analysis_new_item.pdf, id=794, 167.04773pt x 316.53076
+<./Analysis/Dataflow/DFD_analysis_new_item.pdf, id=789, 167.04773pt x 316.53076
 pt>
 File: ./Analysis/Dataflow/DFD_analysis_new_item.pdf Graphic file (type pdf)
  <use ./Analysis/Dataflow/DFD_analysis_new_item.pdf>
 Package pdftex.def Info: ./Analysis/Dataflow/DFD_analysis_new_item.pdf used on 
-input line 70.
+input line 86.
 (pdftex.def)             Requested size: 130.48798pt x 247.25522pt.
 
-<./Analysis/Dataflow/DFD_analysis_update_item.pdf, id=795, 139.84143pt x 305.05
+<./Analysis/Dataflow/DFD_analysis_update_item.pdf, id=790, 139.84143pt x 305.05
 39pt>
 File: ./Analysis/Dataflow/DFD_analysis_update_item.pdf Graphic file (type pdf)
  <use ./Analysis/Dataflow/DFD_analysis_update_item.pdf>
 Package pdftex.def Info: ./Analysis/Dataflow/DFD_analysis_update_item.pdf used 
-on input line 75.
+on input line 91.
 (pdftex.def)             Requested size: 125.46921pt x 273.7081pt.
 
 
@@ -939,18 +922,18 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[11pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1
+[11pdfTeX warning (ext4): destination with the same identifier (name{figure.1.4
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.78 
+l.94 
      pdfTeX warning (ext4): destination with the same identifier (name{figure.1
-.2}) has been already used, duplicate ignored
+.5}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.78 
+l.94 
       <./Analysis/Dataflow/DFD_analysis_key.pdf> <./Analysis/Dataflow/DFD_analy
 sis_new_item.pdf>]
 
@@ -959,23 +942,23 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[12pdfTeX warning (ext4): destination with the same identifier (name{figure.1.3
+[12pdfTeX warning (ext4): destination with the same identifier (name{figure.1.6
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.79 \newpage
+l.95 \newpage
               <./Analysis/Dataflow/DFD_analysis_update_item.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 83--84
+Underfull \hbox (badness 10000) in paragraph at lines 99--100
 
  []
 
-<./Analysis/Forms/enter_data.png, id=858, 1196.47pt x 986.68625pt>
+<./Analysis/Forms/enter_data.png, id=853, 1196.47pt x 986.68625pt>
 File: ./Analysis/Forms/enter_data.png Graphic file (type png)
 
 <use ./Analysis/Forms/enter_data.png>
-Package pdftex.def Info: ./Analysis/Forms/enter_data.png used on input line 86.
-
+Package pdftex.def Info: ./Analysis/Forms/enter_data.png used on input line 102
+.
 (pdftex.def)             Requested size: 390.0pt x 321.61774pt.
 
 
@@ -984,31 +967,31 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[13pdfTeX warning (ext4): destination with the same identifier (name{figure.1.4
+[13pdfTeX warning (ext4): destination with the same identifier (name{figure.1.7
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.90 \newpage
-              <./Analysis/Forms/enter_data.png>]
-<./Analysis/Forms/sub_total_calc.png, id=867, 1192.455pt x 984.67876pt>
+l.106 \newpage
+               <./Analysis/Forms/enter_data.png>]
+<./Analysis/Forms/sub_total_calc.png, id=862, 1192.455pt x 984.67876pt>
 File: ./Analysis/Forms/sub_total_calc.png Graphic file (type png)
 
 <use ./Analysis/Forms/sub_total_calc.png>
 Package pdftex.def Info: ./Analysis/Forms/sub_total_calc.png used on input line
- 95.
+ 111.
 (pdftex.def)             Requested size: 390.0pt x 322.04517pt.
 
-<./Analysis/DataS&D/Data_S&D.pdf, id=868, 597.50786pt x 845.01837pt>
+<./Analysis/DataS&D/Data_S&D.pdf, id=863, 597.50786pt x 845.01837pt>
 File: ./Analysis/DataS&D/Data_S&D.pdf Graphic file (type pdf)
 
 <use ./Analysis/DataS&D/Data_S&D.pdf>
-Package pdftex.def Info: ./Analysis/DataS&D/Data_S&D.pdf used on input line 105
+Package pdftex.def Info: ./Analysis/DataS&D/Data_S&D.pdf used on input line 121
 .
 (pdftex.def)             Requested size: 597.5064pt x 845.01631pt.
 File: ./Analysis/DataS&D/Data_S&D.pdf Graphic file (type pdf)
  <use ./Analysis/DataS&D/Data_S&D.pdf>
-Package pdftex.def Info: ./Analysis/DataS&D/Data_S&D.pdf used on input line 105
+Package pdftex.def Info: ./Analysis/DataS&D/Data_S&D.pdf used on input line 121
 .
 (pdftex.def)             Requested size: 597.5064pt x 845.01631pt.
 
@@ -1018,66 +1001,66 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[14pdfTeX warning (ext4): destination with the same identifier (name{figure.1.5
+[14pdfTeX warning (ext4): destination with the same identifier (name{figure.1.8
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.105 ...pages=-]{./Analysis/DataS&D/Data_S&D.pdf}
+l.121 ...pages=-]{./Analysis/DataS&D/Data_S&D.pdf}
                                                    <./Analysis/Forms/sub_total_
 calc.png>]
-<./Analysis/DataS&D/Data_S&D.pdf, id=878, page=1, 597.50786pt x 845.01837pt>
+<./Analysis/DataS&D/Data_S&D.pdf, id=873, page=1, 597.50786pt x 845.01837pt>
 File: ./Analysis/DataS&D/Data_S&D.pdf Graphic file (type pdf)
 
 <use ./Analysis/DataS&D/Data_S&D.pdf, page 1>
 Package pdftex.def Info: ./Analysis/DataS&D/Data_S&D.pdf, page1 used on input l
-ine 105.
+ine 121.
 (pdftex.def)             Requested size: 597.5064pt x 845.01631pt.
 File: ./Analysis/DataS&D/Data_S&D.pdf Graphic file (type pdf)
 
 <use ./Analysis/DataS&D/Data_S&D.pdf, page 1>
 Package pdftex.def Info: ./Analysis/DataS&D/Data_S&D.pdf, page1 used on input l
-ine 105.
+ine 121.
 (pdftex.def)             Requested size: 597.53374pt x 845.055pt.
 File: ./Analysis/DataS&D/Data_S&D.pdf Graphic file (type pdf)
 
 <use ./Analysis/DataS&D/Data_S&D.pdf, page 1>
 Package pdftex.def Info: ./Analysis/DataS&D/Data_S&D.pdf, page1 used on input l
-ine 105.
+ine 121.
 (pdftex.def)             Requested size: 597.53374pt x 845.055pt.
 File: ./Analysis/DataS&D/Data_S&D.pdf Graphic file (type pdf)
 
 <use ./Analysis/DataS&D/Data_S&D.pdf, page 1>
 Package pdftex.def Info: ./Analysis/DataS&D/Data_S&D.pdf, page1 used on input l
-ine 105.
+ine 121.
 (pdftex.def)             Requested size: 597.53374pt x 845.055pt.
 File: ./Analysis/DataS&D/Data_S&D.pdf Graphic file (type pdf)
 
 <use ./Analysis/DataS&D/Data_S&D.pdf, page 1>
 Package pdftex.def Info: ./Analysis/DataS&D/Data_S&D.pdf, page1 used on input l
-ine 105.
+ine 121.
 (pdftex.def)             Requested size: 597.53374pt x 845.055pt.
  [15 <./Analysis/DataS&D/Data_S&D.pdf>]
 File: ./Analysis/Dataflow/DFD_analysis_key.pdf Graphic file (type pdf)
  <use ./Analysis/Dataflow/DFD_analysis_key.pdf>
 Package pdftex.def Info: ./Analysis/Dataflow/DFD_analysis_key.pdf used on input
- line 111.
+ line 127.
 (pdftex.def)             Requested size: 390.0pt x 108.04575pt.
 
-<./Analysis/Dataflow/Data_flow_new.pdf, id=907, 461.61923pt x 380.25575pt>
+<./Analysis/Dataflow/Data_flow_new.pdf, id=902, 461.61923pt x 380.25575pt>
 File: ./Analysis/Dataflow/Data_flow_new.pdf Graphic file (type pdf)
 
 <use ./Analysis/Dataflow/Data_flow_new.pdf>
 Package pdftex.def Info: ./Analysis/Dataflow/Data_flow_new.pdf used on input li
-ne 117.
+ne 133.
 (pdftex.def)             Requested size: 390.0pt x 321.27516pt.
 
-<./Analysis/Dataflow/Data_flow_update.pdf, id=908, 517.32297pt x 228.05843pt>
+<./Analysis/Dataflow/Data_flow_update.pdf, id=903, 517.32297pt x 228.05843pt>
 File: ./Analysis/Dataflow/Data_flow_update.pdf Graphic file (type pdf)
 
 <use ./Analysis/Dataflow/Data_flow_update.pdf>
 Package pdftex.def Info: ./Analysis/Dataflow/Data_flow_update.pdf used on input
- line 121.
+ line 137.
 (pdftex.def)             Requested size: 390.0pt x 171.93076pt.
 
 
@@ -1086,25 +1069,25 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[16pdfTeX warning (ext4): destination with the same identifier (name{figure.1.6
+[16pdfTeX warning (ext4): destination with the same identifier (name{figure.1.9
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.124 
+l.140 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
-1.7}) has been already used, duplicate ignored
+1.10}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.124 
+l.140 
        <./Analysis/Dataflow/Data_flow_new.pdf>]
-<./Analysis/Dictionary/Data_dictionary.pdf, id=928, 514.40944pt x 476.72774pt>
+<./Analysis/Dictionary/Data_dictionary.pdf, id=923, 514.40944pt x 476.72774pt>
 File: ./Analysis/Dictionary/Data_dictionary.pdf Graphic file (type pdf)
 
 <use ./Analysis/Dictionary/Data_dictionary.pdf>
 Package pdftex.def Info: ./Analysis/Dictionary/Data_dictionary.pdf used on inpu
-t line 130.
+t line 146.
 (pdftex.def)             Requested size: 390.0pt x 361.42937pt.
 
 
@@ -1113,12 +1096,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[17pdfTeX warning (ext4): destination with the same identifier (name{figure.1.8
-}) has been already used, duplicate ignored
+[17pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1
+1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.133 
+l.149 
        <./Analysis/Dataflow/Data_flow_update.pdf>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1126,24 +1109,24 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[18pdfTeX warning (ext4): destination with the same identifier (name{figure.1.9
-}) has been already used, duplicate ignored
+[18pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1
+2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.134 \newpage
+l.150 \newpage
                <./Analysis/Dictionary/Data_dictionary.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 138--139
+Underfull \hbox (badness 10000) in paragraph at lines 154--155
 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 153.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 169.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 153.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 169.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1152,12 +1135,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [19]
-<./Analysis/ER_Diagrams/ER_Diagrams.pdf, id=982, 299.09894pt x 284.97546pt>
+<./Analysis/ER_Diagrams/ER_Diagrams.pdf, id=977, 299.09894pt x 284.97546pt>
 File: ./Analysis/ER_Diagrams/ER_Diagrams.pdf Graphic file (type pdf)
 
 <use ./Analysis/ER_Diagrams/ER_Diagrams.pdf>
 Package pdftex.def Info: ./Analysis/ER_Diagrams/ER_Diagrams.pdf used on input l
-ine 206.
+ine 222.
 (pdftex.def)             Requested size: 250.93842pt x 239.09076pt.
 
 
@@ -1174,36 +1157,36 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [21pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1
-0}) has been already used, duplicate ignored
+3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.210 \newpage
+l.226 \newpage
                <./Analysis/ER_Diagrams/ER_Diagrams.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 214--216
+Underfull \hbox (badness 10000) in paragraph at lines 230--232
 
  []
 
 
-Overfull \hbox (0.26591pt too wide) in paragraph at lines 217--218
+Overfull \hbox (0.26591pt too wide) in paragraph at lines 233--234
 \OT1/cmr/m/n/12 Loan($[]$, \OT1/cmr/m/it/12 ItemID\OT1/cmr/m/n/12 , \OT1/cmr/m/
 it/12 Item-Name\OT1/cmr/m/n/12 , Loan-Rate, LoanStart-Date, Loa-nEnd-Date,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 217--218
+Underfull \hbox (badness 10000) in paragraph at lines 233--234
 
  []
 
 
-<./Analysis/Relationship_Diagrams/Relationships_diagrams.pdf, id=1004, 533.4008
-6pt x 363.85977pt>
+<./Analysis/Relationship_Diagrams/Relationships_diagrams.pdf, id=999, 533.40086
+pt x 363.85977pt>
 File: ./Analysis/Relationship_Diagrams/Relationships_diagrams.pdf Graphic file 
 (type pdf)
 
 <use ./Analysis/Relationship_Diagrams/Relationships_diagrams.pdf>
 Package pdftex.def Info: ./Analysis/Relationship_Diagrams/Relationships_diagram
-s.pdf used on input line 235.
+s.pdf used on input line 251.
 (pdftex.def)             Requested size: 390.0pt x 266.04848pt.
 
 
@@ -1220,27 +1203,27 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [23pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1
-1}) has been already used, duplicate ignored
+4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.239 \newpage
+l.255 \newpage
                <./Analysis/Relationship_Diagrams/Relationships_diagrams.pdf>]
-<./Analysis/Class_Definitions/Class_definition_key.pdf, id=1027, 100.375pt x 11
+<./Analysis/Class_Definitions/Class_definition_key.pdf, id=1022, 100.375pt x 11
 2.42pt>
 File: ./Analysis/Class_Definitions/Class_definition_key.pdf Graphic file (type 
 pdf)
  <use ./Analysis/Class_Definitions/Class_definition_key.pdf>
 Package pdftex.def Info: ./Analysis/Class_Definitions/Class_definition_key.pdf 
-used on input line 244.
+used on input line 260.
 (pdftex.def)             Requested size: 100.37537pt x 112.4283pt.
 
-<./Analysis/Class_Definitions/Class_diagrams.pdf, id=1028, 431.6125pt x 193.723
+<./Analysis/Class_Definitions/Class_diagrams.pdf, id=1023, 431.6125pt x 193.723
 75pt>
 File: ./Analysis/Class_Definitions/Class_diagrams.pdf Graphic file (type pdf)
  <use ./Analysis/Class_Definitions/Class_diagrams.pdf>
 Package pdftex.def Info: ./Analysis/Class_Definitions/Class_diagrams.pdf used o
-n input line 249.
+n input line 265.
 (pdftex.def)             Requested size: 390.0pt x 175.05327pt.
 
 
@@ -1250,45 +1233,24 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [24pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1
-2}) has been already used, duplicate ignored
+5}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.253 \newpage
+l.269 \newpage
               pdfTeX warning (ext4): destination with the same identifier (name
-{figure.1.13}) has been already used, duplicate ignored
+{figure.1.16}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.253 \newpage
+l.269 \newpage
                <./Analysis/Class_Definitions/Class_definition_key.pdf> <./Analy
 sis/Class_Definitions/Class_diagrams.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 261--262
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 275--276
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 277--278
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 279--280
-
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[25]
 Underfull \hbox (badness 10000) in paragraph at lines 291--292
 
  []
@@ -1299,13 +1261,34 @@ Underfull \hbox (badness 10000) in paragraph at lines 293--294
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 295--296
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[25]
+Underfull \hbox (badness 10000) in paragraph at lines 307--308
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 309--310
+
+ []
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [26]
-Underfull \hbox (badness 10000) in paragraph at lines 299--300
+Underfull \hbox (badness 10000) in paragraph at lines 315--316
 
  []
 
@@ -1316,32 +1299,32 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [27]
-Underfull \hbox (badness 10000) in paragraph at lines 330--331
+Underfull \hbox (badness 10000) in paragraph at lines 346--347
 
  []
 
-./Analysis/analysis.tex:331: Misplaced \noalign.
+./Analysis/analysis.tex:347: Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
-l.331 \end{itemize} \hline
+l.347 \end{itemize} \hline
                           
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 335--336
+Underfull \hbox (badness 10000) in paragraph at lines 351--352
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 348--349
+Underfull \hbox (badness 10000) in paragraph at lines 364--365
 
  []
 
-./Analysis/analysis.tex:349: Misplaced \noalign.
+./Analysis/analysis.tex:365: Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
-l.349 \end{itemize}\hline
+l.365 \end{itemize}\hline
                          
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -1353,43 +1336,43 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [28]
-Underfull \hbox (badness 10000) in paragraph at lines 353--354
+Underfull \hbox (badness 10000) in paragraph at lines 369--370
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 365--366
+Underfull \hbox (badness 10000) in paragraph at lines 381--382
 
  []
 
-./Analysis/analysis.tex:366: Misplaced \noalign.
+./Analysis/analysis.tex:382: Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
-l.366 \end{itemize}\hline
+l.382 \end{itemize}\hline
                          
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 370--371
+Underfull \hbox (badness 10000) in paragraph at lines 386--387
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 384--385
+Underfull \hbox (badness 10000) in paragraph at lines 400--401
 
  []
 
-./Analysis/analysis.tex:385: Misplaced \noalign.
+./Analysis/analysis.tex:401: Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
-l.385 \end{itemize}\hline
+l.401 \end{itemize}\hline
                          
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 391--392
+Underfull \hbox (badness 10000) in paragraph at lines 407--408
 
  []
 
@@ -1766,20 +1749,20 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 17.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 17.
 
-(/Users/joel/Dropbox/Apps/Texpad/A levels/Computing/Github/COMP4Coursework/.tex
-padtmp/coursework.aux
-(/Users/joel/Dropbox/Apps/Texpad/A levels/Computing/Github/COMP4Coursework/.tex
-padtmp/./Analysis/analysis.aux)
-(/Users/joel/Dropbox/Apps/Texpad/A levels/Computing/Github/COMP4Coursework/.tex
-padtmp/./Design/design.aux)
-(/Users/joel/Dropbox/Apps/Texpad/A levels/Computing/Github/COMP4Coursework/.tex
-padtmp/./Testing/testing.aux)
-(/Users/joel/Dropbox/Apps/Texpad/A levels/Computing/Github/COMP4Coursework/.tex
-padtmp/./Maintenance/maintenance.aux)
-(/Users/joel/Dropbox/Apps/Texpad/A levels/Computing/Github/COMP4Coursework/.tex
-padtmp/./Manual/manual.aux)
-(/Users/joel/Dropbox/Apps/Texpad/A levels/Computing/Github/COMP4Coursework/.tex
-padtmp/./Evaluation/evaluation.aux))
+(/Users/joelbutcher/Dropbox/Apps/Texpad/Computing/Github/COMP4Coursework/.texpa
+dtmp/coursework.aux
+(/Users/joelbutcher/Dropbox/Apps/Texpad/Computing/Github/COMP4Coursework/.texpa
+dtmp/./Analysis/analysis.aux)
+(/Users/joelbutcher/Dropbox/Apps/Texpad/Computing/Github/COMP4Coursework/.texpa
+dtmp/./Design/design.aux)
+(/Users/joelbutcher/Dropbox/Apps/Texpad/Computing/Github/COMP4Coursework/.texpa
+dtmp/./Testing/testing.aux)
+(/Users/joelbutcher/Dropbox/Apps/Texpad/Computing/Github/COMP4Coursework/.texpa
+dtmp/./Maintenance/maintenance.aux)
+(/Users/joelbutcher/Dropbox/Apps/Texpad/Computing/Github/COMP4Coursework/.texpa
+dtmp/./Manual/manual.aux)
+(/Users/joelbutcher/Dropbox/Apps/Texpad/Computing/Github/COMP4Coursework/.texpa
+dtmp/./Evaluation/evaluation.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 17.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 17.
 Package rerunfilecheck Info: File `coursework.out' has not changed.
@@ -1791,13 +1774,13 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 17.
  ) 
 Here is how much of TeX's memory you used:
- 10943 strings out of 493117
- 163256 string characters out of 6135433
- 266499 words of memory out of 5000000
- 13963 multiletter control sequences out of 15000+600000
+ 10941 strings out of 493117
+ 163017 string characters out of 6135432
+ 266555 words of memory out of 5000000
+ 13960 multiletter control sequences out of 15000+600000
  10886 words of font info for 39 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,18n,48p,769b,451s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 43i,18n,47p,769b,451s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
@@ -1806,11 +1789,11 @@ r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/
 local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loc
 al/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loca
 l/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on "/Users/joel/Dropbox/Apps/Texpad/A levels/Computing/Github/CO
-MP4Coursework/.texpadtmp/coursework.pdf" (46 pages, 629572 bytes).
+Output written on /Users/joelbutcher/Dropbox/Apps/Texpad/Computing/Github/COMP4
+Coursework/.texpadtmp/coursework.pdf (46 pages, 630304 bytes).
 PDF statistics:
- 1217 PDF objects out of 1440 (max. 8388607)
- 1082 compressed objects within 11 object streams
- 217 named destinations out of 1000 (max. 500000)
- 1199 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1212 PDF objects out of 1440 (max. 8388607)
+ 1080 compressed objects within 11 object streams
+ 219 named destinations out of 1000 (max. 500000)
+ 1176 words of extra memory for PDF output out of 10000 (max. 10000000)
 

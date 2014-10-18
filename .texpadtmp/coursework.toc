@@ -4,42 +4,41 @@
 \contentsline {subsection}{\numberline {1.1.2}Define the current system}{6}{subsection.1.1.2}
 \contentsline {subsection}{\numberline {1.1.3}Describe the problems}{6}{subsection.1.1.3}
 \contentsline {subsection}{\numberline {1.1.4}Section appendix}{6}{subsection.1.1.4}
-\contentsline {section}{\numberline {1.2}Investigation}{10}{section.1.2}
-\contentsline {subsection}{\numberline {1.2.1}The current system}{10}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.1.5}The current system}{10}{subsection.1.1.5}
 \contentsline {subsubsection}{Data sources and destinations}{10}{section*.2}
 \contentsline {subsubsection}{Algorithms}{10}{section*.3}
 \contentsline {subsubsection}{Data flow diagrams}{11}{section*.4}
 \contentsline {subsubsection}{Input Forms, Output Forms, Report Formats}{13}{section*.5}
-\contentsline {subsection}{\numberline {1.2.2}The proposed system}{14}{subsection.1.2.2}
+\contentsline {subsection}{\numberline {1.1.6}The proposed system}{14}{subsection.1.1.6}
 \contentsline {subsubsection}{Data sources and destinations}{14}{section*.6}
 \contentsline {subsubsection}{Data flow diagram}{16}{section*.7}
 \contentsline {subsubsection}{Data dictionary}{18}{section*.8}
 \contentsline {subsubsection}{Volumetrics}{19}{section*.9}
-\contentsline {section}{\numberline {1.3}Objectives}{19}{section.1.3}
-\contentsline {subsection}{\numberline {1.3.1}General Objectives}{19}{subsection.1.3.1}
-\contentsline {subsection}{\numberline {1.3.2}Specific Objectives}{19}{subsection.1.3.2}
-\contentsline {subsection}{\numberline {1.3.3}Core Objectives}{20}{subsection.1.3.3}
-\contentsline {subsection}{\numberline {1.3.4}Other Objectives}{20}{subsection.1.3.4}
-\contentsline {section}{\numberline {1.4}ER Diagrams and Descriptions}{21}{section.1.4}
-\contentsline {subsection}{\numberline {1.4.1}ER Diagram}{21}{subsection.1.4.1}
-\contentsline {subsection}{\numberline {1.4.2}Entity Descriptions}{22}{subsection.1.4.2}
-\contentsline {section}{\numberline {1.5}Object Analysis}{22}{section.1.5}
-\contentsline {subsection}{\numberline {1.5.1}Object Listing}{22}{subsection.1.5.1}
-\contentsline {subsection}{\numberline {1.5.2}Relationship diagrams}{23}{subsection.1.5.2}
-\contentsline {subsection}{\numberline {1.5.3}Class definitions}{24}{subsection.1.5.3}
-\contentsline {section}{\numberline {1.6}Other Abstractions and Graphs}{25}{section.1.6}
-\contentsline {section}{\numberline {1.7}Constraints}{25}{section.1.7}
-\contentsline {subsection}{\numberline {1.7.1}Hardware}{25}{subsection.1.7.1}
-\contentsline {subsection}{\numberline {1.7.2}Software}{26}{subsection.1.7.2}
-\contentsline {subsection}{\numberline {1.7.3}Time}{26}{subsection.1.7.3}
-\contentsline {subsection}{\numberline {1.7.4}User Knowledge}{26}{subsection.1.7.4}
-\contentsline {subsection}{\numberline {1.7.5}Access restrictions}{27}{subsection.1.7.5}
-\contentsline {section}{\numberline {1.8}Limitations}{27}{section.1.8}
-\contentsline {subsection}{\numberline {1.8.1}Areas which will not be included in computerisation}{27}{subsection.1.8.1}
-\contentsline {subsection}{\numberline {1.8.2}Areas considered for future computerisation}{27}{subsection.1.8.2}
-\contentsline {section}{\numberline {1.9}Solutions}{28}{section.1.9}
-\contentsline {subsection}{\numberline {1.9.1}Alternative solutions}{28}{subsection.1.9.1}
-\contentsline {subsection}{\numberline {1.9.2}Justification of chosen solution}{30}{subsection.1.9.2}
+\contentsline {section}{\numberline {1.2}Objectives}{19}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}General Objectives}{19}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}Specific Objectives}{19}{subsection.1.2.2}
+\contentsline {subsection}{\numberline {1.2.3}Core Objectives}{20}{subsection.1.2.3}
+\contentsline {subsection}{\numberline {1.2.4}Other Objectives}{20}{subsection.1.2.4}
+\contentsline {section}{\numberline {1.3}ER Diagrams and Descriptions}{21}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}ER Diagram}{21}{subsection.1.3.1}
+\contentsline {subsection}{\numberline {1.3.2}Entity Descriptions}{22}{subsection.1.3.2}
+\contentsline {section}{\numberline {1.4}Object Analysis}{22}{section.1.4}
+\contentsline {subsection}{\numberline {1.4.1}Object Listing}{22}{subsection.1.4.1}
+\contentsline {subsection}{\numberline {1.4.2}Relationship diagrams}{23}{subsection.1.4.2}
+\contentsline {subsection}{\numberline {1.4.3}Class definitions}{24}{subsection.1.4.3}
+\contentsline {section}{\numberline {1.5}Other Abstractions and Graphs}{25}{section.1.5}
+\contentsline {section}{\numberline {1.6}Constraints}{25}{section.1.6}
+\contentsline {subsection}{\numberline {1.6.1}Hardware}{25}{subsection.1.6.1}
+\contentsline {subsection}{\numberline {1.6.2}Software}{26}{subsection.1.6.2}
+\contentsline {subsection}{\numberline {1.6.3}Time}{26}{subsection.1.6.3}
+\contentsline {subsection}{\numberline {1.6.4}User Knowledge}{26}{subsection.1.6.4}
+\contentsline {subsection}{\numberline {1.6.5}Access restrictions}{27}{subsection.1.6.5}
+\contentsline {section}{\numberline {1.7}Limitations}{27}{section.1.7}
+\contentsline {subsection}{\numberline {1.7.1}Areas which will not be included in computerisation}{27}{subsection.1.7.1}
+\contentsline {subsection}{\numberline {1.7.2}Areas considered for future computerisation}{27}{subsection.1.7.2}
+\contentsline {section}{\numberline {1.8}Solutions}{28}{section.1.8}
+\contentsline {subsection}{\numberline {1.8.1}Alternative solutions}{28}{subsection.1.8.1}
+\contentsline {subsection}{\numberline {1.8.2}Justification of chosen solution}{30}{subsection.1.8.2}
 \contentsline {chapter}{\numberline {2}Design}{31}{chapter.2}
 \contentsline {section}{\numberline {2.1}Overall System Design}{32}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}Short description of the main parts of the system}{32}{subsection.2.1.1}
