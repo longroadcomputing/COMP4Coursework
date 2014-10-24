@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.9.11)  1 OCT 2014 15:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.18)  20 OCT 2014 12:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -25,8 +25,8 @@ File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(/Users/joel/Dropbox/A levels/Computing/Github/COMP4Coursework/Latex Examples/.
-texpadtmp/tables.aux)
+(/Users/joelbutcher/Dropbox/Apps/Texpad/Computing/Github/COMP4Coursework/Latex 
+Examples/.texpadtmp/tables.aux)
 \openout1 = `tables.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
@@ -240,23 +240,23 @@ and I'll forget about whatever was undefined.
 [1
 
 {/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-(/Users/joel/Dropbox/A levels/Computing/Github/COMP4Coursework/Latex Examples/.
-texpadtmp/tables.aux) ) 
+(/Users/joelbutcher/Dropbox/Apps/Texpad/Computing/Github/COMP4Coursework/Latex 
+Examples/.texpadtmp/tables.aux) ) 
 Here is how much of TeX's memory you used:
  228 strings out of 493117
- 3058 string characters out of 6135433
+ 3128 string characters out of 6135432
  55909 words of memory out of 5000000
  3775 multiletter control sequences out of 15000+600000
  3948 words of font info for 15 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  23i,10n,17p,122b,211s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2014/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmbx10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmmi10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmmi7.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr10.pfb>
-Output written on "/Users/joel/Dropbox/A levels/Computing/Github/COMP4Coursewor
-k/Latex Examples/.texpadtmp/tables.pdf" (1 page, 48783 bytes).
+</usr/local/texlive/2014/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmr10.pfb>
+Output written on "/Users/joelbutcher/Dropbox/Apps/Texpad/Computing/Github/COMP
+4Coursework/Latex Examples/.texpadtmp/tables.pdf" (1 page, 48783 bytes).
 PDF statistics:
  24 PDF objects out of 1000 (max. 8388607)
  16 compressed objects within 1 object stream
