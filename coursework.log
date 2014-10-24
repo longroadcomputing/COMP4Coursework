@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.1)  1 OCT 2014 11:30
 entering extended mode
 **U:/Github/COMP4Coursework/coursework.tex
@@ -1108,7 +1109,6 @@ PDF statistics:
  86 named destinations out of 1000 (max. 500000)
  328 words of extra memory for PDF output out of 10000 (max. 10000000)
 
-<<<<<<< HEAD
 =======
 This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.1)  2 OCT 2014 12:58
 entering extended mode
@@ -2826,5 +2826,3 @@ PDF statistics:
  175 words of extra memory for PDF output out of 10000 (max. 10000000)
 
 >>>>>>> FETCH_HEAD
-=======
->>>>>>> parent of 77e3891... Merge branch 'master' of https://github.com/JoelLongRoad/COMP4Coursework
