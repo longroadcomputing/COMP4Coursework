@@ -77,20 +77,32 @@ In the current system, there are only a few algorithms in place.
 
 \subsubsection{Data flow diagrams}
 
-\begin{figure}[H]
-    \includegraphics[width=\textwidth]{./Analysis/Dataflow/DFD_analysis_key.pdf}
-    \caption{Flow Diagram Key.} \label{fig:print_function_result}
-\end{figure}
+\begin{center}
+    \begin{figure}[H]
+        \includegraphics[width=\textwidth]{./Analysis/Dataflow/DFD_analysis_key.pdf}
+        \caption{Flow Diagram Key.} \label{fig:print_function_result}
+    \end{figure}
 
-\begin{figure}[H]
-    \centerline{\includegraphics[width=130px]{./Analysis/Dataflow/DFD_analysis_new_item.pdf}}
-    \caption{Entering a new item.} \label{fig:print_function_result}
-\end{figure}
+    \begin{figure}[H]
+        \centerline{\includegraphics[width=\textwidth]{./Analysis/Dataflow/Old_System/Old_Sys_DFD_analysis_new_item.pdf}}
+        \caption{Entering a new item.} \label{fig:print_function_result}
+    \end{figure}
 
-\begin{figure}[H]
-    \centerline{\includegraphics[width=125px]{./Analysis/Dataflow/DFD_analysis_update_item.pdf}}
-    \caption{Updating an item that already exists in the table.} \label{fig:print_function_result}
-\end{figure}
+    \begin{figure}[H]
+        \centerline{\includegraphics[width=\textwidth]{./Analysis/Dataflow/Old_System/Old_Sys_Data_flow_update.pdf}}
+        \caption{Updating an item that already exists in the table.} \label{fig:print_function_result}
+    \end{figure}
+    
+    \begin{figure}[H]
+        \centerline{\includegraphics[width=\textwidth]{./Analysis/Dataflow/Old_System/Old_Sys_Data_flow_quote.pdf}}
+        \caption{Creating and sending the initial quote for a loan.} \label{fig:print_function_result}
+    \end{figure}
+    
+    \begin{figure}[H]
+        \centerline{\includegraphics[width=\textwidth]{./Analysis/Dataflow/Old_System/Old_Sys_Data_flow_invoice.pdf}}
+        \caption{Creating and sending the final invoice for a loan.} \label{fig:print_function_result}
+    \end{figure}
+\end{center}
 
 \newpage
 
@@ -118,7 +130,74 @@ Josh has provided me with a screenshot of him entering some data into his curren
 
 The Following table shows the proposed data and their respective sources and destinations.
 
-\includepdf[pages=-]{./Analysis/DataS&D/Data_S&D.pdf}
+\begin{center}
+        \begin{tabular}{|p{2cm}|p{3cm}|p{3cm}|p{3cm}|}
+            \hline
+            \textbf{Source} & \textbf{Data} & \textbf{Data Type} & \textbf{Destination} \\ \hline
+            Generated & \textbf{ItemTypeID} & Integer & Database - ItemType Table \\ \hline
+            User & ItemType & Text & Database - ItemType Table \\ \hline
+            - & - & - & - \\ \hline
+            Generated & \textbf{LocationID} & Integer & Database - Location Table \\ \hline
+            User & Location & Text & Database - Location Table \\ \hline
+            - & - & - & - \\ \hline
+            Generated & \textbf{ItemID} & Integer & Database - Item Records \\ \hline
+            Database - ItemType Table & \emph{ItemTypeID} & Integer & Database - Item Table \\ \hline
+            Database - Location Table & \emph{LocationID} & Integer & Database - Item Table \\ \hline
+            User & ItemName & Text & Database - Item Table \\ \hline
+            User & Value & Real & Database - Item Table \\ \hline
+            User & ItemQuantity & Integer & Database - Item Table \\ \hline
+            User & SubTotal & Real & Database - Item Table \\ \hline
+            User & OnLoan & Boolean & Database - Item Table \\ \hline
+            \end{tabular}
+\end{center}
+
+\begin{center}
+        \begin{tabular}{|p{2cm}|p{3cm}|p{3cm}|p{3cm}|}
+            \hline
+            \textbf{Source} & \textbf{Data} & \textbf{Data Type} & \textbf{Destination} \\ \hline
+            Generated & \textbf{LoanListingID} & Integer & Database - LoanListing Table \\ \hline
+            Database - Item Table & \emph{ItemID} & Integer & Database - LoanListing Table \\ \hline
+            User & LoanQuantity & Integer & Database - LoanListing Table \\ \hline
+            - & - & - & - \\ \hline
+            Generated & \textbf{CustomerLoanID} & Integer & Database - Loan Table \\ \hline
+            Database - Customer Table & \emph{CustomerID} & Integer & Database - Loan Table \\ \hline
+            User & LoanRate & Real & Database - Loan Table \\ \hline
+            User & LoanLength(Days) & Integer & Database - Loan Table \\ \hline
+            Calculated & LoanCost & Real & Database - Loan Table \\ \hline
+            - & - & - & - \\ \hline
+            Generated & \textbf{CustomerID} & Integer & Database - Customer Table \\ \hline
+            User & Forename & Text & Database - Customer Table \\ \hline
+            User & Lastname & Text & Database - Customer Table \\ \hline
+            User & Company & Text & Database - Customer Table \\ \hline
+            User & Street & Text & Database - Customer Table \\ \hline
+            User & Town & Text & Database - Customer Table \\ \hline
+            User & County & Text & Database - Customer Table \\ \hline
+            User & PostCode & Text & Database - Customer Table \\ \hline
+            User & MobileNumber & Text & Database - Customer Table \\ \hline
+            User & LandLine & Text & Database - Customer Table \\ \hline
+            User & Email & Text & Database - Customer Table \\ \hline
+            \end{tabular}
+\end{center}
+
+\begin{center}
+        \begin{tabular}{|p{2cm}|p{3cm}|p{3cm}|p{3cm}|}
+            \hline
+            \textbf{Source} & \textbf{Data} & \textbf{Data Type} & \textbf{Destination} \\ \hline
+            Generated & \textbf{ItemTestID} & Integer & Database - ItemTest Table \\ \hline
+            Database - PATtest Records & \emph{PATtestID} & Integer & Database - ItemTest Table \\ \hline
+            User & ItemDescription & Text & Database - ItemTest Table \\ \hline
+            User & ItemClass & Integer & Database - ItemTest Table \\ \hline
+            User & FuseRating & Text & Database - ItemTest Table \\ \hline
+            User & TestUsed & Text & Database - ItemTest Table \\ \hline 
+            User & ProtectiveCondTest & Integer & Database - ItemTest Table \\ \hline
+            User & InsulationTest & Text & Database - ItemTest Table \\ \hline
+            User & Leakage & Float & Database - ItemTest Table \\ \hline
+            User & TestResult & Boolean & Database - ItemTest Table \\ \hline
+            - & - & - & - \\ \hline
+            Generated & \textbf{PATtestID} & Integer & Database - PATtest Table \\ \hline
+            User & TestDate & Date & Database - PATtest Table \\ \hline
+        \end{tabular}
+\end{center}
 
 
 \subsubsection{Data flow diagram}
@@ -130,11 +209,11 @@ The Following table shows the proposed data and their respective sources and des
 
 \begin{figure}[H]
     \caption{Enter New Item.} \label{fig:print_function_result}
-    \includegraphics[width=\textwidth]{./Analysis/Dataflow/Data_flow_new.pdf}
+    \includegraphics[width=\textwidth]{./Analysis/Dataflow/New_System/Data_flow_new.pdf}
 \end{figure}
 
 \begin{figure}[H]
-    \includegraphics[width=\textwidth]{./Analysis/Dataflow/Data_flow_update.pdf}
+    \includegraphics[width=\textwidth]{./Analysis/Dataflow/New_System/Data_flow_update.pdf}
     \caption{Enter New Item.} \label{fig:print_function_result}
 \end{figure}
 
@@ -142,10 +221,106 @@ The Following table shows the proposed data and their respective sources and des
 
 \subsubsection{Data dictionary}
 
-\begin{figure}[H]
-    \includegraphics[width=\textwidth]{./Analysis/Dictionary/Data_dictionary.pdf}
-    \caption{Data Dictionary.} \label{fig:data_dictionary}
-\end{figure}
+\begin{landscape}
+
+    \begin{center}
+    \subsubsection{Data dictionary}
+    \end{center}
+    
+    \begin{center}
+        \begin{tabular}{|p{3cm}|p{2cm}|p{3cm}|p{2cm}|p{2cm}|p{5cm}|}
+            \hline
+            \textbf{Name} & \textbf{Data Type} & \textbf{Length} & \textbf{Validation} & \textbf{Example Data} & \textbf{Comment} \\ \hline
+            ItemTypeID & Integer & 1-435 & Range & 253 & This is the \textbf{Primary Key} for the ItemType class, and foreign key for the Item class \\ \hline
+            ItemType & Text & 5-40 Characters & Length & Arkaos Server & This holds the description of each type of Item. \\ \hline
+            LocationID & Integer & 1-3 Figures & Range & 1,300 & This is the \textbf{Primary Key} for the Location class and a \emph{Foreign Key} for the Item class \\ \hline
+            Location & Text & 1-30 Characters & Length & Main Offices  & This holds the name of the locations \\ \hline
+            \end{tabular}
+    \end{center}
+\end{landscape}
+
+
+\begin{landscape}
+    \begin{center}
+        \begin{tabular}{|p{3cm}|p{2cm}|p{3cm}|p{2cm}|p{2cm}|p{5cm}|}
+            \hline
+            \textbf{Name} & \textbf{Data Type} & \textbf{Length} & \textbf{Validation} & \textbf{Example Data} & \textbf{Comment} \\ \hline
+            ItemID & Integer & 1-435 & Range & 253 & This is the \textbf{Primary Key} for the Item class, and foreign key for the Loan and PATtest classes \\ \hline
+            ItemName & Text & 5-40 Characters & Length & Arkaos Server & This gives the name of each item entered \\ \hline
+            Value & Real & 2-5 Figures & Range & 1,300 & This holds the data for the monetary value for each item \\ \hline
+            ItemQuantity & Integer & 0-100 & Range & 35 & This holds the data for the number of each item owned \\ \hline
+            SubTotal & Real & 2-8 Figures & Range & 250 & This  is calculated for each item by multiplying the value by the quantity \\ \hline
+            OnLoan & Boolean & True/False & Status Check & True & This holds the data of whether an item is on loan or not. Will be displayed as "Yes" or "No" \\ \hline
+            \end{tabular}
+    \end{center}
+\end{landscape}
+
+
+\begin{landscape}
+    \begin{center}
+        \begin{tabular}{|p{3cm}|p{2cm}|p{3cm}|p{2cm}|p{2cm}|p{5cm}|}
+            \hline
+            \textbf{Name} & \textbf{Data Type} & \textbf{Length} & \textbf{Validation} & \textbf{Example Data} & \textbf{Comment} \\ \hline
+            LoanListingID & Integer & 1-435 & Range & 56 & This is the \textbf{Primary Key} for the LoanListing class \\ \hline
+            ListingQuantity & Integer & 1-35 & Range & 4 & This holds the data for how many of an item has been loaned out \\ \hline
+            CustomerLoanID & Integer & 1-435 & Range & 21 & This is the \textbf{Primary Key} for the Loan class \\ \hline
+            LoanRate & Real & 1-5 Figures & Range & 75 & Holds data for how much is charged per day for the loan of an item \\ \hline
+            LoanLength & Integer & 1-3 Figures & Range & 7 & Holds the data for the length of the loan \\ \hline
+            LoanCost & Real & 1-4 Integers & Range & 250 & Holds the data for the amount to charge before the loan \\ \hline
+        \end{tabular}
+    \end{center}
+\end{landscape}
+
+
+\begin{landscape}
+    \begin{center}
+        \begin{tabular}{|p{2.3cm}|p{2cm}|p{3cm}|p{2cm}|p{4.6cm}|p{4cm}|}
+            \hline
+            \textbf{Name} & \textbf{Data Type} & \textbf{Length} & \textbf{Validation} & \textbf{Example Data} & \textbf{Comment} \\ \hline
+            CustomerID & Integer & 1-255 & Range & 52 & This is the \textbf{Primary Key} for the Customer class \\ \hline
+            Forename & Text & 3-20 Characters & Length & John & A field for the customers forename \\ \hline
+            Lastname & Text & 3-20 Characters & Length & Smith & A field for the customers surname\\ \hline
+            Company & Text & 3-20 Characters & Length & Digital Lighting Cambs & A field for the company's name\\ \hline
+            Street & Text & 3-30 Characters & Length & 129 Cedar Crescent & A field for the company's Street address\\ \hline
+            Town & Text & 3-30 Characters & Length & Sawston & A field for the company's Town \\ \hline
+            County & Text & 3-20 Characters & Length & Cambs & A field for the company's County \\ \hline
+            PostCode & Text & 6-7 Characters & Format & CB22 7RX & A field for the company's Postcode \\ \hline
+            MobileNumber & Text & 11 Characters & Format & 07891234567 & A field for the customers mobile number\\ \hline
+            LandLine & Text & 11 Characters & Format & 01234567890 & A field for the customers landline phone \\ \hline
+            Email & Text & 7 - 30 Characters & Length & john.smith@example.com & A field for the customers email address\\ \hline
+        \end{tabular}
+    \end{center}
+\end{landscape}
+
+
+\begin{landscape}
+    \begin{center}
+        \begin{tabular}{|p{3.4cm}|p{2cm}|p{2cm}|p{2cm}|p{4cm}|p{5cm}|}
+            \hline
+            \textbf{Name} & \textbf{Data Type} & \textbf{Length} & \textbf{Validation} & \textbf{Example Data} & \textbf{Comment} \\ \hline
+            ItemTestID & Integer & 1-255 & Range & 52 & This is the \textbf{Primary Key} for the ItemTest class \\ \hline
+            ItemDescription & Text & 3-400 Characters & Length & Waltham portable TV & A field that describes the item to be tested \\ \hline
+            ItemClass & Integer & 1 Character & Length & 2 & A field to show what class of electrical equipment the item is \\ \hline
+            FuseRating & Text & 1-3 Characters & Length & 5A & A field which displays the fuse rating \\ \hline
+            TestUsed & Text & 1-10 Characters & Length & II & A field to show what test was used on the item \\ \hline
+            ProtectiveCondTest & Float & 4 Characters & Length & - & A field displaying the resistance of an item, in Ohms, to a 200mA current  \\ \hline
+            InsulationTest & Text & 3 Characters & Length & >20 & A field displaying the Insulation of an item, in Ohms, to a 250V or 500V Potential Difference \\ \hline
+            Leakage & Float & 4 Characters & Format & 0.03 & A field that shows the current not obtained by the item, in milliamperes \\ \hline
+            TestResult & Boolean & - & Presence Check & True & A field to show if an item Passed or not\\ \hline
+        \end{tabular}
+    \end{center}
+\end{landscape}
+
+\begin{landscape}
+    \begin{center}
+        \begin{tabular}{|p{2.3cm}|p{2cm}|p{3cm}|p{2cm}|p{4.6cm}|p{4cm}|}
+            \hline
+            \textbf{Name} & \textbf{Data Type} & \textbf{Length} & \textbf{Validation} & \textbf{Example Data} & \textbf{Comment} \\ \hline
+            PATtestID & Integer & 1-255 & Range & 52 & This is the \textbf{Primary Key} for the PATtest class \\ \hline
+            TestDate & Date & 10 Characters & Format & 01/12/2014 & A field that displays the date of the PAT test \\ \hline
+        \end{tabular}
+    \end{center}
+\end{landscape}
 
 \newpage
 
@@ -167,8 +342,8 @@ If the rest of database managemnent system took up 28MB, the client would need 1
 
 \begin{itemize}
 	\item Easily understandable layout and structure for records.
-	\item Easy structure for input and outputs.
-	\item Easy viewing of records
+	\item Data is easy to enter and edit
+	\item Viewing of records is structured and well presented
 \end{itemize}
 
 \subsection{Specific Objectives}
@@ -176,7 +351,7 @@ If the rest of database managemnent system took up 28MB, the client would need 1
 Record viewing:
 \begin{itemize}
     \item Clear labels for data attributes.
-    \item Next and Preious record buttons.
+    \item Next and Previous record buttons.
     \item Edit button so data cannot be changed accidentally.
     \item Submit button to save data changes (if any) to the current record.
     \item First and Last record buttons to jump to respective record.
@@ -186,7 +361,7 @@ Record viewing:
 \begin{itemize}
     \item Data fields become editable
     \item Drop down selection for location selection
-    \item Changes saved immediately after editng has finished (ie submit button pressed)
+    \item Changes saved immediately after editing has finished (i.e. submit button pressed)
 \end{itemize}
 
 \noindent Data output:
@@ -210,8 +385,10 @@ Record viewing:
 \subsection{Other Objectives}
 
 \begin{itemize}
-    \item Printing records/invoices
-    \item Exporting records/invoices to PDF
+    \item Generating and exporting of quote sheets to PDF
+    \item Generating and exporting of invoices to PDF
+    \item Printing and Exporting records to PDF
+    \item Enable Full screen application on OS X
 \end{itemize}
 
 \section{ER Diagrams and Descriptions}
@@ -219,20 +396,35 @@ Record viewing:
 \subsection{ER Diagram}
 
 \begin{figure}[H]
-    \centerline{\includegraphics[width=250px]{./Analysis/ER_Diagrams/ER_Diagrams.pdf}}
-    \caption{ER Diagrams.} \label{fig:ER Diagrams}
+    \centerline{\includegraphics[width=200px]{./Analysis/ER_Diagrams/Loan_ER_Diagrams.pdf}}
+    \caption{Loan Item ER Diagrams.} \label{fig:ER Diagrams}
 \end{figure}
 
-\newpage
+\begin{figure}[H]
+    \centerline{\includegraphics[width=200px]{./Analysis/ER_Diagrams/PAT_Test_ER_Diagrams.pdf}}
+    \caption{PAT Test ER Diagrams.} \label{fig:ER Diagrams}
+\end{figure}
 
 \subsection{Entity Descriptions}
 
-Item(\underline{ItemID}, Name, Location, Value, Quantity, SubTotal, OnLoan,\\
-\noindent \emph{PATNeeded})\\
+\noindent \textbf{ItemType}(\underline{ItemTypeID}, ItemType)\\
 
-\noindent Loan(\underline{LoanID}, \emph{ItemID}, \emph{ItemName}, LoanRate, LoanStartDate, LoanEndDate, LoanTime, LoanCost)\\
+\noindent \textbf{Location}(\underline{LocationID}, Location)\\
 
-\noindent PATTest(\underline{TestID}, \emph{ItemID}, \emph{ItemName}, LastTest, NextTest)
+\noindent \textbf{Item}(\underline{ItemID}, \emph{ItemTypeID}, \emph{LocationID}, Name, Location, Value,\\
+ItemQuantity, SubTotal, OnLoan,)\\
+
+\noindent \textbf{LoanListing}(\underline{LoanListingID}, \emph{ItemID}, ListingQuantity)\\
+
+\noindent \textbf{Loan}(\underline{LoanID}, \emph{CustomerID}, LoanRate, LoanLength, LoanCost)\\
+
+\noindent \textbf{Customer}(\underline{CustomerID}, Forename, Lastname, Company, Street, Town, County,\\
+PostCode, MobileNumber, LandLine, Email)\\
+
+\noindent \textbf{PATtest}(\underline{PATtestID}, TestDate)\\ 
+
+\noindent \textbf{ItemTest}(\underline{ItemTestID}, \emph{PATTestID}, ItemDescription, ItemClass,\\
+FuseRating, TestUsed, ProtectiveCondTest, InsulationTest, Leakage, TestResult)\\
 
 \section{Object Analysis}
 
@@ -241,8 +433,7 @@ Item(\underline{ItemID}, Name, Location, Value, Quantity, SubTotal, OnLoan,\\
 \begin{itemize}
     \item Client
     \item Item
-    \item Loan
-    \item PAT test
+    \item Location
 \end{itemize}
 
 \subsection{Relationship diagrams}
@@ -256,15 +447,17 @@ Item(\underline{ItemID}, Name, Location, Value, Quantity, SubTotal, OnLoan,\\
 
 \subsection{Class definitions}
 
-\begin{figure}[H]
-    \centerline{\includegraphics[width=100px]{./Analysis/Class_Definitions/Class_definition_key.pdf}}
-    \caption{Class Diagram Key.} \label{fig:relationship_diagram}
-\end{figure}
+\begin{landscape}
+    \begin{figure}[H]
+        \centerline{\includegraphics[width=54px]{./Analysis/Class_Definitions/Class_definition_key.pdf}}
+        \caption{Class Diagram Key.} \label{fig:relationship_diagram}
+    \end{figure}
 
-\begin{figure}[H]
-    \centerline{\includegraphics[width=\textwidth]{./Analysis/Class_Definitions/Class_diagrams.pdf}}
-    \caption{Class Diagrams.} \label{fig:relationship_diagram}
-\end{figure}
+    \begin{figure}[H]
+        \centerline{\includegraphics[width=500px]{./Analysis/Class_Definitions/Class_diagrams.pdf}}
+        \caption{Class Diagrams.} \label{fig:relationship_diagram}
+    \end{figure}
+\end{landscape}
 
 \newpage
 
@@ -288,15 +481,15 @@ Presently, Josh uses a custom built, 2008 MacPro Desktop Computer. This is prima
     \item 15" LG E1942 LCD Display. 1280 x 720 pixels
 \end{itemize}
 
-\noindent The proposed system should have little to no impact on this machine as the processing power and memory that can be disipated by the computer, greatly excedes the requirements for the proposed system.\\
+\noindent The proposed system should have little to no impact on this machine as the processing power and memory that can be dissipated by the computer, greatly exceeds the requirements for the proposed system.\\
 
-\noindent There are, however, a few hard constraints that will have to be considered. One of which is the resolution of the display. The proposed system will have to be designed and implemented by taking this into account, otherwise the system may not fit the screen size appropriately.\\
+\noindent One other constraint of the computer to be used is that it is a desktop computer. This means that the system is only accessible where Josh chooses to have the computer based in his place of work, as the computer is not portable. In addition to this, the computer requires a constant supply of power in order to operate as there is not internal battery.\\
 
 \noindent One other constraint of the computer to be used is that it is a desktop computer. This means that the system is only accessible where Josh chooses to have the computer based in his place of work, as the computer is not portable. In addition to this, the computer requires a constant supply of power in order to opperate as there is not internal battery.\\
 
 \subsection{Software}
 
-Josh has told me that there little restriction as to what software can and can't be stalled. The only restriction in place is that I don't install pirated, illegal or damaging software on the machine as it is part of an inter network of systems and can be accessed by other computers. The current operating system in place is Apples OSX 10.8 (Mountain Lion). Josh wishes to update the software sometime in the near future to OSX 10.9 (Mavericks) and possibly update to OSX 10.10 (Yosemite) when a stable version has been released within the next 3-5 months.
+Josh has told me that he is able to adapt to the software that is required to run the system. The current operating system in place is Apples OSX 10.8 (Mountain Lion). Josh wishes to update the software sometime in the near future to OSX 10.9 (Mavericks) and possibly update to OSX 10.10 (Yosemite). This could prove to be constraint because OSX 10.10 (Yosemite) isn't yet fully supported by some applications. 
 
 \subsection{Time}
 
@@ -304,105 +497,52 @@ Josh has said that there is no deadline requirement for the proposed system to b
 
 \subsection{User Knowledge}
 
-Josh posses a qualification in A level Media studies as well as 2 years use of comuters during his degree. He has substantial understanding of how to use computers as his job requires he uses one most of the time. Josh also has required knowledge of how to use many variaties of applications. He uses Adobe Creative Suite for most of his job as he designs various forms of media. He also has knowledge of Apple's Final Cut Pro application as well as many others.\\
+Josh posses a qualification in A level Media studies as well as 2 years use of computers during his degree. He has substantial understanding of how to use computers as his job requires he uses one most of the time. Josh also has required knowledge of how to use many varieties of applications. He uses Adobe Creative Suite for most of his job as he designs various forms of media. He also has knowledge of Apple's Final Cut Pro application as well as many others.\\
 
 \noindent When designing and implementing the proposed system, Josh's experience with computers will have to be considered. Josh tends to use the internet browser Google Chrome for all his web-browsing and research as well as a third party mail application called. By designing the system similarly to these applications, it should make it easier to understand how the system works and get used to using it a lot faster than it would if the system had a primitive design.\\
 
-\noindent There will also be a full manual included to aid Josh with learning and understaning the familiar interface, the functionality of the new system and how to use certain features.
+\noindent There will also be a full manual included to aid Josh with learning and understanding the familiar interface, the functionality of the new system and how to use certain features.
 
 \subsection{Access restrictions}
 
 The proposed system is primarily to be accessed by Josh himself. However, he can see it being an advantage if other people had access to the system.\\
 
-\noindent For this reason, we have agreed that having the database password protected is the best way fo Josh to control who can do what with the data. He will be able to distribute usernames and passwords to other colleagues who he feels should have different access levels (Admin or standard). This reduces the risk of records being deleted that shouldn't have been. It also allows Josh to monitor who has entered new data, or updated existing data.
-
-\noindent Users should be able to change their passwords to a more memorable one when they log into the system for the first time.
+\noindent For this reason, we have agreed that having the database password protected is the best way for Josh to control who can access the data. He will be able to distribute the passwords to other colleagues who he feels should have access to the database management system. This reduces the risk of records being changed or deleted by people who shouldn't need to use the system.
 
 \section{Limitations}
 
 \subsection{Areas which will not be included in computerisation}
 
-Initial buying of new items will not be included in the computerisation as this is still done either in person or over the world wide web. Similarly, intial sales of items will not be included in the computerisation, it will only be once the item has been bought/sold that the data will be updated to coincide with the quantity changes.
+Initial buying of new items will not be included in the computerisation as this is still done either in person or over the world wide web. Similarly, initial sales of items will not be included in the computerisation, it will only be once the item has been bought/sold that the data will be updated to coincide with the quantity changes and/or addition to or deduction or equipment.
 
 \subsection{Areas considered for future computerisation}
 
-The process of an external client of Josh's buying and receiving an item could be included in the system as it would be easier to produce an invoice and quote sheet from the data already in the system rather than query the database and hand draft an email to be sent. The system could be included if I have time at the end and have the relevant knowledge in order to accomplish the task
+When a customer loans out equipment, Josh sends out an initial quote, either as an email format or on paper. This could be included in the system by selecting the items the customer wants to high out, and draft a quote form for Josh. Similarly, Josh sends out an emailed invoice to the client, he does this manually by hand. It would be advantageous to include this into the system, by generating an invoice based on the attributes in Loan Records and export it as a PDF for email or printing. These could be implemented in addition to the current database design at the end, if I have enough time to learn and understand how to enter this functionality it into the system
 
 \section{Solutions}
 
 \subsection{Alternative solutions}
 
+\begin{center}
+    \begin{tabular}{|p{3cm}|p{6cm}|p{6cm}|}
+        \hline
+        \textbf{Alternative solution} & \textbf{Advantages} & \textbf{Disadvantages}\\ \hline
+        Custom made database & \begin{itemize} \item No need to install additional software, only a simple database management system such as "Microsoft Access" or "Filemaker". \end{itemize} & \begin{itemize} \item Database management systems often cost a substantial amount of money for a license. \end{itemize}\\ \hline
+        Web based application & \begin{itemize} \item Easily accessible by other users. Doesn't rely on one machine. \item Can have 'Cloud based' storage of files. \item More than one user can be logged on at a time. \end{itemize} & \begin{itemize} \item Website or server hosting can be expensive. \item More advanced security methods will be required due to the system being constantly online and therefore vulnerable to attack. \item Better networking knowledge required to compensate for the security implications and risks. \end{itemize}\\ \hline
+    \end{tabular}
+\end{center}
 
-
-\textbf{Custom made database:}
-
-Advantages
-\begin{itemize}
-    \item No need to install addidtional software, only a simple database management system such as "Microsoft Access" or "Filemaker".
-\end{itemize}
-
-Disadvantages
-\begin{itemize}
-    \item Database managment systems often cost a substantial amount of money for a license.\\
-\end{itemize} \hline
-
-
-
-\textbf{Web based application:}\\
-
-Advantages
-\begin{itemize}
-    \item Easily accessible by other users. Doesn't rely on one machine.
-    \item Can have 'Cloud based' storage of files.
-    \item More than one user can be logged on at a time.
-\end{itemize}
-
-Disadvantages
-\begin{itemize}
-    \item Website or server hosting can be expensive.
-    \item More advanced security methods will be required due to the system being constantly online and therefore vulnerable to attack.
-    \item Better networking knowledge required to compensate for the security implications and risks.\\
-\end{itemize}\hline
-
-\newpage
-
-\textbf{Terminal or Command based application:}\\
-
-Advantages
-\begin{itemize}
-    \item More power efficient as it isn't graphics heavy, much easier to desgin as the interface is just text.
-    \item Fast efficient opperation provided the client has knowledge of terminal and shell commands.
-\end{itemize}
-
-Disadvantages
-\begin{itemize}
-    \item Careful error handeling needed as the user could enter any known/valid command.
-    \item Training is required so that the client knows what commands to use when.
-    \item There are often commands that the client don't know about that could potentially corrupt his computer.\\
-\end{itemize}\hline
-
-
-
-\textbf{Python destop application with a GUI:}\\
-
-Advantages
-\begin{itemize}
-    \item Designed and layout can be client specific.
-    \item Minimal error with radio buttons and other widgets.
-    \item Easy to understand layout as data can be formatted to fit the clients requirements.
-    \item Easy to visualise what is happening with graphs and tables.
-\end{itemize}
-
-Disadvantages
-\begin{itemize}
-    \item More time needed to build the interface and sql database compaired to a command based application.
-    \item More resources needed from the computer for graphical visualistaion and database storage 
-    \item Programming the graphical interface could prove a difficult task\\
-\end{itemize}\hline
+\begin{center}
+    \begin{tabular}{|p{3cm}|p{6cm}|p{6cm}|}
+        \hline
+        \textbf{Alternative solution} & \textbf{Advantages} & \textbf{Disadvantages}\\ \hline            
+        Terminal or Command based application & \begin{itemize} \item More power efficient as it isn't graphics heavy, much easier to design as the interface is just text. \item Fast efficient operation provided the client has knowledge of terminal and shell commands. \end{itemize} & \begin{itemize} \item Careful error handling needed as the user could enter any known/valid command. \item Training is required so that the client knows what commands to use when. \item There are often commands that the client don't know about that could potentially corrupt his computer. \end{itemize}\\ \hline
+        Python desktop application with a GUI & \begin{itemize} \item Designed and layout can be client specific. \item Minimal error with radio buttons and other widgets. \item Easy to understand layout as data can be formatted to fit the clients requirements. \item Easy to visualise what is happening with graphs and tables. \end{itemize} & \begin{itemize} \item More time needed to build the interface and sql database compared to a command based application. \item More resources needed from the computer for graphical visualisation and database storage \item Programming the graphical interface could prove a difficult task. \end{itemize}\\ \hline
+    \end{tabular}
+\end{center}
 
 
 \subsection{Justification of chosen solution}
-
 
 I have chosen to use the \emph{'Python Desktop Application with a GUI'} solution. \\
 
