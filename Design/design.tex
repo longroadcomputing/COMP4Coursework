@@ -54,80 +54,54 @@
 \subsubsection{Entity Descriptions}
 
 \begin{center}
-<<<<<<< HEAD
-    \begin{tabular}{|p{4cm}|}
-        \hline
-        \textbf{Un-Normalised Form(UNF)}\\ \hline
-        ItenID\\ \hline
-=======
+\resizebox{150px}{!}{%
     \begin{tabular}{|c|}
         \hline
         \textbf{Un-Normalised Form(UNF)}\\ \hline
-        ItemID\\ \hline
->>>>>>> FETCH_HEAD
-        ItemName\\ \hline
-        ItemType\\ \hline
-        Location\\ \hline
-        Value\\ \hline
-        ItemQuantity\\ \hline
-        SubTotal\\ \hline
-        OnLoan\\ \hline
-<<<<<<< HEAD
-        ListingQuantity\\ \hline
-        LoanRate\\ \hline
-        LoanLength\\ \hline
-        LoanCost\\ \hline
-=======
-        LoanID\\ \hline
-        LoanQuantity\\ \hline
-        LoanRate\\ \hline
-        LoanLength\\ \hline
-        LoanCost\\ \hline
-        CustomerID\\ \hline
->>>>>>> FETCH_HEAD
-        Forename\\ \hline
-        Lastname\\ \hline
-        Company\\ \hline
-        Street\\ \hline
-        Town\\ \hline
-        PostCode\\ \hline
-        MobileNumber\\ \hline
-        LandLine\\ \hline
-        Email\\ \hline
-<<<<<<< HEAD
-=======
-        PATtestID\\\hline
+        \underline{ItemID}\\
+        ItemName\\
+        ItemType\\
+        Location\\
+        Value\\
+        ItemQuantity\\
+        SubTotal\\
+        OnLoan\\
+        ListingQuantity\\
+        LoanRate\\
+        LoanLength\\
+        LoanCost\\
+        LoanListingID\\
+        LoanQuantity\\
+        LoanID
+        LoanRate\\
+        LoanLength\\
+        LoanCost\\
+        CustomerID\\
+        Forename\\
+        Lastname\\
+        Company\\
+        Street\\
+        Town\\
+        PostCode\\
+        MobileNumber\\
+        LandLine\\
+        Email\\
+        PATtestID\\
+        TestResult\\
+        TestDate\\
+        ItemDescription\\
+        ItemClass\\
+        FuseRating\\
+        TestUsed\\
+        ProtectiveCondTest\\
+        InsulationTest\\
+        Leakage\\
         TestResult\\ \hline
->>>>>>> FETCH_HEAD
-        TestDate\\ \hline
-        ItemDescription\\ \hline
-        ItemClass\\ \hline
-        FuseRating\\ \hline
-        TestUsed\\ \hline
-        ProtectiveCondTest\\ \hline
-        InsulationTest\\ \hline
-        Leakage\\ \hline
-<<<<<<< HEAD
-        TestResult\\ \hline
-=======
->>>>>>> FETCH_HEAD
-    \end{tabular}
+    \end{tabular}}
 \end{center}
 
 \newpage
 
-<<<<<<< HEAD
-\begin{center}
-    \begin{tabular}{|p{4cm}|}
-        \hline
-        \textbf{First-Normalised Form(1NF)}\\ \hline
-
-    \end{tabular}
-\end{center}
-
-
-=======
->>>>>>> FETCH_HEAD
 \subsubsection{1NF to 3NF}
 
 \begin{center}
@@ -136,31 +110,35 @@
         \multicolumn{2}{|c|}{\textbf{First-Normalised Form(1NF)}}\\ \hline
         \multicolumn{2}{|c|}{ }\\ \hline
         \textbf{Non-Repeating} & \textbf{Repeating}\\ \hline
-        \underline{ItemID }& \underline{LoanID }\\ \hline
-        ItemName & \emph{ItemID} \\ \hline
-        ItemType & LoanQuantity \\ \hline
-        ItemLocation & LoanRate\\ \hline
-        Value & LoanLength \\ \hline
-        ItemQuantity & LoanCost \\ \hline
-        SubTotalValue & CustomerID \\ \hline
-        OnLoan &  Forename \\ \hline
-         & Lastname \\ \hline
-         & Company \\ \hline
-         & Street \\ \hline
-         & Town \\ \hline
-         & PostCode \\ \hline
-         & MobileNumber \\ \hline
-         & Landline \\ \hline
-         & Email \\ \hline
-         & PATtestID \\ \hline
-         & TestDate \\ \hline
-         & ItemDescription \\ \hline
-         & ItemClass \\ \hline
-         & FuseRating \\ \hline
-         & TestUsed \\ \hline
-         & ProtectiveCondTest \\ \hline
-         & InsulationTest \\ \hline
-         & Leakage  \\ \hline
+        \underline{ItemID }& \underline{LoanListingID}\\
+        ItemName & \emph{ItemID} \\
+        ItemType & LoanQuantity \\
+        \\
+        \underline{LoanID
+        ItemLocation & LoanRate\\
+        Value & LoanLength \\
+        ItemQuantity & LoanCost \\
+        \\
+        SubTotalValue & \underline{CustomerID} \\
+        OnLoan &  Forename \\
+         & Lastname \\
+         & Company \\
+         & Street \\
+         & Town \\
+         & PostCode \\
+         & MobileNumber \\
+         & Landline \\
+         & Email \\
+         \\
+         & \underline{PATtestID} \\
+         & TestDate \\
+         & ItemDescription \\
+         & ItemClass \\
+         & FuseRating \\
+         & TestUsed \\
+         & ProtectiveCondTest \\
+         & InsulationTest \\
+         & Leakage  \\
          & TestResult \\ \hline
     \end{tabular}
 \end{center}
