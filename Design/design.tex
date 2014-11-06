@@ -34,18 +34,18 @@
 
 \subsection{Identification of appropriate storage media}
 
-\newpage
-
-\begin{landscape}
-
 \section{Database Design}
 
 \subsection{Normalisation}
 
+\newpage
+
+\begin{landscape}
+
 \subsubsection{ER Diagrams}
 
 \begin{figure}[H]
-    \centerline{\includegraphics[width=490px]{./Design/Database_Design/Normalisation/ER_Diagrams/ER_Diagram.pdf}}
+    \centerline{\includegraphics[width=600px]{./Design/Database_Design/Normalisation/ER_Diagrams/ER_Diagram.pdf}}
     \caption{ER Diagrams.} \label{fig:ER Diagrams}
 \end{figure}
 
@@ -54,50 +54,43 @@
 \subsubsection{Entity Descriptions}
 
 \begin{center}
-\resizebox{150px}{!}{%
     \begin{tabular}{|c|}
         \hline
         \textbf{Un-Normalised Form(UNF)}\\ \hline
         \underline{ItemID}\\
         ItemName\\
         ItemType\\
-        Location\\
-        Value\\
-        ItemQuantity\\
-        SubTotal\\
-        OnLoan\\
-        ListingQuantity\\
-        LoanRate\\
-        LoanLength\\
-        LoanCost\\
-        LoanListingID\\
-        LoanQuantity\\
-        LoanID
-        LoanRate\\
-        LoanLength\\
-        LoanCost\\
-        CustomerID\\
-        Forename\\
-        Lastname\\
-        Company\\
-        Street\\
-        Town\\
-        PostCode\\
-        MobileNumber\\
-        LandLine\\
-        Email\\
+        Location\\ 
+        Value\\ 
+        ItemQuantity\\ 
+        SubTotal\\ 
+        OnLoan\\ 
+        LoanID\\ 
+        LoanQuantity\\ 
+        LoanRate\\ 
+        LoanLength\\ 
+        LoanCost\\ 
+        CustomerID\\ 
+        Forename\\ 
+        Lastname\\ 
+        Company\\ 
+        Street\\ 
+        Town\\ 
+        PostCode\\ 
+        MobileNumber\\ 
+        LandLine\\ 
+        Email\\ 
         PATtestID\\
-        TestResult\\
-        TestDate\\
-        ItemDescription\\
-        ItemClass\\
-        FuseRating\\
-        TestUsed\\
-        ProtectiveCondTest\\
-        InsulationTest\\
-        Leakage\\
-        TestResult\\ \hline
-    \end{tabular}}
+        TestResult\\ 
+        TestDate\\ 
+        ItemDescription\\ 
+        ItemClass\\ 
+        FuseRating\\ 
+        TestUsed\\ 
+        ProtectiveCondTest\\ 
+        InsulationTest\\ 
+        Leakage\\ \hline
+    \end{tabular}
 \end{center}
 
 \newpage
@@ -107,39 +100,47 @@
 \begin{center}
     \begin{tabular}{|c|c|}
         \hline
-        \multicolumn{2}{|c|}{\textbf{First-Normalised Form(1NF)}}\\ \hline
+        \multicolumn{2}{|c|}{\textbf{First-Normalised Form(1NF)}}\\
         \multicolumn{2}{|c|}{ }\\ \hline
         \textbf{Non-Repeating} & \textbf{Repeating}\\ \hline
-        \underline{ItemID }& \underline{LoanListingID}\\
-        ItemName & \emph{ItemID} \\
-        ItemType & LoanQuantity \\
-        \\
-        \underline{LoanID
-        ItemLocation & LoanRate\\
-        Value & LoanLength \\
-        ItemQuantity & LoanCost \\
-        \\
-        SubTotalValue & \underline{CustomerID} \\
-        OnLoan &  Forename \\
-         & Lastname \\
-         & Company \\
-         & Street \\
-         & Town \\
-         & PostCode \\
-         & MobileNumber \\
-         & Landline \\
-         & Email \\
-         \\
-         & \underline{PATtestID} \\
-         & TestDate \\
-         & ItemDescription \\
-         & ItemClass \\
-         & FuseRating \\
-         & TestUsed \\
-         & ProtectiveCondTest \\
-         & InsulationTest \\
-         & Leakage  \\
+        \underline{ItemID }& \underline{LoanID }\\ 
+        ItemName & \emph{ItemID} \\ 
+        ItemType & LoanQuantity \\ 
+        ItemLocation & LoanRate\\ 
+        Value & LoanLength \\ 
+        ItemQuantity & LoanCost \\ 
+        SubTotalValue & CustomerID \\ 
+        OnLoan &  Forename \\ 
+         & Lastname \\ 
+         & Company \\ 
+         & Street \\ 
+         & Town \\ 
+         & PostCode \\ 
+         & MobileNumber \\ 
+         & Landline \\ 
+         & Email \\ 
+         & PATtestID \\ 
+         & TestDate \\ 
+         & ItemDescription \\ 
+         & ItemClass \\ 
+         & FuseRating \\ 
+         & TestUsed \\ 
+         & ProtectiveCondTest \\ 
+         & InsulationTest \\ 
+         & Leakage  \\ 
          & TestResult \\ \hline
+    \end{tabular}
+\end{center}
+
+\newpage
+
+\begin{center}
+    \begin{tabular}{|c|c|}
+        \hline
+        \multicolumn{2}{|c|}{\textbf{Second-Normalised Form(2NF)}}\\
+        \multicolumn{2}{|c|}{ }\\ \hline
+        \textbf{Non-Repeating} & \textbf{Repeating}\\ \hline
+        
     \end{tabular}
 \end{center}
 
