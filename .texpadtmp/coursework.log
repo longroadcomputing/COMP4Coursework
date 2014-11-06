@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.18)  6 NOV 2014 15:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.18)  6 NOV 2014 20:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1952,77 +1952,91 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [44]
-Underfull \hbox (badness 6927) in paragraph at lines 163--163
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[45]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[46]
+Underfull \hbox (badness 6927) in paragraph at lines 236--236
 []\OT1/cmr/bx/n/12 Test Se-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 173--173
+Underfull \hbox (badness 10000) in paragraph at lines 246--246
 []|\OT1/cmr/bx/n/12 Test
  []
 
 
-Underfull \hbox (badness 3568) in paragraph at lines 173--173
+Underfull \hbox (badness 3568) in paragraph at lines 246--246
 []|\OT1/cmr/bx/n/12 Purpose of
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 173--173
+Underfull \hbox (badness 10000) in paragraph at lines 246--246
 []|\OT1/cmr/bx/n/12 Test De-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 173--173
+Underfull \hbox (badness 10000) in paragraph at lines 246--246
 []|\OT1/cmr/bx/n/12 Test
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 173--173
+Underfull \hbox (badness 10000) in paragraph at lines 246--246
 \OT1/cmr/bx/n/12 Data
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 173--173
+Underfull \hbox (badness 10000) in paragraph at lines 246--246
 \OT1/cmr/bx/n/12 Type
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 173--173
+Underfull \hbox (badness 10000) in paragraph at lines 246--246
 \OT1/cmr/bx/n/12 (Nor-mal/
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 173--173
+Underfull \hbox (badness 10000) in paragraph at lines 246--246
 \OT1/cmr/bx/n/12 Er-ro-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 173--173
+Underfull \hbox (badness 10000) in paragraph at lines 246--246
 \OT1/cmr/bx/n/12 neous/
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 173--173
+Underfull \hbox (badness 10000) in paragraph at lines 246--246
 \OT1/cmr/bx/n/12 Bound-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 173--173
+Underfull \hbox (badness 10000) in paragraph at lines 246--246
 []|\OT1/cmr/bx/n/12 Expected
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 173--173
+Underfull \hbox (badness 10000) in paragraph at lines 246--246
 []|\OT1/cmr/bx/n/12 Actual
  []
 
 
-Overfull \hbox (2.19681pt too wide) in paragraph at lines 174--174
+Overfull \hbox (2.19681pt too wide) in paragraph at lines 247--247
 []|\OT1/cmr/m/n/12 Example| 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 175
+Underfull \vbox (badness 10000) detected at line 248
  []
 
 
@@ -2031,14 +2045,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[45
+[47
 
 ])
 \openout2 = `./Testing/testing.aux'.
 
  (./Testing/testing.tex
 Chapter 3.
-[46
+[48
 
 
 
@@ -2128,7 +2142,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[47
+[49
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 41--41
@@ -2205,28 +2219,28 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[48]
+[50]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[49])
+[51])
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[50
+[52
 
 ]
 \openout2 = `./Maintenance/maintenance.aux'.
 
  (./Maintenance/maintenance.tex
 Chapter 4.
-Excluding 'comment' comment. [51
+Excluding 'comment' comment. [53
 
 
 
@@ -2240,21 +2254,21 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[52] Excluding 'comment' comment.
+[54] Excluding 'comment' comment.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[53
+[55
 
 ])
 \openout2 = `./Manual/manual.aux'.
 
  (./Manual/manual.tex
 Chapter 5.
-) [54
+) [56
 
 
 
@@ -2269,12 +2283,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[55]
+[57]
 \openout2 = `./Evaluation/evaluation.aux'.
 
  (./Evaluation/evaluation.tex
 Chapter 6.
-) [56
+) [58
 
 
 
@@ -2288,7 +2302,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[57]
+[59]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 17.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 17.
 
@@ -2317,8 +2331,8 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 17.
  ) 
 Here is how much of TeX's memory you used:
- 10963 strings out of 493117
- 164036 string characters out of 6135432
+ 10965 strings out of 493117
+ 164050 string characters out of 6135432
  279509 words of memory out of 5000000
  13964 multiletter control sequences out of 15000+600000
  10886 words of font info for 39 fonts, out of 8000000 for 9000
@@ -2333,10 +2347,10 @@ local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loc
 al/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loca
 l/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
 Output written on /Users/joelbutcher/Dropbox/Apps/Texpad/Computing/Github/COMP4
-Coursework/.texpadtmp/coursework.pdf (58 pages, 719469 bytes).
+Coursework/.texpadtmp/coursework.pdf (60 pages, 722985 bytes).
 PDF statistics:
- 1333 PDF objects out of 1440 (max. 8388607)
- 1168 compressed objects within 12 object streams
- 235 named destinations out of 1000 (max. 500000)
+ 1341 PDF objects out of 1440 (max. 8388607)
+ 1174 compressed objects within 12 object streams
+ 237 named destinations out of 1000 (max. 500000)
  1171 words of extra memory for PDF output out of 10000 (max. 10000000)
 

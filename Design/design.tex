@@ -59,14 +59,17 @@
         \textbf{Un-Normalised Form(UNF)}\\ \hline
         \underline{ItemID}\\
         ItemName\\
-        ItemType\\
-        Location\\ 
+        ItemTypeID\\
+        ItemLocationID
+        ItemType
+        ItemLocation\\ 
         Value\\ 
         ItemQuantity\\ 
         SubTotal\\ 
         OnLoan\\ 
+        LoanListingID\\ 
+        LoanQuantity\\
         LoanID\\ 
-        LoanQuantity\\ 
         LoanRate\\ 
         LoanLength\\ 
         LoanCost\\ 
@@ -100,35 +103,36 @@
 \begin{center}
     \begin{tabular}{|c|c|}
         \hline
-        \multicolumn{2}{|c|}{\textbf{First-Normalised Form(1NF)}}\\
-        \multicolumn{2}{|c|}{ }\\ \hline
-        \textbf{Non-Repeating} & \textbf{Repeating}\\ \hline
-        \underline{ItemID }& \underline{LoanID }\\ 
-        ItemName & \emph{ItemID} \\ 
-        ItemType & LoanQuantity \\ 
-        ItemLocation & LoanRate\\ 
-        Value & LoanLength \\ 
-        ItemQuantity & LoanCost \\ 
-        SubTotalValue & CustomerID \\ 
-        OnLoan &  Forename \\ 
-         & Lastname \\ 
-         & Company \\ 
-         & Street \\ 
-         & Town \\ 
-         & PostCode \\ 
-         & MobileNumber \\ 
-         & Landline \\ 
-         & Email \\ 
-         & PATtestID \\ 
-         & TestDate \\ 
-         & ItemDescription \\ 
-         & ItemClass \\ 
-         & FuseRating \\ 
-         & TestUsed \\ 
-         & ProtectiveCondTest \\ 
-         & InsulationTest \\ 
-         & Leakage  \\ 
-         & TestResult \\ \hline
+        \multicolumn{2}{|c|}{\textbf{First-Normalised Form(1NF)}} \\
+        \multicolumn{2}{|c|}{ }                                   \\ \hline
+        \textbf{Non-Repeating} & \textbf{Repeating}               \\ \hline
+        \underline{ItemID}     & \underline{LoanListingID}        \\ 
+        ItemName               & \emph{ItemID}                    \\ 
+        ItemTypeID             & LoanQuantity                     \\ 
+        ItemLocationID         & LoanID                           \\
+        Value                  & LoanRate                         \\ 
+        ItemQuantity           & LoanLength                       \\ 
+        SubTotalValue          & LoanCost                         \\ 
+        OnLoan                 & CustomerID                       \\ 
+        ItemType               & Forename                         \\ 
+        ItemLocation           & Lastname                         \\ 
+                               & Company                          \\ 
+                               & Street                           \\ 
+                               & Town                             \\ 
+                               & PostCode                         \\ 
+                               & MobileNumber                     \\ 
+                               & Landline                         \\ 
+                               & Email                            \\ 
+                               & PATtestID                        \\ 
+                               & TestDate                         \\ 
+                               & ItemDescription                  \\ 
+                               & ItemClass                        \\ 
+                               & FuseRating                       \\ 
+                               & TestUsed                         \\ 
+                               & ProtectiveCondTest               \\ 
+                               & InsulationTest                   \\ 
+                               & Leakage                          \\ 
+                               & TestResult                       \\ \hline
     \end{tabular}
 \end{center}
 
@@ -137,10 +141,79 @@
 \begin{center}
     \begin{tabular}{|c|c|}
         \hline
-        \multicolumn{2}{|c|}{\textbf{Second-Normalised Form(2NF)}}\\
-        \multicolumn{2}{|c|}{ }\\ \hline
-        \textbf{Non-Repeating} & \textbf{Repeating}\\ \hline
-        
+        \multicolumn{2}{|c|}{\textbf{Second-Normalised Form(2NF)}} \\
+        \multicolumn{2}{|c|}{ }                                    \\ \hline
+        \textbf{Non-Repeating}     & \textbf{Repeating}            \\ \hline
+        \underline{ItemID}         & \underline{LoanListingID}     \\
+        \emph{ItemTypeID}          & \emph{ItemID}                 \\
+        \emph{ItemLocationID}      & LoanQuantity                  \\
+        ItemName                   &                               \\
+        Value                      & LoanID                        \\
+        ItemQuantity               & LoanRate                      \\
+        SubTotalValue              & LoanLength                    \\          
+        OnLoan                     & LoanCost                      \\         
+                                   & PATtestID                     \\ 
+        \underline{ItemtypeID}     & TestDate                      \\ 
+        ItemType                   & ItemDescription               \\ 
+                                   & ItemClass                     \\ 
+        \underline{ItemLocationID} & FuseRating                    \\ 
+        ItemLocation               & TestUsed                      \\ 
+                                   & ProtectiveCondTest            \\
+                                   & InsulationTest                \\ 
+                                   & Leakage                       \\
+                                   & TestResult                    \\
+                                   & CustomerID                    \\
+                                   & Forename                      \\
+                                   & Surname                       \\
+                                   & Company                       \\
+                                   & Street                        \\
+                                   & Town                          \\
+                                   & PostCode                      \\ 
+                                   & MobileNumber                  \\
+                                   & Landline                      \\ 
+                                   & Email                         \\ \hline                     
+    \end{tabular}
+\end{center}
+
+\begin{center}
+    \begin{tabular}{|c|c|}
+        \hline
+        \multicolumn{2}{|c|}{\textbf{Third-Normalised Form(2NF)}}  \\
+        \multicolumn{2}{|c|}{ }                                    \\ \hline
+        \textbf{Non-Repeating}     & \textbf{Repeating}            \\ \hline
+        \underline{ItemID}         & \underline{LoanListingID}     \\
+        \emph{ItemTypeID}          & \emph{ItemID}                 \\
+        \emph{ItemLocationID}      & LoanQuantity                  \\
+        ItemName                   &                               \\
+        Value                      & \underline{LoanID}            \\
+        ItemQuantity               & LoanRate                      \\
+        SubTotalValue              & LoanLength                    \\
+        OnLoan                     & LoanCost                      \\
+                                   &                               \\
+        \underline{ItemtypeID}     & \underline{ItemTestID}        \\
+        ItemType                   & \emph{ItemID}                 \\
+                                   & TestResult                    \\
+        \underline{ItemLocationID} &                               \\
+        ItemLocation               & \underline{PATtestID}         \\
+                                   & TestDate                      \\
+                                   & ItemDescription               \\          
+                                   & ItemClass                     \\          
+                                   & FuseRating                    \\ 
+                                   & TestUsed                      \\ 
+                                   & ProtectiveCondTest            \\ 
+                                   & InsulationTest                \\ 
+                                   & Leakage                       \\
+                                   &                               \\ 
+                                   & \underline{CustomerID}        \\ 
+                                   & Forename                      \\
+                                   & Surname                       \\ 
+                                   & Company                       \\
+                                   & Street                        \\
+                                   & Town                          \\
+                                   & PostCode                      \\ 
+                                   & MobileNumber                  \\
+                                   & Landline                      \\ 
+                                   & Email                         \\ \hline                                                  
     \end{tabular}
 \end{center}
 
