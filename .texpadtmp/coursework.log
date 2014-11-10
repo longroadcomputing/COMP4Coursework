@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.18)  10 NOV 2014 10:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.18)  10 NOV 2014 10:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -688,6 +688,9 @@ LaTeX Warning: Label `fig:relationship_diagram' multiply defined.
 )
 (/Users/joelbutcher/Dropbox/Apps/Texpad/Computing/Github/COMP4Coursework/.texpa
 dtmp/./Design/design.aux
+
+LaTeX Warning: Label `fig:print_function_result' multiply defined.
+
 
 LaTeX Warning: Label `fig:print_function_result' multiply defined.
 
@@ -1923,6 +1926,15 @@ Package pdftex.def Info: ./Design/system_flowcharts/PDFs/main_system_flowchart.
 pdf used on input line 72.
 (pdftex.def)             Requested size: 390.0pt x 369.93532pt.
 
+<./Design/system_flowcharts/PDFs/change_password.pdf, id=1157, 219.0588pt x 244
+.77577pt>
+File: ./Design/system_flowcharts/PDFs/change_password.pdf Graphic file (type pd
+f)
+ <use ./Design/system_flowcharts/PDFs/change_password.pdf>
+Package pdftex.def Info: ./Design/system_flowcharts/PDFs/change_password.pdf us
+ed on input line 79.
+(pdftex.def)             Requested size: 150.56305pt x 168.24556pt.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1934,15 +1946,21 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.87 \newpage
-              <./Design/system_flowcharts/PDFs/main_system_flowchart.pdf>]
+l.83 
+      <./Design/system_flowcharts/PDFs/main_system_flowchart.pdf>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[43]
+[43pdfTeX warning (ext4): destination with the same identifier (name{figure.2.2
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.96 \newpage
+              <./Design/system_flowcharts/PDFs/change_password.pdf>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1950,14 +1968,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [44]
-<./Design/Database_Design/Normalisation/ER_Diagrams/ER_Diagram.pdf, id=1184, 77
+<./Design/Database_Design/Normalisation/ER_Diagrams/ER_Diagram.pdf, id=1198, 77
 3.59393pt x 406.46434pt>
 File: ./Design/Database_Design/Normalisation/ER_Diagrams/ER_Diagram.pdf Graphic
  file (type pdf)
 
 <use ./Design/Database_Design/Normalisation/ER_Diagrams/ER_Diagram.pdf>
 Package pdftex.def Info: ./Design/Database_Design/Normalisation/ER_Diagrams/ER_
-Diagram.pdf used on input line 114.
+Diagram.pdf used on input line 123.
 (pdftex.def)             Requested size: 602.2522pt x 316.4455pt.
 
 
@@ -1968,12 +1986,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [45
 
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2.2}) 
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2.3}) 
 has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.118 \end{landscape}
+l.127 \end{landscape}
                       <./Design/Database_Design/Normalisation/ER_Diagrams/ER_Di
 agram.pdf>]
 
@@ -2013,77 +2031,77 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [50]
-Underfull \hbox (badness 6927) in paragraph at lines 302--302
+Underfull \hbox (badness 6927) in paragraph at lines 311--311
 []\OT1/cmr/bx/n/12 Test Se-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 312--312
+Underfull \hbox (badness 10000) in paragraph at lines 321--321
 []|\OT1/cmr/bx/n/12 Test
  []
 
 
-Underfull \hbox (badness 3568) in paragraph at lines 312--312
+Underfull \hbox (badness 3568) in paragraph at lines 321--321
 []|\OT1/cmr/bx/n/12 Purpose of
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 312--312
+Underfull \hbox (badness 10000) in paragraph at lines 321--321
 []|\OT1/cmr/bx/n/12 Test De-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 312--312
+Underfull \hbox (badness 10000) in paragraph at lines 321--321
 []|\OT1/cmr/bx/n/12 Test
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 312--312
+Underfull \hbox (badness 10000) in paragraph at lines 321--321
 \OT1/cmr/bx/n/12 Data
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 312--312
+Underfull \hbox (badness 10000) in paragraph at lines 321--321
 \OT1/cmr/bx/n/12 Type
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 312--312
+Underfull \hbox (badness 10000) in paragraph at lines 321--321
 \OT1/cmr/bx/n/12 (Nor-mal/
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 312--312
+Underfull \hbox (badness 10000) in paragraph at lines 321--321
 \OT1/cmr/bx/n/12 Er-ro-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 312--312
+Underfull \hbox (badness 10000) in paragraph at lines 321--321
 \OT1/cmr/bx/n/12 neous/
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 312--312
+Underfull \hbox (badness 10000) in paragraph at lines 321--321
 \OT1/cmr/bx/n/12 Bound-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 312--312
+Underfull \hbox (badness 10000) in paragraph at lines 321--321
 []|\OT1/cmr/bx/n/12 Expected
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 312--312
+Underfull \hbox (badness 10000) in paragraph at lines 321--321
 []|\OT1/cmr/bx/n/12 Actual
  []
 
 
-Overfull \hbox (2.19681pt too wide) in paragraph at lines 313--313
+Overfull \hbox (2.19681pt too wide) in paragraph at lines 322--322
 []|\OT1/cmr/m/n/12 Example| 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 314
+Underfull \vbox (badness 10000) detected at line 323
  []
 
 
@@ -2378,10 +2396,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 17.
  ) 
 Here is how much of TeX's memory you used:
- 10978 strings out of 493117
- 164416 string characters out of 6135432
- 279507 words of memory out of 5000000
- 13970 multiletter control sequences out of 15000+600000
+ 10984 strings out of 493117
+ 164668 string characters out of 6135432
+ 279518 words of memory out of 5000000
+ 13974 multiletter control sequences out of 15000+600000
  10886 words of font info for 39 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,12n,45p,769b,451s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2394,10 +2412,10 @@ local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loc
 al/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loca
 l/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
 Output written on /Users/joelbutcher/Dropbox/Apps/Texpad/Computing/Github/COMP4
-Coursework/.texpadtmp/coursework.pdf (64 pages, 741997 bytes).
+Coursework/.texpadtmp/coursework.pdf (64 pages, 753951 bytes).
 PDF statistics:
- 1373 PDF objects out of 1440 (max. 8388607)
- 1198 compressed objects within 12 object streams
- 242 named destinations out of 1000 (max. 500000)
- 1176 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1388 PDF objects out of 1440 (max. 8388607)
+ 1208 compressed objects within 13 object streams
+ 243 named destinations out of 1000 (max. 500000)
+ 1181 words of extra memory for PDF output out of 10000 (max. 10000000)
 
