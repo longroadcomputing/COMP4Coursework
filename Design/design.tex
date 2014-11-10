@@ -4,7 +4,73 @@
 
 \subsection{Short description of the main parts of the system}
 
+\begin{itemize}
+    \item Media Inventory Database
+    \begin{itemize}
+        \item General Interface
+        \item Adding Records
+        \item Displaying Records
+        \item Searching Records
+        \item Editing Records
+        \item Deleting Records
+    \end{itemize}
+\end{itemize}
+
+General Interface
+\begin{itemize}
+    \item The user will be presented with a box whereby he/she will enter a password. This password will be the same for all users who have access to the system.
+    \item Once logged in, the user will be confronted with an interface consisting of a series of menu options. These options will be "Add Record", "Display Records", "Search Records", "Edit Record", "Delete Record" and "Change Password".
+    \item When the "Change Password" button has been clicked, the user will be taking to a box where they will be required to enter the previous password, then enter a new password twice.
+    \item Clicking on the "Add Record" button will take the user to an interface where they will be required to select the type of record they wish to enter.
+    \begin{itemize}
+        \item Clicking the "Add Loan" button will present an interface to the user where they will have a choice of selecting an existing customer specific loan or creating a new customer specific loan.
+        \item Selecting the "Add PAT Test" button will present the user with an interface to choose a PAT test date or to create a new PAT test date.
+    \end{itemize}
+    \item Clicking on the "Display Records" button will send the user to an interface where they will have to select the table from which table they wish to see the records.
+    \item Clicking on the "Edit Records" button will send the user to an interface where they will have to select the table from which they want to edit a record.
+    \item Clicking on the "Delete Records" button will send the user to an interface where they will have to select the table from which they wish to delete a record.
+\end{itemize}
+
+Adding Information
+\begin{itemize}
+    \item The system will present the user with a drop down menu from which the user will have to choose an option for which to enter information. After selecting the option, the user will then be presented with a group of data to add to the new record. If any of these options require the user to enter data relating to another table within the database, they will be presented with a drop down menu and will be required to select an option before they record can be created.
+    \item Once all the required data fields have been complete, the system will add a unique identifier to the record of information and save in to the database
+\end{itemize}
+
+\newpage
+
+Displaying Records
+\begin{itemize}
+    \item The system will present the user with an interface with a drop down menu, where they will have to select the database  table from which they wan to view the data.
+    \item Once the table has been selected, the user will then be presented with a view table that will display all the records within that database  table. They can then choose to sort this information into ascending or descending order by selecting any row for which to sort it by.
+\end{itemize}
+
+Editing Records
+\begin{itemize}
+    \item The system will bring up a user interface that will present a drop down menu where the user will have to select a database table from which they wish to edit a record.
+    \item Once a table has been selected, the user will then be confronted with a user interface which will display all the records within that table and then prompt the user to select the record they would like to edit, by enter the unique identifier of this record.
+    \item When the record has been selected, the user will be presented with an interface similar to the one where the user enters a new record, but the fields already contain the information. The user will then have to update which field of information to update.
+    \item Once data has been updated and a "Done" button has been clicked, the user will then be asked to confirm the updates.
+    \item When the updates have been confirmed, the system replace the old record with the new updated record.
+\end{itemize}
+
+Deleting Records
+\begin{itemize}
+    \item The system will present the user with an interface containing a drop down menu where they will have to select a database table from which they wish to delete a record.
+    \item After the database table has been selected, the user will be presented with a view table showing all the records within the database table. Underneath the view table will be a prompt, asking the user for the unique identifier of the record they wish to delete.
+    \newpage
+    \item When the user has selected the record they wish to delete, they will have to confirm this by entering the system password.
+    \item The system will then remove the record from the database permanently.
+\end{itemize}
+
+\newpage
+
 \subsection{System flowcharts showing an overview of the complete system}
+
+\begin{figure}[H]
+    \caption{Enter New Item.} \label{fig:print_function_result}
+    \includegraphics[width=\textwidth]{./Design/system_flowcharts/PDFs/main_system_flowchart.pdf}
+\end{figure}
 
 \section{User Interface Designs}
 
