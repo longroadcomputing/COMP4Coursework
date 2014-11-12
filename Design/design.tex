@@ -155,7 +155,7 @@ Deleting Records
 \subsubsection{ER Diagrams}
 
 \begin{figure}[H]
-    \centerline{\includegraphics[width=600px]{./Design/Database_Design/Normalisation/ER_Diagrams/ER_Diagram.pdf}}
+    \centerline{\includegraphics[width=600px]{./Design/ER_Diagrams/ER_Diagram.pdf}}
     \caption{ER Diagrams.} \label{fig:ER Diagrams}
 \end{figure}
 
@@ -163,15 +163,25 @@ Deleting Records
 
 \subsubsection{Entity Descriptions}
 
+\noindent \textbf{Item}(\underline{ItemID}, \emph{ItemTypeID}, \emph{LocationID}, Name, Location, Value, ItemQuantity, SubTotal, OnLoan)\\
+
+\noindent \textbf{ItemType}9\underline{ItemTypeID}, ItemType)\\
+
+\noindent \textbf{Location}(\underline{LocationID}, Location)\\
+
+\noindent \textbf{LoanListing}(\underline{LoanListingID}, \emph{ItemID}, \emph{LoanID, LoanQuantity)\\
+
+\noindent \textbf{Loan}(\underline{LoanID}, \emph{CustomerID}, \emph{LoanListingID})
+
+\subsubsection{UNF to 3NF}
+
 \begin{center}
     \begin{tabular}{|c|}
         \hline
         \textbf{Un-Normalised Form(UNF)}\\ \hline
         \underline{ItemID}\\
         ItemName\\
-        ItemTypeID\\
-        ItemLocationID
-        ItemType
+        ItemType\\
         ItemLocation\\ 
         Value\\ 
         ItemQuantity\\ 
@@ -208,8 +218,6 @@ Deleting Records
 
 \newpage
 
-\subsubsection{1NF to 3NF}
-
 \begin{center}
     \begin{tabular}{|c|c|}
         \hline
@@ -218,14 +226,16 @@ Deleting Records
         \textbf{Non-Repeating} & \textbf{Repeating}               \\ \hline
         \underline{ItemID}     & \underline{LoanListingID}        \\ 
         ItemName               & \emph{ItemID}                    \\ 
-        ItemTypeID             & LoanQuantity                     \\ 
-        ItemLocationID         & LoanID                           \\
-        Value                  & LoanRate                         \\ 
-        ItemQuantity           & LoanLength                       \\ 
-        SubTotalValue          & LoanCost                         \\ 
-        OnLoan                 & CustomerID                       \\ 
-        ItemType               & Forename                         \\ 
-        ItemLocation           & Lastname                         \\ 
+        Value	                     & LoanQuantity                     \\ 
+        ItemQuantity			         & LoanID                           \\
+        SubTotalValue                  & LoanRate                         \\ 
+        OnLoan           & LoanLength                       \\ 
+        ItemType          & LoanCost                         \\ 
+       ItemLocation   & Location			\\
+		         & ItemType			\\
+                               & CustomerID                       \\ 
+          	 	          & Forename                         \\ 
+               	          & Lastname                         \\ 
                                & Company                          \\ 
                                & Street                           \\ 
                                & Town                             \\ 
