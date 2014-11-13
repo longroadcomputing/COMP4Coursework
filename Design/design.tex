@@ -118,6 +118,21 @@ Deleting Records
     \caption{File Menu.} \label{fig:print_function_result}
 \end{figure}
 
+\section{Hardware Specification}
+
+The hardware I am going to use are for a custom built Early 2008 Mac Pro. The specifications are as follows:
+\begin{itemize}
+    \item 2x 2.8 GHz Quad-Core Intel\textregistered Xeon\texttrademark Processor
+    \item ATI Radeon HD 2600 XT 256MB Graphics Card
+    \item 661-4449 Apple Mac Pro A1186 Motherboard
+    \item 16.00GB DDR3 RAM
+    \item 1TB SATA Disk-Drive
+    \item 6TB RAID Storage
+    \item Apple SuperDrive \\
+\end{itemize}
+
+I have schosen to build my system for this specification as this is the computer my client is going to run the application on, it is also a low cost choice of system spec to run on as the hardware has already been bought and is therefore ready and available to use.
+
 \section{Program Structure}
 
 \subsection{Top-down design structure charts}
@@ -165,11 +180,11 @@ Deleting Records
 
 \noindent \textbf{Item}(\underline{ItemID}, \emph{ItemTypeID}, \emph{LocationID}, Name, Location, Value, ItemQuantity, SubTotal, OnLoan)\\
 
-\noindent \textbf{ItemType}9\underline{ItemTypeID}, ItemType)\\
+\noindent \textbf{ItemType}(\underline{ItemTypeID}, ItemType)\\
 
 \noindent \textbf{Location}(\underline{LocationID}, Location)\\
 
-\noindent \textbf{LoanListing}(\underline{LoanListingID}, \emph{ItemID}, \emph{LoanID, LoanQuantity)\\
+\noindent \textbf{LoanListing}(\underline{LoanListingID}, \emph{ItemID}, \emph{LoanID}, LoanQuantity)\\
 
 \noindent \textbf{Loan}(\underline{LoanID}, \emph{CustomerID}, \emph{LoanListingID})
 
@@ -273,11 +288,11 @@ Deleting Records
         SubTotalValue              & LoanLength                    \\          
         OnLoan                     & LoanCost                      \\         
                                    & PATtestID                     \\ 
-        \underline{ItemtypeID}     & TestDate                      \\ 
-        ItemType                   & ItemDescription               \\ 
+       			     & TestDate                      \\ 
+        			   & ItemDescription               \\ 
                                    & ItemClass                     \\ 
-        \underline{ItemLocationID} & FuseRating                    \\ 
-        ItemLocation               & TestUsed                      \\ 
+        		  	   & FuseRating                    \\ 
+        			   & TestUsed                      \\ 
                                    & ProtectiveCondTest            \\
                                    & InsulationTest                \\ 
                                    & Leakage                       \\
@@ -291,14 +306,16 @@ Deleting Records
                                    & PostCode                      \\ 
                                    & MobileNumber                  \\
                                    & Landline                      \\ 
-                                   & Email                         \\ \hline                     
+                                   & Email                         \\     
+			   & Location		    \\
+			   & ItemType                 \\ \hline
     \end{tabular}
 \end{center}
 
 \begin{center}
     \begin{tabular}{|c|c|}
         \hline
-        \multicolumn{2}{|c|}{\textbf{Third-Normalised Form(2NF)}}  \\
+        \multicolumn{2}{|c|}{\textbf{Third-Normalised Form(3NF)}}  \\
         \multicolumn{2}{|c|}{ }                                    \\ \hline
         \textbf{Non-Repeating}     & \textbf{Repeating}            \\ \hline
         \underline{ItemID}         & \underline{LoanListingID}     \\
@@ -310,11 +327,11 @@ Deleting Records
         SubTotalValue              & LoanLength                    \\
         OnLoan                     & LoanCost                      \\
                                    &                               \\
-        \underline{ItemtypeID}     & \underline{ItemTestID}        \\
-        ItemType                   & \emph{ItemID}                 \\
+          			   & \underline{ItemTestID}        \\
+     			   & \emph{ItemID}                 \\
                                    & TestResult                    \\
-        \underline{ItemLocationID} &                               \\
-        ItemLocation               & \underline{PATtestID}         \\
+      			   &                               \\
+     			   & \underline{PATtestID}         \\
                                    & TestDate                      \\
                                    & ItemDescription               \\          
                                    & ItemClass                     \\          
