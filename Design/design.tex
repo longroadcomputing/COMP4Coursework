@@ -277,7 +277,8 @@ I have schosen to build my system for this specification as this is the computer
         ItemName               & \emph{ItemID}                    \\ 
         Value	                    & LoanRate                         \\ 
         ItemClass	& LoanLength                       \\ 
-        FuseRating      & CustomerID                       \\ 
+        FuseRating     & 					\\
+	                    &\underline{CustomerID}                       \\ 
               	          & Forename                         \\ 
         		          & Lastname                         \\ 
                                & Company                          \\ 
@@ -291,8 +292,8 @@ I have schosen to build my system for this specification as this is the computer
                                & TestDate                         \\ 
                                & PATTestNotes                  \\ 
                                & ComponentType                   \\
-		         & ComponentResult		\\
-		         & ComponentNotes 		\\
+		          & ComponentResult		\\
+		          & ComponentNotes 		\\
                                & Leakage                          \\ 
                                & TestResult                       \\ \hline
     \end{tabular}
@@ -304,39 +305,34 @@ I have schosen to build my system for this specification as this is the computer
         \multicolumn{2}{|c|}{\textbf{Third-Normalised Form(3NF)}}  \\
         \multicolumn{2}{|c|}{ }                                    \\ \hline
         \textbf{Non-Repeating}     & \textbf{Repeating}            \\ \hline
-        \underline{ItemID}         & \underline{LoanListingID}     \\
-        \emph{ItemTypeID}          & \emph{ItemID}                 \\
-        \emph{ItemLocationID}      & LoanQuantity                  \\
-        ItemName                   &                               \\
-        Value                      & \underline{LoanID}            \\
-        ItemQuantity               & LoanRate                      \\
-        SubTotalValue              & LoanLength                    \\
-        OnLoan                     & LoanCost                      \\
-                                   &                               \\
-          			   & \underline{ItemTestID}        \\
-     			   & \emph{ItemID}                 \\
-                                   & TestResult                    \\
-      			   &                               \\
-     			   & \underline{PATtestID}         \\
-                                   & TestDate                      \\
-                                   & ItemDescription               \\          
-                                   & ItemClass                     \\          
-                                   & FuseRating                    \\ 
-                                   & TestUsed                      \\ 
-                                   & ProtectiveCondTest            \\ 
-                                   & InsulationTest                \\ 
-                                   & Leakage                       \\
-                                   &                               \\ 
-                                   & \underline{CustomerID}        \\ 
-                                   & Forename                      \\
-                                   & Surname                       \\ 
-                                   & Company                       \\
-                                   & Street                        \\
-                                   & Town                          \\
-                                   & PostCode                      \\ 
-                                   & MobileNumber                  \\
-                                   & Landline                      \\ 
-                                   & Email                         \\ \hline                                                  
+         \underline{ItemID}     & \underline{LoanID}        \\ 
+        ItemName               & \emph{ItemID}                    \\ 
+        Value	                    & LoanRate                         \\ 
+        ItemClass	& LoanLength                       \\ 
+        FuseRating     & 					\\
+	                    &\underline{CustomerID}                       \\ 
+              	          & Forename                         \\ 
+        		          & Lastname                         \\ 
+                               & Company                          \\ 
+                               & Street                           \\ 
+                               & Town                             \\ 
+                               & PostCode                         \\ 
+                               & MobileNumber                     \\ 
+                               & Landline                         \\ 
+                               & Email                            \\ 
+		          &				\\
+                               & \underline{PATtestID}      \\ 
+                               & TestDate                         \\ 
+		          &				\\
+		          & \underline{TestID}	\\
+		          & \emph{PATtestID}	\\
+		          & \emph{ItemID}		\\
+                               & PATTestNotes                  \\ 
+                               & ComponentType                   \\
+		          & ComponentResult		\\
+		          & ComponentNotes 		\\
+                               & Leakage                          \\ 
+                               & TestResult                       \\ \hline                                  
     \end{tabular}
 \end{center}
 
