@@ -167,13 +167,11 @@ I have schosen to build my system for this specification as this is the computer
 
 \section{Database Design}
 
-\subsection{Normalisation}
-
 \newpage
 
 \begin{landscape}
 
-\subsubsection{ER Diagrams}
+\subsection{ER Diagrams}
 
 \begin{figure}[H]
     \centerline{\includegraphics[width=600px]{./Design/ER_Diagrams/ER_Diagram.pdf}}
@@ -182,7 +180,7 @@ I have schosen to build my system for this specification as this is the computer
 
 \end{landscape}
 
-\subsubsection{Entity Descriptions}
+\subsection{Entity Descriptions}
 
 \noindent \textbf{Item}(\underline{ItemID}, \emph{ItemTypeID}, \emph{LocationID}, Name, Location, Value, ItemQuantity, SubTotal, OnLoan)\\
 
@@ -194,7 +192,7 @@ I have schosen to build my system for this specification as this is the computer
 
 \noindent \textbf{Loan}(\underline{LoanID}, \emph{CustomerID}, \emph{LoanListingID})
 
-
+\subsection{Normalisation}
 
 \subsubsection{UNF to 3NF}
 
@@ -205,17 +203,11 @@ I have schosen to build my system for this specification as this is the computer
         \underline{ItemID}\\
         ItemName\\
         ItemType\\
-        ItemLocation\\ 
+        Location\\ 
         Value\\ 
-        ItemQuantity\\ 
-        SubTotal\\ 
-        OnLoan\\ 
-        LoanListingID\\ 
-        LoanQuantity\\
         LoanID\\ 
         LoanRate\\ 
         LoanLength\\ 
-        LoanCost\\ 
         CustomerID\\ 
         Forename\\ 
         Lastname\\ 
@@ -232,9 +224,10 @@ I have schosen to build my system for this specification as this is the computer
         ItemDescription\\ 
         ItemClass\\ 
         FuseRating\\ 
-        TestUsed\\ 
-        ProtectiveCondTest\\ 
-        InsulationTest\\ 
+        PATTestNotes\\ 
+        ComponentType\\
+        ComponentResult\\
+        ComponentNotes \\
         Leakage\\ \hline
     \end{tabular}
 \end{center}
@@ -247,18 +240,13 @@ I have schosen to build my system for this specification as this is the computer
         \multicolumn{2}{|c|}{\textbf{First-Normalised Form(1NF)}} \\
         \multicolumn{2}{|c|}{ }                                   \\ \hline
         \textbf{Non-Repeating} & \textbf{Repeating}               \\ \hline
-        \underline{ItemID}     & \underline{LoanListingID}        \\ 
+        \underline{ItemID}     & \underline{LoanID}        \\ 
         ItemName               & \emph{ItemID}                    \\ 
-        Value	                     & LoanQuantity                     \\ 
-        ItemQuantity			         & LoanID                           \\
-        SubTotalValue                  & LoanRate                         \\ 
-        OnLoan           & LoanLength                       \\ 
-        ItemType          & LoanCost                         \\ 
-       ItemLocation   & Location			\\
-		         & ItemType			\\
-                               & CustomerID                       \\ 
-          	 	          & Forename                         \\ 
-               	          & Lastname                         \\ 
+        Value	                    & LoanRate                         \\ 
+        ItemClass	& LoanLength                       \\ 
+        FuseRating      & CustomerID                       \\ 
+              	          & Forename                         \\ 
+        		          & Lastname                         \\ 
                                & Company                          \\ 
                                & Street                           \\ 
                                & Town                             \\ 
@@ -268,12 +256,10 @@ I have schosen to build my system for this specification as this is the computer
                                & Email                            \\ 
                                & PATtestID                        \\ 
                                & TestDate                         \\ 
-                               & ItemDescription                  \\ 
-                               & ItemClass                        \\ 
-                               & FuseRating                       \\ 
-                               & TestUsed                         \\ 
-                               & ProtectiveCondTest               \\ 
-                               & InsulationTest                   \\ 
+                               & PATTestNotes                  \\ 
+                               & ComponentType                   \\
+		         & ComponentResult		\\
+		         & ComponentNotes 		\\
                                & Leakage                          \\ 
                                & TestResult                       \\ \hline
     \end{tabular}
@@ -287,36 +273,28 @@ I have schosen to build my system for this specification as this is the computer
         \multicolumn{2}{|c|}{\textbf{Second-Normalised Form(2NF)}} \\
         \multicolumn{2}{|c|}{ }                                    \\ \hline
         \textbf{Non-Repeating}     & \textbf{Repeating}            \\ \hline
-        \underline{ItemID}         & \underline{LoanListingID}     \\
-        \emph{ItemTypeID}          & \emph{ItemID}                 \\
-        \emph{ItemLocationID}      & LoanQuantity                  \\
-        ItemName                   &                               \\
-        Value                      & LoanID                        \\
-        ItemQuantity               & LoanRate                      \\
-        SubTotalValue              & LoanLength                    \\          
-        OnLoan                     & LoanCost                      \\         
-                                   & PATtestID                     \\ 
-       			     & TestDate                      \\ 
-        			   & ItemDescription               \\ 
-                                   & ItemClass                     \\ 
-        		  	   & FuseRating                    \\ 
-        			   & TestUsed                      \\ 
-                                   & ProtectiveCondTest            \\
-                                   & InsulationTest                \\ 
-                                   & Leakage                       \\
-                                   & TestResult                    \\
-                                   & CustomerID                    \\
-                                   & Forename                      \\
-                                   & Surname                       \\
-                                   & Company                       \\
-                                   & Street                        \\
-                                   & Town                          \\
-                                   & PostCode                      \\ 
-                                   & MobileNumber                  \\
-                                   & Landline                      \\ 
-                                   & Email                         \\     
-			   & Location		    \\
-			   & ItemType                 \\ \hline
+        \underline{ItemID}     & \underline{LoanID}        \\ 
+        ItemName               & \emph{ItemID}                    \\ 
+        Value	                    & LoanRate                         \\ 
+        ItemClass	& LoanLength                       \\ 
+        FuseRating      & CustomerID                       \\ 
+              	          & Forename                         \\ 
+        		          & Lastname                         \\ 
+                               & Company                          \\ 
+                               & Street                           \\ 
+                               & Town                             \\ 
+                               & PostCode                         \\ 
+                               & MobileNumber                     \\ 
+                               & Landline                         \\ 
+                               & Email                            \\ 
+                               & PATtestID                        \\ 
+                               & TestDate                         \\ 
+                               & PATTestNotes                  \\ 
+                               & ComponentType                   \\
+		         & ComponentResult		\\
+		         & ComponentNotes 		\\
+                               & Leakage                          \\ 
+                               & TestResult                       \\ \hline
     \end{tabular}
 \end{center}
 

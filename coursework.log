@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.1)  13 NOV 2014 13:52
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.1)  19 NOV 2014 10:33
 entering extended mode
 **U:/Github/COMP4Coursework/coursework.tex
 (U:/Github/COMP4Coursework/coursework.tex
@@ -813,7 +813,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [6]
-<./Analysis/Interview/interview_questions.pdf, id=718, page=1, 597.50786pt x 84
+<./Analysis/Interview/interview_questions.pdf, id=728, page=1, 597.50786pt x 84
 5.01837pt>
 File: ./Analysis/Interview/interview_questions.pdf Graphic file (type pdf)
  <use ./Analysis/Interview/interview_questions.pdf, page 1>
@@ -821,7 +821,7 @@ Package pdftex.def Info: ./Analysis/Interview/interview_questions.pdf, page1 us
 ed on input line 29.
 (pdftex.def)             Requested size: 390.0pt x 551.55055pt.
 
-<./Analysis/Interview/interview_questions.pdf, id=719, page=2, 597.50786pt x 84
+<./Analysis/Interview/interview_questions.pdf, id=729, page=2, 597.50786pt x 84
 5.01837pt>
 File: ./Analysis/Interview/interview_questions.pdf Graphic file (type pdf)
  <use ./Analysis/Interview/interview_questions.pdf, page 2>
@@ -842,7 +842,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
                                                   \fi \fi 
 l.36 
       <U:/Github/COMP4Coursework/Analysis/Interview/interview_questions.pdf>]
-<./Analysis/Interview/interview_questions.pdf, id=751, page=3, 597.50786pt x 84
+<./Analysis/Interview/interview_questions.pdf, id=761, page=3, 597.50786pt x 84
 5.01837pt>
 File: ./Analysis/Interview/interview_questions.pdf Graphic file (type pdf)
  <use ./Analysis/Interview/interview_questions.pdf, page 3>
@@ -879,7 +879,7 @@ l.47
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 54.
 
-<./Analysis/Dataflow/DFD_analysis_key.pdf, id=778, 545.94707pt x 151.24966pt>
+<./Analysis/Dataflow/DFD_analysis_key.pdf, id=788, 545.94707pt x 151.24966pt>
 File: ./Analysis/Dataflow/DFD_analysis_key.pdf Graphic file (type pdf)
 
 <use ./Analysis/Dataflow/DFD_analysis_key.pdf>
@@ -887,7 +887,7 @@ Package pdftex.def Info: ./Analysis/Dataflow/DFD_analysis_key.pdf used on input
  line 82.
 (pdftex.def)             Requested size: 390.0pt x 108.04575pt.
 
-<./Analysis/Dataflow/Old_System/Old_Sys_DFD_analysis_new_item.pdf, id=779, 529.
+<./Analysis/Dataflow/Old_System/Old_Sys_DFD_analysis_new_item.pdf, id=789, 529.
 11967pt x 99.41963pt>
 File: ./Analysis/Dataflow/Old_System/Old_Sys_DFD_analysis_new_item.pdf Graphic 
 file (type pdf)
@@ -904,7 +904,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [10]
-<./Analysis/Dataflow/Old_System/Old_Sys_Data_flow_update.pdf, id=790, 535.80609
+<./Analysis/Dataflow/Old_System/Old_Sys_Data_flow_update.pdf, id=800, 535.80609
 pt x 235.78319pt>
 File: ./Analysis/Dataflow/Old_System/Old_Sys_Data_flow_update.pdf Graphic file 
 (type pdf)
@@ -914,7 +914,7 @@ Package pdftex.def Info: ./Analysis/Dataflow/Old_System/Old_Sys_Data_flow_updat
 e.pdf used on input line 92.
 (pdftex.def)             Requested size: 390.0pt x 171.6274pt.
 
-<./Analysis/Dataflow/Old_System/Old_Sys_Data_flow_quote.pdf, id=791, 525.84009p
+<./Analysis/Dataflow/Old_System/Old_Sys_Data_flow_quote.pdf, id=801, 525.84009p
 t x 250.41415pt>
 File: ./Analysis/Dataflow/Old_System/Old_Sys_Data_flow_quote.pdf Graphic file (
 type pdf)
@@ -924,7 +924,7 @@ Package pdftex.def Info: ./Analysis/Dataflow/Old_System/Old_Sys_Data_flow_quote
 .pdf used on input line 97.
 (pdftex.def)             Requested size: 390.0pt x 185.7315pt.
 
-<./Analysis/Dataflow/Old_System/Old_Sys_Data_flow_invoice.pdf, id=792, 531.5060
+<./Analysis/Dataflow/Old_System/Old_Sys_Data_flow_invoice.pdf, id=802, 531.5060
 9pt x 256.2101pt>
 File: ./Analysis/Dataflow/Old_System/Old_Sys_Data_flow_invoice.pdf Graphic file
  (type pdf)
@@ -987,7 +987,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 111--112
 
  []
 
-<./Analysis/Forms/enter_data.png, id=898, 1196.47pt x 986.68625pt>
+<./Analysis/Forms/enter_data.png, id=908, 1196.47pt x 986.68625pt>
 File: ./Analysis/Forms/enter_data.png Graphic file (type png)
 
 <use ./Analysis/Forms/enter_data.png>
@@ -1008,7 +1008,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
                                                   \fi \fi 
 l.118 \newpage
                <U:/Github/COMP4Coursework/Analysis/Forms/enter_data.png>]
-<./Analysis/Forms/sub_total_calc.png, id=907, 1192.455pt x 984.67876pt>
+<./Analysis/Forms/sub_total_calc.png, id=917, 1192.455pt x 984.67876pt>
 File: ./Analysis/Forms/sub_total_calc.png Graphic file (type png)
 
 <use ./Analysis/Forms/sub_total_calc.png>
@@ -1177,7 +1177,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [17]
-<./Analysis/Dataflow/New_System/Data_flow_new.pdf, id=928, 522.17055pt x 235.02
+<./Analysis/Dataflow/New_System/Data_flow_new.pdf, id=938, 522.17055pt x 235.02
 545pt>
 File: ./Analysis/Dataflow/New_System/Data_flow_new.pdf Graphic file (type pdf)
  <use ./Analysis/Dataflow/New_System/Data_flow_new.pdf>
@@ -1185,7 +1185,7 @@ Package pdftex.def Info: ./Analysis/Dataflow/New_System/Data_flow_new.pdf used
 on input line 212.
 (pdftex.def)             Requested size: 390.0pt x 175.54063pt.
 
-<./Analysis/Dataflow/New_System/Data_flow_update.pdf, id=929, 520.2321pt x 229.
+<./Analysis/Dataflow/New_System/Data_flow_update.pdf, id=939, 520.2321pt x 229.
 90974pt>
 File: ./Analysis/Dataflow/New_System/Data_flow_update.pdf Graphic file (type pd
 f)
@@ -1507,7 +1507,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [26
 
 ]
-<./Analysis/ER_Diagrams/Loan_ER_Diagrams.pdf, id=1024, 508.82544pt x 483.15816p
+<./Analysis/ER_Diagrams/Loan_ER_Diagrams.pdf, id=1034, 508.82544pt x 483.15816p
 t>
 File: ./Analysis/ER_Diagrams/Loan_ER_Diagrams.pdf Graphic file (type pdf)
  <use ./Analysis/ER_Diagrams/Loan_ER_Diagrams.pdf>
@@ -1522,7 +1522,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [27]
-<./Analysis/ER_Diagrams/PAT_Test_ER_Diagrams.pdf, id=1029, 508.77557pt x 481.37
+<./Analysis/ER_Diagrams/PAT_Test_ER_Diagrams.pdf, id=1039, 508.77557pt x 481.37
 743pt>
 File: ./Analysis/ER_Diagrams/PAT_Test_ER_Diagrams.pdf Graphic file (type pdf)
  <use ./Analysis/ER_Diagrams/PAT_Test_ER_Diagrams.pdf>
@@ -1603,7 +1603,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 426--428
  []
 
 
-<./Analysis/Relationship_Diagrams/Relationships_diagrams.pdf, id=1060, 510.7417
+<./Analysis/Relationship_Diagrams/Relationships_diagrams.pdf, id=1070, 510.7417
 4pt x 481.90007pt>
 File: ./Analysis/Relationship_Diagrams/Relationships_diagrams.pdf Graphic file 
 (type pdf)
@@ -1634,7 +1634,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 l.446 \newpage
                <U:/Github/COMP4Coursework/Analysis/Relationship_Diagrams/Relati
 onships_diagrams.pdf>]
-<./Analysis/Class_Definitions/Class_definition_key.pdf, id=1083, 100.375pt x 11
+<./Analysis/Class_Definitions/Class_definition_key.pdf, id=1093, 100.375pt x 11
 2.42pt>
 File: ./Analysis/Class_Definitions/Class_definition_key.pdf Graphic file (type 
 pdf)
@@ -1643,7 +1643,7 @@ Package pdftex.def Info: ./Analysis/Class_Definitions/Class_definition_key.pdf
 used on input line 453.
 (pdftex.def)             Requested size: 50.18768pt x 56.21156pt.
 
-<./Analysis/Class_Definitions/Class_diagrams.pdf, id=1084, 642.74811pt x 321.28
+<./Analysis/Class_Definitions/Class_diagrams.pdf, id=1094, 642.74811pt x 321.28
 139pt>
 File: ./Analysis/Class_Definitions/Class_diagrams.pdf Graphic file (type pdf)
  <use ./Analysis/Class_Definitions/Class_diagrams.pdf>
@@ -1895,7 +1895,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [41]
-<./Design/system_flowcharts/PDFs/main_system_flowchart.pdf, id=1153, 541.44171p
+<./Design/system_flowcharts/PDFs/main_system_flowchart.pdf, id=1163, 541.44171p
 t x 764.9056pt>
 File: ./Design/system_flowcharts/PDFs/main_system_flowchart.pdf Graphic file (t
 ype pdf)
@@ -1905,7 +1905,7 @@ Package pdftex.def Info: ./Design/system_flowcharts/PDFs/main_system_flowchart.
 pdf used on input line 72.
 (pdftex.def)             Requested size: 356.33255pt x 503.39198pt.
 
-<./Design/system_flowcharts/PDFs/add_records_flowchart.pdf, id=1154, 561.5009pt
+<./Design/system_flowcharts/PDFs/add_records_flowchart.pdf, id=1164, 561.5009pt
  x 524.84454pt>
 File: ./Design/system_flowcharts/PDFs/add_records_flowchart.pdf Graphic file (t
 ype pdf)
@@ -1929,7 +1929,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 l.83 
       <U:/Github/COMP4Coursework/Design/system_flowcharts/PDFs/main_system_flow
 chart.pdf>]
-<./Design/system_flowcharts/PDFs/display_records_flowchart.pdf, id=1173, 521.25
+<./Design/system_flowcharts/PDFs/display_records_flowchart.pdf, id=1183, 521.25
 244pt x 263.26155pt>
 File: ./Design/system_flowcharts/PDFs/display_records_flowchart.pdf Graphic fil
 e (type pdf)
@@ -1939,7 +1939,7 @@ Package pdftex.def Info: ./Design/system_flowcharts/PDFs/display_records_flowch
 art.pdf used on input line 86.
 (pdftex.def)             Requested size: 356.33255pt x 179.96751pt.
 
-<./Design/system_flowcharts/PDFs/search_records_flowchart.pdf, id=1174, 555.102
+<./Design/system_flowcharts/PDFs/search_records_flowchart.pdf, id=1184, 555.102
 11pt x 544.27603pt>
 File: ./Design/system_flowcharts/PDFs/search_records_flowchart.pdf Graphic file
  (type pdf)
@@ -1970,7 +1970,7 @@ l.97
       <U:/Github/COMP4Coursework/Design/system_flowcharts/PDFs/add_records_flow
 chart.pdf> <U:/Github/COMP4Coursework/Design/system_flowcharts/PDFs/display_rec
 ords_flowchart.pdf>]
-<./Design/system_flowcharts/PDFs/edit_records_flowchart.pdf, id=1205, 597.23125
+<./Design/system_flowcharts/PDFs/edit_records_flowchart.pdf, id=1215, 597.23125
 pt x 845.1575pt>
 File: ./Design/system_flowcharts/PDFs/edit_records_flowchart.pdf Graphic file (
 type pdf)
@@ -1994,7 +1994,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 l.104 
        <U:/Github/COMP4Coursework/Design/system_flowcharts/PDFs/search_records_
 flowchart.pdf>]
-<./Design/system_flowcharts/PDFs/delete_records_flowchart.pdf, id=1223, 532.581
+<./Design/system_flowcharts/PDFs/delete_records_flowchart.pdf, id=1233, 532.581
 76pt x 547.00258pt>
 File: ./Design/system_flowcharts/PDFs/delete_records_flowchart.pdf Graphic file
  (type pdf)
@@ -2018,14 +2018,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 l.111 
        <U:/Github/COMP4Coursework/Design/system_flowcharts/PDFs/edit_records_fl
 owchart.pdf>]
-<./Design/window_designs/file_menu.pdf, id=1236, 190.67787pt x 158.7788pt>
-File: ./Design/window_designs/file_menu.pdf Graphic file (type pdf)
-
-<use ./Design/window_designs/file_menu.pdf>
-Package pdftex.def Info: ./Design/window_designs/file_menu.pdf used on input li
-ne 116.
-(pdftex.def)             Requested size: 100.37537pt x 83.58542pt.
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2037,41 +2029,44 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.125     \item 2
-                 x 2.8 GHz Quad-Core Intel\textregistered Xeon\texttrademark...
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2.7}) 
-has been already used, duplicate ignored
+l.112 \newpage
+               <U:/Github/COMP4Coursework/Design/system_flowcharts/PDFs/delete_
+records_flowchart.pdf>]
+<./Design/user_interface/login_interface.pdf, id=1263, 790.0116pt x 529.6882pt>
+File: ./Design/user_interface/login_interface.pdf Graphic file (type pdf)
+<use ./Design/user_interface/login_interface.pdf>
+Package pdftex.def Info: ./Design/user_interface/login_interface.pdf used on in
+put line 120.
+(pdftex.def)             Requested size: 552.06451pt x 370.14879pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[47
+
+]
+Overfull \vbox (45.22543pt too high) has occurred while \output is active []
+
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[48pdfTeX warning (ext4): destination with the same identifier (name{figure.2.7
+}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.125     \item 2
-                 x 2.8 GHz Quad-Core Intel\textregistered Xeon\texttrademark...
- <U:/Github/COMP4Coursework/Design/system_flowcharts/PDFs/delete_records_flowch
-art.pdf> <U:/Github/COMP4Coursework/Design/window_designs/file_menu.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 131--132
+l.124 
+       <U:/Github/COMP4Coursework/Design/user_interface/login_interface.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 137--138
 
  []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[47]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[48] <./Design/ER_Diagrams/ER_Diagram.pdf, id=1274, 777.13359pt x 403.48842pt>
-File: ./Design/ER_Diagrams/ER_Diagram.pdf Graphic file (type pdf)
-
-<use ./Design/ER_Diagrams/ER_Diagram.pdf>
-Package pdftex.def Info: ./Design/ER_Diagrams/ER_Diagram.pdf used on input line
- 173.
-(pdftex.def)             Requested size: 602.2522pt x 312.68797pt.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2081,24 +2076,37 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [49
 
+]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[50] <./Design/ER_Diagrams/ER_Diagram.pdf, id=1294, 777.13359pt x 403.48842pt>
+File: ./Design/ER_Diagrams/ER_Diagram.pdf Graphic file (type pdf)
+
+<use ./Design/ER_Diagrams/ER_Diagram.pdf>
+Package pdftex.def Info: ./Design/ER_Diagrams/ER_Diagram.pdf used on input line
+ 177.
+(pdftex.def)             Requested size: 602.2522pt x 312.68797pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[51
+
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2.8}) 
 has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.177 \end{landscape}
+l.181 \end{landscape}
                       <U:/Github/COMP4Coursework/Design/ER_Diagrams/ER_Diagram.
 pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 181--182
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 183--184
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 185--186
 
  []
@@ -2109,28 +2117,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 187--188
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 189--190
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 191--192
+
+ []
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[50
+[52
 
 ]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[51]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[52]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2152,77 +2156,91 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [55]
-Underfull \hbox (badness 6927) in paragraph at lines 373--373
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[56]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[57]
+Underfull \hbox (badness 6927) in paragraph at lines 359--359
 []\OT1/cmr/bx/n/12 Test Se-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 383--383
+Underfull \hbox (badness 10000) in paragraph at lines 369--369
 []|\OT1/cmr/bx/n/12 Test
  []
 
 
-Underfull \hbox (badness 3568) in paragraph at lines 383--383
+Underfull \hbox (badness 3568) in paragraph at lines 369--369
 []|\OT1/cmr/bx/n/12 Purpose of
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 383--383
+Underfull \hbox (badness 10000) in paragraph at lines 369--369
 []|\OT1/cmr/bx/n/12 Test De-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 383--383
+Underfull \hbox (badness 10000) in paragraph at lines 369--369
 []|\OT1/cmr/bx/n/12 Test
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 383--383
+Underfull \hbox (badness 10000) in paragraph at lines 369--369
 \OT1/cmr/bx/n/12 Data
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 383--383
+Underfull \hbox (badness 10000) in paragraph at lines 369--369
 \OT1/cmr/bx/n/12 Type
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 383--383
+Underfull \hbox (badness 10000) in paragraph at lines 369--369
 \OT1/cmr/bx/n/12 (Nor-mal/
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 383--383
+Underfull \hbox (badness 10000) in paragraph at lines 369--369
 \OT1/cmr/bx/n/12 Er-ro-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 383--383
+Underfull \hbox (badness 10000) in paragraph at lines 369--369
 \OT1/cmr/bx/n/12 neous/
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 383--383
+Underfull \hbox (badness 10000) in paragraph at lines 369--369
 \OT1/cmr/bx/n/12 Bound-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 383--383
+Underfull \hbox (badness 10000) in paragraph at lines 369--369
 []|\OT1/cmr/bx/n/12 Expected
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 383--383
+Underfull \hbox (badness 10000) in paragraph at lines 369--369
 []|\OT1/cmr/bx/n/12 Actual
  []
 
 
-Overfull \hbox (2.19681pt too wide) in paragraph at lines 384--384
+Overfull \hbox (2.19681pt too wide) in paragraph at lines 370--370
 []|\OT1/cmr/m/n/12 Example| 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 385
+Underfull \vbox (badness 10000) detected at line 371
  []
 
 
@@ -2231,11 +2249,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[56
+[58
 
 ]) (U:\Github\COMP4Coursework\Testing\testing.tex
 Chapter 3.
-[57
+[59
 
 
 
@@ -2325,7 +2343,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[58
+[60
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 41--41
@@ -2402,25 +2420,25 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[59]
+[61]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[60])
+[62])
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[61
+[63
 
 ] (U:\Github\COMP4Coursework\Maintenance\maintenance.tex
 Chapter 4.
-Excluding 'comment' comment. [62
+Excluding 'comment' comment. [64
 
 
 
@@ -2434,18 +2452,18 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[63] Excluding 'comment' comment.
+[65] Excluding 'comment' comment.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[64
+[66
 
 ]) (U:\Github\COMP4Coursework\Manual\manual.tex
 Chapter 5.
-) [65
+) [67
 
 
 
@@ -2460,9 +2478,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[66] (U:\Github\COMP4Coursework\Evaluation\evaluation.tex
+[68] (U:\Github\COMP4Coursework\Evaluation\evaluation.tex
 Chapter 6.
-) [67
+) [69
 
 
 
@@ -2476,7 +2494,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[68]
+[70]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 17.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 17.
  (U:\Github\COMP4Coursework\coursework.aux
@@ -2489,7 +2507,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 17.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 17.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 17.
 Package rerunfilecheck Info: File `coursework.out' has not changed.
-(rerunfilecheck)             Checksum: C0EF8E0E4226EBD1D0F25EA413CAF9FB;9554.
+(rerunfilecheck)             Checksum: 2DBE9EB13C763C74299CEE7DC82AA9FD;9696.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -2497,10 +2515,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 17.
  ) 
 Here is how much of TeX's memory you used:
- 10909 strings out of 493705
- 161611 string characters out of 3142200
- 276647 words of memory out of 3000000
- 13751 multiletter control sequences out of 15000+200000
+ 10913 strings out of 493705
+ 161701 string characters out of 3142200
+ 276665 words of memory out of 3000000
+ 13753 multiletter control sequences out of 15000+200000
  10886 words of font info for 39 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  41i,12n,45p,796b,451s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2512,9 +2530,9 @@ ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program
  Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Fil
 es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files
  (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on coursework.pdf (69 pages, 962193 bytes).
+Output written on coursework.pdf (71 pages, 961118 bytes).
 PDF statistics:
- 1461 PDF objects out of 1728 (max. 8388607)
- 254 named destinations out of 1000 (max. 500000)
- 1214 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1479 PDF objects out of 1728 (max. 8388607)
+ 256 named destinations out of 1000 (max. 500000)
+ 1230 words of extra memory for PDF output out of 10000 (max. 10000000)
 
