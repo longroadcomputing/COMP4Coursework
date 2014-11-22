@@ -271,29 +271,31 @@ I have chosen to build my system for this specification as this is the computer 
         \multicolumn{2}{|c|}{\textbf{Second-Normalised Form(2NF)}} \\
         \multicolumn{2}{|c|}{ }                                    \\ \hline
         \textbf{Non-Repeating}     & \textbf{Repeating}            \\ \hline
-        \underline{ItemID}     & \underline{LoanID}        \\ 
-        ItemName               & \emph{ItemID}                    \\ 
-        Value	                    & LoanRate                         \\ 
-        ItemClass	& LoanLength                       \\ 
-        FuseRating     & 					\\
-	                    &\underline{CustomerID}                       \\ 
-              	          & Forename                         \\ 
-        		          & Lastname                         \\ 
-                               & Company                          \\ 
-                               & Street                           \\ 
-                               & Town                             \\ 
-                               & PostCode                         \\ 
-                               & MobileNumber                     \\ 
-                               & Landline                         \\ 
-                               & Email                            \\ 
-                               & PATtestID                        \\ 
-                               & TestDate                         \\ 
-                               & PATTestNotes                  \\ 
-                               & ComponentType                   \\
-		          & ComponentResult		\\
-		          & ComponentNotes 		\\
-                               & Leakage                          \\ 
-                               & TestResult                       \\ \hline
+        \underline{ItemID}     & \underline{LoanID}                \\ 
+        ItemName               & \emph{ItemID}                     \\ 
+        Value	              & LoanRate                          \\ 
+        ItemClass	          & LoanLength                        \\ 
+        FuseRating             & 					                \\
+                               &\underline{CustomerID}             \\ 
+                               & Forename                          \\ 
+              	              & Lastname                          \\ 
+                               & Company                           \\ 
+                               & Street                            \\ 
+                               & Town                              \\ 
+                               & PostCode                          \\ 
+                               & MobileNumber                      \\ 
+                               & Landline                          \\ 
+                               & Email                             \\ 
+                               & PATtestID                         \\ 
+                               & TestDate                          \\ 
+                               & PATTestNotes                      \\ 
+                               & ComponentType                     \\
+                               & ComponentResult                   \\
+                               & ComponentNotes                    \\
+                               & Leakage                           \\ 
+                               & TestResult                        \\ 
+                               & Location                          \\
+                               & ItemType                          \\ \hline
     \end{tabular}
 \end{center}
 
@@ -303,34 +305,45 @@ I have chosen to build my system for this specification as this is the computer 
         \multicolumn{2}{|c|}{\textbf{Third-Normalised Form(3NF)}}  \\
         \multicolumn{2}{|c|}{ }                                    \\ \hline
         \textbf{Non-Repeating}     & \textbf{Repeating}            \\ \hline
-         \underline{ItemID}     & \underline{LoanID}        \\ 
-        ItemName               & \emph{ItemID}                    \\ 
-        Value	                    & LoanRate                         \\ 
-        ItemClass	& LoanLength                       \\ 
-        FuseRating     & 					\\
-	                    &\underline{CustomerID}                       \\ 
-              	          & Forename                         \\ 
-        		          & Lastname                         \\ 
-                               & Company                          \\ 
-                               & Street                           \\ 
-                               & Town                             \\ 
-                               & PostCode                         \\ 
-                               & MobileNumber                     \\ 
-                               & Landline                         \\ 
-                               & Email                            \\ 
-		          &				\\
-                               & \underline{PATtestID}      \\ 
-                               & TestDate                         \\ 
-		          &				\\
-		          & \underline{TestID}	\\
-		          & \emph{PATtestID}	\\
-		          & \emph{ItemID}		\\
-                               & PATTestNotes                  \\ 
-                               & ComponentType                   \\
-		          & ComponentResult		\\
-		          & ComponentNotes 		\\
-                               & Leakage                          \\ 
-                               & TestResult                       \\ \hline                                  
+        \underline{ItemID}         & \underline{LoanID}            \\
+        \emph{LocationID}          & \emph{CustomerID}             \\
+        \emph{ItemTypeID}          & LoanRate                      \\
+        ItemName                   & LoanLength                    \\ 
+        Value	                  &                               \\
+        ItemClass                  & \underline{LoanItemID}        \\
+        FuseRating                 & \emph{LoanID}                 \\
+                                   & \emph{ItemID}                 \\
+                                   & Quantity                      \\
+                                   &                               \\ 
+                                   &\underline{CustomerID}         \\
+                                   & Forename                      \\
+                                   & Lastname                      \\ 
+                                   & Company                       \\ 
+                                   & Street                        \\ 
+                                   & Town                          \\ 
+                                   & PostCode                      \\ 
+                                   & MobileNumber                  \\ 
+                                   & Landline                      \\ 
+                                   & Email                         \\ 
+                                   &				                \\
+                                   & \underline{PATtestID}         \\
+                                   & TestDate                      \\   
+                                   &				                \\
+                                   & \underline{TestID}            \\
+                                   & \emph{PATtestID}              \\
+                                   & \emph{ItemID}	                \\
+                                   & PATTestNotes                  \\
+                                   & ComponentType                 \\
+                                   & ComponentResult               \\
+                                   & ComponentNotes                \\
+                                   & Leakage                       \\ 
+                                   & TestResult                    \\ 
+                                   &                               \\
+                                   & \underline{LocationID}        \\
+                                   & Location                      \\
+                                   &                               \\
+                                   & \underline{ItemTypeID}        \\
+                                   & ItemType                      \\ \hline                                
     \end{tabular}
 \end{center}
 

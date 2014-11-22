@@ -1,4 +1,6 @@
 from login_error_dialog import *
+from change_password_dialog import *
+from password_reset import *
 
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
@@ -11,7 +13,12 @@ class MainMenuWindow(QMainWindow):
     """Main Menu Prototype"""
     def __init__(self):
         super().__init__()
+
+        #pdb.set_trace()
+        self.password = read_password()
+        
         self.setWindowTitle("Main Menu")
+        
         self.main_menu_stacked_layout = QStackedLayout()
         self.main_menu_stacked_widget = QWidget()
 
@@ -57,6 +64,7 @@ class MainMenuWindow(QMainWindow):
         #components
         self.login_label = QLabel("Please enter the Password to access:")
         self.password_entry = QLineEdit()
+        self.password_entry.setEchoMode(QLineEdit.Password)
         self.password_entry.setPlaceholderText("Password...")
         self.login_quit_button = QPushButton("Quit")
         self.login_enter_button = QPushButton("Enter")
@@ -83,14 +91,12 @@ class MainMenuWindow(QMainWindow):
 
         #connections
         self.password_entry.returnPressed.connect(self.login)
-        #self.password_entry.escapePressed.connect(self.close)
         self.login_enter_button.clicked.connect(self.login)
         self.login_quit_button.clicked.connect(self.close)
 
     def login(self):
-        password = "c3media"
         name = self.password_entry.text()
-        if name == password:
+        if name == self.password:
             allow_access = True
             self.main_menu_stacked_layout.setCurrentIndex(1)
         else:
@@ -113,14 +119,22 @@ class MainMenuWindow(QMainWindow):
         self.main_menu_screen_layout.addWidget(self.display_records_button,0,1)
         self.main_menu_screen_layout.addWidget(self.edit_record_button,1,0)
         self.main_menu_screen_layout.addWidget(self.delete_record_button,1,1)
-        self.main_menu_screen_layout.addWidget(self.change_password_button,3,0)
-        self.main_menu_screen_layout.addWidget(self.logout_button,3,1)
+        self.main_menu_screen_layout.addWidget(self.logout_button,3,0)
+        self.main_menu_screen_layout.addWidget(self.change_password_button,3,1)
         #create widget to hold layout
         self.main_menu_initial_widget = QWidget()
         #add layout to widget
         self.main_menu_initial_widget.setLayout(self.main_menu_screen_layout)
         #add widget to stacked layout
         self.main_menu_stacked_layout.addWidget(self.main_menu_initial_widget)
+        #connections
+        self.change_password_button.clicked.connect(self.change_password_method)
+        self.logout_button.clicked.connect(self.back_to_login_screen)
+
+    def back_to_login_screen(self):
+        self.main_menu_stacked_layout.setCurrentIndex(0)
+        self.password_entry.clear()
+        self.password = read_password()
         
 
     def add_keyboard_shotcuts(self):
@@ -131,7 +145,14 @@ class MainMenuWindow(QMainWindow):
         self.save.setShortcut('Ctrl+S')
         self.save_as.setShortcut('Ctrl+Shift+S')
 
-        
+    def change_password_method(self):
+        change_password_dialog = ChangePasswordDialog(self.password)
+        change_password_dialog.exec_()
+        self.new_password = change_password_dialog.change_password()
+        if self.new_password != self.password:
+            self.password = self.new_password
+            update_password(self.password)
+
         
 def main_menu_main():
     application = QApplication(sys.argv)
