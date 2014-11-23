@@ -109,13 +109,39 @@ Deleting Records
     \caption{Delete Records Flowchart.} \label{fig:print_function_result}
 \end{figure}
 
+
+
+
+
 \begin{landscape}
 
 \section{User Interface Designs}
 
 \begin{figure}[H]
     \begin{center}
-        \includegraphics[width=500px]{./Design/user_interface/login_interface}
+        \includegraphics[width=420px]{./Design/user_interface/login_interface.pdf}
+    \end{center}
+    \caption{Login and Main Menu windows.} \label{fig:print_function_result}
+\end{figure}
+
+\begin{center}
+    Clicking the "Logout" button will return you to the login screen.
+\end{center}
+
+\newpage
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=500px]{./Design/user_interface/Add_item_record_interface.pdf}
+    \end{center}
+    \caption{Login and Main Menu windows.} \label{fig:print_function_result}
+\end{figure}
+
+\newpage
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=500px]{./Design/user_interface/Add_loan_record_interface.pdf}
     \end{center}
     \caption{Login and Main Menu windows.} \label{fig:print_function_result}
 \end{figure}
@@ -186,7 +212,7 @@ I have chosen to build my system for this specification as this is the computer 
 
 \noindent \textbf{Location}(\underline{LocationID}, Location)\\
 
-\noindent \textbf{LoanListing}(\underline{LoanListingID}, \emph{ItemID}, \emph{LoanID}, LoanQuantity)\\
+\noindent \textbf{LoanItem}(\underline{LoanListingID}, \emph{ItemID}, \emph{LoanID}, LoanQuantity)\\
 
 \noindent \textbf{Loan}(\underline{LoanID}, \emph{CustomerID}, \emph{LoanListingID})
 
@@ -198,35 +224,35 @@ I have chosen to build my system for this specification as this is the computer 
     \begin{tabular}{|c|}
         \hline
         \textbf{Un-Normalised Form(UNF)}\\ \hline
-        \underline{ItemID}\\
-        ItemName\\
-        ItemType\\
-        Location\\ 
-        Value\\ 
-        LoanID\\ 
-        LoanRate\\ 
-        LoanLength\\ 
-        CustomerID\\ 
-        Forename\\ 
-        Lastname\\ 
-        Company\\ 
-        Street\\ 
-        Town\\ 
-        PostCode\\ 
-        MobileNumber\\ 
-        LandLine\\ 
-        Email\\ 
-        PATtestID\\
-        TestResult\\ 
-        TestDate\\ 
-        ItemDescription\\ 
-        ItemClass\\ 
-        FuseRating\\ 
-        PATTestNotes\\ 
-        ComponentType\\
-        ComponentResult\\
-        ComponentNotes \\
-        Leakage\\ \hline
+        \underline{ItemID}              \\
+        ItemName                        \\
+        ItemType                        \\
+        Location                        \\ 
+        Value                           \\ 
+        LoanID                          \\ 
+        LoanRate                        \\ 
+        LoanLength                      \\ 
+        CustomerID                      \\ 
+        Forename                        \\ 
+        Lastname                        \\ 
+        Company                         \\ 
+        Street                          \\ 
+        Town                            \\ 
+        PostCode                        \\ 
+        MobileNumber                    \\ 
+        LandLine                        \\ 
+        Email                           \\ 
+        PATtestID                       \\
+        TestResult                      \\ 
+        TestDate                        \\ 
+        ItemDescription                 \\ 
+        ItemClass                       \\ 
+        FuseRating                      \\ 
+        PATTestNotes                    \\ 
+        ComponentType                   \\
+        ComponentResult                 \\
+        ComponentNotes                  \\
+        Leakage                         \\ \hline
     \end{tabular}
 \end{center}
 
@@ -238,13 +264,13 @@ I have chosen to build my system for this specification as this is the computer 
         \multicolumn{2}{|c|}{\textbf{First-Normalised Form(1NF)}} \\
         \multicolumn{2}{|c|}{ }                                   \\ \hline
         \textbf{Non-Repeating} & \textbf{Repeating}               \\ \hline
-        \underline{ItemID}     & \underline{LoanID}        \\ 
+        \underline{ItemID}     & \underline{LoanID}               \\ 
         ItemName               & \emph{ItemID}                    \\ 
-        Value	                    & LoanRate                         \\ 
-        ItemClass	& LoanLength                       \\ 
-        FuseRating      & CustomerID                       \\ 
-              	          & Forename                         \\ 
-        		          & Lastname                         \\ 
+        Value	              & LoanRate                         \\ 
+        ItemClass	          & LoanLength                       \\ 
+        FuseRating             & CustomerID                       \\ 
+              	              & Forename                         \\ 
+              	              & Lastname                         \\ 
                                & Company                          \\ 
                                & Street                           \\ 
                                & Town                             \\ 
@@ -254,10 +280,10 @@ I have chosen to build my system for this specification as this is the computer 
                                & Email                            \\ 
                                & PATtestID                        \\ 
                                & TestDate                         \\ 
-                               & PATTestNotes                  \\ 
-                               & ComponentType                   \\
-		         & ComponentResult		\\
-		         & ComponentNotes 		\\
+                               & PATTestNotes                     \\ 
+                               & ComponentType                    \\
+                               & ComponentResult                  \\
+                               & ComponentNotes                   \\
                                & Leakage                          \\ 
                                & TestResult                       \\ \hline
     \end{tabular}
@@ -270,7 +296,7 @@ I have chosen to build my system for this specification as this is the computer 
         \hline
         \multicolumn{2}{|c|}{\textbf{Second-Normalised Form(2NF)}} \\
         \multicolumn{2}{|c|}{ }                                    \\ \hline
-        \textbf{Non-Repeating}     & \textbf{Repeating}            \\ \hline
+        \textbf{Non-Repeating} & \textbf{Repeating}                \\ \hline
         \underline{ItemID}     & \underline{LoanID}                \\ 
         ItemName               & \emph{ItemID}                     \\ 
         Value	              & LoanRate                          \\ 
