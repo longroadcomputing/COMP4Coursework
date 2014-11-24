@@ -45,109 +45,109 @@
 \contentsline {subsection}{\numberline {2.1.1}Short description of the main parts of the system}{38}{subsection.2.1.1}
 \contentsline {subsection}{\numberline {2.1.2}System flowcharts showing an overview of the complete system}{42}{subsection.2.1.2}
 \contentsline {section}{\numberline {2.2}User Interface Designs}{47}{section.2.2}
-\contentsline {section}{\numberline {2.3}Hardware Specification}{51}{section.2.3}
-\contentsline {section}{\numberline {2.4}Program Structure}{51}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Top-down design structure charts}{51}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}Algorithms in pseudo-code for each data transformation process}{51}{subsection.2.4.2}
-\contentsline {subsection}{\numberline {2.4.3}Object Diagrams}{51}{subsection.2.4.3}
-\contentsline {subsection}{\numberline {2.4.4}Class Definitions}{51}{subsection.2.4.4}
-\contentsline {section}{\numberline {2.5}Prototyping}{52}{section.2.5}
-\contentsline {section}{\numberline {2.6}Definition of Data Requirements}{52}{section.2.6}
-\contentsline {subsection}{\numberline {2.6.1}Identification of all data input items}{52}{subsection.2.6.1}
-\contentsline {subsection}{\numberline {2.6.2}Identification of all data output items}{52}{subsection.2.6.2}
-\contentsline {subsection}{\numberline {2.6.3}Explanation of how data output items are generated}{52}{subsection.2.6.3}
-\contentsline {subsection}{\numberline {2.6.4}Data Dictionary}{52}{subsection.2.6.4}
-\contentsline {subsection}{\numberline {2.6.5}Identification of appropriate storage media}{52}{subsection.2.6.5}
-\contentsline {section}{\numberline {2.7}Database Design}{52}{section.2.7}
-\contentsline {subsection}{\numberline {2.7.1}ER Diagrams}{53}{subsection.2.7.1}
-\contentsline {subsection}{\numberline {2.7.2}Entity Descriptions}{54}{subsection.2.7.2}
-\contentsline {subsection}{\numberline {2.7.3}Normalisation}{55}{subsection.2.7.3}
-\contentsline {subsubsection}{UNF to 3NF}{55}{section*.11}
-\contentsline {section}{\numberline {2.8}Security and Integrity of the System and Data}{59}{section.2.8}
-\contentsline {subsection}{\numberline {2.8.1}Security and Integrity of Data}{59}{subsection.2.8.1}
-\contentsline {subsection}{\numberline {2.8.2}System Security}{59}{subsection.2.8.2}
-\contentsline {section}{\numberline {2.9}Validation}{59}{section.2.9}
-\contentsline {section}{\numberline {2.10}Testing}{59}{section.2.10}
-\contentsline {subsection}{\numberline {2.10.1}Outline Plan}{60}{subsection.2.10.1}
-\contentsline {subsection}{\numberline {2.10.2}Detailed Plan}{60}{subsection.2.10.2}
-\contentsline {chapter}{\numberline {3}Testing}{61}{chapter.3}
-\contentsline {section}{\numberline {3.1}Test Plan}{61}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Original Outline Plan}{62}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Changes to Outline Plan}{62}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}Original Detailed Plan}{62}{subsection.3.1.3}
-\contentsline {subsection}{\numberline {3.1.4}Changes to Detailed Plan}{63}{subsection.3.1.4}
-\contentsline {section}{\numberline {3.2}Test Data}{64}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Original Test Data}{64}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Changes to Test Data}{64}{subsection.3.2.2}
-\contentsline {section}{\numberline {3.3}Annotated Samples}{64}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Actual Results}{64}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Evidence}{64}{subsection.3.3.2}
-\contentsline {section}{\numberline {3.4}Evaluation}{65}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Approach to Testing}{65}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Problems Encountered}{65}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}Strengths of Testing}{65}{subsection.3.4.3}
-\contentsline {subsection}{\numberline {3.4.4}Weaknesses of Testing}{65}{subsection.3.4.4}
-\contentsline {subsection}{\numberline {3.4.5}Reliability of Application}{65}{subsection.3.4.5}
-\contentsline {subsection}{\numberline {3.4.6}Robustness of Application}{65}{subsection.3.4.6}
-\contentsline {chapter}{\numberline {4}System Maintenance}{66}{chapter.4}
-\contentsline {section}{\numberline {4.1}Environment}{67}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Software}{67}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Usage Explanation}{67}{subsection.4.1.2}
-\contentsline {subsection}{\numberline {4.1.3}Features Used}{67}{subsection.4.1.3}
-\contentsline {section}{\numberline {4.2}System Overview}{67}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}System Component}{67}{subsection.4.2.1}
-\contentsline {section}{\numberline {4.3}Code Structure}{67}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Particular Code Section}{67}{subsection.4.3.1}
-\contentsline {section}{\numberline {4.4}Variable Listing}{67}{section.4.4}
-\contentsline {section}{\numberline {4.5}System Evidence}{67}{section.4.5}
-\contentsline {subsection}{\numberline {4.5.1}User Interface}{67}{subsection.4.5.1}
-\contentsline {subsection}{\numberline {4.5.2}ER Diagram}{67}{subsection.4.5.2}
-\contentsline {subsection}{\numberline {4.5.3}Database Table Views}{67}{subsection.4.5.3}
-\contentsline {subsection}{\numberline {4.5.4}Database SQL}{67}{subsection.4.5.4}
-\contentsline {subsection}{\numberline {4.5.5}SQL Queries}{67}{subsection.4.5.5}
-\contentsline {section}{\numberline {4.6}Testing}{67}{section.4.6}
-\contentsline {subsection}{\numberline {4.6.1}Summary of Results}{67}{subsection.4.6.1}
-\contentsline {subsection}{\numberline {4.6.2}Known Issues}{67}{subsection.4.6.2}
-\contentsline {section}{\numberline {4.7}Code Explanations}{67}{section.4.7}
-\contentsline {subsection}{\numberline {4.7.1}Difficult Sections}{67}{subsection.4.7.1}
-\contentsline {subsection}{\numberline {4.7.2}Self-created Algorithms}{67}{subsection.4.7.2}
-\contentsline {section}{\numberline {4.8}Settings}{67}{section.4.8}
-\contentsline {section}{\numberline {4.9}Acknowledgements}{67}{section.4.9}
-\contentsline {section}{\numberline {4.10}Code Listing}{67}{section.4.10}
-\contentsline {subsection}{\numberline {4.10.1}Module 1}{68}{subsection.4.10.1}
-\contentsline {chapter}{\numberline {5}User Manual}{69}{chapter.5}
-\contentsline {section}{\numberline {5.1}Introduction}{70}{section.5.1}
-\contentsline {section}{\numberline {5.2}Installation}{70}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Prerequisite Installation}{70}{subsection.5.2.1}
-\contentsline {subsubsection}{Installing Python}{70}{section*.12}
-\contentsline {subsubsection}{Installing PyQt}{70}{section*.13}
-\contentsline {subsubsection}{Etc.}{70}{section*.14}
-\contentsline {subsection}{\numberline {5.2.2}System Installation}{70}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}Running the System}{70}{subsection.5.2.3}
-\contentsline {section}{\numberline {5.3}Tutorial}{70}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Introduction}{70}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Assumptions}{70}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}Tutorial Questions}{70}{subsection.5.3.3}
-\contentsline {subsubsection}{Question 1}{70}{section*.15}
-\contentsline {subsubsection}{Question 2}{70}{section*.16}
-\contentsline {subsection}{\numberline {5.3.4}Saving}{70}{subsection.5.3.4}
-\contentsline {subsection}{\numberline {5.3.5}Limitations}{70}{subsection.5.3.5}
-\contentsline {section}{\numberline {5.4}Error Recovery}{70}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Error 1}{70}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}Error 2}{70}{subsection.5.4.2}
-\contentsline {section}{\numberline {5.5}System Recovery}{70}{section.5.5}
-\contentsline {subsection}{\numberline {5.5.1}Backing-up Data}{70}{subsection.5.5.1}
-\contentsline {subsection}{\numberline {5.5.2}Restoring Data}{70}{subsection.5.5.2}
-\contentsline {chapter}{\numberline {6}Evaluation}{71}{chapter.6}
-\contentsline {section}{\numberline {6.1}Customer Requirements}{72}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Objective Evaluation}{72}{subsection.6.1.1}
-\contentsline {section}{\numberline {6.2}Effectiveness}{72}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Objective Evaluation}{72}{subsection.6.2.1}
-\contentsline {section}{\numberline {6.3}Learnability}{72}{section.6.3}
-\contentsline {section}{\numberline {6.4}Usability}{72}{section.6.4}
-\contentsline {section}{\numberline {6.5}Maintainability}{72}{section.6.5}
-\contentsline {section}{\numberline {6.6}Suggestions for Improvement}{72}{section.6.6}
-\contentsline {section}{\numberline {6.7}End User Evidence}{72}{section.6.7}
-\contentsline {subsection}{\numberline {6.7.1}Questionnaires}{72}{subsection.6.7.1}
-\contentsline {subsection}{\numberline {6.7.2}Graphs}{72}{subsection.6.7.2}
-\contentsline {subsection}{\numberline {6.7.3}Written Statements}{72}{subsection.6.7.3}
+\contentsline {section}{\numberline {2.3}Hardware Specification}{52}{section.2.3}
+\contentsline {section}{\numberline {2.4}Program Structure}{52}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Top-down design structure charts}{52}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Algorithms in pseudo-code for each data transformation process}{52}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}Object Diagrams}{52}{subsection.2.4.3}
+\contentsline {subsection}{\numberline {2.4.4}Class Definitions}{52}{subsection.2.4.4}
+\contentsline {section}{\numberline {2.5}Prototyping}{53}{section.2.5}
+\contentsline {section}{\numberline {2.6}Definition of Data Requirements}{53}{section.2.6}
+\contentsline {subsection}{\numberline {2.6.1}Identification of all data input items}{53}{subsection.2.6.1}
+\contentsline {subsection}{\numberline {2.6.2}Identification of all data output items}{53}{subsection.2.6.2}
+\contentsline {subsection}{\numberline {2.6.3}Explanation of how data output items are generated}{53}{subsection.2.6.3}
+\contentsline {subsection}{\numberline {2.6.4}Data Dictionary}{53}{subsection.2.6.4}
+\contentsline {subsection}{\numberline {2.6.5}Identification of appropriate storage media}{53}{subsection.2.6.5}
+\contentsline {section}{\numberline {2.7}Database Design}{53}{section.2.7}
+\contentsline {subsection}{\numberline {2.7.1}ER Diagrams}{54}{subsection.2.7.1}
+\contentsline {subsection}{\numberline {2.7.2}Entity Descriptions}{55}{subsection.2.7.2}
+\contentsline {subsection}{\numberline {2.7.3}Normalisation}{56}{subsection.2.7.3}
+\contentsline {subsubsection}{UNF to 3NF}{56}{section*.11}
+\contentsline {section}{\numberline {2.8}Security and Integrity of the System and Data}{60}{section.2.8}
+\contentsline {subsection}{\numberline {2.8.1}Security and Integrity of Data}{60}{subsection.2.8.1}
+\contentsline {subsection}{\numberline {2.8.2}System Security}{60}{subsection.2.8.2}
+\contentsline {section}{\numberline {2.9}Validation}{60}{section.2.9}
+\contentsline {section}{\numberline {2.10}Testing}{60}{section.2.10}
+\contentsline {subsection}{\numberline {2.10.1}Outline Plan}{61}{subsection.2.10.1}
+\contentsline {subsection}{\numberline {2.10.2}Detailed Plan}{61}{subsection.2.10.2}
+\contentsline {chapter}{\numberline {3}Testing}{62}{chapter.3}
+\contentsline {section}{\numberline {3.1}Test Plan}{62}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Original Outline Plan}{63}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Changes to Outline Plan}{63}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Original Detailed Plan}{63}{subsection.3.1.3}
+\contentsline {subsection}{\numberline {3.1.4}Changes to Detailed Plan}{64}{subsection.3.1.4}
+\contentsline {section}{\numberline {3.2}Test Data}{65}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Original Test Data}{65}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Changes to Test Data}{65}{subsection.3.2.2}
+\contentsline {section}{\numberline {3.3}Annotated Samples}{65}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Actual Results}{65}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Evidence}{65}{subsection.3.3.2}
+\contentsline {section}{\numberline {3.4}Evaluation}{66}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Approach to Testing}{66}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Problems Encountered}{66}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Strengths of Testing}{66}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.4}Weaknesses of Testing}{66}{subsection.3.4.4}
+\contentsline {subsection}{\numberline {3.4.5}Reliability of Application}{66}{subsection.3.4.5}
+\contentsline {subsection}{\numberline {3.4.6}Robustness of Application}{66}{subsection.3.4.6}
+\contentsline {chapter}{\numberline {4}System Maintenance}{67}{chapter.4}
+\contentsline {section}{\numberline {4.1}Environment}{68}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Software}{68}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Usage Explanation}{68}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Features Used}{68}{subsection.4.1.3}
+\contentsline {section}{\numberline {4.2}System Overview}{68}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}System Component}{68}{subsection.4.2.1}
+\contentsline {section}{\numberline {4.3}Code Structure}{68}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Particular Code Section}{68}{subsection.4.3.1}
+\contentsline {section}{\numberline {4.4}Variable Listing}{68}{section.4.4}
+\contentsline {section}{\numberline {4.5}System Evidence}{68}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}User Interface}{68}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}ER Diagram}{68}{subsection.4.5.2}
+\contentsline {subsection}{\numberline {4.5.3}Database Table Views}{68}{subsection.4.5.3}
+\contentsline {subsection}{\numberline {4.5.4}Database SQL}{68}{subsection.4.5.4}
+\contentsline {subsection}{\numberline {4.5.5}SQL Queries}{68}{subsection.4.5.5}
+\contentsline {section}{\numberline {4.6}Testing}{68}{section.4.6}
+\contentsline {subsection}{\numberline {4.6.1}Summary of Results}{68}{subsection.4.6.1}
+\contentsline {subsection}{\numberline {4.6.2}Known Issues}{68}{subsection.4.6.2}
+\contentsline {section}{\numberline {4.7}Code Explanations}{68}{section.4.7}
+\contentsline {subsection}{\numberline {4.7.1}Difficult Sections}{68}{subsection.4.7.1}
+\contentsline {subsection}{\numberline {4.7.2}Self-created Algorithms}{68}{subsection.4.7.2}
+\contentsline {section}{\numberline {4.8}Settings}{68}{section.4.8}
+\contentsline {section}{\numberline {4.9}Acknowledgements}{68}{section.4.9}
+\contentsline {section}{\numberline {4.10}Code Listing}{68}{section.4.10}
+\contentsline {subsection}{\numberline {4.10.1}Module 1}{69}{subsection.4.10.1}
+\contentsline {chapter}{\numberline {5}User Manual}{70}{chapter.5}
+\contentsline {section}{\numberline {5.1}Introduction}{71}{section.5.1}
+\contentsline {section}{\numberline {5.2}Installation}{71}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Prerequisite Installation}{71}{subsection.5.2.1}
+\contentsline {subsubsection}{Installing Python}{71}{section*.12}
+\contentsline {subsubsection}{Installing PyQt}{71}{section*.13}
+\contentsline {subsubsection}{Etc.}{71}{section*.14}
+\contentsline {subsection}{\numberline {5.2.2}System Installation}{71}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Running the System}{71}{subsection.5.2.3}
+\contentsline {section}{\numberline {5.3}Tutorial}{71}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Introduction}{71}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Assumptions}{71}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Tutorial Questions}{71}{subsection.5.3.3}
+\contentsline {subsubsection}{Question 1}{71}{section*.15}
+\contentsline {subsubsection}{Question 2}{71}{section*.16}
+\contentsline {subsection}{\numberline {5.3.4}Saving}{71}{subsection.5.3.4}
+\contentsline {subsection}{\numberline {5.3.5}Limitations}{71}{subsection.5.3.5}
+\contentsline {section}{\numberline {5.4}Error Recovery}{71}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Error 1}{71}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Error 2}{71}{subsection.5.4.2}
+\contentsline {section}{\numberline {5.5}System Recovery}{71}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}Backing-up Data}{71}{subsection.5.5.1}
+\contentsline {subsection}{\numberline {5.5.2}Restoring Data}{71}{subsection.5.5.2}
+\contentsline {chapter}{\numberline {6}Evaluation}{72}{chapter.6}
+\contentsline {section}{\numberline {6.1}Customer Requirements}{73}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Objective Evaluation}{73}{subsection.6.1.1}
+\contentsline {section}{\numberline {6.2}Effectiveness}{73}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Objective Evaluation}{73}{subsection.6.2.1}
+\contentsline {section}{\numberline {6.3}Learnability}{73}{section.6.3}
+\contentsline {section}{\numberline {6.4}Usability}{73}{section.6.4}
+\contentsline {section}{\numberline {6.5}Maintainability}{73}{section.6.5}
+\contentsline {section}{\numberline {6.6}Suggestions for Improvement}{73}{section.6.6}
+\contentsline {section}{\numberline {6.7}End User Evidence}{73}{section.6.7}
+\contentsline {subsection}{\numberline {6.7.1}Questionnaires}{73}{subsection.6.7.1}
+\contentsline {subsection}{\numberline {6.7.2}Graphs}{73}{subsection.6.7.2}
+\contentsline {subsection}{\numberline {6.7.3}Written Statements}{73}{subsection.6.7.3}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.18)  24 NOV 2014 01:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.18)  24 NOV 2014 11:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -688,6 +688,9 @@ LaTeX Warning: Label `fig:relationship_diagram' multiply defined.
 )
 (/Users/joelbutcher/Dropbox/Apps/Texpad/Computing/Github/COMP4Coursework/.texpa
 dtmp/./Design/design.aux
+
+LaTeX Warning: Label `fig:print_function_result' multiply defined.
+
 
 LaTeX Warning: Label `fig:print_function_result' multiply defined.
 
@@ -2161,10 +2164,33 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.158 \end{landscape}
-                      <./Design/user_interface/Add_customer_record_interface.pd
-f>]
-Underfull \hbox (badness 10000) in paragraph at lines 170--171
+l.158 \newpage
+               <./Design/user_interface/Add_customer_record_interface.pdf>]
+<./Design/user_interface/Display_item_records_interface.pdf, id=1382, 780.15433
+pt x 525.78287pt>
+File: ./Design/user_interface/Display_item_records_interface.pdf Graphic file (
+type pdf)
+
+<use ./Design/user_interface/Display_item_records_interface.pdf>
+Package pdftex.def Info: ./Design/user_interface/Display_item_records_interface
+.pdf used on input line 162.
+(pdftex.def)             Requested size: 501.87683pt x 338.24886pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[51pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1
+1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.167 \end{landscape}
+                      <./Design/user_interface/Display_item_records_interface.p
+df>]
+Underfull \hbox (badness 10000) in paragraph at lines 179--180
 
  []
 
@@ -2174,7 +2200,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[51
+[52
 
 ]
 
@@ -2183,47 +2209,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[52] <./Design/ER_Diagrams/ER_Diagram.pdf, id=1390, 770.44925pt x 403.3446pt>
+[53] <./Design/ER_Diagrams/ER_Diagram.pdf, id=1433, 770.44925pt x 403.3446pt>
 File: ./Design/ER_Diagrams/ER_Diagram.pdf Graphic file (type pdf)
 
 <use ./Design/ER_Diagrams/ER_Diagram.pdf>
 Package pdftex.def Info: ./Design/ER_Diagrams/ER_Diagram.pdf used on input line
- 210.
+ 219.
 (pdftex.def)             Requested size: 602.2522pt x 315.29066pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[53
-
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2.11})
- has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.214 \end{landscape}
-                      <./Design/ER_Diagrams/ER_Diagram.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 218--219
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 220--221
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 222--223
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 224--225
-
- []
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2233,14 +2225,41 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [54
 
-]
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2.12})
+ has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.223 \end{landscape}
+                      <./Design/ER_Diagrams/ER_Diagram.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 227--228
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 229--230
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 231--232
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 233--234
+
+ []
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[55]
+[55
+
+]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2255,6 +2274,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [57]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[58]
 Overfull \vbox (12.98251pt too high) has occurred while \output is active []
 
 
@@ -2264,85 +2290,85 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[58]
+[59]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[59]
-Underfull \hbox (badness 6927) in paragraph at lines 401--401
+[60]
+Underfull \hbox (badness 6927) in paragraph at lines 410--410
 []\OT1/cmr/bx/n/12 Test Se-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 411--411
+Underfull \hbox (badness 10000) in paragraph at lines 420--420
 []|\OT1/cmr/bx/n/12 Test
  []
 
 
-Underfull \hbox (badness 3568) in paragraph at lines 411--411
+Underfull \hbox (badness 3568) in paragraph at lines 420--420
 []|\OT1/cmr/bx/n/12 Purpose of
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 411--411
+Underfull \hbox (badness 10000) in paragraph at lines 420--420
 []|\OT1/cmr/bx/n/12 Test De-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 411--411
+Underfull \hbox (badness 10000) in paragraph at lines 420--420
 []|\OT1/cmr/bx/n/12 Test
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 411--411
+Underfull \hbox (badness 10000) in paragraph at lines 420--420
 \OT1/cmr/bx/n/12 Data
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 411--411
+Underfull \hbox (badness 10000) in paragraph at lines 420--420
 \OT1/cmr/bx/n/12 Type
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 411--411
+Underfull \hbox (badness 10000) in paragraph at lines 420--420
 \OT1/cmr/bx/n/12 (Nor-mal/
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 411--411
+Underfull \hbox (badness 10000) in paragraph at lines 420--420
 \OT1/cmr/bx/n/12 Er-ro-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 411--411
+Underfull \hbox (badness 10000) in paragraph at lines 420--420
 \OT1/cmr/bx/n/12 neous/
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 411--411
+Underfull \hbox (badness 10000) in paragraph at lines 420--420
 \OT1/cmr/bx/n/12 Bound-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 411--411
+Underfull \hbox (badness 10000) in paragraph at lines 420--420
 []|\OT1/cmr/bx/n/12 Expected
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 411--411
+Underfull \hbox (badness 10000) in paragraph at lines 420--420
 []|\OT1/cmr/bx/n/12 Actual
  []
 
 
-Overfull \hbox (2.19681pt too wide) in paragraph at lines 412--412
+Overfull \hbox (2.19681pt too wide) in paragraph at lines 421--421
 []|\OT1/cmr/m/n/12 Example| 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 413
+Underfull \vbox (badness 10000) detected at line 422
  []
 
 
@@ -2351,14 +2377,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[60
+[61
 
 ])
 \openout2 = `./Testing/testing.aux'.
 
  (./Testing/testing.tex
 Chapter 3.
-[61
+[62
 
 
 
@@ -2448,7 +2474,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[62
+[63
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 41--41
@@ -2525,28 +2551,28 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[63]
+[64]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[64])
+[65])
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[65
+[66
 
 ]
 \openout2 = `./Maintenance/maintenance.aux'.
 
  (./Maintenance/maintenance.tex
 Chapter 4.
-Excluding 'comment' comment. [66
+Excluding 'comment' comment. [67
 
 
 
@@ -2560,21 +2586,21 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[67] Excluding 'comment' comment.
+[68] Excluding 'comment' comment.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[68
+[69
 
 ])
 \openout2 = `./Manual/manual.aux'.
 
  (./Manual/manual.tex
 Chapter 5.
-) [69
+) [70
 
 
 
@@ -2589,12 +2615,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[70]
+[71]
 \openout2 = `./Evaluation/evaluation.aux'.
 
  (./Evaluation/evaluation.tex
 Chapter 6.
-) [71
+) [72
 
 
 
@@ -2608,7 +2634,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[72]
+[73]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 17.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 17.
 
@@ -2637,10 +2663,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 17.
  ) 
 Here is how much of TeX's memory you used:
- 11046 strings out of 493117
- 166946 string characters out of 6135432
+ 11053 strings out of 493117
+ 167249 string characters out of 6135432
  279526 words of memory out of 5000000
- 14009 multiletter control sequences out of 15000+600000
+ 14013 multiletter control sequences out of 15000+600000
  10886 words of font info for 39 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,12n,45p,769b,451s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2653,10 +2679,10 @@ local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loc
 al/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loca
 l/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
 Output written on /Users/joelbutcher/Dropbox/Apps/Texpad/Computing/Github/COMP4
-Coursework/.texpadtmp/coursework.pdf (73 pages, 929278 bytes).
+Coursework/.texpadtmp/coursework.pdf (74 pages, 969619 bytes).
 PDF statistics:
- 1588 PDF objects out of 1728 (max. 8388607)
- 1355 compressed objects within 14 object streams
- 261 named destinations out of 1000 (max. 500000)
- 1245 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1631 PDF objects out of 1728 (max. 8388607)
+ 1384 compressed objects within 14 object streams
+ 263 named destinations out of 1000 (max. 500000)
+ 1250 words of extra memory for PDF output out of 10000 (max. 10000000)
 
