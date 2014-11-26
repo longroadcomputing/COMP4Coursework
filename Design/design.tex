@@ -196,9 +196,33 @@ I have chosen to build my system for this specification as this is the computer 
 
 \subsection{Algorithms in pseudo-code for each data transformation process}
 
-\subsection{Object Diagrams}
+\begin{landscape}
+
+    \subsection{Object Diagrams}
+
+    \begin{figure}[H]
+        \begin{center}
+        \includegraphics[width=500px]{./Design/Object_Diagrams/Object_diagrams.pdf}
+        \caption{Object Diagram.} \label{fig:object_diagram}
+        \end{center}
+    \end{figure}
+
+\newpage
 
 \subsection{Class Definitions}
+
+    \begin{figure}[H]
+        \centerline{\includegraphics[width=50px]{./Design/Class_Definitions/Class_definition_key.pdf}}
+        \caption{Class Diagram Key.} \label{fig:relationship_diagram}
+    \end{figure}
+
+    \begin{figure}[H]
+        \centerline{\includegraphics[width=450px]{./Design/Class_Definitions/Class_diagrams.pdf}}
+        \caption{Class Diagrams.} \label{fig:relationship_diagram}
+    \end{figure}
+
+
+\end{landscape}
 
 \newpage
 
@@ -233,15 +257,21 @@ I have chosen to build my system for this specification as this is the computer 
 
 \subsection{Entity Descriptions}
 
-\noindent \textbf{Item}(\underline{ItemID}, \emph{ItemTypeID}, \emph{LocationID}, Name, Location, Value, ItemQuantity, SubTotal, OnLoan)\\
+\noindent \textbf{Location}(\underline{LocationID}, Location)
 
-\noindent \textbf{ItemType}(\underline{ItemTypeID}, ItemType)\\
+\noindent \textbf{ItemType}(\underline{ItemTypeID}, ItemType)
 
-\noindent \textbf{Location}(\underline{LocationID}, Location)\\
+\noindent \textbf{Item}(\underline{ItemID}, \emph{LocationID}, \emph{ItemTypeID}, ItemName, Value, ItemClass, FuseRating, )
 
-\noindent \textbf{LoanItem}(\underline{LoanListingID}, \emph{ItemID}, \emph{LoanID}, LoanQuantity)\\
+\noindent \textbf{Customer}(\underline{CustomerID}, Forename, Surname, Company, Street, Town, PostCode, MobileNumber, Landline, Email)
 
-\noindent \textbf{Loan}(\underline{LoanID}, \emph{CustomerID}, \emph{LoanListingID})
+\noindent \textbf{Loam}(\underline{LoanID}, LoanRate, LoanLength)
+
+\noindent \textbf{LoanItem}(\underline{LoanItemID}, \emph{LoanID}, \emph{CustomerID}, Quantity)
+
+\noindent \textbf{PATtest}(\underline{PATtestID}, TestDate)
+
+\noindent \textbf{ItemTest}(\underline{ItemTestID}, \emph{ItemID}, PATtestNotes, ComponentTypem, ComponentResult, ComponentNotes, TestResult)
 
 \subsection{Normalisation}
 
