@@ -217,7 +217,7 @@ I have chosen to build my system for this specification as this is the computer 
     \end{figure}
 
     \begin{figure}[H]
-        \centerline{\includegraphics[width=450px]{./Design/Class_Definitions/Class_diagrams.pdf}}
+        \centerline{\includegraphics[width=550px]{./Design/Class_Definitions/Class_definitions.pdf}}
         \caption{Class Diagrams.} \label{fig:relationship_diagram}
     \end{figure}
 
@@ -265,13 +265,13 @@ I have chosen to build my system for this specification as this is the computer 
 
 \noindent \textbf{Customer}(\underline{CustomerID}, Forename, Surname, Company, Street, Town, PostCode, MobileNumber, Landline, Email)
 
-\noindent \textbf{Loam}(\underline{LoanID}, LoanRate, LoanLength)
+\noindent \textbf{Loan}(\underline{LoanID}, LoanRate, LoanLength)
 
 \noindent \textbf{LoanItem}(\underline{LoanItemID}, \emph{LoanID}, \emph{CustomerID}, Quantity)
 
 \noindent \textbf{PATtest}(\underline{PATtestID}, TestDate)
 
-\noindent \textbf{ItemTest}(\underline{ItemTestID}, \emph{ItemID}, PATtestNotes, ComponentTypem, ComponentResult, ComponentNotes, TestResult)
+\noindent \textbf{ItemTest}(\underline{ItemTestID}, \emph{ItemID}, PATtestNotes, ComponentType, ComponentResult, ComponentNotes, Leakage, TestResult)
 
 \subsection{Normalisation}
 
