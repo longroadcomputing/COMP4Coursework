@@ -192,7 +192,19 @@ I have chosen to build my system for this specification as this is the computer 
 
 \section{Program Structure}
 
-\subsection{Top-down design structure charts}
+\begin{landscape}
+
+    \subsection{Top-down design structure charts}
+
+    \begin{figure}[H]
+        \begin{center}
+        \includegraphics[width=500px]{./Design/top_down_design/Top_down_design.pdf}
+        \caption{Object Diagram.} \label{fig:object_diagram}
+        \end{center}
+    \end{figure}
+
+\end{landscape}
+
 
 \subsection{Algorithms in pseudo-code for each data transformation process}
 
@@ -217,7 +229,7 @@ I have chosen to build my system for this specification as this is the computer 
     \end{figure}
 
     \begin{figure}[H]
-        \centerline{\includegraphics[width=550px]{./Design/Class_Definitions/Class_definitions.pdf}}
+        \centerline{\includegraphics[width=450px]{./Design/Class_Definitions/Class_definitions.pdf}}
         \caption{Class Diagrams.} \label{fig:relationship_diagram}
     \end{figure}
 
@@ -261,13 +273,13 @@ I have chosen to build my system for this specification as this is the computer 
 
 \noindent \textbf{ItemType}(\underline{ItemTypeID}, ItemType)
 
-\noindent \textbf{Item}(\underline{ItemID}, \emph{LocationID}, \emph{ItemTypeID}, ItemName, Value, ItemClass, FuseRating, )
+\noindent \textbf{Item}(\underline{ItemID}, \emph{LocationID}, \emph{ItemTypeID}, ItemName, Value, LoanRate, ItemClass, FuseRating, )
 
 \noindent \textbf{Customer}(\underline{CustomerID}, Forename, Surname, Company, Street, Town, PostCode, MobileNumber, Landline, Email)
 
-\noindent \textbf{Loan}(\underline{LoanID}, LoanRate, LoanLength)
+\noindent \textbf{Loan}(\underline{LoanID}, \emph{CustomerID}, StartDate, LoanLength)
 
-\noindent \textbf{LoanItem}(\underline{LoanItemID}, \emph{LoanID}, \emph{CustomerID}, Quantity)
+\noindent \textbf{LoanItem}(\underline{LoanItemID}, \emph{LoanID}, \emph{ItemID}, Quantity)
 
 \noindent \textbf{PATtest}(\underline{PATtestID}, TestDate)
 
@@ -390,8 +402,8 @@ I have chosen to build my system for this specification as this is the computer 
         \textbf{Non-Repeating}     & \textbf{Repeating}            \\ \hline
         \underline{ItemID}         & \underline{LoanID}            \\
         \emph{LocationID}          & \emph{CustomerID}             \\
-        \emph{ItemTypeID}          & LoanRate                      \\
-        ItemName                   & LoanLength                    \\ 
+        \emph{ItemTypeID}          & LoanLength                    \\
+        ItemName                   & \\
         Value	                  &                               \\
         ItemClass                  & \underline{LoanItemID}        \\
         FuseRating                 & \emph{LoanID}                 \\
