@@ -1,6 +1,7 @@
 from login_error_dialog import *
 from change_password_dialog import *
 from password_reset import *
+from printing import *
 
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
@@ -25,9 +26,11 @@ class MainMenuWindow(QMainWindow):
         self.main_menu_stacked_widget.setLayout(self.main_menu_stacked_layout)
 
         self.create_menubar_actions()
+        self.disable_menubar_actions()
         self.add_keyboard_shotcuts()
         
         self.create_login_layout()
+        self.enable_menubar_actions()
         self.create_main_layout()
 
         self.setCentralWidget(self.main_menu_stacked_widget)
@@ -37,14 +40,16 @@ class MainMenuWindow(QMainWindow):
     def create_menubar_actions(self):
         #create actions
         self.new = QAction("New", self)
-        self.open = QAction("Open...", self)
-        self.close_window = QAction("Close", self)
+        self.open = QAction("Open", self)
+        self.print = QAction("Print", self)
+        self.close_window = QAction("Close Window", self)
         self.save = QAction("Save", self)
         self.save_as = QAction("Save As", self)
         self.logout = QAction("Logout", self)
         self.change_password = QAction("Change Password", self)
 
         self.close_window.triggered.connect(self.close)
+        self.print.triggered.connect(printing_main)
         
         #add menu bar
         self.menu = QMenuBar()
@@ -57,8 +62,29 @@ class MainMenuWindow(QMainWindow):
         self.file_menu.addAction(self.close_window)
         self.file_menu.addAction(self.save)
         self.file_menu.addAction(self.save_as)
+        self.file_menu.addAction(self.print)
         self.file_menu.addAction(self.logout)
         self.file_menu.addAction(self.change_password)
+
+    def disable_menubar_actions(self):
+        self.new.setEnabled(False)
+        self.open.setEnabled(False)
+        self.print.setEnabled(False)
+        self.close_window.setEnabled(False)
+        self.save.setEnabled(False)
+        self.save_as.setEnabled(False)
+        self.logout.setEnabled(False)
+        self.change_password.setEnabled(False)
+
+    def enable_menubar_actions(self):
+        self.new.setEnabled(True)
+        self.open.setEnabled(True)
+        self.print.setEnabled(True)
+        self.close_window.setEnabled(True)
+        self.save.setEnabled(True)
+        self.save_as.setEnabled(True)
+        self.logout.setEnabled(True)
+        self.change_password.setEnabled(True)
 
     def create_login_layout(self):
         #components
@@ -144,6 +170,7 @@ class MainMenuWindow(QMainWindow):
         self.close_window.setShortcut('Ctrl+W')
         self.save.setShortcut('Ctrl+S')
         self.save_as.setShortcut('Ctrl+Shift+S')
+        self.print.setShortcut('Ctrl+P')
 
     def change_password_method(self):
         change_password_dialog = ChangePasswordDialog(self.password)
