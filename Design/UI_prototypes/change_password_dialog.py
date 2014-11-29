@@ -35,8 +35,8 @@ class ChangePasswordDialog(QDialog):
         
 
         self.button_Layout = QHBoxLayout()
-        self.button_Layout.addWidget(self.change_password_button,1)
-        self.button_Layout.addWidget(self.cancel_button,0)
+        self.button_Layout.addWidget(self.cancel_button)
+        self.button_Layout.addWidget(self.change_password_button)
 
         self.button_widget = QWidget()
         self.button_widget.setLayout(self.button_Layout)
@@ -49,6 +49,8 @@ class ChangePasswordDialog(QDialog):
         self.cancel_button.clicked.connect(self.close)
         self.confirm_new_password_lineEdit.returnPressed.connect(self.close)
 
+        self.cancel_button.setAutoDefault(False)
+        self.change_password_button.setAutoDefault(True)
         self.cancel_button.setShortcut("Ctrl+W")
         
     def change_password(self):

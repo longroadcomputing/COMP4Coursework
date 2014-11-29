@@ -10,13 +10,12 @@ class LoginDialog(QDialog):
     """Error displayed when login password is incorrect"""
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("Login Error")
+        self.setWindowTitle("Login")
         self.login_label = QLabel("Please enter the Password to access:")
         self.password_entry = QLineEdit()
         self.password_entry.setPlaceholderText("Password...")
         self.login_quit_button = QPushButton("Quit")
         self.login_enter_button = QPushButton("Enter")
-        self.login_enter_button.autoDefault()
 
         #create layout
         self.login_layout = QVBoxLayout()
