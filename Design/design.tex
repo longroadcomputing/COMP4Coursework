@@ -286,7 +286,7 @@ I have chosen to build my system for this specification as this is the computer 
 
 \noindent \textbf{ItemType}(\underline{ItemTypeID}, ItemType)
 
-\noindent \textbf{Item}(\underline{ItemID}, \emph{LocationID}, \emph{ItemTypeID}, ItemName, ItemValue, LoanRate, ItemClass, FuseRating, )
+\noindent \textbf{Item}(\underline{ItemID}, ItemName, ItemValue, LoanRate, ItemClass, FuseRating,\\ \emph{ItemTypeID}, \emph{LocationID} )
 
 \noindent \textbf{Customer}(\underline{CustomerID}, Forename, Surname, Company, Street, Town, PostCode, MobileNumber, Landline, Email)
 
@@ -469,7 +469,7 @@ Location and Item are tables in the database, Item ID, ItemName and ItemValue ar
     WHERE LocationID = ? AND
     Location.LocationID = Item.LocationID
     ORDER BY ItemName ASC
-\end{sql}\\
+\end{sql}
 
 \subsubsection{SQL Query searching the database for certain ItemTypes then orders them by ItemName from A-Z}
 Location and Item are tables in the database, Item ID, ItemName and ItemValue are attributes in the Item table. ItemTypeID is an attribute in the ItemType table
