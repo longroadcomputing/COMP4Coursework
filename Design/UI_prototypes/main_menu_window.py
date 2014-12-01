@@ -19,6 +19,9 @@ class MainMenuWindow(QMainWindow):
         self.password = read_password()
         
         self.setWindowTitle("Main Menu")
+
+        self.printer = QPrinter()
+        self.printer.setPageSize(QPrinter.Letter)
         
         self.main_menu_stacked_layout = QStackedLayout()
         self.main_menu_stacked_widget = QWidget()
@@ -49,7 +52,7 @@ class MainMenuWindow(QMainWindow):
         self.change_password = QAction("Change Password", self)
 
         self.close_window.triggered.connect(self.close)
-        self.print.triggered.connect(printing_main)
+        self.print.triggered.connect(self.printing)
         
         #add menu bar
         self.menu = QMenuBar()
@@ -179,6 +182,21 @@ class MainMenuWindow(QMainWindow):
         if self.new_password != self.password:
             self.password = self.new_password
             update_password(self.password)
+
+    def printing(self):
+        printing = Print()
+        html = printing.statementHtml()
+##        html += ("<h1> Hello this is a test print!</h1>"
+##                 "<hr/><p style='font-family:times;color:red;'> {0} This is testing the print functionality"
+##                 "of printing something in html from PyQt4.</p>").format(date)
+        dialog = QPrintDialog(self.printer, self)
+        if dialog.exec_():
+            document = QTextDocument()
+            document.setHtml(html)
+            document.print_(self.printer)
+        else:
+            print("The print process has failed!")
+        print(html)
 
         
 def main_menu_main():

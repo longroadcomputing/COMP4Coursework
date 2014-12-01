@@ -5,26 +5,7 @@ import sys
 import random
 
 
-class MainWindow(QDialog):
-    """ This is a test for the printing function """
-
-    def __init__(self):
-        super().__init__()
-        
-        self.setWindowTitle("Printing Test")
-        self.printer = QPrinter()
-        self.printer.setPageSize(QPrinter.Letter)
-
-        self.layout = QHBoxLayout()
-        self.printButton = QPushButton("Print")
-
-        self.layout.addWidget(self.printButton)
-
-        self.setLayout(self.layout)
-
-        self.printButton.clicked.connect(self.printViaHtml)
-
-        
+class Print():
 
     def getCurrentDate(self,dateFormat):
         date = QDate.currentDate().toString(dateFormat)
@@ -80,33 +61,3 @@ class MainWindow(QDialog):
 
         return html
 
-        
-
-    def printViaHtml(self):
-
-        html = self.statementHtml()
-##        html += ("<h1> Hello this is a test print!</h1>"
-##                 "<hr/><p style='font-family:times;color:red;'> {0} This is testing the print functionality"
-##                 "of printing something in html from PyQt4.</p>").format(date)
-
-        dialog = QPrintDialog(self.printer, self)
-        if dialog.exec_():
-            document = QTextDocument()
-            document.setHtml(html)
-            document.print_(self.printer)
-        else:
-            print("The print process has failed!")
-
-        print(html)
-
-
-def printing_main():
-    app = QApplication(sys.argv)
-    window = MainWindow()
-    window.show()
-    window.raise_()
-    app.exec_()
-
-
-if __name__ == "__main__":
-    printing_main()

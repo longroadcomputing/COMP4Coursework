@@ -263,16 +263,17 @@ I have chosen to build my system for this specification as this is the computer 
 
 \subsection{Identification of appropriate storage media}
 
-\section{Database Design}
 
 \newpage
 
 \begin{landscape}
 
+\section{Database Design}
+
 \subsection{ER Diagrams}
 
 \begin{figure}[H]
-    \centerline{\includegraphics[width=600px]{./Design/ER_Diagrams/ER_Diagram.pdf}}
+    \centerline{\includegraphics[width=550px]{./Design/ER_Diagrams/ER_Diagram.pdf}}
     \caption{ER Diagrams.} \label{fig:ER Diagrams}
 \end{figure}
 
@@ -284,7 +285,7 @@ I have chosen to build my system for this specification as this is the computer 
 
 \noindent \textbf{ItemType}(\underline{ItemTypeID}, ItemType)
 
-\noindent \textbf{Item}(\underline{ItemID}, \emph{LocationID}, \emph{ItemTypeID}, ItemName, Value, LoanRate, ItemClass, FuseRating, )
+\noindent \textbf{Item}(\underline{ItemID}, \emph{LocationID}, \emph{ItemTypeID}, ItemName, ItemValue, LoanRate, ItemClass, FuseRating, )
 
 \noindent \textbf{Customer}(\underline{CustomerID}, Forename, Surname, Company, Street, Town, PostCode, MobileNumber, Landline, Email)
 
@@ -308,10 +309,10 @@ I have chosen to build my system for this specification as this is the computer 
         ItemName                        \\
         ItemType                        \\
         Location                        \\ 
-        Value                           \\ 
-        LoanID                          \\ 
+        ItemValue                       \\ 
         LoanRate                        \\ 
-        LoanLength                      \\ 
+        LoanID                          \\ 
+        StartDate                       \\ 
         CustomerID                      \\ 
         Forename                        \\ 
         Lastname                        \\ 
@@ -346,12 +347,11 @@ I have chosen to build my system for this specification as this is the computer 
         \textbf{Non-Repeating} & \textbf{Repeating}               \\ \hline
         \underline{ItemID}     & \underline{LoanID}               \\ 
         ItemName               & \emph{ItemID}                    \\ 
-        Value	              & LoanRate                         \\ 
-        ItemClass	          & LoanLength                       \\ 
-        FuseRating             & CustomerID                       \\ 
-              	              & Forename                         \\ 
-              	              & Lastname                         \\ 
-                               & Company                          \\ 
+        ItemValue	          & StartDate                        \\ 
+        LoanRate    	          & CustomerID                       \\ 
+        ItemClass              & Forename                         \\ 
+        FuseRating             & Lastname                         \\ 
+              	              & Company                          \\ 
                                & Street                           \\ 
                                & Town                             \\ 
                                & PostCode                         \\ 
@@ -379,13 +379,12 @@ I have chosen to build my system for this specification as this is the computer 
         \textbf{Non-Repeating} & \textbf{Repeating}                \\ \hline
         \underline{ItemID}     & \underline{LoanID}                \\ 
         ItemName               & \emph{ItemID}                     \\ 
-        Value	              & LoanRate                          \\ 
-        ItemClass	          & LoanLength                        \\ 
-        FuseRating             & 					                \\
-                               &\underline{CustomerID}             \\ 
-                               & Forename                          \\ 
-              	              & Lastname                          \\ 
-                               & Company                           \\ 
+        ItemValue	          & StartDate                         \\ 
+        LoanRate 	          &                                   \\
+        ItemClass              & \underline{CustomerID}            \\ 
+        FuseRating             & Forename                          \\ 
+                               & Lastname                          \\ 
+              	              & Company                           \\ 
                                & Street                            \\ 
                                & Town                              \\ 
                                & PostCode                          \\ 
@@ -402,6 +401,7 @@ I have chosen to build my system for this specification as this is the computer 
                                & TestResult                        \\ 
                                & Location                          \\
                                & ItemType                          \\ \hline
+                               & 
     \end{tabular}
 \end{center}
 
@@ -414,11 +414,11 @@ I have chosen to build my system for this specification as this is the computer 
         \underline{ItemID}         & \underline{LoanID}            \\
         \emph{LocationID}          & \emph{CustomerID}             \\
         \emph{ItemTypeID}          & LoanLength                    \\
-        ItemName                   & \\
-        Value	                  &                               \\
-        ItemClass                  & \underline{LoanItemID}        \\
-        FuseRating                 & \emph{LoanID}                 \\
-                                   & \emph{ItemID}                 \\
+        ItemName                   &                               \\
+        ItemValue	              &                               \\
+        LoanRate                   & \underline{LoanItemID}        \\
+        ItemClass                  & \emph{LoanID}                 \\
+        FuseRating                 & \emph{ItemID}                 \\
                                    & Quantity                      \\
                                    &                               \\ 
                                    &\underline{CustomerID}         \\
@@ -435,7 +435,7 @@ I have chosen to build my system for this specification as this is the computer 
                                    & \underline{PATtestID}         \\
                                    & TestDate                      \\   
                                    &				                \\
-                                   & \underline{TestItem}            \\
+                                   & \underline{TestItem}          \\
                                    & \emph{PATtestID}              \\
                                    & \emph{ItemID}	                \\
                                    & PATTestNotes                  \\
@@ -452,6 +452,47 @@ I have chosen to build my system for this specification as this is the computer 
                                    & ItemType                      \\ \hline                                
     \end{tabular}
 \end{center}
+
+\section{SQL Queries}
+
+
+\subsubsection{SQL Query searching the database for Items at a specific Location then orders them A-Z by ItemName}
+Location and Item are tables in the database, Item ID, ItemName and ItemValue are attributes in the Item table. LocationID is an attribute in the Location table
+\begin{sql}
+    SELECT 
+    Item.ItemID,
+    Item.ItemName,
+    Item.ItemValue,
+    Location.LocationID
+    FROM Item, Location
+    WHERE LocationID = ? AND
+    Location.LocationID = Item.LocationID
+    ORDER BY ItemName ASC
+\end{sql}\\
+
+\subsubsection{SQL Query searching the database for certain ItemTypes then orders them by ItemName from A-Z}
+Location and Item are tables in the database, Item ID, ItemName and ItemValue are attributes in the Item table. ItemTypeID is an attribute in the ItemType table
+
+\begin{sql}
+    SELECT 
+    Item.ItemID,
+    Item.ItemName,
+    Item.ItemValue,
+    ItemType.ItemTypeID
+    FROM Item, Location
+    WHERE ItemTypeID = ? AND
+    ItemType.ItemTypeID = Item. ItemTypeID
+    ORDER BY ItemName ASC
+\end{sql}
+
+\subsubsection{SQL Query searching the database to display Loans taken out by a certain Company, ordered by date ascending}
+
+\begin{sql}
+    SELECT
+    Customer.Company,
+    Item.ItemName
+    Laon.DateStarted
+\end{sql}
 
 \section{Security and Integrity of the System and Data}
 
