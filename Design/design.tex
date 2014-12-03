@@ -260,10 +260,111 @@ I have chosen to build my system for this specification as this is the computer 
 
 \subsection{Explanation of how data output items are generated}
 
-\subsection{Data Dictionary}
+\begin{landscape}
+
+    \begin{center}
+    \subsection{Data dictionary}
+    \end{center}
+    
+    \begin{center}
+        \begin{tabular}{|p{3cm}|p{2cm}|p{3cm}|p{2cm}|p{2cm}|p{5cm}|}
+            \hline
+            \textbf{Name} & \textbf{Data Type} & \textbf{Length} & \textbf{Validation} & \textbf{Example Data} & \textbf{Comment} \\ \hline
+            ItemTypeID & Integer & 1-435           & Range  & 253           & This is the \textbf{Primary Key} for the ItemType class, and foreign key for the Item 
+                                                                              class \\ \hline
+            ItemType   & Text    & 5-40 Characters & Length & Computer      & This holds the description of each type of Item. \\ \hline
+            LocationID & Integer & 1-3 Figures     & Range  & 3             & This is the \textbf{Primary Key} for the Location class and a \emph{Foreign Key} for the 
+                                                                              Item class \\ \hline
+            Location   & Text    & 1-30 Characters & Length & Main Offices  & This holds the name of the locations \\ \hline
+            \end{tabular}
+    \end{center}
+\end{landscape}
+
+
+\begin{landscape}
+    \begin{center}
+        \begin{tabular}{|p{3cm}|p{2cm}|p{3cm}|p{2cm}|p{2cm}|p{5cm}|}
+            \hline
+            \textbf{Name} & \textbf{Data Type} & \textbf{Length} & \textbf{Validation} & \textbf{Example Data} & \textbf{Comment} \\ \hline
+            ItemID           & Integer & 1-435           & Range        & 253           & This is the \textbf{Primary Key} for the Item class, and foreign key for the 
+                                                                                          Loan and PATtest classes \\ \hline
+            ItemName         & Text    & 5-40 Characters & Length       & Arkaos Server & This gives the name of each item entered \\ \hline
+            ItemValue        & Real    & 2-5 Figures     & Range        & 1,300         & This holds the data for the monetary value for each item \\ \hline
+            LoanRate         & Real    & 2-5 Figures     & Range        & 7             & This holds the data for the monetary loan rate for each item \\ \hline
+            ItemClass        & Integer & 1 Character     & Length       & 2             & A field to show what class of electrical equipment the item is \\ \hline
+            FuseRating       & Text    & 1-3 Characters  & Length       & 5A            & A field which displays the fuse rating \\ \hline
+            \end{tabular}
+    \end{center}
+\end{landscape}
+
+
+\begin{landscape}
+    \begin{center}
+        \begin{tabular}{|p{3cm}|p{2cm}|p{3cm}|p{2cm}|p{2cm}|p{5cm}|}
+            \hline
+            \textbf{Name} & \textbf{Data Type} & \textbf{Length} & \textbf{Validation} & \textbf{Example Data} & \textbf{Comment} \\ \hline
+            LoanID          & Integer & 1-435        & Range & 56  & This is the \textbf{Primary Key} for the LoanListing class \\ \hline
+            StartDate       & Real    & 1-5 Figures  & Range & 75  & Holds data for how much is charged per day for the loan of an item \\ \hline
+            LoanLength      & Integer & 1-3 Figures  & Range & 7   & Holds the data for the length of the loan \\ \hline
+        \end{tabular}
+    \end{center}
+\end{landscape}
+
+
+\begin{landscape}
+    \begin{center}
+        \begin{tabular}{|p{2.3cm}|p{2cm}|p{3cm}|p{2cm}|p{4.6cm}|p{4cm}|}
+            \hline
+            \textbf{Name} & \textbf{Data Type} & \textbf{Length} & \textbf{Validation} & \textbf{Example Data} & \textbf{Comment} \\ \hline
+            CustomerID   & Integer & 1-255           & Range  & 52                     & This is the \textbf{Primary Key} for the Customer class \\ \hline
+            Forename     & Text    & 3-20 Characters & Length & John                   & A field for the customers forename \\ \hline
+            Lastname     & Text    & 3-20 Characters & Length & Smith                  & A field for the customers surname\\ \hline
+            Company      & Text    & 3-20 Characters & Length & Digital Lighting Cambs & A field for the company's name\\ \hline
+            Street       & Text    & 3-30 Characters & Length & 129 Cedar Crescent     & A field for the company's Street address\\ \hline
+            Town         & Text    & 3-30 Characters & Length & Sawston                & A field for the company's Town \\ \hline
+            County       & Text    & 3-20 Characters & Length & Cambs                  & A field for the company's County \\ \hline
+            PostCode     & Text    & 6-7 Characters  & Format & CB22 7RX               & A field for the company's Postcode \\ \hline
+            MobileNumber & Text    & 11 Characters   & Format & 07891234567            & A field for the customers mobile number\\ \hline
+            LandLine     & Text    & 11 Characters   & Format & 01234567890            & A field for the customers landline phone \\ \hline
+            Email        & Text    & 7-30 Characters & Length & john.smith@example.com & A field for the customers email address\\ \hline
+        \end{tabular}
+    \end{center}
+\end{landscape}
+
+
+\begin{landscape}
+    \begin{center}
+        \begin{tabular}{|p{3.4cm}|p{2cm}|p{2cm}|p{2cm}|p{4cm}|p{5cm}|}
+            \hline
+            \textbf{Name} & \textbf{Data Type} & \textbf{Length} & \textbf{Validation} & \textbf{Example Data} & \textbf{Comment} \\ \hline
+            ItemTestID         & Integer & 1-255            & Range          & 52                  & This is the \textbf{Primary Key} for the ItemTest class \\ \hline
+            ItemDescription    & Text    & 3-400 Characters & Length         & Waltham portable TV & A field that describes the item to be tested \\ \hline
+            TestUsed           & Text    & 1-10 Characters  & Length         & II                  & A field to show what test was used on the item \\ \hline
+            ProtectiveCondTest & Float   & 4 Characters     & Length         & -                   & A field displaying the resistance of an item, in Ohms, to a 200mA 
+                                                                                                     current  \\ \hline
+            InsulationTest     & Text    & 3 Characters     & Length         & >20                 & A field displaying the Insulation of an item, in Ohms, to a 250V or 
+                                                                                                     500V Potential Difference \\ \hline
+            Leakage            & Float   & 4 Characters     & Format         & 0.03                & A field that shows the current not obtained by the item, in 
+                                                                                                     milliamperes \\ \hline
+            TestResult         & Boolean & -                & Presence Check & True & A field to show if an item Passed or not\\ \hline
+        \end{tabular}
+    \end{center}
+\end{landscape}
+
+\begin{landscape}
+    \begin{center}
+        \begin{tabular}{|p{2.3cm}|p{2cm}|p{3cm}|p{2cm}|p{4.6cm}|p{4cm}|}
+            \hline
+            \textbf{Name} & \textbf{Data Type} & \textbf{Length} & \textbf{Validation} & \textbf{Example Data} & \textbf{Comment} \\ \hline
+            PATtestID    & Integer  & 1-255         & Range  & 52         & This is the \textbf{Primary Key} for the PATtest class \\ \hline
+            TestDate     & Date     & 10 Characters & Format & 01/12/2014 & A field that displays the date of the PAT test \\ \hline
+        \end{tabular}
+    \end{center}
+\end{landscape}
 
 \subsection{Identification of appropriate storage media}
 
+My system will not need to be accessed by more than 5 people, storing the database file on the server won't be necessary as everyone will then have access to the database file. Therefore, I have chosen to store the database file and application on a single machine which can be accessed by the people who need to use it at any time. The computer is in a central location and easily accessible by those who need to use it and has multiple hard disk drives which I can make use of for storage and backup.  
 
 \newpage
 
@@ -402,7 +503,6 @@ I have chosen to build my system for this specification as this is the computer 
                                & TestResult                        \\ 
                                & Location                          \\
                                & ItemType                          \\ \hline
-                               & 
     \end{tabular}
 \end{center}
 
@@ -509,20 +609,214 @@ Location and Item are tables in the database, Item ID, ItemName and ItemValue ar
 \subsection{Outline Plan}
 
 \begin{center}
-    \begin{tabular}{|p{2cm}|p{5cm}|p{5cm}|p{4cm}|}
+    \begin{tabular}{|p{3cm}|p{3.5cm}|p{4cm}|p{6cm}|}
         \hline
         \textbf{Test Series} & \textbf{Purpose of Test Series} & \textbf{Testing Strategy} & \textbf{Strategy Rationale}\\ \hline
-        Example & Example & Example & Example \\ \hline
+        1 & Test the flow of control between interfaces      & Top-down testing     & \\ \hline
+        2 & Test data input validation works                 & Botton-up testing    & Test each component will commence when they have been developed\\ \hline
+        3 & Test data input is stored in the correctly       & Black box testing    & \\ \hline
+        4 & Test Algorithms and check output is correct      & White box testing    & \\ \hline
+        5.& Test system meets requirements                   & Acceptance Testing   & \\ \hline
     \end{tabular}
 \end{center}
+
+\newpage
 
 \subsection{Detailed Plan}
 
 \begin{center}
-    \begin{longtable}{|p{1.5cm}|p{2.5cm}|p{2.5cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
+    \begin{longtable}{|p{1.5cm}|p{2cm}|p{3cm}|p{2cm}|p{2cm}|p{2.5cm}|p{2cm}|p{2cm}|}
         \hline
         \textbf{Test Series} & \textbf{Purpose of Test} & \textbf{Test Description} & \textbf{Test Data} & \textbf{Test Data Type (Normal/ Erroneous/ Boundary)} & \textbf{Expected Result} & \textbf{Actual Result} & \textbf{Evidence}\\ \hline
-        Example & Example & Example & Example & Example & Example & Example & Example \\ \hline
+        
+        1.01 & Test the "Login" button functions correctly & This should link to the main menu screen & Enter "password" and click the "Login" button & Normal & The 
+        main menu window should be displayed  & & \\ \hline
+        
+        1.02 & Test the "Logout" button functions correctly & This should link back to the login screen & Click "Logout" button & Normal & The login screen should 
+        be displayed & & \\ \hline
+        
+        1.03 & Test the "Change Password" functions correctly & This should link to the Change password dialog window & Click "Change Password" button & Normal & The 
+        change password window should be displayed & & \\ \hline
+        
+        1.04 & Test the and "Cancel" buttons functions correctly & This should link back to the main menu window & Click "Cancel" button & Normal & The main menu should 
+        be displayed & & \\ \hline
+        
+        1.05 & Test the "Confirm Password" button functions correctly & This should link to a message dialog confirming that the password has been changed, other 
+        messages will be displayed if the current password is incorrect or the new passwords don't match & Click the "Confirm Password" button & Normal & The message 
+        dialog window should be displayed & & \\ \hline
+        
+        1.06 & Test the "OK" button on the message dialog functions correctly & This should link back to the main menu window & Click the "OK" button & Normal & The 
+        main menu window should be displayed & & \\ \hline
+        
+        1.07 & Test the enter record button functions correctly & This should link to a table selection window & Click "Enter Record" button & Normal & The table
+        selection dialog box should be displayed & & \\ \hline 
+        
+        1.08 & Test the table selection dialog function correctly on selecting the Item table & This should link to the enter item record window & Select "Item Table" 
+        and click "Enter Record" & Normal & The enter Item Record Window should be displayed & & \\ \hline
+        
+        1.09 & Test the table selection dialog function correctly on selecting the Customer table & This should link to the enter customer record window & Select 
+        "Customer Table" and click "Enter Record" & Normal & The enter Customer Record Window should be displayed & & \\ \hline
+
+        1.10 & Test the table selection dialog function correctly on selecting the Loan table & This should link to the enter loan record window & Select "Loan 
+        Table" and click "Enter Record" & Normal & The enter Loan Record Window should be displayed & & \\ \hline
+        
+        1.10 & Test the table selection dialog function correctly on selecting the PAT test table & This should link to the enter PAT test record window & Select "PAT 
+        test Table" and click "Enter Record" & Normal & The enter PAT test Record Window should be displayed & & \\ \hline
+        
+        1.11 & Check that the "Confirm" button functions correctly on the enter Item record window & This should link back to the main menu & Select the "Confirm" 
+        button & Normal & The main window should be displayed & & \\ \hline
+        
+        1.12 & Check that the "Confirm" button functions correctly on the enter Customer record window & This should link back to the main menu & Select the "Confirm" 
+        button & Normal & The main window should be displayed & & \\ \hline
+        
+        1.13 & Check that the "Confirm" button functions correctly on the enter Loan record window & This should link back to the main menu & Select the "Confirm" 
+        button & Normal & The main window should be displayed & & \\ \hline
+        
+        1.14 & Check that the "Confirm" button functions correctly on the enter PAT test record window & This should link back to the main menu & Select the "Confirm" 
+        button & Normal & The main window should be displayed & & \\ \hline
+        
+        1.15 & Check that the "Cancel" button functions correctly on the enter Item record window & This should link back to the main menu & Select the "Cancel" 
+        button & Normal & The table selection window should be displayed & & \\ \hline
+        
+        1.16 & Check that the "Cancel" button functions correctly on the enter Customer record window & This should link back to the main menu & Select the "Cancel" 
+        button & Normal & The table selection window should be displayed & & \\ \hline
+        
+        1.17 & Check that the "Cancel" button functions correctly on the enter Loan record window & This should link back to the main menu & Select the "Cancel" 
+        button & Normal & The table selection window should be displayed & & \\ \hline
+        
+        1.18 & Check that the "Cancel" button functions correctly on the enter PAT test record window & This should link back to the main menu & Select the "Cancel" 
+        button & Normal & The table selection window should be displayed & & \\ \hline
+        
+        1.19 & Test the "Display Records" button functions correctly & This should link to a table selection window & Click "Display Records" button & Normal & The 
+        table selection dialog box should be displayed & & \\ \hline 
+
+        1.20 & Test the table selection dialog function correctly on selecting the Item table & This should link to the display item records window & Select "Item 
+        Table" and click "Display Record" & Normal & The enter Item Record Window should be displayed & & \\ \hline
+        
+        1.21 & Test the display Item records "Search" button functions correctly & This should link to the search dialog & Click the "Search" button & Normal & The 
+        search dialog should be displayed & & \\ \hline
+        
+        1.22 & Test the search dialogs "Search" button functions correctly & This should link to a dialog window displaying the found record or a dialog window 
+        displaying a message that the record wasn't found & Click the "Search" button & Normal & The appropriate dialog should be displayed if a record was found or not
+         & & \\ \hline
+        
+        1.23 & Test the table selection dialog function correctly on selecting the Customer table & This should link to the display customer records window & Select 
+        "Customer Table" and click "Display Record" & Normal & The enter Customer Record Window should be displayed & & \\ \hline
+        
+        1.24 & Test the display Customer records "Search" button functions correctly & This should link to the search dialog & Click the "Search" button & Normal & The 
+        search dialog should be displayed & & \\ \hline
+        
+        1.25 & Test the search dialogs "Search" button functions correctly & This should link to a dialog window displaying the found record or a dialog window 
+        displaying a message that the record wasn't found & Click the "Search" button & Normal & The appropriate dialog should be displayed if a record was found or not
+         & & \\ \hline
+
+        1.26 & Test the table selection dialog function correctly on selecting the Loan table & This should link to the display item loan records window & Select "Loan 
+        Table" and click "Display Record" & Normal & The enter Loan Record Window should be displayed & & \\ \hline
+        
+        1.27 & Test the display loan records "Search" button functions correctly & This should link to the search dialog & Click the "Search" button & Normal & The 
+        search dialog should be displayed & & \\ \hline
+        
+        1.28 & Test that the display loan records "Print" button functions correctly & This should link to the print dialog box & Click the "Print" button & Normal & 
+        The print dialog box should be displayed & & \\ \hline
+        
+        1.28 & Test the search dialogs "Search" button functions correctly & This should link to a dialog window displaying the found record or a dialog window 
+        displaying a message that the record wasn't found & Click the "Search" button & Normal & The appropriate dialog should be displayed if a record was found or not
+         & & \\ \hline
+        
+        1.29 & Test the table selection dialog function correctly on selecting the PAT test table & This should link to the display PAT test records window & Select 
+        "PAT test Table" and click "Display Record" & Normal & The enter PAT test Record Window should be displayed & & \\ \hline
+        
+        1.30 & Test the display PAT test records "Search" button functions correctly & This should link to the search dialog & Click the "Search" button & Normal & The 
+        search dialog should be displayed & & \\ \hline
+        
+        1.31 & Test the search dialogs "Search" button functions correctly & This should link to a dialog window displaying the found record or a dialog window 
+        displaying a message that the record wasn't found & Click the "Search" button & Normal & The appropriate dialog should be displayed if a record was found or not
+         & & \\ \hline
+         
+        1.32 & Test the edit record button functions correctly & This should link to a table selection window & Click "Edit Record" button & Normal & The table
+        selection dialog box should be displayed & & \\ \hline 
+        
+        1.33 & Test the table selection dialog function correctly on selecting the Item table & This should link to the edit item record window & Select "Item Table" 
+        and click "Edit Record" & Normal & The edit Item Record Window should be displayed & & \\ \hline
+        
+        1.34 & Test the table selection dialog function correctly on selecting the Customer table & This should link to the edit customer record window & Select 
+        "Customer Table" and click "Edit Record" & Normal & The edit Customer Record Window should be displayed & & \\ \hline
+
+        1.35 & Test the table selection dialog function correctly on selecting the Loan table & This should link to the edit loan record window & Select "Loan 
+        Table" and click "Edit Record" & Normal & The edit Loan Record Window should be displayed & & \\ \hline
+        
+        1.36 & Test the table selection dialog function correctly on selecting the PAT test table & This should link to the edit PAT test record window & Select "PAT 
+        test Table" and click "Edit Record" & Normal & The edit PAT test Record Window should be displayed & & \\ \hline
+        
+        1.37 & Check that the "Confirm" button functions correctly on the edit Item record window & This should link back to the main menu & Select the "Confirm" 
+        button & Normal & The main window should be displayed & & \\ \hline
+        
+        1.38 & Check that the "Confirm" button functions correctly on the edit Customer record window & This should link back to the main menu & Select the "Confirm" 
+        button & Normal & The main window should be displayed & & \\ \hline
+        
+        1.39 & Check that the "Confirm" button functions correctly on the edit Loan record window & This should link back to the main menu & Select the "Confirm" 
+        button & Normal & The main window should be displayed & & \\ \hline
+        
+        1.40 & Check that the "Confirm" button functions correctly on the edit PAT test record window & This should link back to the main menu & Select the "Confirm" 
+        button & Normal & The main window should be displayed & & \\ \hline
+        
+        1.41 & Check that the "Cancel" button functions correctly on the edit Item record window & This should link back to the main menu & Select the "Cancel" 
+        button & Normal & The table selection window should be displayed & & \\ \hline
+        
+        1.42 & Check that the "Cancel" button functions correctly on the edit Customer record window & This should link back to the main menu & Select the "Cancel" 
+        button & Normal & The table selection window should be displayed & & \\ \hline
+        
+        1.43 & Check that the "Cancel" button functions correctly on the edit Loan record window & This should link back to the main menu & Select the "Cancel" 
+        button & Normal & The table selection window should be displayed & & \\ \hline
+        
+        1.44 & Check that the "Cancel" button functions correctly on the edit PAT test record window & This should link back to the main menu & Select the "Cancel" 
+        button & Normal & The table selection window should be displayed & & \\ \hline
+        
+        1.45 & Test the delete record button functions correctly & This should link to a table selection window & Click "Delete Record" button & Normal & The table
+        selection dialog box should be displayed & & \\ \hline 
+        
+        1.46 & Test the table selection dialog function correctly on selecting the Item table & This should link to the delete item record window & Select "Item Table" 
+        and click "Delete Record" & Normal & The edit Item Record Window should be displayed & & \\ \hline
+        
+        1.47 & Test the table selection dialog function correctly on selecting the Customer table & This should link to the delete customer record window & Select 
+        "Customer Table" and click "Delete Record" & Normal & The edit Customer Record Window should be displayed & & \\ \hline
+
+        1.48 & Test the table selection dialog function correctly on selecting the Loan table & This should link to the delete loan record window & Select "Loan 
+        Table" and click "Delete Record" & Normal & The edit Loan Record Window should be displayed & & \\ \hline
+        
+        1.49 & Test the table selection dialog function correctly on selecting the PAT test table & This should link to the delete PAT test record window & Select "PAT 
+        test Table" and click "Delete Record" & Normal & The edit PAT test Record Window should be displayed & & \\ \hline
+        
+        1.50 & Check that the "Confirm" button functions correctly on the delete Item record window & This should link back to the main menu & Select the record(s) for 
+        delete and click "Confirm" button & Normal & The main window should be displayed & & \\ \hline
+        
+        1.51 & Check that the "Confirm" button functions correctly on the delete Customer record window & This should link back to the main menu & Select the record(s) 
+        for delete and click "Confirm" button & Normal & The main window should be displayed & & \\ \hline
+        
+        1.52 & Check that the "Confirm" button functions correctly on the delete Loan record window & This should link back to the main menu & Select the record(s) for 
+        delete and click "Confirm" button & Normal & The main window should be displayed & & \\ \hline
+        
+        1.53 & Check that the "Confirm" button functions correctly on the delete PAT test record window & This should link back to the main menu & Select the record(s) 
+        for delete and click "Confirm" button & Normal & The main window should be displayed & & \\ \hline
+        
+        1.54 & Check that the "Cancel" button functions correctly on the delete Item record window & This should link back to the main menu & Click the "Cancel" 
+        button & Normal & The table selection window should be displayed & & \\ \hline
+        
+        1.55 & Check that the "Cancel" button functions correctly on the delete Customer record window & This should link back to the main menu & Click the "Cancel" 
+        button & Normal & The table selection window should be displayed & & \\ \hline
+        
+        1.56 & Check that the "Cancel" button functions correctly on the delete Loan record window & This should link back to the main menu & Click the "Cancel" 
+        button & Normal & The table selection window should be displayed & & \\ \hline
+        
+        1.57 & Check that the "Cancel" button functions correctly on the delete PAT test record window & This should link back to the main menu & Click the "Cancel" 
+        button & Normal & The table selection window should be displayed & & \\ \hline
+        
+        & & & & & & & \\ \hline
+        
+        2.01 & Verify that a password was entered & An error dialog box should appear if no password is entered & "password" & Normal & Accepted & & \\
+             &                                    &                                                             &  nothing   & erroneous & Rejected & & \\ \hline
+             
+             
     \end{longtable}
 \end{center}
 \end{landscape}
