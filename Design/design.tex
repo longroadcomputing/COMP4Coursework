@@ -186,18 +186,18 @@ The hardware I am going to use are for a custom built Early 2008 Mac Pro. The sp
 
 I have chosen to build my system for this specification as this is the computer my client is going to run the application on, it is also a low cost choice of system spec to run on as the hardware has already been bought and is therefore ready and available to use.
 
-\section{Program Structure}
-
 \begin{landscape}
 
-    \subsection{Top-down design structure charts}
+\section{Program Structure}
 
-    \begin{figure}[H]
-        \begin{center}
-        \includegraphics[width=500px]{./Design/top_down_design/Top_down_design.pdf}
-        \caption{Object Diagram.} \label{fig:object_diagram}
-        \end{center}
-    \end{figure}
+\subsection{Top-down design structure charts}
+
+\begin{figure}[H]
+    \begin{center}
+    \includegraphics[width=500px]{./Design/top_down_design/Top_down_design.pdf}
+    \caption{Object Diagram.} \label{fig:object_diagram}
+    \end{center}
+\end{figure}
 
 \end{landscape}
 
@@ -206,28 +206,28 @@ I have chosen to build my system for this specification as this is the computer 
 
 \begin{landscape}
 
-    \subsection{Object Diagrams}
+\subsection{Object Diagrams}
 
-    \begin{figure}[H]
-        \begin{center}
-        \includegraphics[width=500px]{./Design/Object_Diagrams/Object_diagrams.pdf}
-        \caption{Object Diagram.} \label{fig:object_diagram}
-        \end{center}
-    \end{figure}
+\begin{figure}[H]
+    \begin{center}
+    \includegraphics[width=500px]{./Design/Object_Diagrams/Object_diagrams.pdf}
+    \caption{Object Diagram.} \label{fig:object_diagram}
+    \end{center}
+\end{figure}
 
 \newpage
 
 \subsection{Class Definitions}
 
-    \begin{figure}[H]
-        \centerline{\includegraphics[width=50px]{./Design/Class_Definitions/Class_definition_key.pdf}}
-        \caption{Class Diagram Key.} \label{fig:relationship_diagram}
-    \end{figure}
+\begin{figure}[H]
+    \centerline{\includegraphics[width=50px]{./Design/Class_Definitions/Class_definition_key.pdf}}
+    \caption{Class Diagram Key.} \label{fig:relationship_diagram}
+\end{figure}
 
-    \begin{figure}[H]
-        \centerline{\includegraphics[width=450px]{./Design/Class_Definitions/Class_definitions.pdf}}
-        \caption{Class Diagrams.} \label{fig:relationship_diagram}
-    \end{figure}
+\begin{figure}[H]
+    \centerline{\includegraphics[width=450px]{./Design/Class_Definitions/Class_definitions.pdf}}
+    \caption{Class Diagrams.} \label{fig:relationship_diagram}
+\end{figure}
 
 
 \end{landscape}
@@ -256,7 +256,60 @@ I have chosen to build my system for this specification as this is the computer 
 
 \subsection{Identification of all data input items}
 
+\begin{itemize}
+    \item Item Name
+    \item Item Value
+    \item Loan Rate (The amount charged, per day, for the loan of the item)
+    \item Item Class (This is the class for electric items and determines the type of PAT test it receives)
+    \item Fuse Rating\\ \hline
+    \item Start Date (The exact date a loan started)
+    \item Loan Length (The length of the loan in days)
+    \item Quantity (The quantity of an item to be loan out, if there is more than one in stock)\\ \hline
+    \item Forename
+    \item Surname
+    \item Company
+    \item Street
+    \item Town
+    \item Post Code
+    \item Mobile Number
+    \item Email Address
+    \item Landline Number\\ \hline
+    \item Test date (The date on which the PAT tests took place)
+    \item Test Description (Notes referring to why an item failed or other notes about an individual item)
+    \item Leakage (The current not obtained by an electrical item)
+    \item Test Result (The result of the PAT test either Pass or Fail)
+\end{itemize}
+
 \subsection{Identification of all data output items}
+
+\begin{itemize}
+    \item Sub Total Cost (Loan Rate multiplied by the Quantity)
+    \item Total Cost (The sum of all the Sub Total Costs in a single loan)\\
+    \newline
+    \textbf{\underline{Output to database}}
+    \item Item Name
+    \item Item Value
+    \item Loan Rate (The amount charged, per day, for the loan of the item)
+    \item Item Class (This is the class for electric items and determines the type of PAT test it receives)
+    \item Fuse Rating\\ \hline
+    \item Start Date (The exact date a loan started)
+    \item Loan Length (The length of the loan in days)
+    \item Quantity (The quantity of an item to be loan out, if there is more than one in stock)\\ \hline
+    \item Forename
+    \item Surname
+    \item Company
+    \item Street
+    \item Town
+    \item Post Code
+    \item Mobile Number
+    \item Email Address
+    \item Landline Number\\ \hline
+    \item Test date (The date on which the PAT tests took place)
+    \item Test Description (Notes referring to why an item failed or other notes about an individual item)
+    \item Leakage (The current not obtained by an electrical item)
+    \item Test Result (The result of the PAT test either Pass or Fail)
+\end{itemize}
+
 
 \subsection{Explanation of how data output items are generated}
 
@@ -270,11 +323,11 @@ I have chosen to build my system for this specification as this is the computer 
         \begin{tabular}{|p{3cm}|p{2cm}|p{3cm}|p{2cm}|p{2cm}|p{5cm}|}
             \hline
             \textbf{Name} & \textbf{Data Type} & \textbf{Length} & \textbf{Validation} & \textbf{Example Data} & \textbf{Comment} \\ \hline
-            ItemTypeID & Integer & 1-435           & Range  & 253           & This is the \textbf{Primary Key} for the ItemType class, and foreign key for the Item 
-                                                                              class \\ \hline
+            ItemTypeID & Integer & 1-435           & Range  & 253           & This is the \textbf{Primary Key} for the ItemType table, and \emph{Foreign Key} for the 
+                                                                              Item table \\ \hline
             ItemType   & Text    & 5-40 Characters & Length & Computer      & This holds the description of each type of Item. \\ \hline
-            LocationID & Integer & 1-3 Figures     & Range  & 3             & This is the \textbf{Primary Key} for the Location class and a \emph{Foreign Key} for the 
-                                                                              Item class \\ \hline
+            LocationID & Integer & 1-3 Figures     & Range  & 3             & This is the \textbf{Primary Key} for the Location table and a \emph{Foreign Key} for the 
+                                                                              Item table \\ \hline
             Location   & Text    & 1-30 Characters & Length & Main Offices  & This holds the name of the locations \\ \hline
             \end{tabular}
     \end{center}
@@ -286,8 +339,8 @@ I have chosen to build my system for this specification as this is the computer 
         \begin{tabular}{|p{3cm}|p{2cm}|p{3cm}|p{2cm}|p{2cm}|p{5cm}|}
             \hline
             \textbf{Name} & \textbf{Data Type} & \textbf{Length} & \textbf{Validation} & \textbf{Example Data} & \textbf{Comment} \\ \hline
-            ItemID           & Integer & 1-435           & Range        & 253           & This is the \textbf{Primary Key} for the Item class, and foreign key for the 
-                                                                                          Loan and PATtest classes \\ \hline
+            ItemID           & Integer & 1-435           & Range        & 253           & This is the \textbf{Primary Key} for the Item table, and \emph{Foreign Key} 
+                                                                                          for the LoanItem and ItemTest tables \\ \hline
             ItemName         & Text    & 5-40 Characters & Length       & Arkaos Server & This gives the name of each item entered \\ \hline
             ItemValue        & Real    & 2-5 Figures     & Range        & 1,300         & This holds the data for the monetary value for each item \\ \hline
             LoanRate         & Real    & 2-5 Figures     & Range        & 7             & This holds the data for the monetary loan rate for each item \\ \hline
@@ -303,9 +356,13 @@ I have chosen to build my system for this specification as this is the computer 
         \begin{tabular}{|p{3cm}|p{2cm}|p{3cm}|p{2cm}|p{2cm}|p{5cm}|}
             \hline
             \textbf{Name} & \textbf{Data Type} & \textbf{Length} & \textbf{Validation} & \textbf{Example Data} & \textbf{Comment} \\ \hline
-            LoanID          & Integer & 1-435        & Range & 56  & This is the \textbf{Primary Key} for the LoanListing class \\ \hline
-            StartDate       & Real    & 1-5 Figures  & Range & 75  & Holds data for how much is charged per day for the loan of an item \\ \hline
+            LoanID          & Integer & 1-435        & Range & 56  & This is the \textbf{Primary Key} for the Loan table and is a \emph{Foreign Key} in the Loan Item 
+                                                                     table \\ \hline
+            StartDate       & Real    & 1-5 Figures  & Range & 75  & Holds data displaying when the loan started \\ \hline
             LoanLength      & Integer & 1-3 Figures  & Range & 7   & Holds the data for the length of the loan \\ \hline
+                            &         &              &       &     & \\ \hline
+            LoanItemID      & Integer & 1-425        & Range & 26  & This is the \textbf{Primary Key} for the Loan Listings table \\ \hline
+            Quantity        & Integer & 1-10         & Range & 3   & This hold data referring to the amount of one item has been loaned out \\ \hline
         \end{tabular}
     \end{center}
 \end{landscape}
@@ -316,7 +373,7 @@ I have chosen to build my system for this specification as this is the computer 
         \begin{tabular}{|p{2.3cm}|p{2cm}|p{3cm}|p{2cm}|p{4.6cm}|p{4cm}|}
             \hline
             \textbf{Name} & \textbf{Data Type} & \textbf{Length} & \textbf{Validation} & \textbf{Example Data} & \textbf{Comment} \\ \hline
-            CustomerID   & Integer & 1-255           & Range  & 52                     & This is the \textbf{Primary Key} for the Customer class \\ \hline
+            CustomerID   & Integer & 1-255           & Range  & 52                     & This is the \textbf{Primary Key} for the Customer table \\ \hline
             Forename     & Text    & 3-20 Characters & Length & John                   & A field for the customers forename \\ \hline
             Lastname     & Text    & 3-20 Characters & Length & Smith                  & A field for the customers surname\\ \hline
             Company      & Text    & 3-20 Characters & Length & Digital Lighting Cambs & A field for the company's name\\ \hline
@@ -337,27 +394,18 @@ I have chosen to build my system for this specification as this is the computer 
         \begin{tabular}{|p{3.4cm}|p{2cm}|p{2cm}|p{2cm}|p{4cm}|p{5cm}|}
             \hline
             \textbf{Name} & \textbf{Data Type} & \textbf{Length} & \textbf{Validation} & \textbf{Example Data} & \textbf{Comment} \\ \hline
-            ItemTestID         & Integer & 1-255            & Range          & 52                  & This is the \textbf{Primary Key} for the ItemTest class \\ \hline
-            ItemDescription    & Text    & 3-400 Characters & Length         & Waltham portable TV & A field that describes the item to be tested \\ \hline
-            TestUsed           & Text    & 1-10 Characters  & Length         & II                  & A field to show what test was used on the item \\ \hline
-            ProtectiveCondTest & Float   & 4 Characters     & Length         & -                   & A field displaying the resistance of an item, in Ohms, to a 200mA 
-                                                                                                     current  \\ \hline
-            InsulationTest     & Text    & 3 Characters     & Length         & >20                 & A field displaying the Insulation of an item, in Ohms, to a 250V or 
-                                                                                                     500V Potential Difference \\ \hline
-            Leakage            & Float   & 4 Characters     & Format         & 0.03                & A field that shows the current not obtained by the item, in 
+            PATtestID          & Integer  & 1-255            & Range          & 52                  & This is the \textbf{Primary Key} for the PATtest table \\ \hline
+            TestDate           & Date     & 10 Characters    & Format         & 01/12/2014          & A field that displays the date of the PAT test \\ \hline
+             \\ \hline
+            ItemTestID         & Integer  & 1-255            & Range          & 52                  & This is the \textbf{Primary Key} for the ItemTest table \\ \hline
+            ItemDescription    & Text     & 3-400 Characters & Length         & Waltham portable TV & A field that describes the item to be tested \\ \hline
+            ProtectiveCondTest & Float    & 4 Characters     & Length         & -                   & A field displaying the resistance of an item, in Ohms, to a 200mA 
+                                                                                                      current  \\ \hline
+            InsulationTest     & Text     & 3 Characters     & Length         & >20                 & A field displaying the Insulation of an item, in Ohms, to a 250V 
+                                                                                                      or 500V Potential Difference \\ \hline
+            Leakage            & Float    & 4 Characters     & Format         & 0.03                & A field that shows the current not obtained by the item, in 
                                                                                                      milliamperes \\ \hline
-            TestResult         & Boolean & -                & Presence Check & True & A field to show if an item Passed or not\\ \hline
-        \end{tabular}
-    \end{center}
-\end{landscape}
-
-\begin{landscape}
-    \begin{center}
-        \begin{tabular}{|p{2.3cm}|p{2cm}|p{3cm}|p{2cm}|p{4.6cm}|p{4cm}|}
-            \hline
-            \textbf{Name} & \textbf{Data Type} & \textbf{Length} & \textbf{Validation} & \textbf{Example Data} & \textbf{Comment} \\ \hline
-            PATtestID    & Integer  & 1-255         & Range  & 52         & This is the \textbf{Primary Key} for the PATtest class \\ \hline
-            TestDate     & Date     & 10 Characters & Format & 01/12/2014 & A field that displays the date of the PAT test \\ \hline
+            TestResult         & Boolean  & -                & Presence Check & True                & A field to show if an item Passed or not\\ \hline
         \end{tabular}
     \end{center}
 \end{landscape}
@@ -556,6 +604,62 @@ My system will not need to be accessed by more than 5 people, storing the databa
 
 \section{SQL Queries}
 
+\subsubsection{SQL query getting all the items from the Item table in the database ready to be formatted and displayed on screen}
+
+\begin{sql}
+      SELECT
+      Item.ItemID,
+      Item.ItemName,
+      Item.ItemValue,
+      Item.LoanRate,
+      Item.ItemClass,
+      Item.FuseRating,
+      ItemType.ItemType,
+      Location.Location
+      FROM Item, ItemType, Location
+      WHERE Item.LocationID = Location.LocationID AND Item.ItemTypeId = ItemType.ItemTypeID
+\end{sql}
+
+\subsubsection{SQL query getting all the loans from the Loan table in the database ready to be formatted and displayed on screen}
+
+\begin{sql}
+    SELECT
+    Loan.LoanID,
+    Loan.StartDate,
+    Loan.LoanLength,
+    Customer.CustomerID,
+    Customer.Company,
+    FROM Loan, Customer
+    WHERE Loan.CustomerID = Customer.CustomerID
+\end{sql}
+
+\subsubsection{SQL query getting all the loan items from the LoanItem table in the database ready to be formatted and displayed on screen}
+
+\begin{sql}
+    SELECT
+    LoanItem.LoanItemID,
+    LoanItem.LoanID,
+    LoanItem.Quantity,
+    Item.ItemName,
+    Item.LoanRate,
+    FROM LoanItem, Item
+    WHERE LoanItem.ItemID = Item.ItemID
+\end{sql}
+
+\subsubsection{SQL query getting all the item tests from the ItemTest table in the database ready to be formatted and displayed on screen}
+
+\begin{sql}
+      SELECT
+      ItemTestID, 
+      ItemTest.PATtestNotes,
+      ItemTest.Leakage,
+      ItemTest.TestResult,
+      Item.ItemName,
+      Item.ItemClass,
+      Item.FuseRating
+      FROM ItemTest
+      WHERE ItemTest.ItemID = Item.ItemID
+\end{sql}
 
 \subsubsection{SQL Query searching the database for Items at a specific Location then orders them A-Z by ItemName}
 Location and Item are tables in the database, Item ID, ItemName and ItemValue are attributes in the Item table. LocationID is an attribute in the Location table
@@ -590,16 +694,36 @@ Location and Item are tables in the database, Item ID, ItemName and ItemValue ar
 
 \begin{sql}
     SELECT
+    Loan.LoanID
     Customer.Company,
     Item.ItemName
-    Laon.DateStarted
+    Item.LoanRate
+    LoanItem.Quantity,
+    Loan.StartDate,
+    Loan.LoanLength,
+    FROM Loan, Customer, Item
+    WHERE Customer.CustomerID = Loan.CustomerID AND Loan.LoanItemID = LoanItem.LoanItemID AND LoanItem.ItemID = Item.ItemID
 \end{sql}
 
 \section{Security and Integrity of the System and Data}
 
 \subsection{Security and Integrity of Data}
 
+The system will store personal data referring to an individual or a company. This data will fall under the data protection acts. This will mean that the data will need to be kept up to date and would therefore need a way to edit the data. All the information stored in the database should therefore be encrypted to keep this data secure and only accessible through my program which will be protected with a password. I will need to make sure the data stored is valid and correct, to do this I will need to use validation algorithms to make sure they are feasible. I will also need to use referential integrity in my database to ensure that when adding, updating and removing data to the database, key information isn't missing from records.
+
 \subsection{System Security}
+
+It is important that the information in my database is secure and free from theft, corruption and tampering. This will be prevented with the use of a password to access the system. If the password that was entered is incorrect, the user will not be able to gain access to the system and will be notified by a pop-up window. I will need to encrypt my data to avoid people from outside my system from being able to access the data. All of the data entered into the system will undergo validation to make sure that it is suitable and correct.
+Because some of the data fall under the data protection act, I will need to ensure that:
+\begin{itemize}
+    \item The data will be destroyed after 11 years of collection
+    \item Only data that is necessary will be collected and stored.
+    \item The data will be updated when necessary so that the data is up to date and accurate
+    \item The data that is stored will only be used by the Church and not passed on to anyone else
+    \item The data will be secured securely, to ensure that it is only accessed by authorised people
+    \item The data will not be transferred to other countries
+\end{itemize}
+
 
 \section{Validation}
 
