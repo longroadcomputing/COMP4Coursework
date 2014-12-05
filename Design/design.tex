@@ -204,6 +204,80 @@ I have chosen to build my system for this specification as this is the computer 
 
 \subsection{Algorithms in pseudo-code for each data transformation process}
 
+\textbf{Search for an item}
+\begin{sql}
+    FUNCTION SearchItems(Item: ITEM)
+        SET valid TO false
+        WHILE not valid
+            SEND "Please enter the item name"
+            GET ItemName
+        SET Items TO GetItemRecords()
+        SET found TO false
+        FOR Item IN Items
+            IF ItemName = Item.ItemName
+                SET found TO true
+            ELSE
+                SET found TO false
+        If found = true
+            DisplayItem(Item.ItemID)
+        ELSE
+            DisplayItemNotFound()
+\end{sql}
+
+\textbf{Search for Customer}
+\begin{sql}
+    FUNCTION SearchItems(Item: ITEM)
+        SET valid TO false
+        WHILE not valid
+            SEND "Please enter the customer company"
+            GET Company
+        SET Customers TO GetCustomerRecords()
+        SET found TO false
+        FOR Customer IN Customers
+            IF Company = Customer.Company
+                SET found TO true
+            ELSE
+                SET found TO false
+        If found = true
+            DisplayCustomer(Customer.Company)
+        ELSE
+            DisplayCustomerNotFound()
+\end{sql}
+
+\newpage
+
+\textbf{Search for Loan}
+\begin{sql}
+    FUNCTION SearchItems(Item: ITEM)
+        SET valid TO false
+        WHILE not valid
+            SEND "Please enter the customer company"
+            GET Company
+        SET Customer TO GetCustomers()
+        SET foundCustomer TO false
+        FOR Customer IN Customers
+            IF Company = Customer.Company
+                RETURN Customer.CustomerID
+            ELSE
+                SET foundCustomer TO false
+        If foundCustomer = true
+            SET Loans TO GetLoans()
+            SET foundLoan TO false
+            FOR Loan IN Loans
+                IF Customer.CustomerID = Loan.CustomerID
+                    SET foundLoan TO true
+                    SET LoanID = Loan.[0]
+                ELSE
+                    SET foundLoan TO false
+            IF foundLoan = true
+                DisplayLoan(LoanID)
+            ELSE
+                DisplayLoanNotFound()
+        ELSE
+            DisplayCustomerNotFound()
+        
+\end{sql}
+
 \begin{landscape}
 
 \subsection{Object Diagrams}
@@ -312,6 +386,38 @@ I have chosen to build my system for this specification as this is the computer 
 
 
 \subsection{Explanation of how data output items are generated}
+
+\begin{center}
+    \begin{longtable}{|p{6cm}|p{6cm}|}
+        \hline
+        \textbf{Output}  & \textbf{How the output is generated} \\ \hline
+        Sub Total Cost   & Calculated from LoanRate, Quantity and LoanLength \\ \hline
+        Total Cost       & Calculated by adding all the Sub Total Costs in a Loan \\ \hline
+        Item Name        & User Inputs the information \\ \hline
+        Item Value       & User Inputs the information \\ \hline
+        Loan Rate        & User Inputs the information \\ \hline
+        Item Class       & User Inputs the information \\ \hline
+        Fuse Rating      & User Inputs the information \\ \hline
+        Start Date       & User Inputs the information \\ \hline
+        Loan Length      & User Inputs the information \\ \hline
+        Quantity         & User Inputs the information \\ \hline
+        Forename         & User Inputs the information \\ \hline
+        Surname          & User Inputs the information \\ \hline
+        Company          & User Inputs the information \\ \hline
+        Street           & User Inputs the information \\ \hline
+        Town             & User Inputs the information \\ \hline
+        Post Code        & User Inputs the information \\ \hline
+        Mobile Number    & User Inputs the information \\ \hline
+        Email Address    & User Inputs the information \\ \hline
+        Landline Number  & User Inputs the information \\ \hline
+        Test date        & User Inputs the information \\ \hline
+        Test Description & User Inputs the information \\ \hline
+        Leakage          & User Inputs the information \\ \hline
+        Test Result      & User Inputs the information \\ \hline
+    \end{longtable}
+
+\end{center}
+
 
 \begin{landscape}
 
@@ -727,9 +833,53 @@ Because some of the data fall under the data protection act, I will need to ensu
 
 \section{Validation}
 
-\section{Testing}
+In order to insure that information is not entered incorrectly, the system will need to use certain validation methods in order to achieve appropriate data is input.
+
+\begin{center}
+    \begin{longtable}{|p{3cm}|p{2cm}|p{4cm}|p{4cm}|}
+        \hline
+        \textbf{Item}    & \textbf{Example} & \textbf{Validation or Verification Method} & \textbf{Comments}\\ \hline
+        ItemName         & Asus PC Tower    & Presence check                             & Ensure a name is entered. No other validation 
+                                                                                           needed as an ItemName can be any length\\ 
+                                                                                           \hline
+        ItemValue        & 400              & Presence check \newline Size Check         & Ensure a number is entered at that it is 
+                                                                                           greater than 0\\ \hline
+        LoanRate         & 7                & Presence Check                             & Ensure a value is entered that is 0 or greater
+                                                                                           \\ \hline
+        Item Class       & Multiple Choice  & Lookup Check \newline Presence Check       & Only two available Item Classes\\ \hline
+        Fuse Rating      & 3A               & Presence Check                             & Ensure a value is entered\\ \hline
+        Start Date       & 01/12/2014       & Presence Check                             & Ensures a date is entered\\ \hline
+        Loan Length      & 7                & Presence Check                             & Ensures a valid value is entered and is 0 or 
+                                                                                           greater\\ \hline
+        Quantity         & 2                & Presence Check                             & Check that a value is entered \\ \hline
+        Forename         & John             & Presence Check                             & Ensures a name is entered\\ \hline
+        Surname          & Smith            & Presence Check                             & Ensures a name is entered\\ \hline
+        Company          & Digital Inc      & Presence Check                             & Ensures a company is entered\\ \hline
+        Street           & 10 Cedar Close   & Presence Check                             & Ensures a street is entered\\ \hline
+        Town             & Great Shelford   & Presence Check                             & Ensures a town is entered\\ \hline
+        Post Code        & AB12 4XY         & Presence Check \newline Type Check         & Ensures a postcode is entered and that it 
+                                                                                           contains at least a number and a letter\\ 
+                                                                                           \hline
+        Mobile Number    & 01234567890      & Presence Check                             & Ensures a mobile number is entered and that it 
+                                                                                           has a character length of 11\\ \hline
+        Email Address    & example@url.com  & Presence Check \newline Type Check         & Ensures an email is entered and that it 
+                                                                                           contains the characters '@' and '.'\\ \hline
+        Landline Number  & 01234567890      & Presence Check                             & Ensures a mobile number is entered and that it 
+                                                                                           has a character length of 11\\ \hline
+        Test date        & 01/12/2014       & Presence Check                             & Ensures a date is entered\\ \hline
+        Test Result      & yes              & Presence Check                             & Ensures that a yes or no is entered. This is 
+                                                                                           converted to a boolean\\ \hline
+        Password         & p4assw0rd        & Presence Check \newline Type Check         & Ensures a password is entered and that it 
+                                                                                           contains a letter and a number\\ \hline
+    \end{longtable}
+
+\end{center}
+
 
 \begin{landscape}
+
+\section{Testing}
+
 \subsection{Outline Plan}
 
 \begin{center}
@@ -738,7 +888,7 @@ Because some of the data fall under the data protection act, I will need to ensu
         \textbf{Test Series} & \textbf{Purpose of Test Series} & \textbf{Testing Strategy} & \textbf{Strategy Rationale}\\ \hline
         1 & Test the flow of control between interfaces      & Top-down testing     & \\ \hline
         2 & Test data input validation works                 & Botton-up testing    & Test each component will commence when they have been developed\\ \hline
-        3 & Test data input is stored in the correctly       & Black box testing    & \\ \hline
+        3 & Test data input is stored correctly              & Black box testing    & \\ \hline
         4 & Test Algorithms and check output is correct      & White box testing    & \\ \hline
         5.& Test system meets requirements                   & Acceptance Testing   & \\ \hline
     \end{tabular}
@@ -940,7 +1090,115 @@ Because some of the data fall under the data protection act, I will need to ensu
         2.01 & Verify that a password was entered & An error dialog box should appear if no password is entered & "password" & Normal & Accepted & & \\
              &                                    &                                                             &  nothing   & erroneous & Rejected & & \\ \hline
              
+        2.02 & Verify that an ItemName was entered & The input box should display an error if the field is left empty & Asus Pc Tower & Normal & Accepted & & \\   
+             &                                     &                                                               & Nothing       & Erroneous & Rejected & & \\ \hline
              
+        2.03 & Verify that an ItemValue was entered & The input box should display an error if the field is left empty & 400 & Normal & Accepted & & \\   
+             &                                     &                                                               & Nothing       & Erroneous & Rejected & & \\ \hline
+             
+        2.04 & Verify that a LoanRate was entered & The input box should display an error if the field is left empty & 7 & Normal & Accepted & & \\   
+             &                                     &                                                               & Nothing       & Erroneous & Rejected & & \\ \hline
+             
+        2.05 & Verify that an ItemClass was entered & The input box should display an error if the field is left empty & 2 & Normal & Accepted & & \\   
+             &                                      &                                                               & Nothing      & Erroneous & Rejected & & \\ \hline
+             
+        2.06 & Verify that a Fuse Rating was entered & The input box should display an error if the field is left empty & - & Normal & Accepted & & \\
+             &                                        &                                                            & 7       & Normal & Accepted & & \\
+             &                                        &                                                            & Nothing       & Erroneous & Rejected & & \\ \hline
+             
+        2.07 & Verify that a LoanLength was entered & The input box should display an error if the field is left empty & 4 & Normal & Accepted & & \\   
+             &                                      &                                                               & Nothing      & Erroneous & Rejected & & \\ \hline
+             
+        2.08 & Verify that a Quantity was entered & The input box should display an error if the field is left empty & 5 & Normal & Accepted & & \\   
+             &                                      &                                                               & Nothing      & Erroneous & Rejected & & \\ \hline
+
+        2.08 & Verify that a Location was entered & The input box should display an error if the field is left empty & Main Office & Normal & Accepted & & \\   
+             &                                    &                                                                 & Nothing      & Erroneous & Rejected & & \\ \hline
+             
+        2.09 & Verify that an ItemType was entered & The input box should display an error if the field is left empty & Camera & Normal & Accepted & & \\   
+             &                                      &                                                               & Nothing      & Erroneous & Rejected & & \\ \hline
+             
+        2.10 & Verify that a Forename was entered & The input box should display an error if the field is left empty & John & Normal & Accepted & & \\   
+             &                                      &                                                               & Nothing      & Erroneous & Rejected & & \\ \hline
+             
+        2.11 & Verify that a Surname was entered & The input box should display an error if the field is left empty & Smith & Normal & Accepted & & \\   
+             &                                      &                                                               & Nothing      & Erroneous & Rejected & & \\ \hline
+        
+        2.12 & Verify that a Company was entered & The input box should display an error if the field is left empty & Digital Inc & Normal & Accepted & & \\   
+             &                                      &                                                               & Nothing      & Erroneous & Rejected & & \\ \hline
+             
+        2.13 & Verify that a Street was entered & The input box should display an error if the field is left empty & 6 Cedar Close & Normal & Accepted & & \\   
+             &                                      &                                                               & Nothing      & Erroneous & Rejected & & \\ \hline
+             
+        2.14 & Verify that a Town was entered & The input box should display an error if the field is left empty & Stapleford & Normal & Accepted & & \\   
+             &                                      &                                                               & Nothing      & Erroneous & Rejected & & \\ \hline
+             
+        2.15 & Verify that a PostCode was entered & The input box should display an error if the field is left empty & AB12 3XY & Normal & Accepted & & \\   
+             &                                      &                                                               & Nothing      & Erroneous & Rejected & & \\ \hline
+             
+        2.16 & Verify that a MobileNumber was entered & The input box should display an error if the field is left empty & 01234567890 & Normal & Accepted & & \\   
+             &                                      &                                                               & Nothing      & Erroneous & Rejected & & \\ \hline
+             
+        2.17 & Verify that an Email was entered & The input box should display an error if the field is left empty & example@url.com & Normal & Accepted & & \\   
+             &                                      &                                                               & Nothing      & Erroneous & Rejected & & \\ \hline
+             
+        2.18 & Verify that a Landline number was entered & The input box should display an error if the field is left empty & 01234567890 & Normal & Accepted & & \\   
+             &                                      &                                                               & Nothing      & Erroneous & Rejected & & \\ \hline
+             
+        2.19 & Verify that a TestDate  was entered & The input box should display an error if the field is left empty & 01/12/2014 & Normal & Accepted & & \\   
+             &                                      &                                                               & Nothing      & Erroneous & Rejected & & \\ \hline
+             
+        2.20 & Verify that Leakage was entered & The input box should display an error if the field is left empty & 0.04 & Normal & Accepted & & \\   
+             &                                      &                                                               & Nothing      & Erroneous & Rejected & & \\ \hline
+             
+        2.21 & Verify that a ComponentType was entered & The input box should display an error if the field is left empty & Insulation Test & Normal & Accepted & & \\   
+             &                                      &                                                               & Nothing      & Erroneous & Rejected & & \\ \hline
+             
+        2.22 & Verify that a ComponentResult was entered & The input box should display an error if the field is left empty & 0.32 & Normal & Accepted & & \\   
+             &                                      &                                                               & Nothing      & Erroneous & Rejected & & \\ \hline
+             
+        2.23 & Verify that the TestResult was entered & The input box should display an error if the field is left empty & yes & Normal & Accepted & & \\   
+             &                                      &                                                               & Nothing      & Erroneous & Rejected & & \\ \hline
+             
+        2.23 & Verify that a Password was entered and that it is at least 6 characters long and contains a letters and at least 1 number & The input box should display 
+                                                                                                                                           an error if the field is 
+                                                                                                                                           left empty & yes & Normal & 
+                                                                                                                                           Accepted & & \\   
+             &                                      &                                                               & Nothing      & Erroneous & Rejected & & \\ \hline
+        
+        & & & & & & & \\ \hline
+
+        3.1 & Verify that all the Item details are entered and save to the Item table & All information should be added to the correct fields & Item information & 
+              Normal & Added to Item table in the database & & \\ \hline
+        
+        3.2 & Verify that all the Loan details are entered and save to the Item table & All information should be added to the correct fields & Item information & 
+              Normal & Added to Loan table in the database & & \\ \hline
+        
+        3.3 & Verify that all the LoanItem details are entered and save to the Item table & All information should be added to the correct fields & Item information & 
+              Normal & Added to LoanItem table in the database & & \\ \hline
+        
+        3.4 & Verify that all the Customer details are entered and save to the Item table & All information should be added to the correct fields & Item information & 
+              Normal & Added to Customer table in the database & & \\ \hline
+        
+        3.5 & Verify that all the PATtest details are entered and save to the Item table & All information should be added to the correct fields & Item information & 
+              Normal & Added to PATtest table in the database & & \\ \hline
+        
+        3.6 & Verify that all the ItemTest details are entered and save to the Item table & All information should be added to the correct fields & Item information & 
+              Normal & Added to ItemTest table in the database & & \\ \hline
+        
+        & & & & & & & \\ \hline
+
+        4.1 & Make sure the Sub Total Costs for each Item Loan is calculated correctly & Valid information should have been previously entered & Calculate Sub Total 
+        Cost manually then check to see if the systems result is the same & Normal & Sub Total Cost should match the manually calculated results & & \\ \hline
+        
+        4.2 & Make sure the Total Cost for each Loan is calculated correctly & Valid information should have been previously entered & Calculate Total 
+        Cost manually then check to see if the systems result is the same & Normal & Total Cost should match the manually calculated results & & \\ \hline
+        
+        & & & & & & & \\ \hline
+
+        5   & Verify the program meets the client expectations & Run through the system testing every aspect of the system to make sure that it functions correctly and 
+        fits the objectives specified by the client & Add Item, Location, ItemType and Customer information to the database tables, create a loan and a PATtest & 
+        Normal & Program meets expectations and achieves all objectives & & \\ \hline
     \end{longtable}
 \end{center}
 \end{landscape}
