@@ -44,13 +44,13 @@ It is **strongly recommended** that you use LaTeX for your coursework write-up -
 
 LaTeX is used widely in the academic world and you may find yourself using it at University. Getting a head start learning the syntax this year will be provide you with invaluable experience.
 
-[1]: Analysis/analysis.md
-[2]: Design/design.md
-[3]: Implementation/implementation.md
-[4]: Testing/testing.md
-[5]: Maintenance/maintenance.md
-[6]: Manual/manual.md
-[7]: Evaluation/evaluation.md
-[8]: Policy/coursework.md
+[1]: Analysis/analysis.html
+[2]: Design/design.html
+[3]: Implementation/implementation.html
+[4]: Testing/testing.html
+[5]: Maintenance/maintenance.html
+[6]: Manual/manual.html
+[7]: Evaluation/evaluation.html
+[8]: Policy/coursework.html
 [9]: http://moodle.longroad.ac.uk
-[10]:Policy/styling.md
+[10]:Policy/styling.html

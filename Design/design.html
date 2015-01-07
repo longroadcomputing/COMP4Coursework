@@ -1,0 +1,1289 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>body {
+  width: 45em;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
+}
+
+body .markdown-body
+{
+  padding: 30px;
+}
+
+@font-face {
+  font-family: fontawesome-mini;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.markdown-body sup {
+  top: -0.5em;
+}
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body .codehilitetable {
+  border: 0;
+  border-spacing: 0;
+}
+
+.markdown-body .codehilitetable tr {
+  border: 0;
+}
+
+.markdown-body .codehilitetable pre,
+.markdown-body .codehilitetable div.codehilite {
+  margin: 0;
+}
+
+.markdown-body .linenos,
+.markdown-body .code,
+.markdown-body .codehilitetable td {
+  border: 0;
+  padding: 0;
+}
+
+.markdown-body td:not(.linenos) .linenodiv {
+  padding: 0 !important;
+}
+
+.markdown-body .code {
+  width: 100%;
+}
+
+.markdown-body .linenos div pre,
+.markdown-body .linenodiv pre,
+.markdown-body .linenodiv {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.markdown-body .code div pre,
+.markdown-body .code div {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.4;
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before,
+.markdown-body hr:after {
+  display: table;
+  content: " ";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  display: inline-block;
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .headeranchor-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px;
+}
+
+.markdown-body .headeranchor-link:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .headeranchor,
+.markdown-body h2 .headeranchor,
+.markdown-body h3 .headeranchor,
+.markdown-body h4 .headeranchor,
+.markdown-body h5 .headeranchor,
+.markdown-body h6 .headeranchor {
+  display: none;
+  color: #000;
+  vertical-align: middle;
+}
+
+.markdown-body h1:hover .headeranchor-link,
+.markdown-body h2:hover .headeranchor-link,
+.markdown-body h3:hover .headeranchor-link,
+.markdown-body h4:hover .headeranchor-link,
+.markdown-body h5:hover .headeranchor-link,
+.markdown-body h6:hover .headeranchor-link {
+  height: 1em;
+  padding-left: 8px;
+  margin-left: -30px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .headeranchor-link .headeranchor,
+.markdown-body h2:hover .headeranchor-link .headeranchor,
+.markdown-body h3:hover .headeranchor-link .headeranchor,
+.markdown-body h4:hover .headeranchor-link .headeranchor,
+.markdown-body h5:hover .headeranchor-link .headeranchor,
+.markdown-body h6:hover .headeranchor-link .headeranchor {
+  display: inline-block;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body .admonition {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code,
+.markdown-body samp {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .codehilite {
+  margin-bottom: 16px;
+}
+
+.markdown-body .codehilite pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .codehilite pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+/* Admonition */
+.markdown-body .admonition {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #333;
+  padding: 10px 10px 10px 30px;
+}
+
+.markdown-body .admonition table {
+  color: #333;
+}
+
+.markdown-body .admonition p {
+  padding: 0;
+}
+
+.markdown-body .admonition-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.markdown-body .admonition>.admonition-title {
+  color: #333;
+}
+
+.markdown-body .attention>.admonition-title {
+  color: #a6d796;
+}
+
+.markdown-body .caution>.admonition-title {
+  color: #d7a796;
+}
+
+.markdown-body .hint>.admonition-title {
+  color: #96c6d7;
+}
+
+.markdown-body .danger>.admonition-title {
+  color: #c25f77;
+}
+
+.markdown-body .question>.admonition-title {
+  color: #96a6d7;
+}
+
+.markdown-body .note>.admonition-title {
+  color: #d7c896;
+}
+
+.markdown-body .admonition:before,
+.markdown-body .attention:before,
+.markdown-body .caution:before,
+.markdown-body .hint:before,
+.markdown-body .danger:before,
+.markdown-body .question:before,
+.markdown-body .note:before {
+  font: normal normal 16px fontawesome-mini;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.markdown-body .admonition:before {
+  content: "\f056\00a0";
+  color: 333;
+}
+
+.markdown-body .attention:before {
+  content: "\f058\00a0";
+  color: #a6d796;
+}
+
+.markdown-body .caution:before {
+  content: "\f06a\00a0";
+  color: #d7a796;
+}
+
+.markdown-body .hint:before {
+  content: "\f05a\00a0";
+  color: #96c6d7;
+}
+
+.markdown-body .danger:before {
+  content: "\f057\00a0";
+  color: #c25f77;
+}
+
+.markdown-body .question:before {
+  content: "\f059\00a0";
+  color: #96a6d7;
+}
+
+.markdown-body .note:before {
+  content: "\f040\00a0";
+  color: #d7c896;
+}
+
+.markdown-body .admonition::after {
+  content: normal;
+}
+
+.markdown-body .attention {
+  border-left: 6px solid #a6d796;
+}
+
+.markdown-body .caution {
+  border-left: 6px solid #d7a796;
+}
+
+.markdown-body .hint {
+  border-left: 6px solid #96c6d7;
+}
+
+.markdown-body .danger {
+  border-left: 6px solid #c25f77;
+}
+
+.markdown-body .question {
+  border-left: 6px solid #96a6d7;
+}
+
+.markdown-body .note {
+  border-left: 6px solid #d7c896;
+}
+
+.markdown-body .admonition>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .admonition>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* progress bar*/
+.markdown-body .progress {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+  height: 24px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ededed;
+  position: relative;
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
+}
+
+.markdown-body .progress-label {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  width: 100%; margin: 0;
+  line-height: 24px;
+  color: #333;
+  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
+  -webkit-font-smoothing: antialiased !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.markdown-body .progress-bar {
+  height: 24px;
+  float: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #96c6d7;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  background-size: 30px 30px;
+  background-image: -webkit-linear-gradient(
+    135deg, rgba(255, 255, 255, .4) 27%,
+    transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%,
+    transparent 77%, transparent
+  );
+  background-image: -moz-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -ms-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -o-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+}
+
+.markdown-body .progress-100plus .progress-bar {
+  background-color: #a6d796;
+}
+
+.markdown-body .progress-80plus .progress-bar {
+  background-color: #c6d796;
+}
+
+.markdown-body .progress-60plus .progress-bar {
+  background-color: #d7c896;
+}
+
+.markdown-body .progress-40plus .progress-bar {
+  background-color: #d7a796;
+}
+
+.markdown-body .progress-20plus .progress-bar {
+  background-color: #d796a6;
+}
+
+.markdown-body .progress-0plus .progress-bar {
+  background-color: #c25f77;
+}
+
+.markdown-body .candystripe-animate .progress-bar{
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite;
+  animation: animate-stripes 3s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@-moz-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+.markdown-body .gloss .progress-bar {
+  box-shadow:
+    inset 0 4px 12px rgba(255, 255, 255, .7),
+    inset 0 -12px 0 rgba(0, 0, 0, .05);
+}
+
+/* Multimarkdown Critic Blocks */
+.markdown-body .critic_mark {
+  background: #ff0;
+}
+
+.markdown-body .critic_delete {
+  color: #c82829;
+  text-decoration: line-through;
+}
+
+.markdown-body .critic_insert {
+  color: #718c00 ;
+  text-decoration: underline;
+}
+
+.markdown-body .critic_comment {
+  color: #8e908c;
+  font-style: italic;
+}
+
+.markdown-body .headeranchor {
+  font: normal normal 16px octicons-anchor;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.headeranchor:before {
+  content: '\f05c';
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 4px 0.25em -20px;
+  vertical-align: middle;
+}
+
+/* Media */
+@media only screen and (min-width: 480px) {
+  .markdown-body {
+    font-size:14px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .markdown-body {
+    font-size:16px;
+  }
+}
+
+@media print {
+  .markdown-body * {
+    background: transparent !important;
+    color: black !important;
+    filter:none !important;
+    -ms-filter: none !important;
+  }
+
+  .markdown-body {
+    font-size:12pt;
+    max-width:100%;
+    outline:none;
+    border: 0;
+  }
+
+  .markdown-body a,
+  .markdown-body a:visited {
+    text-decoration: underline;
+  }
+
+  .markdown-body .headeranchor-link {
+    display: none;
+  }
+
+  .markdown-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  .markdown-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .markdown-body .ir a:after,
+  .markdown-body a[href^="javascript:"]:after,
+  .markdown-body a[href^="#"]:after {
+    content: "";
+  }
+
+  .markdown-body pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .markdown-body pre,
+  .markdown-body blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+
+  .markdown-body .progress,
+  .markdown-body .progress-bar {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .markdown-body .progress {
+    border: 1px solid #ddd;
+  }
+
+  .markdown-body .progress-bar {
+    height: 22px;
+    border-right: 1px solid #ddd;
+  }
+
+  .markdown-body tr,
+  .markdown-body img {
+    page-break-inside: avoid;
+  }
+
+  .markdown-body img {
+    max-width: 100% !important;
+  }
+
+  .markdown-body p,
+  .markdown-body h2,
+  .markdown-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .markdown-body h2,
+  .markdown-body h3 {
+    page-break-after: avoid;
+  }
+}
+</style><title>design</title></head><body><article class="markdown-body"><h1 id="design"><a name="user-content-design" href="#design" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Design</h1>
+<p>There are <strong>12 marks</strong> available for this section.</p>
+<h2 id="introduction"><a name="user-content-introduction" href="#introduction" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Introduction</h2>
+<p>During the Analysis section you gained an understanding of what is going to be involved in solving the problems presented by the project and from this you developed a list of objectives.</p>
+<p>The Design phase deals with translating these objectives into a <strong>physical model</strong> of the system.</p>
+<h2 id="overall-system-design"><a name="user-content-overall-system-design" href="#overall-system-design" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Overall System Design</h2>
+<p>This section focuses on enabling the reader to understand the system. You need to write a clear and concise description that visualises each system function.</p>
+<h3 id="short-description-of-the-main-parts-of-the-system"><a name="user-content-short-description-of-the-main-parts-of-the-system" href="#short-description-of-the-main-parts-of-the-system" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Short description of the main parts of the system</h3>
+<p>In this section it is important to think about the different areas of your system and then describe each of those areas in reasonable detail. The reader should be able to understand all of the functionality of your system from this description.</p>
+<p>It should summarise each aspect of the system&rsquo;s functionality and this section may be anything up to <strong>roughly a page</strong> in length.</p>
+<p>For example, if your system were a <strong>booking system for a bed and breakfast</strong> you might start by identifying what the areas of the system as a series of bullets:</p>
+<ul>
+<li>Bed and Breakfast Booking System<ul>
+<li>General User Interface</li>
+<li>Getting Customer Booking Details</li>
+<li>Managing Bookings</li>
+<li>Reporting Information</li>
+</ul>
+</li>
+</ul>
+<p>You might then take each of these areas as a <strong>sub-heading</strong> and describe the functionality contained within the area:</p>
+<ul>
+<li>Getting Customer Booking Details<ul>
+<li>The system will ask for basic details about the booking, such as: what night they plan to arrive, how many nights they plan to stay for, what type of room they wish to have</li>
+<li>If the booking is possible the system will then ask for customer details, postcode and house number. If the customer has stayed previously the rest of the details will be found automatically and then the customer asked to confirm them, otherwise further customer information will be requested</li>
+<li>Finally, additional details such as dietary requirements will be asked for and then there will be an opportunity to review the booking details before it is confirmed</li>
+<li>Once confirmed, the customer can be provided with the booking reference number which can be used to amend or cancel the booking in futur</li>
+</ul>
+</li>
+</ul>
+<h3 id="system-flowcharts-showing-an-overview-of-the-complete-system"><a name="user-content-system-flowcharts-showing-an-overview-of-the-complete-system" href="#system-flowcharts-showing-an-overview-of-the-complete-system" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>System flowcharts showing an overview of the complete system</h3>
+<p>A system flowchart allows you to represent the functionality of the system in a way that is easily understood. You will need to create a chart which represents all of the functionality of your system. The symbols that you should use in your flowchart are:</p>
+<p><img alt="" src="/Users/joelbutcher/Dropbox/Apps/Texpad/Computing/Github/COMP4Coursework/Design/images/flowchartsymbols.png" /></p>
+<p>Much like Data Flow Diagrams, creating a reasonable System Flowchart will take some practice. It is easy for them to become unwieldy and end up spread across many pages in a Word document. Let&rsquo;s look at an example:</p>
+<p><img alt="" src="/Users/joelbutcher/Dropbox/Apps/Texpad/Computing/Github/COMP4Coursework/Design/images/bookingflowchart.png" /></p>
+<p>In the above example a flowchart has been constructed which fully explains the process of creating a booking but the sections for managing a booking and system reporting are unfinished. How can we complete these sections when there is clearly not much more room available?</p>
+<p>Instead of trying to make the elements smaller or trying to place them closer together we will do the following:</p>
+<p><img alt="" src="/Users/joelbutcher/Dropbox/Apps/Texpad/Computing/Github/COMP4Coursework/Design/images/bookingflowchart2.png" /></p>
+<p>Notice, that instead of continuing the flowchart we have just referenced the page on which you can see the rest of that particular section of the chart. If you were to look at page 4 you would see the following:</p>
+<p><img alt="" src="/Users/joelbutcher/Dropbox/Apps/Texpad/Computing/Github/COMP4Coursework/Design/images/bookingflowchart3.png" /></p>
+<p>This enables you to both complete the rest of the diagram on a new page and also see where the rest of the diagram can be located.</p>
+<h4 id="creating-flow-charts"><a name="user-content-creating-flow-charts" href="#creating-flow-charts" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Creating Flow charts</h4>
+<p>System flowcharts are difficult to do well using the tools available in Word. You will need to use a <a href="http://www.libreoffice.org/discover/draw/"><strong>specialist diagramming</strong></a> application to do this section justice.</p>
+<p>You should also consider:</p>
+<ul>
+<li>Separate out the different aspects of your system on different pages if required rather than trying to squeeze everything into one page</li>
+<li>Make sure you provide sub-headings for each flowchart and give some explanation of what it is supposed to be representing</li>
+</ul>
+<p>The example flowchart in the A2 textbook is not very good as it does not use all of the symbols available. Be sure to investigate this further on the Internet – especially the decision symbol.</p>
+<p>Keep in mind that a process symbol is for processing and not for stating that a particular UI screen is displayed on the monitor.</p>
+<h2 id="user-interface-designs"><a name="user-content-user-interface-designs" href="#user-interface-designs" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>User Interface Designs</h2>
+<p>Here you are providing diagrams which <strong>visualise</strong> the interface and show the <strong>flow of control</strong> i.e. what happens when one interface component is selected.</p>
+<p>Designing a good interface is difficult, even for professional software developers. The success of an interface depends on many factors which need to be considered together. There is a good list of these factors in the <strong>A2 Textbook on page 250</strong>.</p>
+<p>It is important to consider each one of these factors seriously as by doing so you will be able to come to a conclusion about what is most suitable for your <strong>client</strong> and/or <strong>audience</strong>. For example, imagine you were producing an interface for a touch-screen device. Which of the screenshots below would be most suitable? Why?</p>
+<p><img alt="" src="/Users/joelbutcher/Dropbox/Apps/Texpad/Computing/Github/COMP4Coursework/Design/images/desktop.png" /></p>
+<p><img alt="" src="/Users/joelbutcher/Dropbox/Apps/Texpad/Computing/Github/COMP4Coursework/Design/images/metro.jpg" /></p>
+<h3 id="designing-your-interface"><a name="user-content-designing-your-interface" href="#designing-your-interface" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Designing your Interface</h3>
+<p>You must create sketches for each interface screen and <strong>annotate</strong> these sketches to <strong>explain your decisions</strong> and also to show <strong>flow of control</strong>. The example below shows this.</p>
+<p><img alt="" src="/Users/joelbutcher/Dropbox/Apps/Texpad/Computing/Github/COMP4Coursework/Design/images/userinterfacesample.png" /></p>
+<h3 id="considerations"><a name="user-content-considerations" href="#considerations" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Considerations</h3>
+<p>Be sure to provided <strong>headings</strong> and <strong>figure numbers</strong> for each interface so that the can be <strong>cross-referenced</strong> later. In addition, be sure to annotate the designs to explain or highlight particular features.</p>
+<h2 id="hardware-specification"><a name="user-content-hardware-specification" href="#hardware-specification" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Hardware Specification</h2>
+<p>This is your opportunity to describe and justify the hardware that is required to enable your design. In the majority of cases the will be the hardware specified by your client as this is the equipment they plan to use to run your solution. However, if a few cases it may be appropriate to select hardware that will need to be purchased by the client to effectively run your system.</p>
+<p>You need to <strong>justify</strong> your choices in terms of:</p>
+<ul>
+<li><strong>cost</strong></li>
+<li><strong>suitability for purpose</strong></li>
+<li><strong>availability</strong></li>
+</ul>
+<p>You should take each hardware component and justify it individually.</p>
+<h2 id="program-structure"><a name="user-content-program-structure" href="#program-structure" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Program Structure</h2>
+<p>In this section you are breaking the problem down so that it can be more easily solved and then developing the algorithms and structures necessary to solve these problems.</p>
+<h3 id="topdown-design-structure-charts"><a name="user-content-topdown-design-structure-charts" href="#topdown-design-structure-charts" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Topdown design structure charts</h3>
+<p>Here you must take your problem and break it down into its component parts. You start be developing a <strong>Hierarchy Chart</strong> for the problem. For example:</p>
+<p><img alt="" src="/Users/joelbutcher/Dropbox/Apps/Texpad/Computing/Github/COMP4Coursework/Design/images/heirarchychart.png" /></p>
+<p>Once you have created the hierarchy chart you need to add interfaces and control information to turn it into a structure chart. For example:</p>
+<p><img alt="" src="/Users/joelbutcher/Dropbox/Apps/Texpad/Computing/Github/COMP4Coursework/Design/images/structurechart.png" /></p>
+<h3 id="algorithms-in-pseudo-code-for-each-data-transformation-process"><a name="user-content-algorithms-in-pseudo-code-for-each-data-transformation-process" href="#algorithms-in-pseudo-code-for-each-data-transformation-process" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Algorithms in pseudo-code for each data transformation process</h3>
+<p>Most students find this the hardest section to complete as it is quite hard to think about all of the algorithms that your system will require <strong>before</strong> you build the system rather than creating them as you are going along. You should make use of the <a href="http://filestore.aqa.org.uk/subjects/AQA-GCSE-COMPSCI-W-TRB-PSEU.PDF">pseudo-code guide</a> which explains the syntax of pseudo-code.</p>
+<p>Here, we are only interested in those algorithms that perform some <strong>data transformation</strong>, not on every single algorithm in the system. You will be able to identify the data transformation algorithms from analysing your structure chart and identifying those sub-problems that <strong>process</strong> data.</p>
+<p>For example, in the above structure chart the <strong>search availability</strong> sub-problem takes in the dates and rooms required and outputs whether these rooms are available on these dates.</p>
+<p>The search availability algorithm could look as follows:</p>
+<pre><code class="python">FUNCTION SearchAvailability (checkDate, checkRooms)
+    single ← 0
+    double ← 0
+    family ← 0
+    availability ← FALSE
+    Connect(BookingDatabase)
+    Bookings ← Search(BookingDatabase,Bookings,CheckDate)
+    Rooms ← Search(BookingDatabase,Rooms)
+    FOR EACH Room IN Rooms
+        CASE Room.Type OF
+            &quot;Single&quot;: single ← single + 1
+            &quot;Double&quot;: double ← double + 1
+        ELSE
+            family ← family + 1
+        ENDCASE
+    ENDFOR&lt;br/&gt;
+    FOR EACH eachBooking IN Bookings
+        CASE eachBooking.Room OF
+            &quot;Single&quot;: single ← single - 1
+            &quot;Double&quot;: double ← double - 1
+        ELSE
+            Family ← Family - 1
+        ENDCASE
+    ENDFOR
+    IF checkRooms.single &lt;= single AND checkRooms.double &lt;= Double AND checkRooms.family &lt;= family THEN
+        availability  ← TRUE
+    ENDIF
+    RETURN availability
+ENDFUNCTION
+</code></pre>
+
+<p>Make sure you provide algorithms for <strong>all</strong> data processing functions in your system. However, there is no need to include <strong>SQL</strong> in your algorithms - just state that you will get the information from the database. SQL queries are highlighted in a separate section.</p>
+<h2 id="object-diagrams"><a name="user-content-object-diagrams" href="#object-diagrams" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Object diagrams</h2>
+<p>You have done most of this work already as part of the analysis section. For the most part you should be able to copy and paste the material from there into this section. However, you may need to make alterations if your understanding of the problem has improved.</p>
+<h2 id="class-definitions"><a name="user-content-class-definitions" href="#class-definitions" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Class definitions</h2>
+<p>You have done most of this work already as part of the analysis section. For the most part you should be able to copy and paste the material from there into this section. However, you may need to make alterations if your understanding of the problem has improved.</p>
+<h2 id="prototyping"><a name="user-content-prototyping" href="#prototyping" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Prototyping</h2>
+<p>You might find this section difficult as you have little experience of developing large scale solutions to programming problems.</p>
+<p>At this stage, there are many areas of your project implementation that you must be unsure about as you may not have the gained the knowledge necessary to have confidence in developing a particular area.</p>
+<p>Prototypes can help. Rather than attempting to jump straight into a difficult problem you may decide to solve a smaller scale problem to test out your ideas or to develop your programming knowledge. You can then use the results to inform your decisions on tackling the actual problem.</p>
+<h3 id="consideration-of-impact-on-design-and-development"><a name="user-content-consideration-of-impact-on-design-and-development" href="#consideration-of-impact-on-design-and-development" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Consideration of impact on design and development</h3>
+<p>In this section you should list the different parts of the implementation you plan to create prototypes for and give reasons as to why you wish to do this. You should explain what you are expecting the prototype to help you find out and also how the results of the prototype will inform the development of the actual system.</p>
+<p>For example, you may wish to:</p>
+<ul>
+<li>Prototype the design of a user interface form and get feedback from the client on whether it is appropriate or not.</li>
+<li>Develop an algorithm which enables you to place parameters in a complex SQL query as you are not sure about how to do this</li>
+</ul>
+<h2 id="definition-of-data-requirements"><a name="user-content-definition-of-data-requirements" href="#definition-of-data-requirements" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Definition of Data Requirements</h2>
+<p>This section is going to be based on your work on the <strong>data source(s) and data destination(s)</strong> section of the Analysis.</p>
+<h3 id="identification-of-all-data-input-items"><a name="user-content-identification-of-all-data-input-items" href="#identification-of-all-data-input-items" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Identification of all data input items</h3>
+<p>You should list all of you data input items here. If not obvious you could say where these items come from and give a comment/description for more obscurely titled items.</p>
+<h3 id="identification-of-all-data-output-items"><a name="user-content-identification-of-all-data-output-items" href="#identification-of-all-data-output-items" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Identification of all data output items</h3>
+<p>You should list all of you data output items here. If not obvious you could say where these items come from and give a comment/description for more obscurely titled items.</p>
+<h3 id="explanation-of-how-data-output-items-are-generated"><a name="user-content-explanation-of-how-data-output-items-are-generated" href="#explanation-of-how-data-output-items-are-generated" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Explanation of how data output items are generated</h3>
+<p>You should explain how data output items are produced and which input items are required to produce them.</p>
+<p>It may make sense to complete this entire section in table format.</p>
+<h3 id="data-dictionary"><a name="user-content-data-dictionary" href="#data-dictionary" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Data Dictionary</h3>
+<p>This is your data dictionary from Analysis updated with any additional data items that have presented themselves at the design phase.</p>
+<h3 id="identification-of-appropriate-storage-media"><a name="user-content-identification-of-appropriate-storage-media" href="#identification-of-appropriate-storage-media" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Identification of appropriate storage media</h3>
+<p>Describe and explain the kind of secondary storage devices that will be required to store and back-up your data. Be sure to justify your choices.</p>
+<h2 id="database-design"><a name="user-content-database-design" href="#database-design" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Database Design</h2>
+<p>It is important to spend a good deal of time on this section as without a properly designed database your system will not function as intended.</p>
+<h3 id="normalisation"><a name="user-content-normalisation" href="#normalisation" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Normalisation</h3>
+<h4 id="er-diagrams"><a name="user-content-er-diagrams" href="#er-diagrams" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>ER Diagrams</h4>
+<p>Include, with a key, your final normalised ER diagram.</p>
+<h4 id="unf-to-3nf-and-entity-descriptions"><a name="user-content-unf-to-3nf-and-entity-descriptions" href="#unf-to-3nf-and-entity-descriptions" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>UNF to 3NF (and Entity Descriptions)</h4>
+<p>In this section show with annotation how you moved from <strong>UNF</strong> to <strong>3NF</strong>. Ensure that your final <strong>entity descriptions match the ER diagram</strong> in the section above.</p>
+<h3 id="sql-queries"><a name="user-content-sql-queries" href="#sql-queries" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>SQL Queries</h3>
+<p>You will have literally dozens of SQL queries to produce for your implementation. In this section only include those queries that are either <strong>complex</strong> or <strong>complex and parameterised</strong>.</p>
+<p>For example, the following type of SQL query is <strong>simple</strong> and <strong>should not</strong> be included:</p>
+<p><pre><code class="sql">SELECT *
+FROM Videos
+WHERE VideoID = 5
+</code></pre><br />
+This query is also simple:</p>
+<pre><code class="sql">SELECT *
+FROM Videos
+WHERE VideoID = ?
+</code></pre>
+
+<p>This query is complex and parameterised:</p>
+<pre><code class="sql">SELECT Video.Title,Genre.Name
+FROM Video,Genre
+WHERE VideoID = ? AND
+Video.VideoID = Genre.VideoID
+</code></pre>
+
+<p>Clearly you will need to annotate and explain where the parameters come from and make clear that you are using Python to format the SQL query text strings.</p>
+<h2 id="security-and-integrity-of-the-system-and-data"><a name="user-content-security-and-integrity-of-the-system-and-data" href="#security-and-integrity-of-the-system-and-data" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Security and Integrity of the System and Data</h2>
+<p>This section is concerned with explaining how you plan to ensure your system and data are used only by authorised individuals.</p>
+<h3 id="security-and-integrity-of-data"><a name="user-content-security-and-integrity-of-data" href="#security-and-integrity-of-data" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Security and Integrity of Data</h3>
+<p>Here you will want to discuss any encryption you plan to add to certain data or how you are going to ensure that the data is accurate (may refer to the next section on Validation).</p>
+<p>Finally, you will want to discuss how your data needs to be protected in respect to legislation. You may find it possible to copy material from Analysis and amend/improve it based on the changes that have occurred during the design phase.</p>
+<h3 id="system-security"><a name="user-content-system-security" href="#system-security" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>System Security</h3>
+<p>This section deals with the access restrictions you will place on the system and how these relate to legislation.</p>
+<h2 id="validation"><a name="user-content-validation" href="#validation" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Validation</h2>
+<p>This section will involve references back to the data dictionary where you identified validation techniques to use. Here you will identify each type of check and explain why it is required.</p>
+<h2 id="testing"><a name="user-content-testing" href="#testing" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Testing</h2></h2>
+<p>Testing is another important section as producing the plan you will use to actually test your system as you are developing it/once you have finished developing it.</p>
+<h3 id="outline-plan"><a name="user-content-outline-plan" href="#outline-plan" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Outline Plan</h3>
+<h4 id="identification-and-explanation-of-suitable-test-strategies"><a name="user-content-identification-and-explanation-of-suitable-test-strategies" href="#identification-and-explanation-of-suitable-test-strategies" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Identification and explanation of suitable test strategies</h4></h4>
+<p>This section should be a table which identifies the purpose of each area of testing, the testing strategy and a rationale for using the strategy:</p>
+<table>
+<thead>
+<tr>
+<th>Test Series</th>
+<th>Purpose of test series</th>
+<th>Testing Strategy</th>
+<th>Strategy Rationale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Validation of input data performed corrected</td>
+<td>Bottom-up Testing</td>
+<td>Each component will be tested as it becomes available</td>
+</tr>
+</tbody>
+</table>
+<h3 id="detailed-plan"><a name="user-content-detailed-plan" href="#detailed-plan" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Detailed Plan</h3>
+<p>In this final section you must take the outline plan and identify the tests that will be performed in each area. There is a good example in the textbook on <strong>page 262</strong>.</p>
+<p>However, you should use the table format below:<br />
+<table><br />
+<tr><br />
+<th>Test Series and number</th><br />
+<th>Purpose</th><br />
+<th>Description</th><br />
+<th>Test Data</th><br />
+<th>Test Data Type (Normal/Erroneous/Extreme)</th><br />
+<th>Expected Result</th><br />
+<th>Actual Result</th><br />
+<th>Evidence in appendix</th><br />
+</tr><br />
+<tr><br />
+<td rowspan="4" class="tcell">2.1</td><br />
+<td rowspan="4" class="tcell">Validate number of seconds input</td><br />
+<td rowspan="4" class="tcell">The input box should accept positive integers and values with once decimal place</td><br />
+<td>15</td><br />
+<td>normal</td><br />
+<td>Accept 15</td><br />
+<td>Accepted</td><br />
+<td>Page 57, Fig.2.1a</td><br />
+</tr><br />
+<tr><br />
+    <td>21.6</td><br />
+    <td>normal</td><br />
+    <td>Accept 21.6</td><br />
+    <td>Accepted</td><br />
+    <td>Page 57, Fig.2.1b</td><br />
+</tr><br />
+<tr><br />
+    <td>3</td><br />
+    <td>erroneous</td><br />
+    <td>Error</td><br />
+    <td>Error</td><br />
+    <td>Page 58, Fig.2.1c</td><br />
+</tr><br />
+<tr><br />
+    <td>&lsquo;abs&rsquo;</td><br />
+    <td>erroneous</td><br />
+    <td>Error</td><br />
+    <td>Error</td><br />
+    <td>Page 58, Fig.2.1d</td><br />
+</tr><br />
+</table></p>
+<h2 id="mark-scheme"><a name="user-content-mark-scheme" href="#mark-scheme" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Mark Scheme</h2>
+<table>
+<thead>
+<tr>
+<th>0-3 marks</th>
+<th>4-6 marks</th>
+<th>7-9 marks</th>
+<th>10-12 marks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>not feasible design</td>
+<td>less than feasible design</td>
+<td>feasible design</td>
+<td>effective design</td>
+</tr>
+<tr>
+<td>poor reporting of criteria for design</td>
+<td>detailed reporting of all criteria for design</td>
+<td>detailed reporting of all criteria for design</td>
+<td>detailed reporting of all criteria for design in the context of the problem being solved</td>
+</tr>
+</tbody>
+</table></article></body></html>

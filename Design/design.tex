@@ -710,7 +710,9 @@ My system will not need to be accessed by more than 5 people, storing the databa
 
 \section{SQL Queries}
 
-\subsubsection{SQL query getting all the items from the Item table in the database ready to be formatted and displayed on screen}
+\subsubsection{Get Items from Item Table}
+
+\textbf{SQL query getting all the items from the Item table in the database ready to be formatted and displayed on screen}
 
 \begin{sql}
       SELECT
@@ -726,7 +728,9 @@ My system will not need to be accessed by more than 5 people, storing the databa
       WHERE Item.LocationID = Location.LocationID AND Item.ItemTypeId = ItemType.ItemTypeID
 \end{sql}
 
-\subsubsection{SQL query getting all the loans from the Loan table in the database ready to be formatted and displayed on screen}
+\subsubsection{Get Items from Item Table}
+
+\textbf{SQL query getting all the loans from the Loan table in the database ready to be formatted and displayed on screen}
 
 \begin{sql}
     SELECT
@@ -739,7 +743,7 @@ My system will not need to be accessed by more than 5 people, storing the databa
     WHERE Loan.CustomerID = Customer.CustomerID
 \end{sql}
 
-\subsubsection{SQL query getting all the loan items from the LoanItem table in the database ready to be formatted and displayed on screen}
+\textbf{SQL query getting all the loan items from the LoanItem table in the database ready to be formatted and displayed on screen}
 
 \begin{sql}
     SELECT
@@ -752,7 +756,7 @@ My system will not need to be accessed by more than 5 people, storing the databa
     WHERE LoanItem.ItemID = Item.ItemID
 \end{sql}
 
-\subsubsection{SQL query getting all the item tests from the ItemTest table in the database ready to be formatted and displayed on screen}
+\textbf{SQL query getting all the item tests from the ItemTest table in the database ready to be formatted and displayed on screen}
 
 \begin{sql}
       SELECT
@@ -767,7 +771,7 @@ My system will not need to be accessed by more than 5 people, storing the databa
       WHERE ItemTest.ItemID = Item.ItemID
 \end{sql}
 
-\subsubsection{SQL Query searching the database for Items at a specific Location then orders them A-Z by ItemName}
+\textbf{SQL Query searching the database for Items at a specific Location then orders them A-Z by ItemName}
 Location and Item are tables in the database, Item ID, ItemName and ItemValue are attributes in the Item table. LocationID is an attribute in the Location table
 \begin{sql}
     SELECT 
@@ -781,7 +785,7 @@ Location and Item are tables in the database, Item ID, ItemName and ItemValue ar
     ORDER BY ItemName ASC
 \end{sql}
 
-\subsubsection{SQL Query searching the database for certain ItemTypes then orders them by ItemName from A-Z}
+\textbf{SQL Query searching the database for certain ItemTypes then orders them by ItemName from A-Z}
 Location and Item are tables in the database, Item ID, ItemName and ItemValue are attributes in the Item table. ItemTypeID is an attribute in the ItemType table
 
 \begin{sql}
@@ -796,7 +800,7 @@ Location and Item are tables in the database, Item ID, ItemName and ItemValue ar
     ORDER BY ItemName ASC
 \end{sql}
 
-\subsubsection{SQL Query searching the database to display Loans taken out by a certain Company, ordered by date ascending}
+\textbf{SQL Query searching the database to display Loans taken out by a certain Company, ordered by date ascending}
 
 \begin{sql}
     SELECT
