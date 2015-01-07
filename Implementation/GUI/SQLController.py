@@ -26,7 +26,6 @@ class SQLConnection():
         self.db = QSqlDatabase.addDatabase("QSQLITE")
         self.db.setDatabaseName(self.path )
         opened_ok = self.db.open()
-        print(opened_ok)
         return opened_ok
 
     def close_database(self):
@@ -68,8 +67,8 @@ class SQLConnection():
         add_item = QSqlQuery(self.db)
 
         add_item.prepare("""INSERT INTO Item(ItemName,ItemValue,LoanRate,
-ItemClass,FuseRating,ItemTypeID,LocationID) VALUES(:ItemName,:ItemValue,
-:LoanRate,:ItemClass,:FuseRating,:ItemTypeID,:LocationID,)""")
+        ItemClass,FuseRating,ItemTypeID,LocationID) VALUES(:ItemName,:ItemValue,
+        :LoanRate,:ItemClass,:FuseRating,:ItemTypeID,:LocationID)""")
 
         add_item.bindValue(":ItemName",values["ItemName"])
         add_item.bindValue(":ItemValue",values["ItemValue"])
@@ -80,7 +79,7 @@ ItemClass,FuseRating,ItemTypeID,LocationID) VALUES(:ItemName,:ItemValue,
         add_item.bindValue(":LocationID",values["LocationID"])
 
         success = add_item.exec_()
-
+        print(add_item.lastError().text())
         if success:
             return True
         else:
@@ -91,8 +90,8 @@ ItemClass,FuseRating,ItemTypeID,LocationID) VALUES(:ItemName,:ItemValue,
         query = QSqlQuery(self.db)
         
         query.prepare("""INSERT INTO Customer(Forename,Surname,Company,
-Street,Town,PostCode,Mobile,Landline,Email) VALUES(:Forename,:Surname,
-:Company,:Street,:Town,:PostCode,:Mobile,:Landline,:Email)""")
+        Street,Town,PostCode,Mobile,Landline,Email) VALUES(:Forename,:Surname,
+        :Company,:Street,:Town,:PostCode,:Mobile,:Landline,:Email)""")
 
         query.bindValue(":Forename",values["Title"])
         query.bindValue(":Surname",values["FirstName"])

@@ -86,8 +86,7 @@ class NewItemWidget(QWidget):
 
         self.cancel_button = QPushButton("Cancel")
         self.confirm_button = QPushButton("Enter")
-        self.cancel_button.setAutoDefault(False)
-        self.confirm_button.setAutoDefault(True)
+        
         self.confirm_button.setShortcut("Enter")
 
         self.buttons_layout = QHBoxLayout()
@@ -99,6 +98,9 @@ class NewItemWidget(QWidget):
 
         self.item_layout.addWidget(self.buttons_widget)
 
+        self.cancel_button.setAutoDefault(False)
+        self.confirm_button.setAutoDefault(True)
+    
     def enable_edit_new_item(self):
         self.item_name_line_edit.setEnabled(True)
         self.item_value_line_edit.setEnabled(True)

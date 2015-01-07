@@ -27,6 +27,7 @@ from PyQt4.QtGui import *
 import sys
 import pdb
 import re
+import time
 
 class C3MediaDBMS(QMainWindow):
     """docstring for C3MediaDBMS"""
@@ -34,7 +35,8 @@ class C3MediaDBMS(QMainWindow):
         super().__init__()
 
         self.setWindowTitle("C3 Media Database Management Systems")
-        self.resize(800,500)
+        self.resize(0,500)
+        self.move(536,250)
         #self.icon = QIcon(QPixmap("./icon.png"))
         #self.setWindowIcon(self.icon)
 
@@ -55,8 +57,6 @@ class C3MediaDBMS(QMainWindow):
 
         #Add the Menu Bar and Main Settings Etc...
         self.settings()
-
-        
 
         self.create_start_screen()
         self.create_logged_in_screen()
@@ -107,7 +107,7 @@ class C3MediaDBMS(QMainWindow):
 
         #help actions
         self.help.setEnabled(False)
-        self.about.setEnabled(False)
+        self.about.setEnabled(True)
 
         #database actions
         self.open.setEnabled(True)
@@ -331,15 +331,18 @@ class C3MediaDBMS(QMainWindow):
         if self.connection:
             self.close_connection()
 
-        path = QFileDialog.getOpenFileName()
+        path = QFileDialog.getOpenFileName(caption="Open Database",filter="Database file (*.db)")
         self.connection = SQLConnection(path)
         opened = self.connection.open_database()
 
         if opened:
             self.password = self.connection.getPassword()
-            print(self.password)
-            self.database_login()
+            #self.database_login()
+            self.stacked_layout.setCurrentIndex(1)
+            self.enable_actions()
+            self.statusBar.showMessage("Database opened: {0}".format(path))
 
+            
     def close_connection(self):
         if self.connection:
             closed = self.connection.close_database()
@@ -356,7 +359,7 @@ class C3MediaDBMS(QMainWindow):
 
     def showAboutMessageBox(self):
 
-        aboutText = """This application was built by Joel Butcher using Python3, PyQt4 and uses Sqlite3. \n It is for the media department of Cambridge Community Church \n It was built to enable """
+        aboutText = """This application was built by Joel Butcher using Python3, PyQt4 and uses Sqlite3. \n It is design for use by the media department of Cambridge Community Church to enable the organisation of the equipment owned by the department """
 
         QMessageBox.about(self, "About", aboutText)
 
@@ -371,6 +374,7 @@ class C3MediaDBMS(QMainWindow):
         if self.selected_table == 1:
             if hasattr(self, 'create_new_item'):
                 self.stacked_layout.setCurrentIndex(2)
+                #self.clear_new_item_widgets()
             else:
                 self.create_new_item()
         elif self.selected_table == 2:
@@ -399,6 +403,7 @@ class C3MediaDBMS(QMainWindow):
                            font-size: 16px; background-color: rgba(188, 188, 188, 50);
                            border: 1px solid rgba(188, 188, 188, 250);
                            height:100px;
+                           width:300px;
                            border-radius:5px;}""")
 
         self.open_database_button = QPushButton("Open Database")
@@ -433,6 +438,11 @@ class C3MediaDBMS(QMainWindow):
         self.stacked_layout.addWidget(self.start_widget)
 
     def create_new_item(self):
+        if hasattr(self, 'new_item_right_widget'):
+            self.new_item_right_widget.close()
+            self.new_item_right_widget = QWidget()
+            self.new_item_right_widget.setFixedWidth(300)
+
         self.new_item_right_widget = QWidget()
 
         self.new_item_widget = NewItemWidget()
@@ -454,6 +464,14 @@ class C3MediaDBMS(QMainWindow):
         self.create_new_item_widget.setLayout(self.create_new_item_layout)
 
         self.stacked_layout.addWidget(self.create_new_item_widget)
+
+    def clear_new_item_widgets(self):
+        #self.new_item_widget.clear_widgets()
+        if hasattr(self, 'new_item_right_widget'):
+            self.new_item_right_widget.close()
+            self.new_item_right_widget = QWidget()
+            self.new_item_right_widget.setFixedWidth(300)
+            self.create_new_item_layout.addWidget(self.new_item_right_widget)
 
     def display_preview_new_item_record(self):
         self.new_item_widget.disable_edit_new_item()
@@ -538,37 +556,41 @@ class C3MediaDBMS(QMainWindow):
 
     def enter_new_item_to_database(self):
         if self.item_type == "Cabling":
-            item_type_id = 1
+            item_type_id = '1'
         elif self.item_type == "Storage/Hardware":
-            item_type_id = 2
+            item_type_id = '2'
         elif self.item_type == "Lighting":
-            item_type_id = 3
+            item_type_id = '3'
         elif self.item_type == "Power":
-            item_type_id = 4
+            item_type_id = '4'
         elif self.item_type == "Audio":
-            item_type_id = 5
+            item_type_id = '5'
         elif self.item_type == "Visual":
-            item_type_id = 6
+            item_type_id = '6'
         elif self.item_type == "Miscellaneous":
-            item_type_id = 7
+            item_type_id = '7'
         elif self.item_type == "Software":
-            item_type_id = 8
+            item_type_id = '8'
         elif self.item_type == "Staging":
-            item_type_id = 9
+            item_type_id = '9'
         elif self.item_type == "Control Desks":
-            item_type_id = 10
-
-        print(self.item_location)
+            item_type_id = '10'
 
         if self.item_location == "St. Bedes":
-            location_id = 1
+            location_id = '1'
         elif self.item_location == "Alpha Terrace":
-            location_id = 2
+            location_id = '2'
         elif self.item_location == "Cineworld":
-            location_id = 3
+            location_id = '3'
         elif self.item_location == "C3 Centre":
-            location_id = 4
+            location_id = '4'
 
+
+        print(self.item_name)
+        print(self.item_value)
+        print(self.item_loan_rate)
+        print(self.item_class)
+        print(self.fuse_rating)
         print(item_type_id)
         print(location_id)
 
@@ -579,6 +601,8 @@ class C3MediaDBMS(QMainWindow):
                   "FuseRating":self.fuse_rating,
                   "ItemTypeID":item_type_id,
                   "LocationID":location_id}
+
+        print(values["ItemName"])
 
         success = self.connection.addItem(values)
 
@@ -969,7 +993,9 @@ class C3MediaDBMS(QMainWindow):
             self.close_connection()
 
     def logout(self):
+        self.access = False
         self.stacked_layout.setCurrentIndex(0)
+        self.close_connection()
         self.disable_actions()
 
     def change_password_method(self):
@@ -977,6 +1003,8 @@ class C3MediaDBMS(QMainWindow):
         change_password_dialog.exec_()  
 
     def switch_to_new_item_layout(self):
+        if hasattr(self, 'create_new_item'):
+            self.clear_new_item_widgets()
         self.stacked_layout.setCurrentIndex(2)
 
     def switch_to_new_customer_layout(self):
