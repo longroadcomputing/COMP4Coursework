@@ -83,6 +83,12 @@ class NewCustomerWidget(QWidget):
 
         self.new_customer_layout.addWidget(self.customer_buttons_widget)
 
+
+        self.cancel_button.setAutoDefault(False)
+        self.confirm_button.setAutoDefault(True)
+        self.cancel_button.setDefault(False)
+        self.confirm_button.setDefault(True)
+
 def diable_widget(self):
     self.get_forename.setEnabled(False)
     self.get_surname.setEnabled(False)

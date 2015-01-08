@@ -291,6 +291,11 @@ class C3MediaDBMS(QMainWindow):
 
         self.addToolBar(Qt.LeftToolBarArea, self.toolBar)
 
+        #OS X translusency
+        self.toolBar.setStyleSheet('background: transparent')
+        self.toolBar.setAttribute(Qt.WA_TranslucentBackground, True)
+        self.toolBar.setAutoFillBackground(True)
+
         self.setMenuBar(self.menubar)
 
         self.statusBar = QStatusBar()
@@ -373,20 +378,22 @@ class C3MediaDBMS(QMainWindow):
         self.selected_table = self.select_table_dialog_box.selected_button()
         if self.selected_table == 1:
             if hasattr(self, 'create_new_item'):
-                self.stacked_layout.setCurrentIndex(2)
-                #self.clear_new_item_widgets()
+                self.new_item_widget.clear_widgets()
             else:
-                self.create_new_item()
+                self.stacked_layout.setCurrentIndex(3)
         elif self.selected_table == 2:
             if hasattr(self, 'create_new_customer'):
-                self.stacked_layout.setCurrentIndex(3)
+                self.stacked_layout.setCurrentIndex(4)
             else:
                 self.create_new_customer()
         elif self.selected_table == 3:
-            pass
+            if hasattr(self, 'create_new_loan'):
+                self.stacked_layout.setCurrentIndex(5)
+            else:
+                self.create_new_loan()
         elif self.selected_table == 4:
             if hasattr(self, 'create_new_pat_test'):
-                self.stacked_layout.setCurrentIndex(5)
+                self.stacked_layout.setCurrentIndex(6)
             else:
                 self.create_new_pat_test()
 
@@ -465,14 +472,6 @@ class C3MediaDBMS(QMainWindow):
 
         self.stacked_layout.addWidget(self.create_new_item_widget)
 
-    def clear_new_item_widgets(self):
-        #self.new_item_widget.clear_widgets()
-        if hasattr(self, 'new_item_right_widget'):
-            self.new_item_right_widget.close()
-            self.new_item_right_widget = QWidget()
-            self.new_item_right_widget.setFixedWidth(300)
-            self.create_new_item_layout.addWidget(self.new_item_right_widget)
-
     def display_preview_new_item_record(self):
         self.new_item_widget.disable_edit_new_item()
         self.heading = QLabel("New Item Preview")
@@ -493,22 +492,43 @@ class C3MediaDBMS(QMainWindow):
 
         self.item_class_heading = QLabel("Item Class:")
         self.item_class = self.new_item_widget.item_class_drop_down.currentText()
-        self.item_class_widget = QLabel("{0}".format(self.item_class))
+        if self.item_class == 'Please select...':
+            self.display_item_class = ''
+        else:
+            self.display_item_class = self.item_class
+        self.item_class_widget = QLabel("{0}".format(self.display_item_class))
 
         self.fuse_rating_heading = QLabel("Fuse Rating:")
         self.fuse_rating = self.new_item_widget.fuse_rating_drop_down.currentText()
-        self.fuse_rating_widget = QLabel("{0}".format(self.fuse_rating))
+        if self.fuse_rating == 'Please select...':
+            self.display_fuse_rating = ''
+        else:
+            self.display_fuse_rating = self.fuse_rating
+        self.fuse_rating_widget = QLabel("{0}".format(self.display_fuse_rating))
 
         self.item_type_heading = QLabel("Item Type:")
         self.item_type = self.new_item_widget.item_type_drop_down.currentText()
-        self.item_type_widget = QLabel("{0}".format(self.item_type))
+        if self.item_type == 'Please select...':
+            self.display_item_type = ''
+        else:
+            self.display_item_type = self.item_type
+        self.item_type_widget = QLabel("{0}".format(self.display_item_type))
 
         self.item_location_heading = QLabel("Location:")
         self.item_location = self.new_item_widget.location_drop_down.currentText()
-        self.item_location_widget = QLabel("{0}".format(self.item_location))
+        if self.item_location == 'Please select...':
+            self.display_item_location = ''
+        else:
+            self.display_item_location = self.item_location
+        self.item_location_widget = QLabel("{0}".format(self.display_item_location))
 
         self.edit_button = QPushButton("Edit")
         self.preview_confirm_button = QPushButton("Confirm")
+
+        self.edit_button.setAutoDefault(False)
+        self.preview_confirm_button.setAutoDefault(False)
+        self.edit_button.setDefault(False)
+        self.preview_confirm_button.setDefault(True)
 
         self.buttons_layout = QHBoxLayout()
         self.buttons_layout.addWidget(self.edit_button)
@@ -555,60 +575,73 @@ class C3MediaDBMS(QMainWindow):
         self.preview_confirm_button.setEnabled(False)
 
     def enter_new_item_to_database(self):
-        if self.item_type == "Cabling":
-            item_type_id = '1'
-        elif self.item_type == "Storage/Hardware":
-            item_type_id = '2'
-        elif self.item_type == "Lighting":
-            item_type_id = '3'
-        elif self.item_type == "Power":
-            item_type_id = '4'
-        elif self.item_type == "Audio":
-            item_type_id = '5'
-        elif self.item_type == "Visual":
-            item_type_id = '6'
-        elif self.item_type == "Miscellaneous":
-            item_type_id = '7'
-        elif self.item_type == "Software":
-            item_type_id = '8'
-        elif self.item_type == "Staging":
-            item_type_id = '9'
-        elif self.item_type == "Control Desks":
-            item_type_id = '10'
+        if self.item_type == "Please select..." or self.item_location == "Please select..." or self.item_class == "Please select..." or self.fuse_rating == "Please select...":
+            self.error_message_dialog = QMessageBox()
+            self.error_message_dialog.setText("The following error occured: \n" 
+                                            "Invalid data input.")
+            self.error_message_dialog.setDetailedText("Make sure that information is entered into the text boxes displayed. The drop-down menus should NOT have 'Please select...' as an option for data input.")
+            self.error_message_dialog.setIcon(QMessageBox.Warning)
+            self.okay_button = self.error_message_dialog.addButton(self.tr("Okay"), QMessageBox.AcceptRole)
+            self.error_message_dialog.setEscapeButton(self.okay_button)
+            self.error_message_dialog.setDefaultButton(self.okay_button)
+            self.okay_button.clicked.connect(self.edit_new_item)
+            self.error_message_dialog.exec_()
+            pass
+        else:
+            if self.item_type == "Cabling":
+                item_type_id = '2'
+            elif self.item_type == "Storage/Hardware":
+                item_type_id = '3'
+            elif self.item_type == "Lighting":
+                item_type_id = '4'
+            elif self.item_type == "Power":
+                item_type_id = '5'
+            elif self.item_type == "Audio":
+                item_type_id = '6'
+            elif self.item_type == "Visual":
+                item_type_id = '7'
+            elif self.item_type == "Miscellaneous":
+                item_type_id = '8'
+            elif self.item_type == "Software":
+                item_type_id = '9'
+            elif self.item_type == "Staging":
+                item_type_id = '10'
+            elif self.item_type == "Control Desks":
+                item_type_id = '11'
 
-        if self.item_location == "St. Bedes":
-            location_id = '1'
-        elif self.item_location == "Alpha Terrace":
-            location_id = '2'
-        elif self.item_location == "Cineworld":
-            location_id = '3'
-        elif self.item_location == "C3 Centre":
-            location_id = '4'
+            if self.item_location == "St. Bedes":
+                location_id = '2'
+            elif self.item_location == "Alpha Terrace":
+                location_id = '3'
+            elif self.item_location == "Cineworld":
+                location_id = '4'
+            elif self.item_location == "C3 Centre":
+                location_id = '5'
 
 
-        print(self.item_name)
-        print(self.item_value)
-        print(self.item_loan_rate)
-        print(self.item_class)
-        print(self.fuse_rating)
-        print(item_type_id)
-        print(location_id)
+            print(self.item_name)
+            print(self.item_value)
+            print(self.item_loan_rate)
+            print(self.item_class)
+            print(self.fuse_rating)
+            print(item_type_id)
+            print(location_id)
 
-        values = {"ItemName":self.item_name,
-                  "ItemValue":self.item_value,
-                  "LoanRate":self.item_loan_rate,
-                  "ItemClass":self.item_class,
-                  "FuseRating":self.fuse_rating,
-                  "ItemTypeID":item_type_id,
-                  "LocationID":location_id}
+            values = {"ItemName":self.item_name,
+                      "ItemValue":self.item_value,
+                      "LoanRate":self.item_loan_rate,
+                      "ItemClass":self.item_class,
+                      "FuseRating":self.fuse_rating,
+                      "ItemTypeID":item_type_id,
+                      "LocationID":location_id}
 
-        print(values["ItemName"])
+            success = self.connection.addItem(values)
 
-        success = self.connection.addItem(values)
+            if success:
+                self.statusBar.showMessage("Item {0} successfully added to the database".format(values["ItemName"]))
 
-        print(success)
 
-        self.stacked_layout.setCurrentIndex(1)
+            self.stacked_layout.setCurrentIndex(1)
 
     def create_new_loan(self):
         self.new_loan_right_widget = QWidget()
@@ -1004,7 +1037,7 @@ class C3MediaDBMS(QMainWindow):
 
     def switch_to_new_item_layout(self):
         if hasattr(self, 'create_new_item'):
-            self.clear_new_item_widgets()
+            self.new_item_widget.clear_widgets()
         self.stacked_layout.setCurrentIndex(2)
 
     def switch_to_new_customer_layout(self):
