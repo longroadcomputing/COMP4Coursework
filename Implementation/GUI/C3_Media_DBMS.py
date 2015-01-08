@@ -575,11 +575,28 @@ class C3MediaDBMS(QMainWindow):
         self.preview_confirm_button.setEnabled(False)
 
     def enter_new_item_to_database(self):
-        if self.item_type == "Please select..." or self.item_location == "Please select..." or self.item_class == "Please select..." or self.fuse_rating == "Please select...":
+        valid = False
+        try:
+            self.item_value = int(self.item_value)
+            if self.item_value:
+                valid_value = True
+        except ValueError:
+            valid_value = False
+                
+        if self.item_type == "Please select..." or self.item_location == "Please select..." or self.item_class == "Please select..." or self.fuse_rating == "Please select..." or valid_value == False:
             self.error_message_dialog = QMessageBox()
-            self.error_message_dialog.setText("The following error occured: \n" 
-                                            "Invalid data input.")
-            self.error_message_dialog.setDetailedText("Make sure that information is entered into the text boxes displayed. The drop-down menus should NOT have 'Please select...' as an option for data input.")
+            self.error_message_dialog.setFixedWidth(200)
+            self.error_message_dialog.setWindowTitle("Input Error")
+            self.error_message_dialog.setText("Error! Some data entered is invalid \n"
+                                              "\n"
+                                              "Click the 'Show details' button for more information")
+            self.error_message_dialog.setDetailedText("The information entered is invalid \n"
+                                                      "Steps to take: \n"
+                                                      "\n"
+                                                      "    1. Make sure that only an integer is entered \n"
+                                                      "       for the Item Value field. \n"
+                                                      "    2. The drop-down menus should NOT have \n"
+                                                      "       'Please select...' as an option for data input. \n")
             self.error_message_dialog.setIcon(QMessageBox.Warning)
             self.okay_button = self.error_message_dialog.addButton(self.tr("Okay"), QMessageBox.AcceptRole)
             self.error_message_dialog.setEscapeButton(self.okay_button)
@@ -642,6 +659,260 @@ class C3MediaDBMS(QMainWindow):
 
 
             self.stacked_layout.setCurrentIndex(1)
+
+    def create_new_customer(self):
+        if hasattr(self, 'new_customer_right_widget'):
+            self.new_customer_right_widget.close()
+            self.new_customer_right_widget = QWidget()
+            self.new_customer_right_widget.setFixedWidth(300)
+
+            
+        self.new_customer_right_widget = QWidget()
+        
+        self.new_customer_widget = NewCustomerWidget()
+        self.new_customer_widget.setLayout(self.new_customer_widget.new_customer_layout)
+
+        #geometry setting for widgets
+        self.new_customer_right_widget.setFixedWidth(300)
+        self.new_customer_widget.setFixedWidth(300)
+
+        self.new_customer_widget.confirm_button.clicked.connect(self.preview_new_customer_widget)
+        self.new_customer_widget.cancel_button.clicked.connect(self.cancel)
+
+        self.new_customer_widget.get_forename.clear()
+        self.new_customer_widget.get_surname.clear()
+        self.new_customer_widget.get_company.clear()
+        self.new_customer_widget.get_address.clear()
+        self.new_customer_widget.get_town.clear()
+        self.new_customer_widget.get_post_code.clear()
+        self.new_customer_widget.get_mobile.clear()
+        self.new_customer_widget.get_landline.clear()
+        self.new_customer_widget.get_email.clear()
+
+        self.create_new_customer_layout = QHBoxLayout()
+
+        self.create_new_customer_layout.addWidget(self.new_customer_widget)
+        self.create_new_customer_layout.addWidget(self.new_customer_right_widget)
+
+        self.create_new_customer_widget = QWidget()
+        self.create_new_customer_widget.setLayout(self.create_new_customer_layout)
+
+        self.stacked_layout.addWidget(self.create_new_customer_widget)
+
+    def preview_new_customer_widget(self):
+        self.new_customer_widget.disable_widget()
+
+        self.new_customer_heading = QLabel("New Customer Preview")
+        self.new_customer_heading.setAlignment(Qt.AlignCenter)
+        self.new_customer_heading.setStyleSheet("font:18pt; font-weight:bold")
+
+        self.firstname_label = QLabel("FirstName")
+        self.new_firstname = self.new_customer_widget.get_forename.text()
+        self.firstname_widget = QLabel('{0}'.format(self.new_firstname))
+
+        self.lastname_label = QLabel("Lastname")
+        self.new_lastname = self.new_customer_widget.get_surname.text()
+        self.lastname_widget = QLabel('{0}'.format(self.new_lastname))
+
+        self.company_label = QLabel("Company")
+        self.new_company = self.new_customer_widget.get_company.text()
+        self.company_widget = QLabel('{0}'.format(self.new_company))
+
+        self.street_label = QLabel("Street")
+        self.new_street = self.new_customer_widget.get_address.text()
+        self.street_widget = QLabel('{0}'.format(self.new_street))
+
+        self.town_label = QLabel("Town")
+        self.new_town = self.new_customer_widget.get_town.text()
+        self.town_widget = QLabel('{0}'.format(self.new_town))
+
+        self.post_code_label = QLabel("Post-Code")
+        self.new_post_code = self.new_customer_widget.get_post_code.text()
+        self.post_code_widget = QLabel('{0}'.format(self.new_post_code))
+
+        self.mobile_label = QLabel("Mobile")
+        self.new_mobile = self.new_customer_widget.get_mobile.text()
+        self.mobile_widget = QLabel('{0}'.format(self.new_mobile))
+
+        self.landline_label = QLabel("Landline")
+        self.new_landline = self.new_customer_widget.get_landline.text()
+        self.landline_widget = QLabel('{0}'.format(self.new_landline))
+
+        self.email_label = QLabel("Email")
+        self.new_email = self.new_customer_widget.get_email.text()
+        self.email_widget = QLabel('{0}'.format(self.new_email))
+
+        if hasattr(self, 'new_customer_right_widget'):
+            self.new_customer_right_widget.close()
+            self.new_customer_right_widget = QWidget()
+            self.new_customer_right_widget.setFixedWidth(300)
+            self.create_new_customer_layout.addWidget(self.new_customer_right_widget)
+
+        self.new_customer_preview_layout = QVBoxLayout()
+        
+        self.new_customer_preview_layout.addWidget(self.new_customer_heading)
+        self.new_customer_preview_layout.addWidget(self.firstname_label)
+        
+        self.new_customer_preview_layout.addWidget(self.lastname_label)
+        
+        self.new_customer_preview_layout.addWidget(self.company_label)
+
+        self.new_customer_preview_layout.addWidget(self.street_label)
+
+        self.new_customer_preview_layout.addWidget(self.town_label)
+
+        self.new_customer_preview_layout.addWidget(self.post_code_label)
+
+        self.new_customer_preview_layout.addWidget(self.mobile_label)
+
+        self.new_customer_preview_layout.addWidget(self.landline_label)
+
+        self.new_customer_preview_layout.addWidget(self.email_label)
+
+        self.new_customer_right_widget.setLayout(self.new_customer_preview_layout)
+
+    def return_customer(self):
+        self.forename = self.new_customer_widget.get_forename.text()
+        valid_customer = False
+        valid_length = False
+        if len(self.forename) == 0:
+            valid_length = False
+            self.error_dialog = EntryErrorDialog('a valid Forename')
+            self.error_dialog.exec_()
+        elif len(self.forename) > 0 :
+            valid_length = True
+            valid = False
+            for char in self.forename:
+                if char.isdigit() == True:
+                    valid = False
+                else:
+                    valid = True
+            if valid == True and valid_length == True:
+                valid_forename = True
+
+
+        self.surname = self.new_customer_widget.get_surname.text()
+        valid_length = False
+        if len(self.surname) == 0:
+            valid_length = False
+            self.error_dialog = EntryErrorDialog('a valid Surname')
+            self.error_dialog.exec_()
+        elif len(self.surname) > 0 :
+            valid_length = True
+            valid = False
+            for char in self.surname:
+                if char.isdigit() == True:
+                    valid = False
+                else:
+                    valid = True
+            if valid == True and valid_length == True:
+                valid_surname = True
+
+
+        self.company = self.new_customer_widget.get_company.text()
+        valid_length = False
+        if len(self.company) == 0:
+            valid_length = False
+            self.error_dialog = EntryErrorDialog('a valid Company')
+            self.error_dialog.exec_()
+        elif len(self.company) > 0 :
+            valid_length = True
+            valid = False
+            for char in self.company:
+                if char.isdigit() == True:
+                    valid = False
+                else:
+                    valid = True
+            if valid == True and valid_length == True:
+                valid_company = True
+
+
+        self.street = self.new_customer_widget.get_address.text()
+        valid_length = False
+        if len(self.street) > 0:
+            valid_length = True
+            valid_street = True
+                
+
+        self.town = self.new_customer_widget.get_town.text()
+        valid_length = False
+        if len(self.town) == 0:
+            valid_length = False
+            self.error_dialog = EntryErrorDialog('a Town')
+            self.error_dialog.exec_()
+        elif len(self.town) > 0 :
+            valid_length = True
+            valid = False
+            for char in self.town:
+                if char.isdigit() == True:
+                    valid = False
+                else:
+                    valid = True
+            if valid == True and valid_length == True:
+                valid_town = True
+
+
+        self.post_code = self.new_customer_widget.get_post_code.text()
+        valid_length = False
+        length_regex_validation = re.match('[a-zA-Z]{1,2}[0-9]{1,2}([A-Z]|[a-z]|[A-Z][a-z])?\s[0-9][a-zA-Z][a-zA-Z]', self.post_code)
+        if length_regex_validation:
+            valid = True
+        else:
+            valid = False
+        
+        if valid == True:
+            valid_post_code = True
+
+
+        self.mobile = self.new_customer_widget.get_mobile.text()
+        valid_length = False
+        if len(self.mobile) == 11:
+            valid_length = True
+            valid = False
+            no_letters = re.search('^[a-z],[A-z]*$', self.mobile)
+            valid_mobile = re.search('^(07\d{8,12}|447\d{7,11})$', self.mobile)
+            if not no_letters and valid_mobile:
+                valid = True
+            else:
+                valid = False
+        else:
+            valid_length = False
+        if valid_length == True and valid == True:
+            valid_mobile = True
+
+
+        self.landline = self.new_customer_widget.get_landline.text()
+        valid_length = False
+        if len(self.landline) == 11:
+            valid_length = True
+            valid = False
+            for char in self.landline:
+                no_letters = re.search('^[a-z],[A-z]*$',self.landline)
+                valid_landline_number = re.search('^\s*\(?(020[78]?\)? ?[1-9][0-9]{2,3} ?[0-9]{4})$|^(0[1-8][0-9]{3}\)? ?[1-9][0-9]{2} ?[0-9]{3})\s*$', self.landline)
+                if not no_letters and valid_landline_number:
+                    valid = True
+                else:
+                    valid = False
+        else:
+            valid_length = False
+        if valid_length == True and valid == True:
+            valid_landline = True
+
+
+        self.email = self.new_customer_widget.get_email.text()
+        valid_length = False
+        if len(self.email) > 0:
+            valid_length = True
+            valid = False
+            valid_email_type = re.match("^[a-zA-Z0-9._%-+]+@[a-zA-Z0-9._%-]+.[a-z]{2,3}(\.[a-z]{2,3})$", self.email)
+            if valid_email_type:
+                valid = True
+            else:
+                valid = False
+        else:
+            valid_length = False
+        if valid_length == True and valid == True:
+            valid_email = True
 
     def create_new_loan(self):
         self.new_loan_right_widget = QWidget()
@@ -717,295 +988,10 @@ class C3MediaDBMS(QMainWindow):
         month = int(month)
         day = int(day)
         self.date = ("{0}/{1}/{2}".format(day,month,year))
-        self.statusBar.showMessage(self.date)
+        self.date_confirmation_dialog = QMessage()
+        
         self.stacked_layout.setCurrentIndex(0)
 
-    def create_new_customer(self):
-        self.new_customer_right_widget = QWidget()
-        self.new_customer_widget = NewCustomerWidget()
-        self.new_customer_right_widget.setFixedWidth(300)
-        self.new_customer_widget.setFixedWidth(300)
-
-        self.new_customer_widget.get_forename.clear()
-        self.new_customer_widget.get_surname.clear()
-        self.new_customer_widget.get_company.clear()
-        self.new_customer_widget.get_address.clear()
-        self.new_customer_widget.get_town.clear()
-        self.new_customer_widget.get_post_code.clear()
-        self.new_customer_widget.get_mobile.clear()
-        self.new_customer_widget.get_landline.clear()
-        self.new_customer_widget.get_email.clear()
-        self.new_customer_widget.setLayout(self.new_customer_widget.new_customer_layout)
-
-        self.new_customer_widget.setFixedWidth(300)
-        self.new_customer_right_widget.setFixedWidth(300)
-
-        self.create_new_customer_layout = QHBoxLayout()
-
-        self.create_new_customer_layout.addWidget(self.new_customer_widget)
-        self.create_new_customer_layout.addWidget(self.new_customer_right_widget)
-
-        self.new_customer_widget.confirm_button.clicked.connect(self.preview_new_customer_widget)
-        self.new_customer_widget.cancel_button.clicked.connect(self.cancel)
-
-        self.stacked_layout.addWidget(self.new_customer_widget)
-
-    def preview_new_customer_widget(self):
-        self.new_customer_widget.diable_widget()
-
-        self.new_customer_heading = QLabel("New Customer Preview")
-        self.new_customer_heading.setAlignment(Qt.AlignCenter)
-        self.new_customer_heading.setStyleSheet("font:18pt; font-weight:bold")
-
-        self.firstname_label = QLabel("FirstName")
-        self.new_firstname = self.new_customer_widget.get_forename.text()
-        self.firstname_widget = QLabel()
-
-        self.lastname_label = QLabel("Lastname")
-        self.new_lastname = self.new_customer_widget.get_surname.text()
-        self.lastname_widget = QLabel()
-
-        self.company_label = QLabel("Company")
-        self.new_company = self.new_customer_widget.get_company.text()
-        self.company_widget = QLabel()
-
-        self.street_label = QLabel("Street")
-        self.new_street = self.new_customer_widget.get_address.text()
-        self.street_widget = QLabel()
-
-        self.town_label = QLabel("Town")
-        self.new_town = self.new_customer_widget.get_town.text()
-        self.town_widget = QLabel()
-
-        self.post_code_label = QLabel("Post-Code")
-        self.new_post_code = self.new_customer_widget.get_post_code.text()
-        self.post_code_widget = QLabel()
-
-        self.mobile_label = QLabel("Mobile")
-        self.new_mobile = self.new_customer_widget.get_mobile.text()
-        self.mobile_widget = QLabel()
-
-        self.laneline_label = QLabel("Landline")
-        self.new_landline = self.new_customer_widget.get_landline.text()
-        self.lanline_widget = QLabel()
-
-        self.email_label = QLabel("Email")
-        self.new_email = self.new_customer_widget.get_email.text()
-        self.email_widget = QLabel()
-
-        if hasattr(self, 'new_item_right_widget'):
-            self.new_customer_right_widget.close()
-            self.new_customer_right_widget = QWidget()
-            self.new_customer_right_widget.setFixedWidth(300)
-            self.create_new_customer.addWidget(self.new_customer_right_widget)
-
-        self.new_customer_preview_layout = QVBoxLayout()
-        self.new_customer_preview_layout.addWidget(self.new_customer_heading)
-
-        self.new_customer_right_widget.setLayout(self.new_customer_preview_layout)
-
-
-
-    def validate_customer(self):
-        valid_customer = self.return_customer()
-        if valid_customer == True:
-            pass
-        else:
-            self.new_customer_widget.enable_widget()
-
-
-
-
-    def return_customer(self):
-        valid_customer = False
-        self.forename = self.new_customer_widget.get_forename.text()
-        valid_length = False
-        if len(self.forename) == 0:
-            valid_length = False
-            self.error_dialog = EntryErrorDialog('a valid Forename')
-            self.error_dialog.exec_()
-        elif len(self.forename) > 0 :
-            valid_length = True
-            valid = False
-            for char in self.forename:
-                if char.isdigit() == True:
-                    valid = False
-                else:
-                    valid = True
-            if valid == False:
-                self.error_dialog = EntryErrorDialog('only letters')
-                self.error_dialog.exec_()
-                valid_forename = False
-            elif valid == True and valid_length == True:
-                valid_forename = True
-                print("Forename: {0}".format(self.forename))
-
-
-        self.surname = self.new_customer_widget.get_surname.text()
-        valid_length = False
-        if len(self.surname) == 0:
-            valid_length = False
-            self.error_dialog = EntryErrorDialog('a valid Surname')
-            self.error_dialog.exec_()
-        elif len(self.surname) > 0 :
-            valid_length = True
-            valid = False
-            for char in self.surname:
-                if char.isdigit() == True:
-                    valid = False
-                else:
-                    valid = True
-            if valid == False:
-                self.error_dialog = EntryErrorDialog('only letters')
-                self.error_dialog.exec_()
-                valid_surname = False
-            elif valid == True and valid_length == True:
-                valid_surname = True
-                print("Surname: {0}".format(self.surname))
-
-
-        self.company = self.new_customer_widget.get_company.text()
-        valid_length = False
-        if len(self.company) == 0:
-            valid_length = False
-            self.error_dialog = EntryErrorDialog('a valid Company')
-            self.error_dialog.exec_()
-        elif len(self.company) > 0 :
-            valid_length = True
-            valid = False
-            for char in self.company:
-                if char.isdigit() == True:
-                    valid = False
-                else:
-                    valid = True
-            if valid == False:
-                self.error_dialog = EntryErrorDialog('only letters')
-                self.error_dialog.exec_()
-                valid_company = False
-            elif valid == True and valid_length == True:
-                valid_company = True
-                print("Company: {0}".format(self.company))
-
-
-        self.street = self.new_customer_widget.get_address.text()
-        valid_length = False
-        if len(self.street) > 0:
-            valid_length = True
-            valid_street = True
-            print("Address: {0}".format(self.street))
-        else:
-            valid_length = False
-            self.error_dialog = EntryErrorDialog('a valid Address')
-            self.error_dialog.exec_()
-                
-
-        self.town = self.new_customer_widget.get_town.text()
-        valid_length = False
-        if len(self.town) == 0:
-            valid_length = False
-            self.error_dialog = EntryErrorDialog('a Town')
-            self.error_dialog.exec_()
-        elif len(self.town) > 0 :
-            valid_length = True
-            valid = False
-            for char in self.town:
-                if char.isdigit() == True:
-                    valid = False
-                else:
-                    valid = True
-            if valid == False:
-                self.error_dialog = EntryErrorDialog('only letters')
-                self.error_dialog.exec_()
-                valid_town = False
-            elif valid == True and valid_length == True:
-                valid_town = True
-                print("Town: {0}".format(self.town))
-
-
-        self.post_code = self.new_customer_widget.get_post_code.text()
-        valid_length = False
-        length_regex_validation = re.match('[a-zA-Z]{1,2}[0-9]{1,2}([A-Z]|[a-z]|[A-Z][a-z])?\s[0-9][a-zA-Z][a-zA-Z]', self.post_code)
-        if length_regex_validation:
-            valid = True
-        else:
-            valid = False
-        
-        if valid == True:
-            valid_post_code = True
-            print("Post-Code: {0}".format(self.post_code))
-        else:
-            self.error_dialog = EntryErrorDialog('a valid Post-Code')
-            self.error_dialog.exec_()
-            valid_post_code = False
-
-
-        self.mobile = self.new_customer_widget.get_mobile.text()
-        valid_length = False
-        if len(self.mobile) == 11:
-            valid_length = True
-            valid = False
-            no_letters = re.search('^[a-z],[A-z]*$', self.mobile)
-            valid_mobile = re.search('^(07\d{8,12}|447\d{7,11})$', self.mobile)
-            if not no_letters and valid_mobile:
-                valid = True
-            else:
-                valid = False
-        else:
-            valid_length = False
-        if valid_length == True and valid == True:
-            valid_mobile = True
-            print("Mobile: {0}".format(self.mobile))
-        else:
-            self.error_dialog = EntryErrorDialog('a valid Mobile Number')
-            self.error_dialog.exec_()
-            valid_mobile = False
-
-
-        self.landline = self.new_customer_widget.get_landline.text()
-        valid_length = False
-        if len(self.landline) == 11:
-            valid_length = True
-            valid = False
-            for char in self.landline:
-                no_letters = re.search('^[a-z],[A-z]*$',self.landline)
-                valid_landline_number = re.search('^\s*\(?(020[78]?\)? ?[1-9][0-9]{2,3} ?[0-9]{4})$|^(0[1-8][0-9]{3}\)? ?[1-9][0-9]{2} ?[0-9]{3})\s*$', self.landline)
-                if not no_letters and valid_landline_number:
-                    valid = True
-                else:
-                    valid = False
-        else:
-            valid_length = False
-        if valid_length == True and valid == True:
-            valid_landline = True
-            print("Landline: {0}".format(self.landline))
-        else:
-            self.error_dialog = EntryErrorDialog('a valid Landline Number')
-            self.error_dialog.exec_()
-            valid_landline = False
-
-
-        self.email = self.new_customer_widget.get_email.text()
-        valid_length = False
-        if len(self.email) > 0:
-            valid_length = True
-            valid = False
-            valid_email_type = re.match("^[a-zA-Z0-9._%-+]+@[a-zA-Z0-9._%-]+.[a-z]{2,3}(\.[a-z]{2,3})$", self.email)
-            if valid_email_type:
-                valid = True
-            else:
-                valid = False
-        else:
-            valid_length = False
-        if valid_length == True and valid == True:
-            valid_email = True
-            print("Email: {0}".format(self.email))
-            if valid_forename == True and valid_surname == True and valid_company == True and valid_street == True and valid_town == True and valid_post_code == True and valid_mobile == True and valid_landline == True and valid_email == True:
-                valid_customer = True
-                print(valid_customer)
-        else:
-            self.error_dialog = EntryErrorDialog('a valid Email Address')
-            self.error_dialog.exec_()
-            valid_email = False
         
     def database_login(self):
         while not self.access:

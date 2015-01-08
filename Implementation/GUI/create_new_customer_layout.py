@@ -89,31 +89,34 @@ class NewCustomerWidget(QWidget):
         self.cancel_button.setDefault(False)
         self.confirm_button.setDefault(True)
 
-def diable_widget(self):
-    self.get_forename.setEnabled(False)
-    self.get_surname.setEnabled(False)
-    self.get_company.setEnabled(False)
-    self.get_address.setEnabled(False)
-    self.get_town.setEnabled(False)
-    self.get_post_code.setEnabled(False)
-    self.get_mobile.setEnabled(False)
-    self.get_landline.setEnabled(False)
-    self.get_email.setEnabled(False)
-    self.cancel_button.setEnabled(False)
-    self.confirm_button.setEnabled(False)
+    def disable_widget(self):
+        self.get_forename.setEnabled(False)
+        self.get_surname.setEnabled(False)
+        self.get_company.setEnabled(False)
+        self.get_address.setEnabled(False)
+        self.get_town.setEnabled(False)
+        self.get_post_code.setEnabled(False)
+        self.get_mobile.setEnabled(False)
+        self.get_landline.setEnabled(False)
+        self.get_email.setEnabled(False)
+        self.cancel_button.setEnabled(False)
+        self.confirm_button.setEnabled(False)
 
 
-def enable_widget(self):
-    self.get_forename.setEnabled(True)
-    self.get_surname.setEnabled(True)
-    self.get_company.setEnabled(True)
-    self.get_address.setEnabled(True)
-    self.get_town.setEnabled(True)
-    self.get_post_code.setEnabled(True)
-    self.get_mobile.setEnabled(True)
-    self.get_landline.setEnabled(True)
-    self.get_email.setEnabled(True)
-    self.cancel_button.setEnabled(True)
-    self.confirm_button.setEnabled(True)
+    def enable_widget(self):
+        self.get_forename.setEnabled(True)
+        self.get_surname.setEnabled(True)
+        self.get_company.setEnabled(True)
+        self.get_address.setEnabled(True)
+        self.get_town.setEnabled(True)
+        self.get_post_code.setEnabled(True)
+        self.get_mobile.setEnabled(True)
+        self.get_landline.setEnabled(True)
+        self.get_email.setEnabled(True)
+        self.cancel_button.setEnabled(True)
+        self.confirm_button.setEnabled(True)
+
+    def clear_widgets(self):
+        pass
 
 
