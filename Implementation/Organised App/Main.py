@@ -23,6 +23,7 @@ class MainWindow(QMainWindow):
 		self.setWindowTitle("C3 Media Database Management Systems")
 		self.resize(0,500)
 		self.move(536,250)
+
 		#self.icon = QIcon(QPixmap("./icon.png"))
 		#self.setWindowIcon(self.icon)
 
@@ -345,7 +346,8 @@ class MainWindow(QMainWindow):
 		self.stacked_layout.addWidget(self.database_widget)
 
 	def loggedInWidget(self):
-		self.widget = QWidget()
+		self.loggedInLayout = loggedInWidget(self)
+		self.loggedInLayout.setLayout(self.loggedInLayout.mainLayout)
 		self.stacked_layout.addWidget(self.widget)
 
 	def switchToLoggedIn(self):
@@ -423,7 +425,7 @@ class MainWindow(QMainWindow):
 	def closeEvent(self, event):
 		self.stacked_layout.setCurrentIndex(1)
 		if self.access == False:
-			self.close_connection()
+			self.close_database()
 
 	def logout(self):
 		self.access = False
@@ -431,7 +433,24 @@ class MainWindow(QMainWindow):
 		self.close_connection()
 		self.disable_actions()
 
-
+def showSplash():
+	
+	splash_pix = QPixmap('splash.png')
+	splash = QSplashScreen(splash_pix, Qt.WindowStaysOnTopHint)
+	progressBar = QProgressBar(splash)
+	progressBar.setTextVisible(True)
+	progressBar.setAlignment(Qt.AlignHCenter)
+	progressBar.setAlignment(Qt.AlignBottom)
+	splash.setMask(splash_pix.mask())
+	splash.show()
+	for i in range(0,100):
+		progressBar.setValue(i)
+		t = time.time()
+		while time.time() < t + 0.1:
+			app.processEvents()
+	app.processEvents()
+	time.sleep(2)
+	splash.finish(splash)
 
 if __name__ == "__main__":
 	app = QApplication(sys.argv)

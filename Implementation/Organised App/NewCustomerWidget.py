@@ -31,8 +31,6 @@ class newCustomerWidget(QWidget):
 		self.mainLayout = QHBoxLayout()
 		self.mainLayout.addWidget(self.leftWidget)
 		self.mainLayout.addWidget(self.rightWidget)
-
-		self.mainWidget = QWidget()
 		
 
 		self.setStyleSheet("QWidget[addCustomerClass=True]{padding:100px;}")
