@@ -13,6 +13,9 @@ from NewLoanWidget import *
 from NewPatTestWidget import *
 
 from create_login_dialog import *
+from login_error_dialog import *
+from change_password_dialog import *
+from password_reset import *
 
 
 class MainWindow(QMainWindow):
@@ -430,6 +433,10 @@ class MainWindow(QMainWindow):
 		self.stacked_layout.setCurrentIndex(0)
 		self.close_connection()
 		self.disable_actions()
+
+	def change_password_method(self):
+		change_password_dialog = ChangePasswordDialog(self.password)
+		change_password_dialog.exec_() 
 
 
 
