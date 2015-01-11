@@ -8,5 +8,15 @@ class NewLoanWidget(QWidget):
 	def __init__(self):
 		super().__init__()
 
-		self.select_customer_label = QLabel("Select Customer:")
-		self.select_customer_drop_down = QComboBox()
+		self.setProperty("newLoanClass", "True")
+
+		self.parent = parent
+
+		self.setFixedWidth(800)
+
+		self.leftWidget = QWidget()
+
+		self.setLayout(self.mainLayout)
+
+		self.setStyleSheet("QWidget[newLoanClass=True]{padding:100px;}")
+

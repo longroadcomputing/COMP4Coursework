@@ -21,8 +21,6 @@ class newCustomerWidget(QWidget):
 		self.leftWidget = QWidget()
 		self.rightWidget = QWidget()
 
-		self.leftWidget.setFixedWidth(300)
-		self.rightWidget.setFixedWidth(300)
 
 		self.leftLayout = self.newCustomerLayout()
 
@@ -42,7 +40,7 @@ class newCustomerWidget(QWidget):
 		return True
 
 	def validateTitle(self):
-		text = self.title.currentText()
+		text = self.customerTitle.currentText()
 
 		if text == "Please select...":
 			return False
@@ -78,12 +76,8 @@ class newCustomerWidget(QWidget):
 		text = self.customerCompany.text()
 		length = len(text)
 
-		if length > 2 or text == '-':
-			self.customerCompany.setStyleSheet("background-color:#c4df9b;")
+		if text == '-' or text =='':
 			return True
-		else:
-			self.customerCompany.setStyleSheet("background-color:#f6989d;")
-			return False
 
 	def validateStreet(self):
 
@@ -123,7 +117,7 @@ class newCustomerWidget(QWidget):
 		
 		text = self.customerPostCode.text()
 
-		postCodeRegEx = re.compile("[A-Z]{1,2}[0-9][0-9A-Z]?\s?[0-9][A-Z]{2}")
+		postCodeRegEx = re.compile("^[A-Z]{1,2}[0-9][0-9A-Z]?\s?[0-9][A-Z]{2}$")
 
 		match = postCodeRegEx.match(text.upper())
 
@@ -139,17 +133,17 @@ class newCustomerWidget(QWidget):
 		length = len(text)
 
 		no_letters = re.search('^[a-z],[A-z]*$', text)
-		valid_mobile = re.search('^(07\d{8,12}|447\d{7,11})$', text)
+		valid_mobile = re.search('^(((\+44\s?\d{4}|\(?0\d{4}\)?)\s?\d{3}\s?\d{3})|((\+44\s?\d{3}|\(?0\d{3}\)?)\s?\d{3}\s?\d{4})|((\+44\s?\d{2}|\(?0\d{2}\)?)\s?\d{4}\s?\d{4}))(\s?\#(\d{4}|\d{3}))?$', text)
 		if not no_letters and valid_mobile:
 			valid = True
 		else:
 			valid = False
 
 		if length >= 11 and valid == True:
-			self.customerLandline.setStyleSheet("background-color:#c4df9b;")
+			self.customerMobile.setStyleSheet("background-color:#c4df9b;")
 			return True
 		else:
-			self.customerLandline.setStyleSheet("background-color:#f6989d;")
+			self.customerMobile.setStyleSheet("background-color:#f6989d;")
 			return False
 
 
@@ -158,7 +152,7 @@ class newCustomerWidget(QWidget):
 		length = len(text)
 
 		no_letters = re.search('^[a-z],[A-z]*$', text)
-		valid_landline_number = re.search('^\s*\(?(020[78]?\)? ?[1-9][0-9]{2,3} ?[0-9]{4})$|^(0[1-8][0-9]{3}\)? ?[1-9][0-9]{2} ?[0-9]{3})\s*$', text)
+		valid_landline_number = re.search('^((\(?0\d{4}\)?\s?\d{3}\s?\d{3})|(\(?0\d{3}\)?\s?\d{3}\s?\d{4})|(\(?0\d{2}\)?\s?\d{4}\s?\d{4}))(\s?\#(\d{4}|\d{3}))?$', text)
 		if not no_letters and valid_landline_number:
 			valid = True
 		else:
@@ -193,6 +187,7 @@ class newCustomerWidget(QWidget):
 		self.customerCompany.clear()
 		self.customerStreet.clear()
 		self.customerTown.clear()
+		self.customerCounty.setCurrentIndex(0)
 		self.customerPostCode.clear()
 		self.customerMobile.clear()
 		self.customerLandline.clear()
@@ -209,15 +204,20 @@ class newCustomerWidget(QWidget):
 		self.customerEmail.setStyleSheet("background-color:#FFF;")
 		
 
-	def addcustomerToDatabase(self):
+	def addCustomerToDatabase(self):
 
 		county = str(self.customerCounty.currentText())
 		title = str(self.customerTitle.currentText())
 
+		if self.customerCompany.text() == "":
+			self.customerCompany == "-"
+		else:
+			self.customerCompany == self.customerCompany.text()
+
 		values = { "Title": title,
-				   "Firstname": self.customerFirstName.text(),
-				  "Surname": self.customerSurname.text(),
-				  "Company": self.customerCompany(),
+				   "FirstName": self.customerFirstName.text(),
+				  "LastName": self.customerSurname.text(),
+				  "Company": self.customerCompany,
 				  "Street": self.customerStreet.text(),
 				  "Town": self.customerTown.text(),
 				  "County": county,
@@ -226,102 +226,82 @@ class newCustomerWidget(QWidget):
 				  "Landline": self.customerLandline.text(),
 				  "Email": self.customerEmail.text()}
 
-		customerAdded = self.connection.addCustomer(values)
+		customerAdded = self.connection.addCustomer(values, self)
 
 		if customerAdded:
-
+			self.parent.statusBar.showMessage("Record for {0} added to database".format(values["FirstName"]))
 			self.clearForm()
-			self.parent.switchTocustomersMenu()
-			
-			infoText = """ The New customer has been added to the database!"""
-			QMessageBox.information(self, "customer Added", infoText)
-			
+			self.parent.switchToMainMenu()
 		else:
-			infoText = """ The New customer was not added to the database successfully! """
-
-			QMessageBox.critical(self, "customer Not Added", infoText)
+			self.editEntry()
 			
 	
 	def validateAddcustomerForm(self):
 
-		error_values = ["title.","forename.", "surname.", "company.", "street.", "town.", "post-code.", "mobile.", "landline.", "email."]
+		checkTitle = self.validateTitle()
+		checkFirstName = self.validateFirstName()
+		checkSurname = self.validateSurname()
+		checkCompany = self.validateCompany()
+		checkStreet = self.validateStreet()
+		checkTown = self.validateTown()
+		checkCounty = self.validateCounty()
+		checkPostCode = self.validatePostCode()
+		checkMobile = self.validateMobile()
+		checkLandline = self.validateUKLandline()
+		checkEmail = self.validateEmail()
 
-		self.checkTitle = self.validateTitle()
-		self.checkFirstName = self.validateFirstName()
-		self.checkSurname = self.validateSurname()
-		self.checkCompany = self.validateCompany()
-		self.checkStreet = self.validateStreet()
-		self.checkTown = self.validateTown()
-		self.checkCounty = self.validateCounty()
-		self.checkPostCode = self.validatePostCode()
-		self.checkMobile = self.validateMobile()
-		self.checkLandline = self.validateUKLandline()
-		self.checkEmail = self.validateEmail()
+		error_count = 0
 
-		if checkTitle == False or checkFirstName == False or checkSurname == False or checkCompany == False or checkStreet == False or checkTown == False or checkCounty == False or checkPostCode == False or checkMobile == False or checkLandline == False or checkEmail == False:
+		if checkTitle == False:
+			error_count += 1
+		if checkFirstName == False:
+			error_count += 1
+		if checkSurname == False:
+			error_count += 1
+		if checkCompany == False:
+			error_count += 1
+		if checkStreet == False:
+			error_count += 1
+		if checkTown == False:
+			error_count += 1
+		if checkCounty == False:
+			error_count += 1
+		if checkPostCode == False:
+			error_count += 1
+		if checkMobile == False:
+			error_count += 1
+		if checkLandline == False:
+			error_count += 1
+		if checkEmail == False:
+			error_count += 1
 
-			errrors_list = []
-
-			if checkTitle == False and checkFirstName == False and checkSurname == False and checkCompany == False and checkStreet == False and checkTown == False and checkCounty == False and checkPostCode == False and checkMobile == False and checkLandline == False and checkEmail == False:
-				for error in error_values:
-					errrors_list.append(error)
-
-			elif checkTitle == False:
-				error = 'title.'
-				errrors_list.append(error)
-			elif checkFirstName == False:
-				error = 'forename.'
-				errrors_list.append(error)
-			elif checkSurname == False:
-				error = 'surname.'
-				errrors_list.append(error)
-			elif checkCompany == False:
-				error = 'company.'
-				errrors_list.append(error)
-			elif checkStreet == False:
-				error = 'street.'
-				errrors_list.append(error)
-			elif checkTown == False:
-				error = 'town.'
-				errrors_list.append(error)
-			elif checkCounty == False:
-				error = 'county.'
-				errrors_list.append(error)
-			elif checkPostCode == False:
-				error = 'post-code.'
-				errrors_list.append(error)
-			elif checkMobile == False:
-				error = 'mobile.'
-				errrors_list.append(error)
-			elif checkLandline == False:
-				error = 'landline.'
-				errrors_list.append(error)
-			elif checkEmail == False:
-				error = 'email.'
-				errrors_list.append(error)
-
+		if error_count > 0:
 			self.error_message_dialog = QMessageBox()
 			self.error_message_dialog.setFixedWidth(200)
 			self.error_message_dialog.setWindowTitle("Input Error")
 			self.error_message_dialog.setText("Error! Some data entered is invalid \n"
 											  "\n"
 											  "Click the 'Show details' button for more information")
-			for error in error_list:
-				self.error_message_dialog.setDetailedText("Please enter a valid {0} \n".format(error))
+			self.error_message_dialog.setDetailedText("The information entered is invalid \n"
+													"Steps to take: \n"
+													"\n"
+													"    1. Make sure that valid post-codes and numbers are \n"
+													"       entered into the required fields. \n"
+													"    2. The drop-down menus should NOT have \n"
+													"       'Please select...' as an option for data input. \n")
 			self.error_message_dialog.setIcon(QMessageBox.Warning)
 			self.okay_button = self.error_message_dialog.addButton(self.tr("Okay"), QMessageBox.AcceptRole)
 			self.error_message_dialog.setEscapeButton(self.okay_button)
 			self.error_message_dialog.setDefaultButton(self.okay_button)
-			self.okay_button.clicked.connect(self.edit_new_item)
+			self.okay_button.clicked.connect(self.editEntry)
 			self.error_message_dialog.exec_()
-		
 		else: 
 			self.addCustomerToDatabase()
-	
+		
 
 	def newCustomerLayout(self):
 
-		self.counties = ['Aberdeenshire', 'Angus', 'Argyll and Bute', 'Ayrshire', 'Ayrshire and Arran',
+		self.counties = ['Please select...','Aberdeenshire', 'Angus', 'Argyll and Bute', 'Ayrshire', 'Ayrshire and Arran',
 						 'Banffshire', 'Bedfordshire', 'Berkshire','Berwickshire', 'Buckinghamshire',
 						 'Caithness', 'Cambridgeshire', 'Ceredigion', 'Cheshire', 'City of Bristol', 'City of Edinburgh',
 						 'City of Glasgow', 'Clwyd', 'Cornwall', 'Cumbria', 'Denbighshire', 'Derbyshire', 'Devon', 'Dorset',
@@ -334,17 +314,19 @@ class newCustomerWidget(QWidget):
 						 'Stirling and Falkirk', 'Suffolk', 'Surrey', 'Sutherland', 'Tweeddale', 'Tyne and Wear', 'Warwickshire', 'West Glamorgan',
 						 'West Lothian', 'West Midlands', 'West Sussex', 'West Yorkshire', 'Western Isles', 'Wiltshire', 'Worcestershire']
 
-		self.customerTitleLabel = QLabel('Title:')
-		self.customerFirstNameLabel = QLabel('First Name:')
-		self.customerSurnameLabel = QLabel('Surname:')
+		self.customerTitleLabel = QLabel('Title:*')
+		self.customerFirstNameLabel = QLabel('First Name:*')
+		self.customerSurnameLabel = QLabel('Surname:*')
 		self.customerCompanyLabel = QLabel('Company:')
-		self.customerStreetLabel = QLabel('Street:')
-		self.customerTownLabel = QLabel('Town/City:')
-		self.customerCountyLabel = QLabel('County:')
-		self.customerPostCodeLabel = QLabel('Post Code:')
-		self.customerMobileLabel = QLabel('Mobile Number:')
-		self.customerLandlineLabel = QLabel('Landline Number:')
-		self.customerEmailLabel = QLabel('Email:')
+		self.customerStreetLabel = QLabel('Street:*')
+		self.customerTownLabel = QLabel('Town/City:*')
+		self.customerCountyLabel = QLabel('County:*')
+		self.customerPostCodeLabel = QLabel('Post Code:*')
+		self.customerMobileLabel = QLabel('Mobile Number:*')
+		self.customerLandlineLabel = QLabel('Landline Number:*')
+		self.customerEmailLabel = QLabel('Email:*')
+		self.smallPrint = QLabel('* required fields.')
+		self.smallPrint.setStyleSheet("font-size:11pt")
 
 		self.customerTitle = QComboBox()
 		self.titles = ["Please select...","Mr","Mrs","Ms","Miss"]
@@ -382,6 +364,7 @@ class newCustomerWidget(QWidget):
 
 
 		self.addcustomerTitleText = QLabel("Add New customer")
+		self.addcustomerTitleText.setAlignment(Qt.AlignCenter)
 		self.shadow = QGraphicsDropShadowEffect()
 		self.shadow.setBlurRadius(5)
 		self.addcustomerTitleText.setGraphicsEffect(self.shadow)
@@ -433,6 +416,7 @@ class newCustomerWidget(QWidget):
 		self.verticalLayout.addWidget(self.addcustomerTitleText)
 		self.verticalLayout.addStretch(1)
 		self.verticalLayout.addWidget(self.gridWidget)
+		self.verticalLayout.addWidget(self.smallPrint)
 
 		self.hBoxL = QHBoxLayout()
 		self.hBoxL.addWidget(self.cancelButton)
@@ -506,6 +490,7 @@ class newCustomerWidget(QWidget):
 
 		#connections
 		self.editButton.clicked.connect(self.editEntry)
+		self.addButton.clicked.connect(self.validateAddcustomerForm)
 
 		self.rightWidget.setLayout(self.verticalLayout)
 

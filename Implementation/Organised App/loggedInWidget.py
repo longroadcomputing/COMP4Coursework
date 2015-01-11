@@ -13,7 +13,7 @@ class loggedInWidget(QWidget):
 
 		self.parent = parent
 
-		self.setFixedWidth(600)
+		self.setFixedWidth(800)
 
 		self.mainLayout = self.layout()
 
@@ -33,8 +33,9 @@ class loggedInWidget(QWidget):
 		self.setStyleSheet("""QPushButton[buttonClass=home] {
 					font-size: 16px; background-color: rgba(188, 188, 188, 50);
 					border: 1px solid rgba(188, 188, 188, 250);
-					height:100px;
-					width:300px;
+					height:50px;
+					width:300px;50px
+					spacing:
 					border-radius:5px;}""")
 
 
@@ -152,6 +153,12 @@ class loggedInWidget(QWidget):
 		
 		self.verticalLayout.addWidget(self.hButtonL)
 		self.verticalLayout.addStretch(1)
+
+		#connections
+		self.newItemButton.clicked.connect(self.parent.switchToNewItem)
+		self.newCustomerButton.clicked.connect(self.parent.switchToNewCustomer)
+		#self.newLoanButton.clicked.connect(self.parent.switchToNewItem)
+		self.newPatTestButton.clicked.connect(self.parent.switchToNewPatTest)
 
 		return self.verticalLayout
 

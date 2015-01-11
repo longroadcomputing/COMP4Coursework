@@ -21,11 +21,11 @@ class MainWindow(QMainWindow):
 		super( ).__init__()
 
 		self.setWindowTitle("C3 Media Database Management Systems")
-		self.resize(0,500)
-		self.move(536,250)
+		self.move(300,250)
+		self.centerOnScreen()
 
-		#self.icon = QIcon(QPixmap("./icon.png"))
-		#self.setWindowIcon(self.icon)
+		self.icon = QIcon(QPixmap("./c3_logo_black.png"))
+		self.setWindowIcon(self.icon)
 
 		#Connection Attribute stores the database connection
 		self.connection = None
@@ -51,17 +51,24 @@ class MainWindow(QMainWindow):
 		self.CreateNewItemWidget()
 		self.CreateNewCustomerWidget()
 		# self.CreateNewLoanWidget()
-		# self.CreateNewPatTestWidget()
+		self.CreateNewPatTestWidget()
 
 		#disable actions
 		self.disable_actions()
 
-		#set Qt signals and connections
+		#set Qt action signals, connections and shortcuts
 		self.connections()
+		self.createActionShortcuts()
 
-	def addConnectionsToWidget(self):
+	def centerOnScreen(self):
+		resolution = QDesktopWidget().screenGeometry()
+		self.move((resolution.width() / 2) - (self.frameSize().width() / 2),
+		(resolution.height() / 2) - (self.frameSize().height() / 2))
+
+
+	def addDbConnectionsToWidgets(self):
 		self.new_item_widget.addConnection(self.connection)
-		# self.new_customer_widget.addConnection(self.connection)
+		self.new_customer_widget.addConnection(self.connection)
 		# self.new_loan_widget.addConnection(self.connection)
 		# self.new_pat_test_widget.addConnection(self.connection)
 
@@ -73,6 +80,7 @@ class MainWindow(QMainWindow):
 		self.Print = QAction("Print", self)
 		self.change_password = QAction("Change Password", self)
 		self.logout_action = QAction("Logout", self)
+		self.close_window = QAction("Close Window", self)
 
 		#edit actions
 		self.cut = QAction("Cut", self)
@@ -113,6 +121,8 @@ class MainWindow(QMainWindow):
 		self.file_menu.addSeparator()
 		self.file_menu.addAction(self.change_password)
 		self.file_menu.addAction(self.logout_action)
+		self.file_menu.addSeparator()
+		self.file_menu.addAction(self.close_window)
 
 
 		#add edit menu and add actions to edit menu
@@ -199,6 +209,8 @@ class MainWindow(QMainWindow):
 		self.open.setShortcut('Ctrl+O')
 		self.new.setShortcut('Ctrl+N')
 		self.Print.setShortcut('Ctrl+P')
+		self.logout_action.setShortcut('Ctrl+Shift+L')
+		self.close_window.setShortcut('Ctrl+W')
 
 		#edit menu shortcuts
 		self.cut.setShortcut('Ctrl+X')
@@ -207,10 +219,31 @@ class MainWindow(QMainWindow):
 		self.select_all.setShortcut('Ctrl+A')
 
 	def connections(self):
-		self.open_database_button.clicked.connect(self.open_database)
-		self.close_application_button.clicked.connect(self.close)
+		#menubar connections
+		self.open.triggered.connect(self.open_database)
+		self.close_window.triggered.connect(self.close)
+
+		#toolbar actions
 		self.add_item.triggered.connect(self.switchToNewItem)
 		self.add_customer.triggered.connect(self.switchToNewCustomer)
+		# self.add_loan.triggered.connect(self.switchToNewLoan)
+		self.add_pat_test.triggered.connect(self.switchToNewPatTest)
+
+		#button connections
+		self.open_database_button.clicked.connect(self.open_database)
+		self.close_application_button.clicked.connect(self.close)
+
+		self.loggedInLayout.logoutButton.clicked.connect(self.close_database)
+
+		self.new_item_widget.cancelButton.clicked.connect(self.switchToMainMenu)
+		self.new_customer_widget.cancelButton.clicked.connect(self.switchToMainMenu)
+		# self.new_loan_widget.cancelButton.clicked.connect(self.switchToMainMenu)
+		self.new_pat_test_widget.cancelButton.clicked.connect(self.switchToMainMenu)
+
+		#login connections
+		# self.login_dialog.login_button.clicked.connect(self.database_login)
+		# self.login_dialog.password_entry.returnPressed.connect(self.database_login)
+		self.logout_action.triggered.connect(self.close_database)
 
 	def disable_actions(self):
 		#file actions
@@ -288,6 +321,9 @@ class MainWindow(QMainWindow):
 		self.open.setEnabled(False)
 		self.closeDatabase.setEnabled(True)
 
+		#add connection to widgets
+		self.addDbConnectionsToWidgets()
+
 
 	def open_database(self):
 		if self.connection:
@@ -311,6 +347,7 @@ class MainWindow(QMainWindow):
 			if closed:
 				self.statusBar.showMessage("Database has been closed.")
 				self.disable_actions()
+				#self.logout
 				self.stacked_layout.setCurrentIndex(0)
 			else:
 				self.statusBar.showMessage("An error occured!")
@@ -348,9 +385,9 @@ class MainWindow(QMainWindow):
 	def loggedInWidget(self):
 		self.loggedInLayout = loggedInWidget(self)
 		self.loggedInLayout.setLayout(self.loggedInLayout.mainLayout)
-		self.stacked_layout.addWidget(self.widget)
+		self.stacked_layout.addWidget(self.loggedInLayout)
 
-	def switchToLoggedIn(self):
+	def switchToMainMenu(self):
 		self.stacked_layout.setCurrentIndex(1)
 
 	def switchToNewItem(self):
@@ -366,10 +403,10 @@ class MainWindow(QMainWindow):
 	def switchToNewLoan(self):
 		if hasattr(self, 'new_loan_widget'):
 			pass
-		self.stacked_layout.setCurrentIndex(4)
+		self.stacked_layout.setCurrentIndex()
 
 	def switchToNewPatTest(self):
-		self.stacked_layout.setCurrentIndex(5)
+		self.stacked_layout.setCurrentIndex(4)
 
 	def CreateNewItemWidget(self):
 		self.new_item_widget =  NewItemWidget(self)
@@ -377,37 +414,33 @@ class MainWindow(QMainWindow):
 		self.new_item_widget.setLayout(self.new_item_widget.mainLayout)
 		self.stacked_layout.addWidget(self.new_item_widget)
 
-		self.new_item_widget.cancelButton.clicked.connect(self.switchToLoggedIn)
-
 	def CreateNewCustomerWidget(self):
 		self.new_customer_widget = newCustomerWidget(self)
-		self.new_customer_widget.clearForm()
 		self.new_customer_widget.setLayout(self.new_customer_widget.mainLayout)
 		self.stacked_layout.addWidget(self.new_customer_widget)
 
-		self.new_customer_widget.cancelButton.clicked.connect(self.switchToLoggedIn)
 
 	def CreateNewLoanWidget(self):
-		self.new_loan_widget = NewLoanWidget(self)
+		self.new_loan_widget = newLoanWidget(self)
 		self.stacked_layout.addWidget(self.new_loan_widget)
 
 	def CreateNewPatTestWidget(self):
-		self.new_pat_test_widget - NewPatTestWidget(self)
+		self.new_pat_test_widget = newPatTestWidget(self)
+		self.new_pat_test_widget.setLayout(self.new_pat_test_widget.mainLayout)
 		self.stacked_layout.addWidget(self.new_pat_test_widget)
 
 	def showAboutMessageBox(self):
 
-		aboutText = """This application was built by Joel Butcher using Python3, PyQt4 and uses Sqlite3. \n It is design for use by the media department of Cambridge Community Church to enable the organisation of the equipment owned by the department """
+		aboutText = """This application was built by Joel Butcher using Python3, PyQt4 and uses Sqlite3. \n 
+						It is design for use by the media department of Cambridge Community Church \n
+						to enable the organisation of the equipment owned by the department """
 
 		QMessageBox.about(self, "About", aboutText)
 
 	def create_login(self):
-
 		self.login_dialog = LoginDialog()
 		self.login_dialog.exec_()
 
-		self.login_dialog.login_button.clicked.connect(self.database_login)
-		self.login_dialog.password_entry.returnPressed.connect(self.database_login)
 
 	def database_login(self):
 		while not self.access:
@@ -432,6 +465,9 @@ class MainWindow(QMainWindow):
 		self.stacked_layout.setCurrentIndex(0)
 		self.close_connection()
 		self.disable_actions()
+
+	def closeEvent(self, event):
+		self.deleteLater()
 
 def showSplash():
 	
