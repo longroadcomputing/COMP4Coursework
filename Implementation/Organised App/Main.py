@@ -233,8 +233,10 @@ class MainWindow(QMainWindow):
 		#toolbar actions
 		self.add_item.triggered.connect(self.switchToNewItem)
 		self.add_customer.triggered.connect(self.switchToNewCustomer)
-		# self.add_loan.triggered.connect(self.switchToNewLoan)
+		self.add_loan.triggered.connect(self.switchToNewLoan)
 		self.add_pat_test.triggered.connect(self.switchToNewPatTest)
+
+		self.manage_customer.triggered.connect(self.switchToManageCustomers)
 
 		#button connections
 		self.open_database_button.clicked.connect(self.open_database)
@@ -334,7 +336,7 @@ class MainWindow(QMainWindow):
 
 	def open_database(self):
 		if self.connection:
-			self.close_connection()
+			self.close_database()
 
 		path = QFileDialog.getOpenFileName(caption="Open Database",filter="Database file (*.db)")
 		self.connection = SQLConnection(path)
