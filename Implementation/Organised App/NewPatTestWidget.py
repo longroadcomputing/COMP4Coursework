@@ -2,6 +2,7 @@ from PyQt4.QtGui import *
 from PyQt4.QtCore import *
 
 from date_widget import *
+from selectItemDialog import *
 
 import sys
 import time
@@ -20,10 +21,10 @@ class newPatTestWidget(QWidget):
 		self.leftWidget = QWidget()
 
 		self.leftTopWidget = QWidget()
-		self.leftBottomWidget = QWidget()
+		self.leftBottomWidget = QTabWidget()
 
 		self.leftTopWidget.setFixedHeight(200)
-		self.leftBottomWidget.setFixedHeight(150)
+		self.leftBottomWidget.setFixedHeight(200)
 
 		self.leftLayout = QVBoxLayout()
 		self.leftLayout.addWidget(self.leftTopWidget)
@@ -36,6 +37,8 @@ class newPatTestWidget(QWidget):
 		self.leftTopWidget.setLayout(self.leftTopLayout)
 
 		self.rightWidget = QWidget()
+		self.rightWidget.setFixedWidth(300)
+		self.rightWidget.setFixedHeight(600)
 
 
 		self.mainLayout = QHBoxLayout()
@@ -45,7 +48,7 @@ class newPatTestWidget(QWidget):
 		self.setStyleSheet("QWidget[addCustomerClass=True]{padding:100px;}")
 
 	def newPatTestLayout(self):
-		self.newPatTestHeading = QLabel("New PAT Test Series:")
+		self.newPatTestHeading = QLabel("New PAT Test Series")
 		self.newPatTestHeading.setAlignment(Qt.AlignCenter)
 		self.shadow = QGraphicsDropShadowEffect()
 		self.shadow.setBlurRadius(5)
@@ -53,50 +56,52 @@ class newPatTestWidget(QWidget):
 		self.newPatTestHeading.setStyleSheet("font-size:20px")
 
 		self.date_label = QLabel("Please select a date:")
-		self.selection_widget = DateWidget()
 
+		self.datePopup = DateWidget()
 		self.addItemTestButton = QPushButton("+")
 		self.addItemTestButton.setFixedWidth(30)
 		self.addItemTestButton.setFixedHeight(30)
 
 		self.selectionLayout = QHBoxLayout()
-		self.selectionLayout.addWidget(self.selection_widget)
+		self.selectionLayout.addWidget(self.datePopup)
 		self.selectionLayout.addWidget(self.addItemTestButton)
 
-		self.selectionQWidget = QWidget()
-		self.selectionQWidget.setLayout(self.selectionLayout)
+		self.selectionWidget = QWidget()
+		self.selectionWidget.setLayout(self.selectionLayout)
 
-		self.dateLayout = QVBoxLayout()
-		self.dateLayout.addWidget(self.date_label)
-		self.dateLayout.addWidget(self.selectionQWidget)
-
-		self.dateWidget = QWidget()
-		self.dateWidget.setLayout(self.dateLayout)
 
 		self.verticalLayout = QVBoxLayout()
 		self.verticalLayout.addWidget(self.newPatTestHeading)
-		self.verticalLayout.addWidget(self.dateWidget)
+		self.verticalLayout.addWidget(self.date_label)
+		self.verticalLayout.addWidget(self.selectionWidget)
 
 		self.cancelButton = QPushButton("Cancel")
+		self.cancelButton.setShortcut('Esc')
+		self.cancelButton.setAutoDefault(False)
+		self.cancelButton.setDefault(False)
+		
 		self.confirmButton = QPushButton("Confirm")
+		self.confirmButton.setShortcut('Return')
+		self.confirmButton.setAutoDefault(True)
+		self.confirmButton.setDefault(True)
 
 		self.buttonsLayout = QHBoxLayout()
 		self.buttonsLayout.addWidget(self.cancelButton)
 		self.buttonsLayout.addWidget(self.confirmButton)
 
+		self.buttonsWidget = QWidget()
+		self.buttonsWidget.setLayout(self.buttonsLayout)
+
+		self.leftLayout.addWidget(self.buttonsWidget)
+
 
 		#connections
-		self.addItemTestButton.clicked.connect(self.addItemTestWidget)
+		self.cancelButton.clicked.connect(self.parent.switchToMainMenu)
+		self.addItemTestButton.clicked.connect(self.selectItem)
 
 		return self.verticalLayout
 
-	def addItemTestWidget(self):
-		self.tabbedLayout = QTabLayout()
+	def selectItem(self):
+		self.selectItemDialog = selectItemDialog()
 
 		
-
-	def previewPatTestLayout(self):
-		self.leftWidget.setEnabled(False)
-		
-		self.heading = QLabel("Preview PAT Tests")
-		self.heading.setStyleSheet("font-size:20px")

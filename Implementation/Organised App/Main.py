@@ -12,6 +12,9 @@ from NewCustomerWidget import *
 from NewLoanWidget import *
 from NewPatTestWidget import *
 
+from manageItems import *
+from manageCustomer import *
+
 from create_login_dialog import *
 
 
@@ -21,7 +24,8 @@ class MainWindow(QMainWindow):
 		super( ).__init__()
 
 		self.setWindowTitle("C3 Media Database Management Systems")
-		self.move(300,250)
+		self.move(200,250)
+		self.resize(900,800)
 		self.centerOnScreen()
 
 		self.icon = QIcon(QPixmap("./c3_logo_black.png"))
@@ -50,8 +54,9 @@ class MainWindow(QMainWindow):
 		self.loggedInWidget()
 		self.CreateNewItemWidget()
 		self.CreateNewCustomerWidget()
-		# self.CreateNewLoanWidget()
+		self.CreateNewLoanWidget()
 		self.CreateNewPatTestWidget()
+		self.CreateManageCustomersWidget()
 
 		#disable actions
 		self.disable_actions()
@@ -69,8 +74,10 @@ class MainWindow(QMainWindow):
 	def addDbConnectionsToWidgets(self):
 		self.new_item_widget.addConnection(self.connection)
 		self.new_customer_widget.addConnection(self.connection)
-		# self.new_loan_widget.addConnection(self.connection)
-		# self.new_pat_test_widget.addConnection(self.connection)
+		#self.new_loan_widget.addConnection(self.connection)
+		#self.new_pat_test_widget.addConnection(self.connection)
+
+		self.manageCustomers.addConnection(self.connection)
 
 	def settings(self):
 		#file actions
@@ -233,7 +240,7 @@ class MainWindow(QMainWindow):
 		self.open_database_button.clicked.connect(self.open_database)
 		self.close_application_button.clicked.connect(self.close)
 
-		self.loggedInLayout.logoutButton.clicked.connect(self.close_database)
+		self.mainMenu.logoutButton.clicked.connect(self.close_database)
 
 		self.new_item_widget.cancelButton.clicked.connect(self.switchToMainMenu)
 		self.new_customer_widget.cancelButton.clicked.connect(self.switchToMainMenu)
@@ -360,7 +367,7 @@ class MainWindow(QMainWindow):
 					   font-size: 16px; background-color: rgba(188, 188, 188, 50);
 					   border: 1px solid rgba(188, 188, 188, 250);
 					   height:100px;
-					   width:300px;
+					   width:200px;
 					   border-radius:5px;}""")
 
 		self.open_database_button = QPushButton("Open Database")
@@ -383,9 +390,9 @@ class MainWindow(QMainWindow):
 		self.stacked_layout.addWidget(self.database_widget)
 
 	def loggedInWidget(self):
-		self.loggedInLayout = loggedInWidget(self)
-		self.loggedInLayout.setLayout(self.loggedInLayout.mainLayout)
-		self.stacked_layout.addWidget(self.loggedInLayout)
+		self.mainMenu = loggedInWidget(self)
+		self.mainMenu.setLayout(self.mainMenu.mainLayout)
+		self.stacked_layout.addWidget(self.mainMenu)
 
 	def switchToMainMenu(self):
 		self.stacked_layout.setCurrentIndex(1)
@@ -403,31 +410,40 @@ class MainWindow(QMainWindow):
 	def switchToNewLoan(self):
 		if hasattr(self, 'new_loan_widget'):
 			pass
-		self.stacked_layout.setCurrentIndex()
+		self.stacked_layout.setCurrentIndex(4)
 
 	def switchToNewPatTest(self):
-		self.stacked_layout.setCurrentIndex(4)
+		self.stacked_layout.setCurrentIndex(5)
+
+	def switchToManageCustomers(self):
+		self.stacked_layout.setCurrentIndex(6)
 
 	def CreateNewItemWidget(self):
 		self.new_item_widget =  NewItemWidget(self)
-		self.new_item_widget.clearForm()
+		#self.new_item_widget.clearForm()
 		self.new_item_widget.setLayout(self.new_item_widget.mainLayout)
 		self.stacked_layout.addWidget(self.new_item_widget)
 
 	def CreateNewCustomerWidget(self):
 		self.new_customer_widget = newCustomerWidget(self)
+		#self.new_customer_widget.clearForm()
 		self.new_customer_widget.setLayout(self.new_customer_widget.mainLayout)
 		self.stacked_layout.addWidget(self.new_customer_widget)
 
 
 	def CreateNewLoanWidget(self):
 		self.new_loan_widget = newLoanWidget(self)
+		self.new_loan_widget.setLayout(self.new_loan_widget.mainLayout)
 		self.stacked_layout.addWidget(self.new_loan_widget)
 
 	def CreateNewPatTestWidget(self):
 		self.new_pat_test_widget = newPatTestWidget(self)
 		self.new_pat_test_widget.setLayout(self.new_pat_test_widget.mainLayout)
 		self.stacked_layout.addWidget(self.new_pat_test_widget)
+
+	def CreateManageCustomersWidget(self):
+		self.manageCustomers = ManageCustomersWidget(self)
+		self.stacked_layout.addWidget(self.manageCustomers)
 
 	def showAboutMessageBox(self):
 

@@ -13,8 +13,6 @@ class loggedInWidget(QWidget):
 
 		self.parent = parent
 
-		self.setFixedWidth(800)
-
 		self.mainLayout = self.layout()
 
 		self.setLayout(self.mainLayout)
@@ -31,12 +29,11 @@ class loggedInWidget(QWidget):
 		self.mainMenuText.setStyleSheet("font-size:30px;")
 
 		self.setStyleSheet("""QPushButton[buttonClass=home] {
-					font-size: 16px; background-color: rgba(188, 188, 188, 50);
-					border: 1px solid rgba(188, 188, 188, 250);
-					height:50px;
-					width:300px;50px
-					spacing:
-					border-radius:5px;}""")
+					   font-size: 16px; background-color: rgba(188, 188, 188, 50);
+					   border: 1px solid rgba(188, 188, 188, 250);
+					   width:200px;
+					   height:100px:
+					   border-radius:5px;}""")
 
 
 
@@ -128,6 +125,9 @@ class loggedInWidget(QWidget):
 		self.logoutButton = QPushButton("Logout")
 		self.changePasswordButton = QPushButton("Change Password")
 
+		self.logoutButton.setFixedWidth(200)
+		self.changePasswordButton.setFixedWidth(200)
+
 
 		grid = QGridLayout()
 		grid.setSpacing(10)
@@ -157,8 +157,10 @@ class loggedInWidget(QWidget):
 		#connections
 		self.newItemButton.clicked.connect(self.parent.switchToNewItem)
 		self.newCustomerButton.clicked.connect(self.parent.switchToNewCustomer)
-		#self.newLoanButton.clicked.connect(self.parent.switchToNewItem)
+		self.newLoanButton.clicked.connect(self.parent.switchToNewLoan)
 		self.newPatTestButton.clicked.connect(self.parent.switchToNewPatTest)
+
+		self.manageCustomersButton.clicked.connect(self.parent.switchToManageCustomers)
 
 		return self.verticalLayout
 

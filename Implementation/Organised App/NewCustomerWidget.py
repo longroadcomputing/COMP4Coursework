@@ -17,27 +17,354 @@ class newCustomerWidget(QWidget):
 		self.connection = None
 
 		self.parent = parent
+
+		self.mainLayout = QHBoxLayout()
 		
 		self.leftWidget = QWidget()
-		self.rightWidget = QWidget()
 
+		self.leftWidget.setFixedWidth(300)
+		self.leftWidget.setFixedHeight(600)
 
 		self.leftLayout = self.newCustomerLayout()
 
+
 		self.leftWidget.setLayout(self.leftLayout)
 
-		self.mainLayout = QHBoxLayout()
 		self.mainLayout.addWidget(self.leftWidget)
-		self.mainLayout.addWidget(self.rightWidget)
 		
 
 		self.setStyleSheet("QWidget[addCustomerClass=True]{padding:100px;}")
 
 	def addConnection(self, connection):
-		
 		self.connection = connection
-
 		return True
+
+
+	def newCustomerLayout(self):
+		self.counties = ['Please select...','Aberdeenshire', 'Angus', 'Argyll and Bute', 'Ayrshire', 'Ayrshire and Arran',
+						 'Banffshire', 'Bedfordshire', 'Berkshire','Berwickshire', 'Buckinghamshire',
+						 'Caithness', 'Cambridgeshire', 'Ceredigion', 'Cheshire', 'City of Bristol', 'City of Edinburgh',
+						 'City of Glasgow', 'Clwyd', 'Cornwall', 'Cumbria', 'Denbighshire', 'Derbyshire', 'Devon', 'Dorset',
+						 'Dumbartonshire', 'Dumfries','Durham', 'Dyfed', 'East Lothian', 'East Sussex', 'East Yorkshire', 'Essex',
+						 'Ettrick and Lauderdale', 'Fife', 'Gloucestershire','Greater London', 'Greater Manchester', 'Gwent', 'Gwynedd',
+						 'Hampshire', 'Herefordshire', 'Hertfordshire', 'Highlands', 'Inverness','Isle of Skye', 'Isle of Wight', 'Kent',
+						 'Lanarkshire', 'Lancashire', 'Leicestershire', 'Lincolnshire', 'Merseyside', 'Mid Glamorgan','Morayshire', 'Norfolk',
+						 'North Yorkshire', 'Northamptonshire', 'Northumberland', 'Nottinghamshire', 'Orkney', 'Oxfordshire', 'Perth and Kinross',
+						 'Powys', 'Renfrewshire', 'Roxburgh', 'Shetland', 'Shropshire', 'Somerset', 'South Glamorgan', 'South Yorkshire', 'Staffordshire',
+						 'Stirling and Falkirk', 'Suffolk', 'Surrey', 'Sutherland', 'Tweeddale', 'Tyne and Wear', 'Warwickshire', 'West Glamorgan',
+						 'West Lothian', 'West Midlands', 'West Sussex', 'West Yorkshire', 'Western Isles', 'Wiltshire', 'Worcestershire']
+
+		customerTitleLabel = QLabel('Title:*')
+		customerFirstNameLabel = QLabel('First Name:*')
+		customerSurnameLabel = QLabel('Surname:*')
+		customerCompanyLabel = QLabel('Company:')
+		customerStreetLabel = QLabel('Street:*')
+		customerTownLabel = QLabel('Town/City:*')
+		customerCountyLabel = QLabel('County:*')
+		customerPostCodeLabel = QLabel('Post Code:*')
+		customerMobileLabel = QLabel('Mobile Number:*')
+		customerLandlineLabel = QLabel('Landline Number:*')
+		customerEmailLabel = QLabel('Email:*')
+		smallPrint = QLabel('* required fields.')
+		smallPrint.setStyleSheet("font-size:11pt")
+
+		self.customerTitle = QComboBox()
+		self.titles = ["Please select...","Mr","Mrs","Ms","Miss"]
+		self.customerTitle.addItems(self.titles)
+
+		j = self.customerTitle.model().index(0,0)
+		self.customerTitle.model().setData(j, 0, Qt.UserRole-1)
+
+		self.customerFirstName = QLineEdit()
+		self.customerSurname = QLineEdit()
+		self.customerStreet = QLineEdit()
+		self.customerCompany = QLineEdit()
+		self.customerTown = QLineEdit()
+
+		self.customerCounty = QComboBox()
+		self.customerCounty.addItems(self.counties)
+
+		j = self.customerCounty.model().index(0,0)
+		self.customerCounty.model().setData(j, 0, Qt.UserRole-1)
+
+
+		self.customerPostCode = QLineEdit()
+		self.customerMobile = QLineEdit()
+		self.customerLandline = QLineEdit()
+		self.customerEmail = QLineEdit()
+
+		self.addcustomerTitleText = QLabel("Add New customer")
+		self.addcustomerTitleText.setAlignment(Qt.AlignCenter)
+		self.shadow = QGraphicsDropShadowEffect()
+		self.shadow.setBlurRadius(5)
+		self.addcustomerTitleText.setGraphicsEffect(self.shadow)
+		self.addcustomerTitleText.setStyleSheet("font-size:20px;")
+
+
+
+		grid = QGridLayout()
+		grid.setSpacing(10)
+		
+		
+		grid.addWidget(customerTitleLabel, 0, 0)
+		grid.addWidget(self.customerTitle, 0, 1)
+
+		grid.addWidget(customerFirstNameLabel, 1, 0)
+		grid.addWidget(self.customerFirstName, 1, 1)
+
+		grid.addWidget(customerSurnameLabel, 2, 0)
+		grid.addWidget(self.customerSurname, 2, 1)
+
+		grid.addWidget(customerCompanyLabel, 3, 0)
+		grid.addWidget(self.customerCompany, 3, 1)		
+
+		grid.addWidget(customerStreetLabel, 4, 0)
+		grid.addWidget(self.customerStreet, 4, 1)
+
+		grid.addWidget(customerTownLabel, 5, 0)
+		grid.addWidget(self.customerTown, 5, 1)
+
+		grid.addWidget(customerCountyLabel, 6, 0)
+		grid.addWidget(self.customerCounty, 6, 1)
+
+		grid.addWidget(customerPostCodeLabel, 7, 0)
+		grid.addWidget(self.customerPostCode, 7, 1)
+
+		grid.addWidget(customerMobileLabel, 8, 0)
+		grid.addWidget(self.customerMobile, 8, 1)
+
+		grid.addWidget(customerLandlineLabel, 9, 0)
+		grid.addWidget(self.customerLandline, 9, 1)
+
+		grid.addWidget(customerEmailLabel, 10, 0)
+		grid.addWidget(self.customerEmail, 10, 1)
+
+		self.gridWidget = QGroupBox("")
+		self.gridWidget.setLayout(grid)
+		self.gridWidget.setFixedHeight(400)
+
+		self.verticalLayout = QVBoxLayout()
+		self.verticalLayout.addWidget(self.addcustomerTitleText)
+		self.verticalLayout.addStretch(1)
+		self.verticalLayout.addWidget(self.gridWidget)
+		self.verticalLayout.addWidget(smallPrint)
+
+		self.cancelButton = QPushButton("Cancel")
+		self.cancelButton.setShortcut('Esc')
+		self.cancelButton.setAutoDefault(False)
+		self.cancelButton.setDefault(False)
+
+		self.confirmButton = QPushButton("Confirm")
+		self.confirmButton.setShortcut('Return')
+		self.confirmButton.setAutoDefault(True)
+		self.confirmButton.setDefault(True)
+
+		self.hBoxL = QHBoxLayout()
+		self.hBoxL.addWidget(self.cancelButton)
+		self.hBoxL.addWidget(self.confirmButton)
+		self.hButtonL = QWidget()
+		self.hButtonL.setLayout(self.hBoxL)
+		
+		self.verticalLayout.addWidget(self.hButtonL)
+		self.verticalLayout.addStretch(1)
+
+		#connections
+		self.customerFirstName.textChanged.connect(self.validateFirstName)
+		self.customerSurname.textChanged.connect(self.validateSurname)
+		self.customerCompany.textChanged.connect(self.validateCompany)
+		self.customerStreet.textChanged.connect(self.validateStreet)
+		self.customerTown.textChanged.connect(self.validateTown)
+		self.customerPostCode.textChanged.connect(self.validatePostCode)
+		self.customerEmail.textChanged.connect(self.validateEmail)
+		self.customerMobile.textChanged.connect(self.validateMobile)
+		self.customerLandline.textChanged.connect(self.validateUKLandline)
+
+		self.confirmButton.clicked.connect(self.switchToPreviewWidget)
+
+		self.clearForm()
+
+		return self.verticalLayout
+
+	def previewNewCustomer(self):
+		self.previewCustomerTitleText = QLabel("Preview New Customer")
+		self.shadow = QGraphicsDropShadowEffect()
+		self.shadow.setBlurRadius(5)
+		self.previewCustomerTitleText.setGraphicsEffect(self.shadow)
+		self.previewCustomerTitleText.setStyleSheet("font-size:20px;")
+
+		customerTitleLabel = QLabel('Title:')
+		customerFirstNameLabel = QLabel('First Name:')
+		customerSurnameLabel = QLabel('Surname:')
+		customerCompanyLabel = QLabel('Company:')
+		customerStreetLabel = QLabel('Street:')
+		customerTownLabel = QLabel('Town/City:')
+		customerCountyLabel = QLabel('County:')
+		customerPostCodeLabel = QLabel('Post Code:')
+		customerMobileLabel = QLabel('Mobile Number:')
+		customerLandlineLabel = QLabel('Landline Number:')
+		customerEmailLabel = QLabel('Email:')
+		self.smallerPrint = QLabel("")
+
+		Title = self.customerTitle.currentText()
+		Firstname = self.customerFirstName.text()
+		Surname = self.customerSurname.text()
+		Company = self.customerCompany.text()
+		Street = self.customerStreet.text()
+		Town = self.customerTown.text()
+		County = self.customerCounty.currentText()
+		PostCode = self.customerPostCode.text()
+		Mobile = self.customerMobile.text()
+		Landline = self.customerLandline.text()
+		Email = self.customerEmail.text()
+
+
+		if Title == 'Please select...':
+			self.previewCustomerTitle = QLabel("")
+		else:
+			self.previewCustomerTitle = QLabel("{0}".format(Title))
+
+		self.previewCustomerFirstName = QLabel('{0}'.format(Firstname))
+		self.previewCustomerSurname = QLabel('{0}'.format(Surname))
+		self.previewCustomerCompany = QLabel('{0}'.format(Company))
+		self.previewCustomerStreet = QLabel('{0}'.format(Street))
+		self.previewCustomerTown = QLabel('{0}'.format(Town))
+
+		if County == 'Please select...':
+			self.previewCustomerCounty = QLabel("")
+		else:
+			self.previewCustomerCounty = QLabel("{0}".format(County))
+
+		self.previewCustomerPostCode = QLabel('{0}'.format(PostCode))
+		self.previewCustomerMobile = QLabel('{0}'.format(Mobile))
+		self.previewCustomerLandline = QLabel('{0}'.format(Landline))
+		self.previewCustomerEmail = QLabel('{0}'.format(Email))
+
+		grid = QGridLayout()
+
+		grid.addWidget(customerTitleLabel, 0, 0)
+		grid.addWidget(self.previewCustomerTitle, 0, 1)
+
+		grid.addWidget(customerFirstNameLabel, 1, 0)
+		grid.addWidget(self.previewCustomerFirstName, 1, 1)
+
+		grid.addWidget(customerSurnameLabel, 2, 0)
+		grid.addWidget(self.previewCustomerSurname, 2, 1)
+
+		grid.addWidget(customerCompanyLabel, 3, 0)
+		grid.addWidget(self.previewCustomerCompany, 3, 1)		
+
+		grid.addWidget(customerStreetLabel, 4, 0)
+		grid.addWidget(self.previewCustomerStreet, 4, 1)
+
+		grid.addWidget(customerTownLabel, 5, 0)
+		grid.addWidget(self.previewCustomerTown, 5, 1)
+
+		grid.addWidget(customerCountyLabel, 6, 0)
+		grid.addWidget(self.previewCustomerCounty, 6, 1)
+
+		grid.addWidget(customerPostCodeLabel, 7, 0)
+		grid.addWidget(self.previewCustomerPostCode, 7, 1)
+
+		grid.addWidget(customerMobileLabel, 8, 0)
+		grid.addWidget(self.previewCustomerMobile, 8, 1)
+
+		grid.addWidget(customerLandlineLabel, 9, 0)
+		grid.addWidget(self.previewCustomerLandline, 9, 1)
+
+		grid.addWidget(customerEmailLabel, 10, 0)
+		grid.addWidget(self.previewCustomerEmail, 10, 1)
+
+		self.gridWidget = QGroupBox("")
+		self.gridWidget.setLayout(grid)
+		self.gridWidget.setFixedHeight(400)
+
+		self.previewVerticalLayout = QVBoxLayout()
+		self.previewVerticalLayout.addWidget(self.previewCustomerTitleText)
+		self.previewVerticalLayout.addStretch(1)
+		self.previewVerticalLayout.addWidget(self.gridWidget)
+
+		self.editButton = QPushButton("Edit")
+		self.editButton.setShortcut('Esc')
+		self.editButton.setAutoDefault(False)
+		self.editButton.setDefault(False)
+
+		self.addButton = QPushButton("Add")
+		self.addButton.setShortcut('Return')
+		self.addButton.setAutoDefault(True)
+		self.addButton.setDefault(True)
+
+		self.hBoxL = QHBoxLayout()
+		self.hBoxL.addWidget(self.editButton)
+		self.hBoxL.addWidget(self.addButton)
+		self.hButtonL = QWidget()
+		self.hButtonL.setLayout(self.hBoxL)
+		self.hButtonL.setFixedHeight(100)
+		
+		self.previewVerticalLayout.addWidget(self.hButtonL)
+		self.previewVerticalLayout.addStretch(1)
+
+		#connections
+		self.editButton.clicked.connect(self.editEntry)
+		self.addButton.clicked.connect(self.validateAddcustomerForm)
+
+		return self.previewVerticalLayout
+
+	def editEntry(self):
+		self.rightWidget.setEnabled(False)
+		self.leftWidget.setEnabled(True)
+
+	def switchToPreviewWidget(self):
+		#disable editing widget
+		self.leftWidget.setEnabled(False)
+
+		#reshresh preview widget
+		if hasattr(self, 'rightWidget'):
+			self.rightWidget.close()
+			self.rightWidget = QWidget()
+			self.mainLayout.addWidget(self.rightWidget)
+			self.rightWidget.setFixedWidth(300)
+			self.rightWidget.setFixedHeight(600)
+
+		#set preview widget layout
+		self.rightLayout = self.previewNewCustomer()
+		self.rightWidget.setLayout(self.rightLayout)
+
+	def clearForm(self):
+		
+		self.customerTitle.setCurrentIndex(0)
+		self.customerFirstName.clear()
+		self.customerSurname.clear()
+		self.customerCompany.clear()
+		self.customerStreet.clear()
+		self.customerTown.clear()
+		self.customerCounty.setCurrentIndex(0)
+		self.customerPostCode.clear()
+		self.customerMobile.clear()
+		self.customerLandline.clear()
+		self.customerEmail.clear()
+
+		self.customerFirstName.setStyleSheet("background-color:#FFF;")
+		self.customerSurname.setStyleSheet("background-color:#FFF;")
+		self.customerCompany.setStyleSheet("background-color:#FFF;")
+		self.customerStreet.setStyleSheet("background-color:#FFF;")
+		self.customerTown.setStyleSheet("background-color:#FFF;")
+		self.customerPostCode.setStyleSheet("background-color:#FFF;")
+		self.customerMobile.setStyleSheet("background-color:#FFF;")
+		self.customerLandline.setStyleSheet("background-color:#FFF;")
+		self.customerEmail.setStyleSheet("background-color:#FFF;")
+
+		if hasattr(self, 'rightWidget'):
+			self.rightWidget.close()
+
+		self.rightWidget = QWidget()
+		self.rightLayout = self.previewNewCustomer()
+		self.rightWidget.setLayout(self.rightLayout)
+		self.rightWidget.setFixedWidth(300)
+		self.rightWidget.setFixedHeight(600)
+
+		self.mainLayout.addWidget(self.rightWidget)
+
+		self.rightWidget.setEnabled(False)
 
 	def validateTitle(self):
 		text = self.customerTitle.currentText()
@@ -179,63 +506,6 @@ class newCustomerWidget(QWidget):
 			self.customerEmail.setStyleSheet("background-color:#f6989d;")
 			return False
 
-	def clearForm(self):
-		
-		self.customerTitle.setCurrentIndex(0)
-		self.customerFirstName.clear()
-		self.customerSurname.clear()
-		self.customerCompany.clear()
-		self.customerStreet.clear()
-		self.customerTown.clear()
-		self.customerCounty.setCurrentIndex(0)
-		self.customerPostCode.clear()
-		self.customerMobile.clear()
-		self.customerLandline.clear()
-		self.customerEmail.clear()
-
-		self.customerFirstName.setStyleSheet("background-color:#FFF;")
-		self.customerSurname.setStyleSheet("background-color:#FFF;")
-		self.customerCompany.setStyleSheet("background-color:#FFF;")
-		self.customerStreet.setStyleSheet("background-color:#FFF;")
-		self.customerTown.setStyleSheet("background-color:#FFF;")
-		self.customerPostCode.setStyleSheet("background-color:#FFF;")
-		self.customerMobile.setStyleSheet("background-color:#FFF;")
-		self.customerLandline.setStyleSheet("background-color:#FFF;")
-		self.customerEmail.setStyleSheet("background-color:#FFF;")
-		
-
-	def addCustomerToDatabase(self):
-
-		county = str(self.customerCounty.currentText())
-		title = str(self.customerTitle.currentText())
-
-		if self.customerCompany.text() == "":
-			self.customerCompany == "-"
-		else:
-			self.customerCompany == self.customerCompany.text()
-
-		values = { "Title": title,
-				   "FirstName": self.customerFirstName.text(),
-				  "LastName": self.customerSurname.text(),
-				  "Company": self.customerCompany,
-				  "Street": self.customerStreet.text(),
-				  "Town": self.customerTown.text(),
-				  "County": county,
-				  "PostCode": self.customerPostCode.text(),
-				  "Mobile": self.customerMobile.text(),
-				  "Landline": self.customerLandline.text(),
-				  "Email": self.customerEmail.text()}
-
-		customerAdded = self.connection.addCustomer(values, self)
-
-		if customerAdded:
-			self.parent.statusBar.showMessage("Record for {0} added to database".format(values["FirstName"]))
-			self.clearForm()
-			self.parent.switchToMainMenu()
-		else:
-			self.editEntry()
-			
-	
 	def validateAddcustomerForm(self):
 
 		checkTitle = self.validateTitle()
@@ -299,204 +569,35 @@ class newCustomerWidget(QWidget):
 			self.addCustomerToDatabase()
 		
 
-	def newCustomerLayout(self):
+	def addCustomerToDatabase(self):
 
-		self.counties = ['Please select...','Aberdeenshire', 'Angus', 'Argyll and Bute', 'Ayrshire', 'Ayrshire and Arran',
-						 'Banffshire', 'Bedfordshire', 'Berkshire','Berwickshire', 'Buckinghamshire',
-						 'Caithness', 'Cambridgeshire', 'Ceredigion', 'Cheshire', 'City of Bristol', 'City of Edinburgh',
-						 'City of Glasgow', 'Clwyd', 'Cornwall', 'Cumbria', 'Denbighshire', 'Derbyshire', 'Devon', 'Dorset',
-						 'Dumbartonshire', 'Dumfries','Durham', 'Dyfed', 'East Lothian', 'East Sussex', 'East Yorkshire', 'Essex',
-						 'Ettrick and Lauderdale', 'Fife', 'Gloucestershire','Greater London', 'Greater Manchester', 'Gwent', 'Gwynedd',
-						 'Hampshire', 'Herefordshire', 'Hertfordshire', 'Highlands', 'Inverness','Isle of Skye', 'Isle of Wight', 'Kent',
-						 'Lanarkshire', 'Lancashire', 'Leicestershire', 'Lincolnshire', 'Merseyside', 'Mid Glamorgan','Morayshire', 'Norfolk',
-						 'North Yorkshire', 'Northamptonshire', 'Northumberland', 'Nottinghamshire', 'Orkney', 'Oxfordshire', 'Perth and Kinross',
-						 'Powys', 'Renfrewshire', 'Roxburgh', 'Shetland', 'Shropshire', 'Somerset', 'South Glamorgan', 'South Yorkshire', 'Staffordshire',
-						 'Stirling and Falkirk', 'Suffolk', 'Surrey', 'Sutherland', 'Tweeddale', 'Tyne and Wear', 'Warwickshire', 'West Glamorgan',
-						 'West Lothian', 'West Midlands', 'West Sussex', 'West Yorkshire', 'Western Isles', 'Wiltshire', 'Worcestershire']
+		county = str(self.customerCounty.currentText())
+		title = str(self.customerTitle.currentText())
 
-		self.customerTitleLabel = QLabel('Title:*')
-		self.customerFirstNameLabel = QLabel('First Name:*')
-		self.customerSurnameLabel = QLabel('Surname:*')
-		self.customerCompanyLabel = QLabel('Company:')
-		self.customerStreetLabel = QLabel('Street:*')
-		self.customerTownLabel = QLabel('Town/City:*')
-		self.customerCountyLabel = QLabel('County:*')
-		self.customerPostCodeLabel = QLabel('Post Code:*')
-		self.customerMobileLabel = QLabel('Mobile Number:*')
-		self.customerLandlineLabel = QLabel('Landline Number:*')
-		self.customerEmailLabel = QLabel('Email:*')
-		self.smallPrint = QLabel('* required fields.')
-		self.smallPrint.setStyleSheet("font-size:11pt")
+		if self.customerCompany.text() == "":
+			self.customerCompany == "-"
+		else:
+			self.customerCompany == self.customerCompany.text()
 
-		self.customerTitle = QComboBox()
-		self.titles = ["Please select...","Mr","Mrs","Ms","Miss"]
-		self.customerTitle.addItems(self.titles)
+		values = { "Title": title,
+				   "FirstName": self.customerFirstName.text(),
+				  "LastName": self.customerSurname.text(),
+				  "Company": self.customerCompany,
+				  "Street": self.customerStreet.text(),
+				  "Town": self.customerTown.text(),
+				  "County": county,
+				  "PostCode": self.customerPostCode.text(),
+				  "Mobile": self.customerMobile.text(),
+				  "Landline": self.customerLandline.text(),
+				  "Email": self.customerEmail.text()}
 
-		j = self.customerTitle.model().index(0,0)
-		self.customerTitle.model().setData(j, 0, Qt.UserRole-1)
+		customerAdded = self.connection.addCustomer(values, self)
 
-		self.customerFirstName = QLineEdit()
-		self.customerSurname = QLineEdit()
-		self.customerStreet = QLineEdit()
-		self.customerCompany = QLineEdit()
-		self.customerTown = QLineEdit()
-
-		self.customerCounty = QComboBox()
-		self.customerCounty.addItems(self.counties)
-
-		j = self.customerCounty.model().index(0,0)
-		self.customerCounty.model().setData(j, 0, Qt.UserRole-1)
-
-
-		self.customerPostCode = QLineEdit()
-		self.customerMobile = QLineEdit()
-		self.customerLandline = QLineEdit()
-		self.customerEmail = QLineEdit()
-
-		self.cancelButton = QPushButton("Cancel")
-		self.confirmButton = QPushButton("Add Customer")
-
-		self.cancelButton.setAutoDefault(False)
-		self.cancelButton.setDefault(False)
-
-		self.confirmButton.setAutoDefault(True)
-		self.confirmButton.setDefault(True)
-
-
-		self.addcustomerTitleText = QLabel("Add New customer")
-		self.addcustomerTitleText.setAlignment(Qt.AlignCenter)
-		self.shadow = QGraphicsDropShadowEffect()
-		self.shadow.setBlurRadius(5)
-		self.addcustomerTitleText.setGraphicsEffect(self.shadow)
-		self.addcustomerTitleText.setStyleSheet("font-size:20px;")
-
-
-
-		grid = QGridLayout()
-		grid.setSpacing(10)
-		
-		
-		grid.addWidget(self.customerTitleLabel, 0, 0)
-		grid.addWidget(self.customerTitle, 0, 1)
-
-		grid.addWidget(self.customerFirstNameLabel, 1, 0)
-		grid.addWidget(self.customerFirstName, 1, 1)
-
-		grid.addWidget(self.customerSurnameLabel, 2, 0)
-		grid.addWidget(self.customerSurname, 2, 1)
-
-		grid.addWidget(self.customerCompanyLabel, 3, 0)
-		grid.addWidget(self.customerCompany, 3, 1)		
-
-		grid.addWidget(self.customerStreetLabel, 4, 0)
-		grid.addWidget(self.customerStreet, 4, 1)
-
-		grid.addWidget(self.customerTownLabel, 5, 0)
-		grid.addWidget(self.customerTown, 5, 1)
-
-		grid.addWidget(self.customerCountyLabel, 6, 0)
-		grid.addWidget(self.customerCounty, 6, 1)
-
-		grid.addWidget(self.customerPostCodeLabel, 7, 0)
-		grid.addWidget(self.customerPostCode, 7, 1)
-
-		grid.addWidget(self.customerMobileLabel, 8, 0)
-		grid.addWidget(self.customerMobile, 8, 1)
-
-		grid.addWidget(self.customerLandlineLabel, 9, 0)
-		grid.addWidget(self.customerLandline, 9, 1)
-
-		grid.addWidget(self.customerEmailLabel, 10, 0)
-		grid.addWidget(self.customerEmail, 10, 1)
-
-		self.gridWidget = QWidget()
-		self.gridWidget.setLayout(grid)
-
-		self.verticalLayout = QVBoxLayout()
-		self.verticalLayout.addWidget(self.addcustomerTitleText)
-		self.verticalLayout.addStretch(1)
-		self.verticalLayout.addWidget(self.gridWidget)
-		self.verticalLayout.addWidget(self.smallPrint)
-
-		self.hBoxL = QHBoxLayout()
-		self.hBoxL.addWidget(self.cancelButton)
-		self.hBoxL.addWidget(self.confirmButton)
-		self.hButtonL = QWidget()
-		self.hButtonL.setLayout(self.hBoxL)
-		
-		self.verticalLayout.addWidget(self.hButtonL)
-		self.verticalLayout.addStretch(1)
-
-		#connections
-		self.customerFirstName.textChanged.connect(self.validateFirstName)
-		self.customerSurname.textChanged.connect(self.validateSurname)
-		self.customerCompany.textChanged.connect(self.validateCompany)
-		self.customerStreet.textChanged.connect(self.validateStreet)
-		self.customerTown.textChanged.connect(self.validateTown)
-		self.customerPostCode.textChanged.connect(self.validatePostCode)
-		self.customerEmail.textChanged.connect(self.validateEmail)
-		self.customerMobile.textChanged.connect(self.validateMobile)
-		self.customerLandline.textChanged.connect(self.validateUKLandline)
-
-		self.confirmButton.clicked.connect(self.previewNewCustomer)
-
-		return self.verticalLayout
-
-	def previewNewCustomer(self):
-		self.leftWidget.setEnabled(False)
-		self.rightWidget.setEnabled(True)
-
-		self.previewCustomerTitleText = QLabel("Preview New Customer")
-		self.shadow = QGraphicsDropShadowEffect()
-		self.shadow.setBlurRadius(5)
-		self.previewCustomerTitleText.setGraphicsEffect(self.shadow)
-		self.previewCustomerTitleText.setStyleSheet("font-size:20px;")
-
-
-
-
-
-
-
-		self.editButton = QPushButton("Cancel")
-		self.addButton = QPushButton("Add Customer")
-
-		self.editButton.setAutoDefault(False)
-		self.editButton.setDefault(False)
-
-		self.addButton.setAutoDefault(True)
-		self.addButton.setDefault(True)
-
-
-
-		grid = QGridLayout()
-
-		self.gridWidget = QWidget()
-		self.gridWidget.setLayout(grid)
-
-		self.verticalLayout = QVBoxLayout()
-		self.verticalLayout.addWidget(self.previewCustomerTitleText)
-		self.verticalLayout.addStretch(1)
-		self.verticalLayout.addWidget(self.gridWidget)
-
-		self.hBoxL = QHBoxLayout()
-		self.hBoxL.addWidget(self.editButton)
-		self.hBoxL.addWidget(self.addButton)
-		self.hButtonL = QWidget()
-		self.hButtonL.setLayout(self.hBoxL)
-		
-		self.verticalLayout.addWidget(self.hButtonL)
-		self.verticalLayout.addStretch(1)
-
-		#connections
-		self.editButton.clicked.connect(self.editEntry)
-		self.addButton.clicked.connect(self.validateAddcustomerForm)
-
-		self.rightWidget.setLayout(self.verticalLayout)
-
-
-	def editEntry(self):
-		self.rightWidget.setEnabled(False)
-		self.leftWidget.setEnabled(True)
+		if customerAdded:
+			self.parent.statusBar.showMessage("Record for {0} added to database".format(values["FirstName"]))
+			self.clearForm()
+			self.parent.switchToMainMenu()
+		else:
+			self.editEntry()
 
 

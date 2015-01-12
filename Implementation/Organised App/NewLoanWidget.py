@@ -1,6 +1,9 @@
 from PyQt4.QtGui import *
 from PyQt4.QtCore import *
 
+from date_widget import *
+from selectItemDialog import *
+
 import sys
 import time
 
@@ -18,10 +21,10 @@ class newLoanWidget(QWidget):
 		self.leftWidget = QWidget()
 
 		self.leftTopWidget = QWidget()
-		self.leftBottomWidget = QWidget()
+		self.leftBottomWidget = QTabWidget()
 
 		self.leftTopWidget.setFixedHeight(200)
-		self.leftBottomWidget.setFixedHeight(150)
+		self.leftBottomWidget.setFixedHeight(200)
 
 		self.leftLayout = QVBoxLayout()
 		self.leftLayout.addWidget(self.leftTopWidget)
@@ -34,6 +37,8 @@ class newLoanWidget(QWidget):
 		self.leftTopWidget.setLayout(self.leftTopLayout)
 
 		self.rightWidget = QWidget()
+		self.rightWidget.setFixedWidth(300)
+		self.rightWidget.setFixedHeight(600)
 
 
 		self.mainLayout = QHBoxLayout()
@@ -43,11 +48,60 @@ class newLoanWidget(QWidget):
 		self.setStyleSheet("QWidget[addCustomerClass=True]{padding:100px;}")
 
 	def newLoanLayout(self):
-		self.newLoanHeading = QLabel("New PAT Loan Series:")
+		self.newLoanHeading = QLabel("New Loan")
 		self.newLoanHeading.setAlignment(Qt.AlignCenter)
 		self.shadow = QGraphicsDropShadowEffect()
 		self.shadow.setBlurRadius(5)
 		self.newLoanHeading.setGraphicsEffect(self.shadow)
 		self.newLoanHeading.setStyleSheet("font-size:20px")
 
-		
+		self.date_label = QLabel("Please select a date:")
+
+		self.datePopup = DateWidget()
+		self.addLoanItemButton = QPushButton("+")
+		self.addLoanItemButton.setFixedWidth(30)
+		self.addLoanItemButton.setFixedHeight(30)
+
+		self.selectionLayout = QHBoxLayout()
+		self.selectionLayout.addWidget(self.datePopup)
+		self.selectionLayout.addWidget(self.addLoanItemButton)
+
+		self.selectionWidget = QWidget()
+		self.selectionWidget.setLayout(self.selectionLayout)
+
+
+		self.verticalLayout = QVBoxLayout()
+		self.verticalLayout.addWidget(self.newLoanHeading)
+		self.verticalLayout.addWidget(self.date_label)
+		self.verticalLayout.addWidget(self.selectionWidget)
+
+		self.cancelButton = QPushButton("Cancel")
+		self.cancelButton.setShortcut('Esc')
+		self.cancelButton.setAutoDefault(False)
+		self.cancelButton.setDefault(False)
+
+		self.confirmButton = QPushButton("Confirm")
+		self.confirmButton.setShortcut('Return')
+		self.confirmButton.setAutoDefault(True)
+		self.confirmButton.setDefault(True)
+
+		self.buttonsLayout = QHBoxLayout()
+		self.buttonsLayout.addWidget(self.cancelButton)
+		self.buttonsLayout.addWidget(self.confirmButton)
+
+		self.buttonsWidget = QWidget()
+		self.buttonsWidget.setLayout(self.buttonsLayout)
+
+		self.leftLayout.addWidget(self.buttonsWidget)
+
+
+		#connections
+		self.cancelButton.clicked.connect(self.parent.switchToMainMenu)
+		self.addLoanItemButton.clicked.connect(self.selectItem)
+
+		return self.verticalLayout
+
+	def selectItem(self):
+		Date = "1"
+		self.selectItemDialog = selectItemDialog(Date)
+		self.selectItemDialog.exec_()

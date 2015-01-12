@@ -9,7 +9,7 @@ import re
 
 class ManageClientsWidget(QWidget):
 
-	""" This is the add clients widget """
+	""" This is the add plasterer widget """
 
 	def __init__(self, parent):
 
@@ -373,6 +373,10 @@ class ManageClientsWidget(QWidget):
 		if clientAdded:
 
 			self.searchingClients()
+
+			#clear table
+			query = self.connection.initialTable()
+			self.showResults(query)
 			 
 			infoText = """ The clients information has been updated!"""
 			QMessageBox.information(self, "Client Info Updated!", infoText)
@@ -510,9 +514,6 @@ class ManageClientsWidget(QWidget):
 		else:
 			self.emailEdit.setStyleSheet("background-color:#f6989d;")
 			return False
-		
-
-
 
 
 
