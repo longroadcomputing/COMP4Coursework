@@ -64,17 +64,12 @@
 \contentsline {subsection}{\numberline {2.7.3}Normalisation}{72}{subsection.2.7.3}
 \contentsline {subsubsection}{UNF to 3NF}{72}{section*.11}
 \contentsline {section}{\numberline {2.8}SQL Queries}{76}{section.2.8}
-\contentsline {subsubsection}{SQL query getting all the items from the Item table in the database ready to be formatted and displayed on screen}{76}{section*.12}
-\contentsline {subsubsection}{SQL query getting all the loans from the Loan table in the database ready to be formatted and displayed on screen}{76}{section*.13}
-\contentsline {subsubsection}{SQL query getting all the loan items from the LoanItem table in the database ready to be formatted and displayed on screen}{76}{section*.14}
-\contentsline {subsubsection}{SQL query getting all the item tests from the ItemTest table in the database ready to be formatted and displayed on screen}{77}{section*.15}
-\contentsline {subsubsection}{SQL Query searching the database for Items at a specific Location then orders them A-Z by ItemName}{77}{section*.16}
-\contentsline {subsubsection}{SQL Query searching the database for certain ItemTypes then orders them by ItemName from A-Z}{78}{section*.17}
-\contentsline {subsubsection}{SQL Query searching the database to display Loans taken out by a certain Company, ordered by date ascending}{78}{section*.18}
-\contentsline {section}{\numberline {2.9}Security and Integrity of the System and Data}{79}{section.2.9}
-\contentsline {subsection}{\numberline {2.9.1}Security and Integrity of Data}{79}{subsection.2.9.1}
+\contentsline {subsubsection}{Get Items from Item Table}{76}{section*.12}
+\contentsline {subsubsection}{Get Items from Item Table}{76}{section*.13}
+\contentsline {section}{\numberline {2.9}Security and Integrity of the System and Data}{78}{section.2.9}
+\contentsline {subsection}{\numberline {2.9.1}Security and Integrity of Data}{78}{subsection.2.9.1}
 \contentsline {subsection}{\numberline {2.9.2}System Security}{79}{subsection.2.9.2}
-\contentsline {section}{\numberline {2.10}Validation}{80}{section.2.10}
+\contentsline {section}{\numberline {2.10}Validation}{79}{section.2.10}
 \contentsline {section}{\numberline {2.11}Testing}{82}{section.2.11}
 \contentsline {subsection}{\numberline {2.11.1}Outline Plan}{82}{subsection.2.11.1}
 \contentsline {subsection}{\numberline {2.11.2}Detailed Plan}{83}{subsection.2.11.2}
@@ -127,17 +122,17 @@
 \contentsline {section}{\numberline {5.1}Introduction}{129}{section.5.1}
 \contentsline {section}{\numberline {5.2}Installation}{129}{section.5.2}
 \contentsline {subsection}{\numberline {5.2.1}Prerequisite Installation}{129}{subsection.5.2.1}
-\contentsline {subsubsection}{Installing Python}{129}{section*.19}
-\contentsline {subsubsection}{Installing PyQt}{129}{section*.20}
-\contentsline {subsubsection}{Etc.}{129}{section*.21}
+\contentsline {subsubsection}{Installing Python}{129}{section*.14}
+\contentsline {subsubsection}{Installing PyQt}{129}{section*.15}
+\contentsline {subsubsection}{Etc.}{129}{section*.16}
 \contentsline {subsection}{\numberline {5.2.2}System Installation}{129}{subsection.5.2.2}
 \contentsline {subsection}{\numberline {5.2.3}Running the System}{129}{subsection.5.2.3}
 \contentsline {section}{\numberline {5.3}Tutorial}{129}{section.5.3}
 \contentsline {subsection}{\numberline {5.3.1}Introduction}{129}{subsection.5.3.1}
 \contentsline {subsection}{\numberline {5.3.2}Assumptions}{129}{subsection.5.3.2}
 \contentsline {subsection}{\numberline {5.3.3}Tutorial Questions}{129}{subsection.5.3.3}
-\contentsline {subsubsection}{Question 1}{129}{section*.22}
-\contentsline {subsubsection}{Question 2}{129}{section*.23}
+\contentsline {subsubsection}{Question 1}{129}{section*.17}
+\contentsline {subsubsection}{Question 2}{129}{section*.18}
 \contentsline {subsection}{\numberline {5.3.4}Saving}{129}{subsection.5.3.4}
 \contentsline {subsection}{\numberline {5.3.5}Limitations}{129}{subsection.5.3.5}
 \contentsline {section}{\numberline {5.4}Error Recovery}{129}{section.5.4}
