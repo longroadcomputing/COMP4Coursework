@@ -344,9 +344,9 @@ class MainWindow(QMainWindow):
 
 		if opened:
 			self.password = self.connection.getPassword()
-			#self.database_login()
+			self.database_login()
 			self.stacked_layout.setCurrentIndex(1)
-			self.enable_actions()
+			#self.enable_actions()
 			self.statusBar.showMessage("Database opened: {0}".format(path))
 
 	def close_database(self):
@@ -355,9 +355,9 @@ class MainWindow(QMainWindow):
 
 			if closed:
 				self.statusBar.showMessage("Database has been closed.")
-				self.disable_actions()
-				#self.logout
-				self.stacked_layout.setCurrentIndex(0)
+				#self.disable_actions()
+				self.logout()
+				#self.stacked_layout.setCurrentIndex(0)
 			else:
 				self.statusBar.showMessage("An error occured!")
 		else:
@@ -481,7 +481,7 @@ class MainWindow(QMainWindow):
 	def logout(self):
 		self.access = False
 		self.stacked_layout.setCurrentIndex(0)
-		self.close_connection()
+		self.close_database()
 		self.disable_actions()
 
 	def closeEvent(self, event):

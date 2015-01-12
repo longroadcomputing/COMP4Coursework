@@ -75,33 +75,12 @@ class SQLConnection():
 		add_item.bindValue(":LocationID",values["LocationID"])
 
 		success = add_item.exec_()
+
+		self.error = add_item.lastError().text()
+
 		if success:
-			self.mssg = QMessageBox()
-			self.mssg.setFixedWidth(200)
-			self.mssg.setWindowTitle("Item Added")
-			self.mssg.setText("Success! Record added for {0}".format(values["ItemName"]))
-			self.mssg.setIcon(QMessageBox.Information)
-			self.okay_button = self.mssg.addButton(self.parent.tr("Okay"), QMessageBox.AcceptRole)
-			self.mssg.setEscapeButton(self.okay_button)
-			self.mssg.setDefaultButton(self.okay_button)
-			self.okay_button.clicked.connect(self.parent.editEntry)
-			self.mssg.exec_()
 			return True
 		else:
-			self.error_message_dialog = QMessageBox()
-			self.error_message_dialog.setFixedWidth(200)
-			self.error_message_dialog.setWindowTitle("Input Error")
-			self.error_message_dialog.setText("Error! Failed to commit to database\n"
-											  "\n"
-											  "Click the 'Show details' button for more information")
-			self.error_message_dialog.setDetailedText("The Database Error:\n "
-											  "{0}".format(add_item.lastError().text()))
-			self.error_message_dialog.setIcon(QMessageBox.Warning)
-			self.okay_button = self.error_message_dialog.addButton(self.parent.tr("Okay"), QMessageBox.AcceptRole)
-			self.error_message_dialog.setEscapeButton(self.okay_button)
-			self.error_message_dialog.setDefaultButton(self.okay_button)
-			self.okay_button.clicked.connect(self.parent.editEntry)
-			self.error_message_dialog.exec_()
 			return False
 
 
@@ -134,6 +113,30 @@ class SQLConnection():
 		query.exec_()
 
 		return query
+
+	def getCustomerData(self, ID):
+		
+		# QSqlQuery doesn't support indexing
+		# query = QSqlQuery(self.db)
+
+		# query.prepare("SELECT * FROM Customer WHERE CustomerID = :ID")
+
+		# query.bindValue(":ID",ID)
+
+		# query.exec_()
+
+		# return query
+
+		with sqlite3.connect(self.path) as db:
+
+			cursor = db.cursor()
+			sql = "SELECT * FROM Customer WHERE CustomerID = ?"
+			values = (ID,)
+			cursor.execute(sql, values)
+			data = cursor.fetchone()
+			db.commit()
+
+			return data
 
 	def addCustomer(self, values, parent):
 		self.parent = parent

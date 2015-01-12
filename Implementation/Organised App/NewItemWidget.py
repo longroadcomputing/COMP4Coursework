@@ -167,14 +167,30 @@ class NewItemWidget(QWidget):
 		grid.addWidget(self.location_label,6,0)
 		grid.addWidget(self.location_drop_down,6,1)
 
-		self.gridWidget = QWidget()
+		self.gridWidget = QGroupBox('Add Item:')
 		self.gridWidget.setLayout(grid)
 		self.gridWidget.setFixedHeight(400)
+
+		self.quantityGroup = QGroupBox("Duplicate Items:")
+
+		self.quantityLabel = QLabel("Quantity")
+		self.quantitySpinBox = QSpinBox()
+		self.quantitySpinBox.setRange(1,50)
+		self.quantitySpinBox.setValue(1)
+
+
+		self.quantityLayout = QHBoxLayout()
+		self.quantityLayout.addWidget(self.quantityLabel)
+		self.quantityLayout.addWidget(self.quantitySpinBox)
+
+		self.quantityGroup.setLayout(self.quantityLayout)
+
 
 		self.verticalLayout = QVBoxLayout()
 		self.verticalLayout.addWidget(self.heading)
 		self.verticalLayout.addStretch(1)
 		self.verticalLayout.addWidget(self.gridWidget)
+		self.verticalLayout.addWidget(self.quantityGroup)
 		self.verticalLayout.addWidget(self.smallPrint)
 
 		self.cancelButton = QPushButton("Cancel")
@@ -280,7 +296,7 @@ class NewItemWidget(QWidget):
 		grid.addWidget(self.location_preview_label,6,0)
 		grid.addWidget(self.location_preview,6,1)
 
-		self.gridWidget = QWidget()
+		self.gridWidget = QGroupBox('Preview:')
 		self.gridWidget.setLayout(grid)
 		self.gridWidget.setFixedHeight(400)
 
@@ -311,7 +327,6 @@ class NewItemWidget(QWidget):
 
 		self.editButton.clicked.connect(self.editEntry)
 		self.addButton.clicked.connect(self.validateNewItemForm)
-
 
 		return self.previewVerticalLayout
 
@@ -469,6 +484,11 @@ class NewItemWidget(QWidget):
 
 	def addNewItemToDatabase(self):
 
+		if self.item_type_preview.text() == "Please select...":
+			item_type_id = ''
+		if self.location_preview.text() == "Please select...":
+			location_id = ''
+
 		if self.item_type_preview.text() == "Cabling":
 			item_type_id = '2'
 		elif self.item_type_preview.text() == "Storage/Hardware":
@@ -489,6 +509,7 @@ class NewItemWidget(QWidget):
 			item_type_id = '10'
 		elif self.item_type_preview.text() == "Control Desks":
 			item_type_id = '11'
+
 
 		if self.location_preview.text() == "St. Bedes":
 			location_id = '2'
@@ -512,14 +533,39 @@ class NewItemWidget(QWidget):
 					  "ItemTypeID":item_type_id,
 					  "LocationID":location_id}
 
-		success = self.connection.addItem(values,self)
+		quantity = self.quantitySpinBox.value()
 
-		if success:
-			self.parent.statusBar.showMessage("Item {0} successfully added to the database".format(values["ItemName"]))
+		for each in range(quantity):
+			success = self.connection.addItem(values,self)
+
+		if not success:
+			self.error_message_dialog = QMessageBox()
+			self.error_message_dialog.setFixedWidth(200)
+			self.error_message_dialog.setWindowTitle("Input Error")
+			self.error_message_dialog.setText("Error! Failed to commit to database\n"
+											  "\n"
+											  "Click the 'Show details' button for more information")
+			self.error_message_dialog.setDetailedText("Database Error:\n \n "
+											  "{0}".format(self.connection.error))
+			self.error_message_dialog.setIcon(QMessageBox.Warning)
+			self.okay_button = self.error_message_dialog.addButton(self.parent.tr("Okay"), QMessageBox.AcceptRole)
+			self.error_message_dialog.setEscapeButton(self.okay_button)
+			self.error_message_dialog.setDefaultButton(self.okay_button)
+			self.okay_button.clicked.connect(self.editEntry)
+			self.error_message_dialog.exec_()
+		else:
+			self.mssg = QMessageBox()
+			self.mssg.setFixedWidth(200)
+			self.mssg.setWindowTitle("Customer Added")
+			self.mssg.setText("Success! {0} Record(s) added for {1}".format(quantity, self.item_name_preview.text()))
+			self.mssg.setIcon(QMessageBox.Information)
+			self.okay_button = self.mssg.addButton(self.parent.tr("Okay"), QMessageBox.AcceptRole)
+			self.mssg.setEscapeButton(self.okay_button)
+			self.mssg.setDefaultButton(self.okay_button)
+			self.mssg.exec_()
+			self.parent.statusBar.showMessage("Item {0} unsuccessfully added to the database".format(values["ItemName"]))
 			self.clearForm()
 			self.parent.switchToMainMenu()
-		else:
-			self.editEntry()
 
 
 
