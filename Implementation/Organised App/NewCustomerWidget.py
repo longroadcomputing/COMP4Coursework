@@ -26,6 +26,7 @@ class newCustomerWidget(QWidget):
 		self.leftWidget.setFixedHeight(600)
 
 		self.leftLayout = self.newCustomerLayout()
+		self.mainLayout.setAlignment(Qt.AlignHCenter)
 
 
 		self.leftWidget.setLayout(self.leftLayout)

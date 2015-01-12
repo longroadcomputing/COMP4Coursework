@@ -21,6 +21,7 @@ class NewItemWidget(QWidget):
 		self.errors = []
 
 		self.mainLayout = QHBoxLayout()
+		self.mainLayout.setAlignment(Qt.AlignHCenter)
 
 		self.leftWidget = QWidget()
 

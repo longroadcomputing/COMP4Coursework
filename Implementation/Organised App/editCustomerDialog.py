@@ -18,7 +18,6 @@ class editCustomerDialog(QDialog):
 				self.setLayout(self.mainLayout)
 
 		def layout(self):
-				self.parent.mainLayout.setEnabled(False)
 				self.editCustomerGroupBox = QGroupBox("Edit Customer Info")
 				self.editCustomerGroupBox.setEnabled(False)
 				self.grid = QGridLayout()
@@ -166,6 +165,11 @@ class editCustomerDialog(QDialog):
 
 			self.cancelButton.clicked.connect(self.close)
 			self.confirmButton.clicked.connect(self.validateUpdatecustomerForm)
+
+		def closeEvent(self, Event):
+			self.parent.setEnabled(True)
+			self.parent.results_table.selectionModel().clearSelection()
+			self.parent.tableGroup.setEnabled(True)
 				
 
 		def addConnection(self, connection):
@@ -196,6 +200,8 @@ class editCustomerDialog(QDialog):
 				self.customerMobile.setStyleSheet('')
 				self.customerLandline.setStyleSheet('')
 				self.customerEmail.setStyleSheet('')
+
+				self.parent.results_table.selectionModel().clearSelection()
 
 
 		def populateEditFields(self, data):
@@ -448,10 +454,12 @@ class editCustomerDialog(QDialog):
 
 				if clientAdded:
 
-						self.searchingCustomers()
+						self.clearForm()
 						 
 						infoText = """ The clients information has been updated!"""
 						QMessageBox.information(self, "Customer Info Updated!", infoText)
+
+						self.parent.parent.switchToMainMenu()
 						
 				else:
 						infoText = """ The client was not updated successfully! """

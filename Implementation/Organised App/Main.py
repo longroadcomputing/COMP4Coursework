@@ -25,7 +25,6 @@ class MainWindow(QMainWindow):
 
 		self.setWindowTitle("C3 Media Database Management Systems")
 		self.move(200,250)
-		self.resize(900,800)
 		self.centerOnScreen()
 
 		self.icon = QIcon(QPixmap("./c3_logo_black.png"))
@@ -41,6 +40,7 @@ class MainWindow(QMainWindow):
 		self.widget = QWidget()
 
 		self.widget.setLayout(self.stacked_layout)
+		#self.stacked_layout.setAlignment(Qt.AlignHCenter)
 
 		#set central widget to the stacked layout
 		self.setCentralWidget(self.widget)
@@ -197,7 +197,7 @@ class MainWindow(QMainWindow):
 		self.toolBar.addAction(self.logout_action)
 		self.toolBar.setMovable(False)
 
-		self.addToolBar(Qt.LeftToolBarArea, self.toolBar)
+		self.addToolBar(Qt.TopToolBarArea, self.toolBar)
 
 		#OS X translusency
 		self.toolBar.setStyleSheet('background: transparent')
@@ -373,17 +373,20 @@ class MainWindow(QMainWindow):
 					   border-radius:5px;}""")
 
 		self.open_database_button = QPushButton("Open Database")
+		self.open_database_button.setMaximumWidth(200)
 		self.open_database_button.setProperty("buttonClass","home")
 		self.open_database_button.setCursor(QCursor(Qt.PointingHandCursor))
 
 		self.close_application_button = QPushButton("Close Application")
+		self.close_application_button.setMaximumWidth(200)
 		self.close_application_button.setProperty("buttonClass","home")
 		self.close_application_button.setCursor(QCursor(Qt.PointingHandCursor))
 
-		self.database_layout = QHBoxLayout()
+		self.database_layout = QVBoxLayout()
 
-		self.database_layout.addWidget(self.open_database_button)
-		self.database_layout.addWidget(self.close_application_button)
+		self.database_layout.addWidget(self.open_database_button,Qt.AlignCenter)
+		self.database_layout.addWidget(self.close_application_button,Qt.AlignCenter)
+		self.database_layout.setAlignment(Qt.AlignHCenter)
 		
 		self.database_widget = QWidget()
 
@@ -422,13 +425,11 @@ class MainWindow(QMainWindow):
 
 	def CreateNewItemWidget(self):
 		self.new_item_widget =  NewItemWidget(self)
-		#self.new_item_widget.clearForm()
 		self.new_item_widget.setLayout(self.new_item_widget.mainLayout)
 		self.stacked_layout.addWidget(self.new_item_widget)
 
 	def CreateNewCustomerWidget(self):
 		self.new_customer_widget = newCustomerWidget(self)
-		#self.new_customer_widget.clearForm()
 		self.new_customer_widget.setLayout(self.new_customer_widget.mainLayout)
 		self.stacked_layout.addWidget(self.new_customer_widget)
 

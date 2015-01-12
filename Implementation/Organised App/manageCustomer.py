@@ -32,6 +32,7 @@ class ManageCustomersWidget(QWidget):
 
 				self.mainWidget = QWidget()
 				self.mainLayout = QVBoxLayout()
+				self.mainLayout.setAlignment(Qt.AlignHCenter)
 
 				self.Layout = self.layout()
 
@@ -110,7 +111,6 @@ class ManageCustomersWidget(QWidget):
 				self.editCustomerDialog.clearForm()
 				self.editCustomerDialog.populateEditFields(data)
 				self.editCustomerDialog.exec_()
-				self.mainLayout.setEnabled(True)
 
 		def changeFormFields(self):
 
@@ -132,6 +132,7 @@ class ManageCustomersWidget(QWidget):
 								self.currentRow = rows[0]
 								ID = int(self.currentRow) + 1
 								data = self.connection.getCustomerData(ID)
+
 
 
 								self.searchCustomersGroup.setEnabled(False)

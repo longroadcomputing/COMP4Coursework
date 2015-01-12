@@ -14,6 +14,7 @@ class loggedInWidget(QWidget):
 		self.parent = parent
 
 		self.mainLayout = self.layout()
+		self.mainLayout.setAlignment(Qt.AlignHCenter)
 
 		self.setLayout(self.mainLayout)
 
