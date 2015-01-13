@@ -51,16 +51,17 @@ class ManageCustomersWidget(QWidget):
 
 		def layout(self):
 				if hasattr(self, 'mainWidget'):
-					self.mainWidget = QWidget()
 					self.mainWidget.close()
-					self.mainLayout.addWidget(self.mainWidget)
+					self.mainWidget = QWidget()
 
 				#create widgets
 				self.searchCustomersGroup = QGroupBox("Search Customers:")
 				self.searchField = QLineEdit()
+				self.searchButton = QPushButton("Search")
 
 				self.searchLayout = QHBoxLayout()
 				self.searchLayout.addWidget(self.searchField)
+				self.searchLayout.addWidget(self.searchButton)
 
 				self.searchCustomersGroup.setLayout(self.searchLayout)
 
@@ -73,7 +74,7 @@ class ManageCustomersWidget(QWidget):
 				self.tableGroup = QGroupBox("Customer")
 
 				self.results_table = QTableView()
-				#self.results_table.setFixedHeight(400)
+				self.results_table.setMaximumHeight(600)
 
 				header = QHeaderView(Qt.Horizontal, self.results_table)
 				header.setStretchLastSection(True)
@@ -86,9 +87,9 @@ class ManageCustomersWidget(QWidget):
 				self.backButton.setMaximumWidth(75)
 				self.showAllCustomersButton.setMaximumWidth(200)
 
-				self.viewCustomersLayout = QGridLayout()
-				self.viewCustomersLayout.addWidget(self.results_table,0,0)
-				self.viewCustomersLayout.addWidget(self.showAllCustomersButton,1,0)
+				self.viewCustomersLayout = QVBoxLayout()
+				self.viewCustomersLayout.addWidget(self.results_table)
+				self.viewCustomersLayout.addWidget(self.showAllCustomersButton)
 
 				self.tableGroup.setLayout(self.viewCustomersLayout)
 
@@ -133,7 +134,7 @@ class ManageCustomersWidget(QWidget):
 								ID = int(self.currentRow) + 1
 								data = self.connection.getCustomerData(ID)
 
-
+								print(data)
 
 								self.searchCustomersGroup.setEnabled(False)
 								self.tableGroup.setEnabled(False)
@@ -147,9 +148,34 @@ class ManageCustomersWidget(QWidget):
 
 				query = self.connection.getSearchQuery(queryText)
 
-				#print(queryText)
+				# if query:
+				# 	self.error_message_dialog = QMessageBox()
+				# 	self.error_message_dialog.setFixedWidth(200)
+				# 	self.error_message_dialog.setWindowTitle("Database Error")
+				# 	self.error_message_dialog.setText("Error! A record with that search parameter \n"
+				# 										"cannot be found. \n"
+				# 										"Would you like to search again or enter a new record?")
+				# 	self.error_message_dialog.setDetailedText("Database Error:\n \n "
+				# 									  "{0}".format(self.connection.error))
+				# 	self.error_message_dialog.setIcon(QMessageBox.Question)
+				# 	self.seach_again = self.error_message_dialog.addButton(self.parent.tr("Search Again"), QMessageBox.AcceptRole)
+				# 	self.new_record = self.error_message_dialog.addButton(self.parent.tr("Enter New Record"), QMessageBox.AcceptRole)
+				# 	self.error_message_dialog.setEscapeButton(self.seach_again)
+				# 	self.error_message_dialog.setDefaultButton(self.new_record)
+				# 	self.seach_again.clicked.connect(self.searchAgain)
+				# 	self.new_record.clicked.connect(self.newRecord)
+				# 	self.error_message_dialog.exec_()
+
+				# print(queryText)
 
 				self.showResults(query)
+
+		def searchAgain(self):
+			pass
+
+		def newRecord(self):
+			self.parent.switchToNewCustomer()
+
 				
 		def showAllCustomersInTable(self):
 
@@ -196,7 +222,7 @@ class ManageCustomersWidget(QWidget):
 				self.results_table.selectionModel().selectionChanged.connect(self.changeFormFields)
 				
 		def connections(self):
-				self.searchField.textChanged.connect(self.searchDatabase)
+				self.searchButton.clicked.connect(self.searchDatabase)
 				self.showAllCustomersButton.clicked.connect(self.showAllCustomersInTable)
 				self.parent.mainMenu.manageCustomersButton.clicked.connect(self.showAllCustomersInTable)
 				self.parent.manage_customer.triggered.connect(self.showAllCustomersInTable)

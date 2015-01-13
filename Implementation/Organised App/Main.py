@@ -457,7 +457,7 @@ class MainWindow(QMainWindow):
 		QMessageBox.about(self, "About", aboutText)
 
 	def create_login(self):
-		self.login_dialog = LoginDialog()
+		self.login_dialog = LoginDialog(self)
 		self.login_dialog.exec_()
 
 

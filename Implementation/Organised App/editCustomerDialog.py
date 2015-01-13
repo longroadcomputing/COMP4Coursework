@@ -136,6 +136,10 @@ class editCustomerDialog(QDialog):
 				self.cancelButton.setAutoDefault(False)
 				self.cancelButton.setDefault(False)
 
+				self.deleteButton = QPushButton("Delete")
+				self.deleteButton.setAutoDefault(False)
+				self.deleteButton.setDefault(False)
+
 				self.confirmButton = QPushButton("Update")
 				self.confirmButton.setShortcut('Return')
 				self.confirmButton.setAutoDefault(True)
@@ -143,6 +147,7 @@ class editCustomerDialog(QDialog):
 
 				self.hBoxL = QHBoxLayout()
 				self.hBoxL.addWidget(self.cancelButton)
+				self.hBoxL.addWidget(self.deleteButton)
 				self.hBoxL.addWidget(self.confirmButton)
 				self.hButtonL = QWidget()
 				self.hButtonL.setLayout(self.hBoxL)
@@ -153,23 +158,68 @@ class editCustomerDialog(QDialog):
 				return self.verticalLayout
 
 		def connections(self):
-			self.customerFirstName.textChanged.connect(self.validateFirstName)
-			self.customerSurname.textChanged.connect(self.validateSurname)
-			self.customerCompany.textChanged.connect(self.validateCompany)
-			self.customerStreet.textChanged.connect(self.validateStreet)
-			self.customerTown.textChanged.connect(self.validateTown)
-			self.customerPostCode.textChanged.connect(self.validatePostCode)
-			self.customerMobile.textChanged.connect(self.validateMobile)
-			self.customerLandline.textChanged.connect(self.validateUKLandline)
-			self.customerEmail.textChanged.connect(self.validateEmail)
+				self.customerFirstName.textChanged.connect(self.validateFirstName)
+				self.customerSurname.textChanged.connect(self.validateSurname)
+				self.customerCompany.textChanged.connect(self.validateCompany)
+				self.customerStreet.textChanged.connect(self.validateStreet)
+				self.customerTown.textChanged.connect(self.validateTown)
+				self.customerPostCode.textChanged.connect(self.validatePostCode)
+				self.customerMobile.textChanged.connect(self.validateMobile)
+				self.customerLandline.textChanged.connect(self.validateUKLandline)
+				self.customerEmail.textChanged.connect(self.validateEmail)
 
-			self.cancelButton.clicked.connect(self.close)
-			self.confirmButton.clicked.connect(self.validateUpdatecustomerForm)
+				self.cancelButton.clicked.connect(self.close)
+				self.deleteButton.clicked.connect(self.warningDialog)
+				self.confirmButton.clicked.connect(self.validateUpdatecustomerForm)
+
+		def warningDialog(self):
+				self.error_message_dialog = QMessageBox()
+				self.error_message_dialog.setFixedHeight(400)
+				self.error_message_dialog.setMaximumWidth(200)
+				self.error_message_dialog.setWindowTitle("Database Warning")
+				self.error_message_dialog.setText("WARNING! You are about to delete a record from the database. \n"
+													"This action cannot be undone!")
+				self.error_message_dialog.setIcon(QMessageBox.Warning)
+				self.cancelButton = self.error_message_dialog.addButton(self.tr("Cancel"), QMessageBox.RejectRole)
+				self.okay_button = self.error_message_dialog.addButton(self.tr("Okay"), QMessageBox.AcceptRole)
+				self.error_message_dialog.setEscapeButton(self.cancelButton)
+				self.error_message_dialog.setDefaultButton(self.cancelButton)
+				self.okay_button.clicked.connect(self.deleteCustomer)
+				self.error_message_dialog.exec_()
+
+
+		def deleteCustomer(self):
+				customerID = self.data[0]
+
+				customerDeleted = self.connection.deleteCustomer(customerID)
+
+				if customerDeleted:
+						self.error_message_dialog = QMessageBox()
+						self.error_message_dialog.setFixedHeight(400)
+						self.error_message_dialog.setMaximumWidth(200)
+						self.error_message_dialog.setWindowTitle("Input Error")
+						self.error_message_dialog.setText("Success! Record for {0} {1} deleted. \n".format(self.data[1], self.data[2]))
+						self.error_message_dialog.setIcon(QMessageBox.Information)
+						self.okay_button = self.error_message_dialog.addButton(self.tr("Okay"), QMessageBox.AcceptRole)
+						self.error_message_dialog.setEscapeButton(self.okay_button)
+						self.error_message_dialog.setDefaultButton(self.okay_button)
+						self.okay_button.clicked.connect(self.close)
+						self.error_message_dialog.exec_()
+
+						#clear table
+						query = self.connection.initialCustomerTable()
+						self.parent.showResults(query)
+
+				else:
+						infoText = """ The client was not updated successfully! """
+
+						QMessageBox.critical(self, "Customer Not Updated!", infoText)
+
 
 		def closeEvent(self, Event):
-			self.parent.setEnabled(True)
-			self.parent.results_table.selectionModel().clearSelection()
-			self.parent.tableGroup.setEnabled(True)
+				self.parent.setEnabled(True)
+				self.parent.results_table.selectionModel().clearSelection()
+				self.parent.tableGroup.setEnabled(True)
 				
 
 		def addConnection(self, connection):
@@ -205,27 +255,34 @@ class editCustomerDialog(QDialog):
 
 
 		def populateEditFields(self, data):
-				currentId = data[0]
-				title = data[1]
-				firstname = data[2]
-				surname = data[3]
-				company = data[4]
-				street = data[5]
-				town = data[6]
-				county = data[7]
-				postCode = data[8]
-				mobile = data[9]
-				landline = data[10]
-				email = data[11]
+				self.data = data
+				currentId = self.data[0]
+				title = self.data[1]
+				firstname = self.data[2]
+				surname = self.data[3]
+				company = self.data[4]
+				street = self.data[5]
+				town = self.data[6]
+				county = self.data[7]
+				postCode = self.data[8]
+				mobile = self.data[9]
+				landline = self.data[10]
+				email = self.data[11]
 
 				self.currentMemberId = currentId
-				self.customerTitle.findText(title)
+
+				self.titleIndex = self.customerTitle.findText(title)
+				self.customerTitle.setCurrentIndex(self.titleIndex)
+				
 				self.customerFirstName.setText(firstname)
 				self.customerSurname.setText(surname)
 				self.customerCompany.setText(company)
 				self.customerStreet.setText(street)
 				self.customerTown.setText(town)
-				self.customerCounty.findText(county)
+
+				self.countyIndex = self.customerCounty.findText(county)
+				self.customerCounty.setCurrentIndex(self.countyIndex)
+
 				self.customerPostCode.setText(postCode)
 				self.customerMobile.setText(mobile)
 				self.customerLandline.setText(landline)
@@ -412,7 +469,8 @@ class editCustomerDialog(QDialog):
 
 				if error_count > 0:
 						self.error_message_dialog = QMessageBox()
-						self.error_message_dialog.setFixedWidth(200)
+						self.error_message_dialog.setFixedHeight(400)
+						self.error_message_dialog.setMaximumWidth(200)
 						self.error_message_dialog.setWindowTitle("Input Error")
 						self.error_message_dialog.setText("Error! Some data entered is invalid \n"
 																						  "\n"
@@ -420,8 +478,8 @@ class editCustomerDialog(QDialog):
 						self.error_message_dialog.setDetailedText("The information entered is invalid \n"
 																										"Steps to take: \n"
 																										"\n"
-																										"    1. Make sure that valid post-codes and numbers are \n"
-																										"       entered into the required fields. \n"
+																										"    1. Make sure that valid post-codes and numbers and \n"
+																										"       emails are entered into the required fields. \n"
 																										"    2. The drop-down menus should NOT have \n"
 																										"       'Please select...' as an option for data input. \n")
 						self.error_message_dialog.setIcon(QMessageBox.Warning)
@@ -434,13 +492,13 @@ class editCustomerDialog(QDialog):
 						self.updateCustomer()
 
 		def updateCustomer(self):
-				county = str(self.countyEdit.currentText())
-				title = str(self.titleEdit.currentText())
+				county = str(self.customerCounty.currentText())
+				title = str(self.customerTitle.currentText())
 
 				values = {"ID" : self.currentMemberId,
 										"Title": title,
 								   "FirstName": self.firstNameEdit.text(),
-								  "Surname": self.surnameEdit.text(),
+								  "LastName": self.surnameEdit.text(),
 								  "Company":self.companyEdit.text(),
 								  "Street": self.streetEdit.text(),
 								  "Town": self.townEdit.text(),
@@ -450,21 +508,35 @@ class editCustomerDialog(QDialog):
 								  "Landline": self.landline.text(),
 										"Email": emailEdit.text()}
 
-				clientAdded = self.connection.updateCustomer(values)
+				customerUpdated = self.connection.updateCustomer(values)
 
-				if clientAdded:
+				if customerUpdated:
 
 						self.clearForm()
-						 
-						infoText = """ The clients information has been updated!"""
-						QMessageBox.information(self, "Customer Info Updated!", infoText)
 
-						self.parent.parent.switchToMainMenu()
+						query = self.connection.initialCustomerTable()
+						self.parent.showResults(query)
+						 
+						infoText = """ The customers information has been updated!"""
+						QMessageBox.information(self, "Customer Info Updated!", infoText)
 						
 				else:
-						infoText = """ The client was not updated successfully! """
-
-						QMessageBox.critical(self, "Customer Not Updated!", infoText)
+						self.error_message_dialog = QMessageBox()
+						self.error_message_dialog.setFixedWidth(200)
+						self.error_message_dialog.setWindowTitle("Input Error")
+						self.error_message_dialog.setText("Error! Failed to commit to database\n"
+														  "\n"
+														  "Click the 'Show details' button for more information")
+						self.error_message_dialog.setDetailedText("Database Error:\n \n "
+														  "{0}".format(self.connection.error))
+						self.error_message_dialog.setIcon(QMessageBox.Warning)
+						self.okay_button = self.error_message_dialog.addButton(self.parent.tr("Okay"), QMessageBox.AcceptRole)
+						self.error_message_dialog.setEscapeButton(self.okay_button)
+						self.error_message_dialog.setDefaultButton(self.okay_button)
+						self.okay_button.clicked.connect(self.editEntry)
+						self.error_message_dialog.exec_()
+						self.parent.statusBar.showMessage("Customer {0} {1} unsuccessfully added to the database".format(values["FirstName"],values["LastName"]))
+						self.parent.switchToMainMenu()
 
 				
 				

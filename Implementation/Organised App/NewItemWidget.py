@@ -1,6 +1,8 @@
 from PyQt4.QtGui import *
 from PyQt4.QtCore import *
 
+import sqlite3
+
 import sys
 import re
 
@@ -102,27 +104,15 @@ class NewItemWidget(QWidget):
 		self.fuse_rating_drop_down.model().setData(j, 0, Qt.UserRole-1)
 
 
-
+		self.parent.mainMenu.newItemButton.clicked.connect(self.populateDropDowns)
 
 		self.item_type_drop_down = QComboBox()
 
 		self.item_type_drop_down.addItem("Please select...")
 		
-		# self.item_type_drop_down.addItem(item_type)
-		self.item_type_drop_down.addItem("Audio")
-		self.item_type_drop_down.addItem("Cabling")
-		self.item_type_drop_down.addItem("Control Desks")
-		self.item_type_drop_down.addItem("Lighting")
-		self.item_type_drop_down.addItem("Miscallaneous")
-		self.item_type_drop_down.addItem("Power")
-		self.item_type_drop_down.addItem("Software")
-		self.item_type_drop_down.addItem("Staging")
-		self.item_type_drop_down.addItem("Storage/Hardware")
-		self.item_type_drop_down.addItem("Visual")
 
 		j = self.item_type_drop_down.model().index(0,0)
 		self.item_type_drop_down.model().setData(j, 0, Qt.UserRole-1)
-
 
 
 
@@ -132,10 +122,6 @@ class NewItemWidget(QWidget):
 
 		# self.location_drop_down.addItem[location]
 
-		self.location_drop_down.addItem("Alpha Terrace")
-		self.location_drop_down.addItem("C3 Centre")
-		self.location_drop_down.addItem("Cineworld")
-		self.location_drop_down.addItem("St. Bedes")
 
 		j = self.location_drop_down.model().index(0,0)
 		self.location_drop_down.model().setData(j, 0, Qt.UserRole-1)
@@ -221,9 +207,30 @@ class NewItemWidget(QWidget):
 
 		self.confirmButton.clicked.connect(self.switchToPreviewWidget)
 
+		self.parent.mainMenu.newItemButton.clicked.connect(self.editEntry)
+
 		self.clearForm()
 
 		return self.verticalLayout
+
+	def populateDropDowns(self):
+		with sqlite3.connect(self.connection.path) as db:
+			cursor = db.cursor()
+			sql = ("""SELECT ItemTypeID, ItemType FROM ItemType ORDER BY ItemType ASC""")
+			cursor.execute(sql)
+			self.itemTypes = cursor.fetchall()
+
+			for itemType in self.itemTypes:
+				self.item_type_drop_down.addItem(itemType[1])
+
+		with sqlite3.connect(self.connection.path) as db:
+			cursor = db.cursor()
+			sql = ("""SELECT LocationID, Location FROM Location ORDER BY Location ASC""")
+			cursor.execute(sql)
+			self.locations = cursor.fetchall()
+
+			for location in self.locations:
+				self.location_drop_down.addItem(location[1])
 
 
 
@@ -406,7 +413,7 @@ class NewItemWidget(QWidget):
 		except ValueError:
 			valid_item_value = False
 
-		if valid_item_value == True:
+		if valid_item_value == True or item_value == "0":
 			self.item_value_line_edit.setStyleSheet("background-color:#c4df9b")
 			return True
 		else:
@@ -490,36 +497,14 @@ class NewItemWidget(QWidget):
 		if self.location_preview.text() == "Please select...":
 			location_id = ''
 
-		if self.item_type_preview.text() == "Cabling":
-			item_type_id = '2'
-		elif self.item_type_preview.text() == "Storage/Hardware":
-			item_type_id = '3'
-		elif self.item_type_preview.text() == "Lighting":
-			item_type_id = '4'
-		elif self.item_type_preview.text() == "Power":
-			item_type_id = '5'
-		elif self.item_type_preview.text() == "Audio":
-			item_type_id = '6'
-		elif self.item_type_preview.text() == "Visual":
-			item_type_id = '7'
-		elif self.item_type_preview.text() == "Miscellaneous":
-			item_type_id = '8'
-		elif self.item_type_preview.text() == "Software":
-			item_type_id = '9'
-		elif self.item_type_preview.text() == "Staging":
-			item_type_id = '10'
-		elif self.item_type_preview.text() == "Control Desks":
-			item_type_id = '11'
+		for itemType in self.itemTypes:
+			if self.item_type_drop_down.currentText() == itemType[1]:
+				item_type_id = itemType[0]
 
 
-		if self.location_preview.text() == "St. Bedes":
-			location_id = '2'
-		elif self.location_preview.text() == "Alpha Terrace":
-			location_id = '3'
-		elif self.location_preview.text() == "Cineworld":
-			location_id = '4'
-		elif self.location_preview.text() == "C3 Centre":
-			location_id = '5'
+		for location in self.locations:
+			if self.location_drop_down.currentText() == location[1]:
+				location_id = location[0]
 
 		if self.item_loan_rate_preview.text() == "":
 			self.loan_rate_entry = "-"
@@ -554,17 +539,18 @@ class NewItemWidget(QWidget):
 			self.error_message_dialog.setDefaultButton(self.okay_button)
 			self.okay_button.clicked.connect(self.editEntry)
 			self.error_message_dialog.exec_()
+			self.parent.statusBar.showMessage("Item {0} unsuccessfully added to the database".format(values["ItemName"]))
 		else:
 			self.mssg = QMessageBox()
 			self.mssg.setFixedWidth(200)
-			self.mssg.setWindowTitle("Customer Added")
+			self.mssg.setWindowTitle("Item Added")
 			self.mssg.setText("Success! {0} Record(s) added for {1}".format(quantity, self.item_name_preview.text()))
 			self.mssg.setIcon(QMessageBox.Information)
 			self.okay_button = self.mssg.addButton(self.parent.tr("Okay"), QMessageBox.AcceptRole)
 			self.mssg.setEscapeButton(self.okay_button)
 			self.mssg.setDefaultButton(self.okay_button)
 			self.mssg.exec_()
-			self.parent.statusBar.showMessage("Item {0} unsuccessfully added to the database".format(values["ItemName"]))
+			self.parent.statusBar.showMessage("Item {0} successfully added to the database".format(values["ItemName"]))
 			self.clearForm()
 			self.parent.switchToMainMenu()
 

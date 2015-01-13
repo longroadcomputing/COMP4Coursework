@@ -594,11 +594,36 @@ class newCustomerWidget(QWidget):
 
 		customerAdded = self.connection.addCustomer(values, self)
 
-		if customerAdded:
-			self.parent.statusBar.showMessage("Record for {0} added to database".format(values["FirstName"]))
-			self.clearForm()
+		if not customerAdded:
+			self.error_message_dialog = QMessageBox()
+			self.error_message_dialog.setFixedWidth(200)
+			self.error_message_dialog.setWindowTitle("Input Error")
+			self.error_message_dialog.setText("Error! Failed to commit to database\n"
+											  "\n"
+											  "Click the 'Show details' button for more information")
+			self.error_message_dialog.setDetailedText("Database Error:\n \n "
+											  "{0}".format(self.connection.error))
+			self.error_message_dialog.setIcon(QMessageBox.Warning)
+			self.okay_button = self.error_message_dialog.addButton(self.parent.tr("Okay"), QMessageBox.AcceptRole)
+			self.error_message_dialog.setEscapeButton(self.okay_button)
+			self.error_message_dialog.setDefaultButton(self.okay_button)
+			self.okay_button.clicked.connect(self.editEntry)
+			self.error_message_dialog.exec_()
+			self.parent.statusBar.showMessage("Customer {0} {1} unsuccessfully added to the database".format(values["FirstName"],values["LastName"]))
 			self.parent.switchToMainMenu()
 		else:
+			self.mssg = QMessageBox()
+			self.mssg.setFixedWidth(200)
+			self.mssg.setWindowTitle("Customer Added")
+			self.mssg.setText("Success! Record added for {0} {1}".format(self.customerFirstName.text(), self.customerSurname.text()))
+			self.mssg.setIcon(QMessageBox.Information)
+			self.okay_button = self.mssg.addButton(self.parent.tr("Okay"), QMessageBox.AcceptRole)
+			self.mssg.setEscapeButton(self.okay_button)
+			self.mssg.setDefaultButton(self.okay_button)
+			self.mssg.exec_()
+			self.parent.statusBar.showMessage("Customer {0} {1} successfully added to the database".format(values["FirstName"],values["LastName"]))
+			self.clearForm()
+			self.parent.switchToMainMenu()
 			self.editEntry()
 
 

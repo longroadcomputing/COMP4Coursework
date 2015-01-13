@@ -60,49 +60,52 @@ class SQLConnection():
 
 	def addItem(self, values, parent):
 		self.parent = parent
-		add_item = QSqlQuery(self.db)
+		addItem = QSqlQuery(self.db)
 
-		add_item.prepare("""INSERT INTO Item(ItemName,ItemValue,LoanRate,
+		addItem.prepare("""INSERT INTO Item(ItemName,ItemValue,LoanRate,
 		ItemClass,FuseRating,ItemTypeID,LocationID) VALUES(:ItemName,:ItemValue,
 		:LoanRate,:ItemClass,:FuseRating,:ItemTypeID,:LocationID)""")
 
-		add_item.bindValue(":ItemName",values["ItemName"])
-		add_item.bindValue(":ItemValue",values["ItemValue"])
-		add_item.bindValue(":LoanRate",values["LoanRate"])
-		add_item.bindValue(":ItemClass",values["ItemClass"])
-		add_item.bindValue(":FuseRating",values["FuseRating"])
-		add_item.bindValue(":ItemTypeID",values["ItemTypeID"])
-		add_item.bindValue(":LocationID",values["LocationID"])
+		addItem.bindValue(":ItemName",values["ItemName"])
+		addItem.bindValue(":ItemValue",values["ItemValue"])
+		addItem.bindValue(":LoanRate",values["LoanRate"])
+		addItem.bindValue(":ItemClass",values["ItemClass"])
+		addItem.bindValue(":FuseRating",values["FuseRating"])
+		addItem.bindValue(":ItemTypeID",values["ItemTypeID"])
+		addItem.bindValue(":LocationID",values["LocationID"])
 
-		success = add_item.exec_()
-
-		self.error = add_item.lastError().text()
+		success = addItem.exec_()
 
 		if success:
 			return True
 		else:
+			self.error = addItem.lastError().text()
 			return False
 
 
 	def getAllItemTypes(self):
-		query = QSqlQuery(self.db)
+		with sqlite3.connect(self.path) as db:
 
-		query.prepare("SELECT ItemType FROM ItemType ORDER BY ItemType ASC")
+			cursor = db.cursor()
+			sql = "SELECT ItemType FROM ItemType ORDER BY ItemType ASC"
+			values = (ID,)
+			cursor.execute(sql, values)
+			data = cursor.fetchone()
+			db.commit()
 
-		query.exec_()
-
-		return query
+			return data
 
 	def getLocations(self):
-		query = QSqlQuery(self.db)
+		with sqlite3.connect(self.path) as db:
 
-		query.prepare("SELECT Location FROM Location ORDER BY Location ASC")
+			cursor = db.cursor()
+			sql = "SELECT Customer FROM Customer ORDER BY Customer ASC"
+			values = (ID,)
+			cursor.execute(sql, values)
+			data = cursor.fetchone()
+			db.commit()
 
-		query.exec_()
-
-		print(query)
-
-		return query
+			return data
 
 	def getAllCustomers(self):
 		
@@ -140,54 +143,78 @@ class SQLConnection():
 
 	def addCustomer(self, values, parent):
 		self.parent = parent
-		add_item = QSqlQuery(self.db)
+		addCustomer = QSqlQuery(self.db)
 		
-		add_item.prepare("""INSERT INTO Customer(Title,FirstName,LastName,Company,
+		addCustomer.prepare("""INSERT INTO Customer(Title,FirstName,LastName,Company,
 		Street,Town,County,PostCode,Mobile,Landline,Email) VALUES(:Title,:FirstName,:LastName,
 		:Company,:Street,:Town,:County,:PostCode,:Mobile,:Landline,:Email)""")
 
-		add_item.bindValue(":Title",values["Title"])
-		add_item.bindValue(":FirstName",values["FirstName"])
-		add_item.bindValue(":LastName",values["LastName"])
-		add_item.bindValue(":Company",values["Company"])
-		add_item.bindValue(":Street",values["Street"])
-		add_item.bindValue(":Town",values["Town"])
-		add_item.bindValue(":County",values["County"])
-		add_item.bindValue(":PostCode",values["PostCode"])
-		add_item.bindValue(":Mobile",values["Mobile"])
-		add_item.bindValue(":Landline",values["Landline"])
-		add_item.bindValue(":Email",values["Email"])
+		addCustomer.bindValue(":Title",values["Title"])
+		addCustomer.bindValue(":FirstName",values["FirstName"])
+		addCustomer.bindValue(":LastName",values["LastName"])
+		addCustomer.bindValue(":Company",values["Company"])
+		addCustomer.bindValue(":Street",values["Street"])
+		addCustomer.bindValue(":Town",values["Town"])
+		addCustomer.bindValue(":County",values["County"])
+		addCustomer.bindValue(":PostCode",values["PostCode"])
+		addCustomer.bindValue(":Mobile",values["Mobile"])
+		addCustomer.bindValue(":Landline",values["Landline"])
+		addCustomer.bindValue(":Email",values["Email"])
 
-		success = add_item.exec_()
+		success = addCustomer.exec_()
 
 		if success:
-			self.mssg = QMessageBox()
-			self.mssg.setFixedWidth(200)
-			self.mssg.setWindowTitle("Customer Added")
-			self.mssg.setText("Success! Record added for {0}".format(values["FirstName"]))
-			self.mssg.setIcon(QMessageBox.Information)
-			self.okay_button = self.mssg.addButton(self.parent.tr("Okay"), QMessageBox.AcceptRole)
-			self.mssg.setEscapeButton(self.okay_button)
-			self.mssg.setDefaultButton(self.okay_button)
-			self.okay_button.clicked.connect(self.parent.editEntry)
-			self.mssg.exec_()
 			return True
 		else:
-			self.error_message_dialog = QMessageBox()
-			self.error_message_dialog.setFixedWidth(200)
-			self.error_message_dialog.setWindowTitle("Input Error")
-			self.error_message_dialog.setText("Error! Failed to commit to database\n"
-											  "\n"
-											  "Click the 'Show details' button for more information")
-			self.error_message_dialog.setDetailedText("Database Error:\n \n "
-											  "{0}".format(add_item.lastError().text()))
-			self.error_message_dialog.setIcon(QMessageBox.Warning)
-			self.okay_button = self.error_message_dialog.addButton(self.parent.tr("Okay"), QMessageBox.AcceptRole)
-			self.error_message_dialog.setEscapeButton(self.okay_button)
-			self.error_message_dialog.setDefaultButton(self.okay_button)
-			self.okay_button.clicked.connect(self.parent.editEntry)
-			self.error_message_dialog.exec_()
+			self.error = addCustomer.lastError().text()
 			return False
+
+	def updateCustomer(self,values):
+		updateCustomer = QSqlQuery(self.db)
+
+		updateCustomer.prepare("""
+UPDATE Customer SET Title = :Title, FirstName = :FirstName, LastName = :LastName,
+Company = :Company, Street = :Street, Town = :Town, County = :County, 
+PostCode = :PostCode, Mobile = :Mobile, Landline = :Landline,
+Email = :Email
+WHERE CustomerID = :CustomerID;
+""")
+		updateCustomer.bindValue(":CustomerID",values["ID"])
+		updateCustomer.bindValue(":Title",values["Title"])
+		updateCustomer.bindValue(":FirstName",values["FirstName"])
+		updateCustomer.bindValue(":LastName",values["LastName"])
+		updateCustomer.bindValue(":Company",values["Company"])
+		updateCustomer.bindValue(":Street",values["Street"])
+		updateCustomer.bindValue(":Town",values["Town"])
+		updateCustomer.bindValue(":County",values["County"])
+		updateCustomer.bindValue(":PostCode",values["PostCode"])
+		updateCustomer.bindValue(":Mobile",values["Mobile"])
+		updateCustomer.bindValue(":Landline",values["Landline"])
+		updateCustomer.bindValue(":Email",values["Email"])
+
+	def initialCustomerTable(self):
+
+		query = QSqlQuery(self.db)
+		query.prepare("SELECT * FROM Customer WHERE 1=0")
+		query.exec_()
+
+		return query
+
+	def deleteCustomer(self, ID):
+		
+		query = QSqlQuery(self.db)
+
+		query.prepare("DELETE FROM Customer WHERE CustomerID = :ID")
+
+		query.bindValue(":ID",ID)
+
+		self.error = query.lastError().text()
+
+		print(self.error)
+
+		query.exec_()
+
+		return query
 
 
 	def getSearchQuery(self, queryText):
@@ -195,22 +222,25 @@ class SQLConnection():
 		searchText = queryText
 
 		if searchText == "":
-			query = self.initialTable()
+			query = self.initialCustomerTable()
 
 			return query
 		else:
 
 			query = QSqlQuery(self.db)
 
-			query.prepare("""SELECT * FROM Client WHERE
-	   ClientFirstName LIKE '%'||:searchString||'%' OR
-	   ClientEmail LIKE '%'||:searchString2||'%' OR
-	   ClientSurname LIKE '%'||:searchString3||'%' OR
-	   ClientAddrLine1 LIKE '%'||:searchString4||'%' OR
-	   ClientAddrLine2 LIKE '%'||:searchString5||'%' OR
-	   ClientAddrLine3 LIKE '%'||:searchString6||'%' OR
-	   ClientAddrLine4 LIKE '%'||:searchString7||'%' OR
-	   ClientPhoneNumber LIKE '%'||:searchString8||'%'
+			query.prepare("""SELECT * FROM Customer WHERE
+	   FirstName LIKE '%'||:searchString||'%' OR
+	   LastName LIKE '%'||:searchString2||'%' OR
+	   Company LIKE '%'||:searchString3||'%' OR
+	   Street LIKE '%'||:searchString4||'%' OR
+	   Town LIKE '%'||:searchString5||'%' OR
+	   County LIKE '%'||:searchString6||'%' OR
+	   PostCode LIKE '%'||:searchString7||'%' OR
+	   Mobile LIKE '%'||:searchString8||'%' OR
+	   Landline LIKE '%'||:searchString9||'%' OR
+	   Email LIKE '%'||:searchString10||'%'
+	   UNION "NONE"
 		""")
 		
 
@@ -222,6 +252,8 @@ class SQLConnection():
 			query.bindValue(":searchString6", searchText)
 			query.bindValue(":searchString7", searchText)
 			query.bindValue(":searchString8", searchText)
+			query.bindValue(":searchString9", searchText)
+			query.bindValue(":searchString10", searchText)
 
 			success = query.exec_()
 

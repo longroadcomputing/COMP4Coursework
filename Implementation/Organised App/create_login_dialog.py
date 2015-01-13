@@ -6,8 +6,9 @@ import pdb
 
 class LoginDialog(QDialog):
 	"""Error displayed when login password is incorrect"""
-	def __init__(self):
+	def __init__(self,parent):
 		super().__init__()
+		self.parent = parent
 		self.setWindowTitle("Login")
 		self.login_label = QLabel("Please enter the Password to access:")
 		self.password_entry = QLineEdit()
@@ -35,10 +36,14 @@ class LoginDialog(QDialog):
 		self.quit_button.setAutoDefault(False)
 		self.login_button.setAutoDefault(True)
 
-		self.password_entry.returnPressed.connect(self.close)
 		self.login_button.clicked.connect(self.close)
+		self.login_button.setShortcut('Return')
 		self.quit_button.clicked.connect(self.close)
 		self.quit_button.setShortcut('Ctrl+W')
+
+		def closeEvent(self, Event):
+			if self.quit_button.clicked:
+				self.parent.logout()
 
 
 class LoginErrorDialog(QDialog):
@@ -63,9 +68,7 @@ class LoginErrorDialog(QDialog):
 		self.setLayout(self.login_error_layout)
 
 		self.close_button.clicked.connect(self.close)
-		#self.returnPressed.connect(self.close)
-
-		
+		self.close_button.setShortcut("Return")
 
 def login_dialog_main():
 	application = QApplication(sys.argv)

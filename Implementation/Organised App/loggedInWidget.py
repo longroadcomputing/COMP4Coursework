@@ -124,6 +124,7 @@ class loggedInWidget(QWidget):
 
 
 		self.logoutButton = QPushButton("Logout")
+		self.logoutButton.setShortcut('Esc')
 		self.changePasswordButton = QPushButton("Change Password")
 
 		self.logoutButton.setFixedWidth(200)
