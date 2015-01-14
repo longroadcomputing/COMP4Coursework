@@ -121,7 +121,7 @@ Deleting Records
 
 \begin{figure}[H]
     \begin{center}
-        \includegraphics[width=500px]{./Design/user_interface/Add_loan_record_interface.pdf}
+        \includegraphics[width=500px]{./Design/user_interface/Add_customer_record_interface.pdf}
     \end{center}
     \caption{Login and Main Menu windows.} \label{fig:print_function_result}
 \end{figure}
@@ -130,7 +130,7 @@ Deleting Records
 
 \begin{figure}[H]
     \begin{center}
-        \includegraphics[width=500px]{./Design/user_interface/Add_customer_record_interface.pdf}
+        \includegraphics[width=500px]{./Design/user_interface/Add_loan_record_interface.pdf}
     \end{center}
     \caption{Login and Main Menu windows.} \label{fig:print_function_result}
 \end{figure}
@@ -179,79 +179,43 @@ I have chosen to build my system for this specification as this is the computer 
 
 \subsection{Algorithms in pseudo-code for each data transformation process}
 
-\textbf{Search for an item}
-\begin{sql}
-    FUNCTION SearchItems(Item: ITEM)
-        SET valid TO false
-        WHILE not valid
-            SEND "Please enter the item name"
-            GET ItemName
-        SET Items TO GetItemRecords()
-        SET found TO false
-        FOR Item IN Items
-            IF ItemName = Item.ItemName
-                SET found TO true
-            ELSE
-                SET found TO false
-        If found = true
-            DisplayItem(Item.ItemID)
-        ELSE
-            DisplayItemNotFound()
-\end{sql}
+\begin{algorithm}[H]
+    \caption{Producing a PDF via print function}
+\begin{algorithmic}[1]
+\SET{$officeAddr$}{$['Street','Town','County','PostCode']$}
+\SET{$loanItems$}{$self.getItemsInLoan()$}
+\SET{$customerDets$}{$self.getCustomerDetails$}
 
-\textbf{Search for Customer}
-\begin{sql}
-    FUNCTION SearchItems(Item: ITEM)
-        SET valid TO false
-        WHILE not valid
-            SEND "Please enter the customer company"
-            GET Company
-        SET Customers TO GetCustomerRecords()
-        SET found TO false
-        FOR Customer IN Customers
-            IF Company = Customer.Company
-                SET found TO true
-            ELSE
-                SET found TO false
-        If found = true
-            DisplayCustomer(Customer.Company)
-        ELSE
-            DisplayCustomerNotFound()
-\end{sql}
+\For{$item$}{$loanItems$}
+    \SET{$loanRate$}{$item[2]$}
+    \SET{$amountDue$}{$amountDue + loanRate$}
+\EndFor
+\SET{$amountIncVAT$}{$amountDue * 1.2$}
 
-\newpage
+\SET{$invoiceInfo$}{$[officeAddr, loanItems, customerDets, amountDue, amountIncVAT]$}
+\SET{$htmlInvoice$}{$self.createHtmlInvoice(invoiceInfo)$}
 
-\textbf{Search for Loan}
-\begin{sql}
-    FUNCTION SearchItems(Item: ITEM)
-        SET valid TO false
-        WHILE not valid
-            SEND "Please enter the customer company"
-            GET Company
-        SET Customer TO GetCustomers()
-        SET foundCustomer TO false
-        FOR Customer IN Customers
-            IF Company = Customer.Company
-                RETURN Customer.CustomerID
-            ELSE
-                SET foundCustomer TO false
-        If foundCustomer = true
-            SET Loans TO GetLoans()
-            SET foundLoan TO false
-            FOR Loan IN Loans
-                IF Customer.CustomerID = Loan.CustomerID
-                    SET foundLoan TO true
-                    SET LoanID = Loan.[0]
-                ELSE
-                    SET foundLoan TO false
-            IF foundLoan = true
-                DisplayLoan(LoanID)
-            ELSE
-                DisplayLoanNotFound()
-        ELSE
-            DisplayCustomerNotFound()
-        
-\end{sql}
+\SET{$self.printer$}{$QPrinter()$}
+\SET{$printerDialog$}{$QPrintDialog(self.printer, self)$}
+
+\If{$printerDialog.exec_()$}
+    \SET{$document$}{$QTextDocument$}
+    \SET{$document.setHtml$}{$html$}
+    \SET{$document.Print$}{$self.printer$}
+    \State
+    \SET{$message$}{$"The document printed successfully"$}
+    \SET{$QMessageBox.information$}{$self, "Print Successful", message $}
+\Else
+    \SET{$message$}{$"The document was unable to print."$}
+    \SET{$QMessageBox.information$}{$self, "Print Failed", message $}
+\EndIf
+\end{algorithmic}
+\end{algorithm}
+
+\begin{center}
+    NB. The reason that "document.Print" has a capitalised 'P' is because\\
+    LaTeX doesn't like the underscore that should be after it
+\end{center}
 
 \begin{landscape}
 
@@ -259,7 +223,7 @@ I have chosen to build my system for this specification as this is the computer 
 
 \begin{figure}[H]
     \begin{center}
-    \includegraphics[width=500px]{./Design/Object_Diagrams/Object_diagrams.pdf}
+    \includegraphics[height=325px]{./Design/Object_Diagrams/Object_diagrams.pdf}
     \caption{Object Diagram.} \label{fig:object_diagram}
     \end{center}
 \end{figure}
