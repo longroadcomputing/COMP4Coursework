@@ -5,7 +5,453 @@ import sys
 import re
 
 #=============================================================================#
+class editItemDialog(QDialog):
+	"""docstring for editItemDialog"""
+	def __init__(self, parent):
+		super().__init__()
+		self.parent = parent
 
+		self.connection = None
+
+		self.mainLayout = self.layout()
+		self.setLayout(self.mainLayout)
+
+	def layout(self):
+		#create widgets
+		self.heading = QLabel("Add New Item")
+		self.heading.setAlignment(Qt.AlignCenter)
+		self.shadow = QGraphicsDropShadowEffect()
+		self.shadow.setBlurRadius(5)
+		self.heading.setGraphicsEffect(self.shadow)
+		self.heading.setStyleSheet("font-size:20px")
+
+		self.item_name_label = QLabel("Item Name:*")
+		self.item_value_label = QLabel("Item Value:*")
+		self.item_loan_rate_label = QLabel("Loan Rate:")
+
+		self.item_class_label = QLabel("Item Class:*")
+		self.fuse_rating_label = QLabel("Fuse Rating:*")
+		self.item_type_label = QLabel("Item Type:*")
+		self.location_label = QLabel("Location:*")
+
+		self.smallPrint = QLabel("* required fields")
+		self.smallPrint.setStyleSheet("font-size:11px")
+
+		self.item_name_line_edit = QLineEdit()
+		self.item_value_line_edit = QLineEdit()
+		self.item_loan_rate_line_edit = QLineEdit()
+		self.item_class_drop_down = QComboBox()
+
+
+
+		#dropdown menus (combobox)'s
+		#==========================#
+
+		self.item_class_drop_down.addItem("Please select...")
+
+		#self.item_class_drop_down.addItem(item_class)
+		self.item_class_drop_down.addItem("1")
+		self.item_class_drop_down.addItem("2")
+
+		j = self.item_class_drop_down.model().index(0,0)
+		self.item_class_drop_down.model().setData(j, 0, Qt.UserRole-1)
+
+
+
+
+		self.fuse_rating_drop_down = QComboBox()
+		self.fuse_rating_drop_down.addItem("Please select...")
+
+		# self.fuse_rating_drop_down.addItem(fuse_rating)
+		self.fuse_rating_drop_down.addItem("-")
+		self.fuse_rating_drop_down.addItem("0")
+		self.fuse_rating_drop_down.addItem("3")
+		self.fuse_rating_drop_down.addItem("5")
+		self.fuse_rating_drop_down.addItem("7")
+		self.fuse_rating_drop_down.addItem("10")
+		self.fuse_rating_drop_down.addItem("13")
+
+		j = self.fuse_rating_drop_down.model().index(0,0)
+		self.fuse_rating_drop_down.model().setData(j, 0, Qt.UserRole-1)
+
+
+		self.parent.parent.mainMenu.newItemButton.clicked.connect(self.populateDropDowns)
+
+		self.item_type_drop_down = QComboBox()
+
+		self.item_type_drop_down.addItem("Please select...")
+		
+
+		j = self.item_type_drop_down.model().index(0,0)
+		self.item_type_drop_down.model().setData(j, 0, Qt.UserRole-1)
+
+
+
+		self.location_drop_down = QComboBox()
+
+		self.location_drop_down.addItem("Please select...")
+
+		# self.location_drop_down.addItem[location]
+
+
+		j = self.location_drop_down.model().index(0,0)
+		self.location_drop_down.model().setData(j, 0, Qt.UserRole-1)
+
+
+		self.cancelButton = QPushButton("Cancel")
+		self.confirmButton = QPushButton("Confirm")
+
+		grid = QGridLayout()
+		grid.setSpacing(10)
+
+		grid.addWidget(self.item_name_label,0,0)
+		grid.addWidget(self.item_name_line_edit,0,1)
+
+		grid.addWidget(self.item_value_label,1,0)
+		grid.addWidget(self.item_value_line_edit,1,1)
+
+		grid.addWidget(self.item_loan_rate_label,2,0)
+		grid.addWidget(self.item_loan_rate_line_edit,2,1)
+
+		grid.addWidget(self.item_class_label,3,0)
+		grid.addWidget(self.item_class_drop_down,3,1)
+
+		grid.addWidget(self.fuse_rating_label,4,0)
+		grid.addWidget(self.fuse_rating_drop_down,4,1)
+
+		grid.addWidget(self.item_type_label,5,0)
+		grid.addWidget(self.item_type_drop_down,5,1)
+
+		grid.addWidget(self.location_label,6,0)
+		grid.addWidget(self.location_drop_down,6,1)
+
+		self.gridWidget = QGroupBox('Add Item:')
+		self.gridWidget.setLayout(grid)
+		self.gridWidget.setFixedHeight(400)
+
+		self.quantityGroup = QGroupBox("Duplicate Items:")
+
+		self.quantityLabel = QLabel("Quantity")
+		self.quantitySpinBox = QSpinBox()
+		self.quantitySpinBox.setRange(1,50)
+		self.quantitySpinBox.setValue(1)
+
+
+		self.quantityLayout = QHBoxLayout()
+		self.quantityLayout.addWidget(self.quantityLabel)
+		self.quantityLayout.addWidget(self.quantitySpinBox)
+
+		self.quantityGroup.setLayout(self.quantityLayout)
+
+
+		self.verticalLayout = QVBoxLayout()
+		self.verticalLayout.addWidget(self.heading)
+		self.verticalLayout.addStretch(1)
+		self.verticalLayout.addWidget(self.gridWidget)
+		self.verticalLayout.addWidget(self.quantityGroup)
+		self.verticalLayout.addWidget(self.smallPrint)
+
+		self.cancelButton = QPushButton("Exit")
+		self.cancelButton.setShortcut('Esc')
+		self.cancelButton.setAutoDefault(False)
+		self.cancelButton.setDefault(False)
+
+		self.deleteButton = QPushButton("Delete")
+		self.deleteButton.setAutoDefault(False)
+		self.deleteButton.setDefault(False)
+
+		self.confirmButton = QPushButton("Update")
+		self.confirmButton.setShortcut('Return')
+		self.confirmButton.setAutoDefault(True)
+		self.confirmButton.setDefault(True)
+
+		self.hBoxL = QHBoxLayout()
+		self.hBoxL.addWidget(self.cancelButton)
+		self.hBoxL.addWidget(self.deleteButton)
+		self.hBoxL.addWidget(self.confirmButton)
+		self.hButtonL = QWidget()
+		self.hButtonL.setLayout(self.hBoxL)
+
+
+		self.verticalLayout.addWidget(self.hButtonL)
+		self.verticalLayout.addStretch(1)
+
+		return self.verticalLayout
+
+	def populateDropDowns(self):
+		with sqlite3.connect(self.connection.path) as db:
+			cursor = db.cursor()
+			sql = ("""SELECT ItemTypeID, ItemType FROM ItemType ORDER BY ItemType ASC""")
+			cursor.execute(sql)
+			self.itemTypes = cursor.fetchall()
+
+			for itemType in self.itemTypes:
+				self.item_type_drop_down.addItem(itemType[1])
+
+		with sqlite3.connect(self.connection.path) as db:
+			cursor = db.cursor()
+			sql = ("""SELECT LocationID, Location FROM Location ORDER BY Location ASC""")
+			cursor.execute(sql)
+			self.locations = cursor.fetchall()
+
+			for location in self.locations:
+				self.location_drop_down.addItem(location[1])
+
+	def connections(self):
+		self.item_name_line_edit.textChanged.connect(self.validateItemName)
+		self.item_value_line_edit.textChanged.connect(self.validateItemValue)
+		self.item_loan_rate_line_edit.textChanged.connect(self.validateLoanRate)
+
+		self.cancelButton.clicked.connect(self.close)
+		self.deleteButton.clicked.connect(self.warningDialog)
+		self.confirmButton.clicked.connect(self.validateUpdateItemForm)
+
+	def warningDialog(self):
+		self.error_message_dialog = QMessageBox()
+		self.error_message_dialog.setFixedHeight(400)
+		self.error_message_dialog.setMaximumWidth(200)
+		self.error_message_dialog.setWindowTitle("Database Warning")
+		self.error_message_dialog.setText("WARNING! You are about to delete a record from the database. \n"
+											"This action cannot be undone!")
+		self.error_message_dialog.setIcon(QMessageBox.Warning)
+		self.cancelButton = self.error_message_dialog.addButton(self.tr("Cancel"), QMessageBox.RejectRole)
+		self.okay_button = self.error_message_dialog.addButton(self.tr("Okay"), QMessageBox.AcceptRole)
+		self.error_message_dialog.setEscapeButton(self.cancelButton)
+		self.error_message_dialog.setDefaultButton(self.cancelButton)
+		self.okay_button.clicked.connect(self.deleteCustomer)
+		self.error_message_dialog.exec_()
+
+
+	def deleteCustomer(self):
+		customerID = self.data[0]
+
+		customerDeleted = self.connection.deleteCustomer(customerID)
+
+		if customerDeleted:
+			self.error_message_dialog = QMessageBox()
+			self.error_message_dialog.setFixedHeight(400)
+			self.error_message_dialog.setMaximumWidth(200)
+			self.error_message_dialog.setWindowTitle("Input Error")
+			self.error_message_dialog.setText("Success! Record for {0} deleted. \n".format(self.data[1]))
+			self.error_message_dialog.setIcon(QMessageBox.Information)
+			self.okay_button = self.error_message_dialog.addButton(self.tr("Okay"), QMessageBox.AcceptRole)
+			self.error_message_dialog.setEscapeButton(self.okay_button)
+			self.error_message_dialog.setDefaultButton(self.okay_button)
+			self.okay_button.clicked.connect(self.close)
+			self.error_message_dialog.exec_()
+
+			#clear table
+			query = self.connection.initialCustomerTable()
+			self.parent.showResults(query)
+
+		else:
+			infoText = """ """
+
+			QMessageBox.critical(self, "Item Not Deleted!", infoText)
+
+
+	def closeEvent(self, Event):
+		self.parent.setEnabled(True)
+		self.parent.results_table.selectionModel().clearSelection()
+		self.parent.tableGroup.setEnabled(True)
+				
+
+	def addConnection(self, connection):
+		self.connection = connection
+
+		self.connections()
+		return True
+
+	def clearForm(self):
+		self.item_name_line_edit.clear()
+		self.item_value_line_edit.clear()
+		self.item_loan_rate_line_edit.clear()
+		self.item_class_drop_down.setCurrentIndex(0)
+		self.fuse_rating_drop_down.setCurrentIndex(0)
+		self.item_type_drop_down.setCurrentIndex(0)
+		self.location_drop_down.setCurrentIndex(0)
+
+		self.item_name_line_edit.setStyleSheet('')
+		self.item_value_line_edit.setStyleSheet('')
+		self.item_loan_rate_line_edit.setStyleSheet('')
+
+		self.parent.results_table.selectionModel().clearSelection()
+
+
+	def populateEditFields(self, data):
+		self.data = data
+		currentId = self.data[0]
+		itemName = self.data[1]
+		itemValue = str(self.data[2])
+		itemLoanRate = str(self.data[3])
+		itemClass = str(self.data[4])
+		fuseRating = self.data[5]
+		itemType = self.data[6]
+		location = self.data[7]
+
+		self.currentMemberId = currentId
+
+		self.item_name_line_edit.setText(itemName)
+		self.item_value_line_edit.setText(itemValue)
+		self.item_loan_rate_line_edit.setText(itemLoanRate)
+
+		itemClassIndex = self.item_class_drop_down.findText(itemClass)
+		self.item_class_drop_down.setCurrentIndex(itemClassIndex)
+
+		fuseRatingIndex = self.fuse_rating_drop_down.findText(fuseRating)
+		self.fuse_rating_drop_down.setCurrentIndex(fuseRatingIndex)
+
+		itemTypeIndex = self.item_type_drop_down.findText(itemType)
+		self.item_type_drop_down.setCurrentIndex(itemTypeIndex)
+
+		locationIndex = self.location_drop_down.findText(location)
+		self.location_drop_down.setCurrentIndex(locationIndex)
+
+
+
+	def validateItemName(self):
+		item_name = self.item_name_line_edit.text()
+		length = len(item_name)
+		if length >= 2:
+			self.item_name_line_edit.setStyleSheet("background-color:#c4df9b")
+			return True
+		else:
+			self.item_name_line_edit.setStyleSheet("background-color:#f6989d ")
+			return False
+
+	def validateItemValue(self):
+		item_value = self.item_value_line_edit.text()
+		length = len(item_value)
+		try:
+			item_value = int(item_value)
+			if item_value:
+				valid_item_value = True
+		except ValueError:
+			valid_item_value = False
+
+		if valid_item_value == True or item_value == "0":
+			self.item_value_line_edit.setStyleSheet("background-color:#c4df9b")
+			return True
+		else:
+			self.item_value_line_edit.setStyleSheet("background-color:#f6989d ")
+			return False
+
+	def validateLoanRate(self):
+		text = self.item_loan_rate_line_edit.text()
+		length = len(text)
+		valid_loan_rate = False
+		try:
+			loan_rate = int(text)
+			if loan_rate:
+				valid_loan_rate = True
+		except ValueError:
+			valid_loan_rate = False
+
+		if text == "" or text == '-':
+			valid_loan_rate = True
+
+		if valid_loan_rate == True or text == '':
+			self.item_loan_rate_line_edit.setStyleSheet("background-color:#c4df9b")
+			return True
+		else:
+			self.item_loan_rate_line_edit.setStyleSheet("background-color:#f6989d ")
+			return False
+
+
+	def validateItemValue(self):
+		item_value = self.item_value_line_edit.text()
+		length = len(item_value)
+		if length >= 2:
+			self.item_value_line_edit.setStyleSheet("background-color:#c4df9b")
+			return True
+		else:
+			self.item_value_line_edit.setStyleSheet("background-color:#f6989d ")
+			return False
+
+	def validateDropDowns(self):
+		valid_dropdowns = False
+		if self.item_type_preview == "" or self.location_preview == "" or self.item_class_preview == "" or self.fuse_rating_preview == "":
+			valid_dropdowns = False
+		else:
+			valid_dropdowns = True
+
+	def validateUpdateItemForm(self):
+		valid_dropdowns = self.validateDropDowns()
+		valid_name = self.validateItemName()
+		valid_value = self.validateItemValue()
+		valid_loan_rate = self.validateLoanRate()
+
+		if valid_dropdowns == False or valid_name == False or valid_value == False or valid_loan_rate == False:
+			self.error_message_dialog = QMessageBox()
+			self.error_message_dialog.setFixedWidth(200)
+			self.error_message_dialog.setWindowTitle("Input Error")
+			self.error_message_dialog.setText("Error! Some data entered is invalid \n"
+							  "\n"
+							  "Click the 'Show details' button for more information")
+			self.error_message_dialog.setDetailedText("The information entered is invalid \n"
+								"Steps to take: \n"
+								"\n"
+								"    1. Make sure that only an integer is entered \n"
+								"       for the Item Value field. \n"
+								"    2. The drop-down menus should NOT have \n"
+								"       'Please select...' as an option for data input. \n")
+			self.error_message_dialog.setIcon(QMessageBox.Warning)
+			self.okay_button = self.error_message_dialog.addButton(self.tr("Okay"), QMessageBox.AcceptRole)
+			self.error_message_dialog.setEscapeButton(self.okay_button)
+			self.error_message_dialog.setDefaultButton(self.okay_button)
+			self.okay_button.clicked.connect(self.editEntry)
+			self.error_message_dialog.exec_()
+
+		else:
+			self.updateItem()
+
+	def updateItem(self):
+		itemClass = str(self.item_class_drop_down.currentText())
+		fuseRating = str(self.fuse_rating_drop_down.currentText())
+		itemType = str(self.item_type_drop_down.currentText())
+		location = str(self.location_drop_down.currentText())
+
+		values = {"ItemID" : self.currentMemberId,
+			   "ItemName": self.item_name_line_edit.text(),
+			  "ItemValue": self.item_value_line_edit.text(),
+			  "LoanRate":self.item_loan_rate_line_edit.text(),
+			  "ItemClass": itemClass,
+			  "FuseRating": fuseRating,
+			  "ItemType": itemType,
+			  "Location": location}
+
+		customerUpdated = self.connection.updateItem(values)
+
+		if customerUpdated:
+
+			self.clearForm()
+
+			query = self.connection.initialCustomerTable()
+			self.parent.showResults(query)
+			 
+			infoText = """ The customers information has been updated!"""
+			QMessageBox.information(self, "Customer Info Updated!", infoText)
+				
+		else:
+			self.error_message_dialog = QMessageBox()
+			self.error_message_dialog.setFixedWidth(200)
+			self.error_message_dialog.setWindowTitle("Input Error")
+			self.error_message_dialog.setText("Error! Failed to commit to database\n"
+							  "\n"
+							  "Click the 'Show details' button for more information")
+			self.error_message_dialog.setDetailedText("Database Error:\n \n "
+								  "{0}".format(self.connection.error))
+			self.error_message_dialog.setIcon(QMessageBox.Warning)
+			self.okay_button = self.error_message_dialog.addButton(self.parent.tr("Okay"), QMessageBox.AcceptRole)
+			self.error_message_dialog.setEscapeButton(self.okay_button)
+			self.error_message_dialog.setDefaultButton(self.okay_button)
+			self.okay_button.clicked.connect(self.editEntry)
+			self.error_message_dialog.exec_()
+			self.parent.statusBar.showMessage("Item {0}  unsuccessfully updated to the database".format(values["FirstName"]))
+			self.parent.switchToMainMenu()
+
+
+		
 #=============================================================================#
 
 class editCustomerDialog(QDialog):
@@ -174,7 +620,7 @@ class editCustomerDialog(QDialog):
 
 				self.cancelButton.clicked.connect(self.close)
 				self.deleteButton.clicked.connect(self.warningDialog)
-				self.confirmButton.clicked.connect(self.validateUpdatecustomerForm)
+				self.confirmButton.clicked.connect(self.validateUpdateCustomerForm)
 
 		def warningDialog(self):
 				self.error_message_dialog = QMessageBox()
@@ -215,9 +661,9 @@ class editCustomerDialog(QDialog):
 						self.parent.showResults(query)
 
 				else:
-						infoText = """ The client was not updated successfully! """
+						infoText = """ """
 
-						QMessageBox.critical(self, "Customer Not Updated!", infoText)
+						QMessageBox.critical(self, "Customer Not Deleted!", infoText)
 
 
 		def closeEvent(self, Event):
@@ -432,7 +878,7 @@ class editCustomerDialog(QDialog):
 						self.customerEmail.setStyleSheet("background-color:#f6989d;")
 						return False
 
-		def validateUpdatecustomerForm(self):
+		def validateUpdateCustomerForm(self):
 
 				checkTitle = self.validateTitle()
 				checkFirstName = self.validateFirstName()
@@ -539,7 +985,7 @@ class editCustomerDialog(QDialog):
 						self.error_message_dialog.setDefaultButton(self.okay_button)
 						self.okay_button.clicked.connect(self.editEntry)
 						self.error_message_dialog.exec_()
-						self.parent.statusBar.showMessage("Customer {0} {1} unsuccessfully added to the database".format(values["FirstName"],values["LastName"]))
+						self.parent.statusBar.showMessage("Customer {0} {1} unsuccessfully updated to the database".format(values["FirstName"],values["LastName"]))
 						self.parent.switchToMainMenu()
 
 				

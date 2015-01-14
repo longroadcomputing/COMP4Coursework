@@ -58,6 +58,53 @@ class SQLConnection():
 
 		return password
 
+	def initialItemsTable(self):
+
+		query = QSqlQuery(self.db)
+		query.prepare("""SELECT Item.ItemName, Item.ItemValue, Item.LoanRate,
+                        Item.ItemClass, Item.FuseRating,  ItemType.ItemTypeID, Location.LocationID
+			FROM Item, ItemType, Location
+			WHERE Item.ItemTypeID = ItemType.ItemTypeID AND Item.LocationID = Location.LocationID
+			AND 1=0""")
+		query.exec_()
+
+		return query
+
+	def getAllItems(self):
+		
+		query = QSqlQuery(self.db)
+
+		query.prepare("SELECT * FROM Item")
+
+		query.exec_()
+
+		return query
+
+	def getItemData(self, ID):
+		
+		# QSqlQuery doesn't support indexing
+		# query = QSqlQuery(self.db)
+
+		# query.prepare("SELECT * FROM Customer WHERE CustomerID = :ID")
+
+		# query.bindValue(":ID",ID)
+
+		# query.exec_()
+
+		# return query
+
+		with sqlite3.connect(self.path) as db:
+
+			cursor = db.cursor()
+			sql = """SELECT * FROM Item WHERE ItemID = ?"""
+			values = (ID,)
+			cursor.execute(sql, values)
+			data = cursor.fetchone()
+			db.commit()
+
+			return data
+
+
 	def addItem(self, values, parent):
 		self.parent = parent
 		addItem = QSqlQuery(self.db)
@@ -82,6 +129,24 @@ class SQLConnection():
 			self.error = addItem.lastError().text()
 			return False
 
+	def updateItem(self,values):
+		updateCustomer = QSqlQuery(self.db)
+
+		updateCustomer.prepare("""
+UPDATE Customer SET ItemName = :ItemName, ItemValue = :ItemValue,
+LoanRate = :LoanRate, ItemClass = :ItemClass, FuseRating =:FuseRating,
+ItemTypeID = :ItemTypeID, LocationID = :LocationID
+WHERE ItemID = :ItemID;
+""")
+		updateCustomer.bindValue(":ItemID",values["ItemID"])
+		updateCustomer.bindValue(":ItemName",values["ItemName"])
+		updateCustomer.bindValue(":ItemValue",values["ItemValue"])
+		updateCustomer.bindValue(":LoanRate",values["LoanRate"])
+		updateCustomer.bindValue(":ItemClass",values["ItemClass"])
+		updateCustomer.bindValue(":FuseRating",values["FuseRating"])
+		updateCustomer.bindValue(":ItemTypeID",values["ItemTypeID"])
+		updateCustomer.bindValue(":LocationID",values["LocationID"])
+
 
 	def getAllItemTypes(self):
 		with sqlite3.connect(self.path) as db:
@@ -95,6 +160,56 @@ class SQLConnection():
 
 			return data
 
+	def deleteItem(self, ID):
+		
+		query = QSqlQuery(self.db)
+
+		query.prepare("DELETE FROM Item WHERE ItemID = :ID")
+
+		query.bindValue(":ID",ID)
+
+		self.error = query.lastError().text()
+
+		print(self.error)
+
+		query.exec_()
+
+		return query
+
+	def getItemSearchQuery(self, queryText):
+
+		searchText = queryText
+
+		if searchText == "":
+			query = self.initialCustomerTable()
+
+			return query
+		else:
+
+			query = QSqlQuery(self.db)
+
+			query.prepare("""SELECT * FROM Item WHERE
+	   Item.ItemName LIKE '%'||:searchString||'%' OR
+	   ItemType.ItemType LIKE '%'||:searchString2||'%' OR
+	   Location.Location LIKE '%'||:searchString3||'%'
+		""")
+		
+
+			query.bindValue(":searchString", searchText)
+			query.bindValue(":searchString2", searchText)
+			query.bindValue(":searchString3", searchText)
+
+			success = query.exec_()
+
+			if success:
+				return query
+			else:
+				
+				error =  query.lastError()
+				print(error.text())
+
+				return query
+
 	def getLocations(self):
 		with sqlite3.connect(self.path) as db:
 
@@ -107,6 +222,15 @@ class SQLConnection():
 
 			return data
 
+	def initialCustomerTable(self):
+
+		query = QSqlQuery(self.db)
+		query.prepare("SELECT * FROM Customer WHERE 1=0")
+		query.exec_()
+
+		return query
+
+
 	def getAllCustomers(self):
 		
 		query = QSqlQuery(self.db)
@@ -117,6 +241,7 @@ class SQLConnection():
 
 		return query
 
+	
 	def getCustomerData(self, ID):
 		
 		# QSqlQuery doesn't support indexing
@@ -192,13 +317,6 @@ WHERE CustomerID = :CustomerID;
 		updateCustomer.bindValue(":Landline",values["Landline"])
 		updateCustomer.bindValue(":Email",values["Email"])
 
-	def initialCustomerTable(self):
-
-		query = QSqlQuery(self.db)
-		query.prepare("SELECT * FROM Customer WHERE 1=0")
-		query.exec_()
-
-		return query
 
 	def deleteCustomer(self, ID):
 		
@@ -215,48 +333,6 @@ WHERE CustomerID = :CustomerID;
 		query.exec_()
 
 		return query
-
-	def getItemSearchQuery(self, queryText):
-
-		searchText = queryText
-
-		if searchText == "":
-			query = self.initialCustomerTable()
-
-			return query
-		else:
-
-			query = QSqlQuery(self.db)
-
-			query.prepare("""SELECT * FROM Item WHERE
-	   Item.ItemName LIKE '%'||:searchString||'%' OR
-	   ItemType.ItemType LIKE '%'||:searchString2||'%' OR
-	   Location.Location LIKE '%'||:searchString3||'%' OR
-	   UNION "NONE"
-		""")
-		
-
-			query.bindValue(":searchString", searchText)
-			query.bindValue(":searchString2", searchText)
-			query.bindValue(":searchString3", searchText)
-			query.bindValue(":searchString4", searchText)
-			query.bindValue(":searchString5", searchText)
-			query.bindValue(":searchString6", searchText)
-			query.bindValue(":searchString7", searchText)
-			query.bindValue(":searchString8", searchText)
-			query.bindValue(":searchString9", searchText)
-			query.bindValue(":searchString10", searchText)
-
-			success = query.exec_()
-
-			if success:
-				return query
-			else:
-				
-				error =  query.lastError()
-				print(error.text())
-
-				return query
 
 
 	def getCustomerSearchQuery(self, queryText):

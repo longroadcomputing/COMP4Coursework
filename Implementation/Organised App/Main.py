@@ -56,6 +56,7 @@ class MainWindow(QMainWindow):
 		self.CreateNewCustomerWidget()
 		self.CreateNewLoanWidget()
 		self.CreateNewPatTestWidget()
+		self.CreateManageItemsWidget()
 		self.CreateManageCustomersWidget()
 
 		#disable actions
@@ -77,6 +78,7 @@ class MainWindow(QMainWindow):
 		#self.new_loan_widget.addConnection(self.connection)
 		#self.new_pat_test_widget.addConnection(self.connection)
 
+		self.manageItems.addConnection(self.connection)
 		self.manageCustomers.addConnection(self.connection)
 
 	def settings(self):
@@ -420,8 +422,11 @@ class MainWindow(QMainWindow):
 	def switchToNewPatTest(self):
 		self.stacked_layout.setCurrentIndex(5)
 
-	def switchToManageCustomers(self):
+	def swtichToManageItems(self):
 		self.stacked_layout.setCurrentIndex(6)
+
+	def switchToManageCustomers(self):
+		self.stacked_layout.setCurrentIndex(7)
 
 	def CreateNewItemWidget(self):
 		self.new_item_widget =  NewItemWidget(self)
@@ -443,6 +448,10 @@ class MainWindow(QMainWindow):
 		self.new_pat_test_widget = newPatTestWidget(self)
 		self.new_pat_test_widget.setLayout(self.new_pat_test_widget.mainLayout)
 		self.stacked_layout.addWidget(self.new_pat_test_widget)
+
+	def CreateManageItemsWidget(self):
+		self.manageItems = ManageItemsWidget(self)
+		self.stacked_layout.addWidget(self.manageItems)
 
 	def CreateManageCustomersWidget(self):
 		self.manageCustomers = ManageCustomersWidget(self)

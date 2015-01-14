@@ -28,7 +28,7 @@ class ManageCustomersWidget(QWidget):
 
 				self.model = QSqlQueryModel()
 				
-				self.setStyleSheet("QWidget[addplastererClass=True]{padding:100px;}")
+				self.setStyleSheet("QWidget[manageCustomer=True]{padding:100px;}")
 
 				self.mainWidget = QWidget()
 				self.mainLayout = QVBoxLayout()
@@ -147,6 +147,8 @@ class ManageCustomersWidget(QWidget):
 				queryText = self.searchField.text()
 
 				query = self.connection.getCustomerSearchQuery(queryText)
+
+				print(query)
 
 				# if query:
 				# 	self.error_message_dialog = QMessageBox()
