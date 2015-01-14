@@ -1,7 +1,9 @@
 from PyQt4.QtGui import *
 from PyQt4.QtCore import *
 
+
 import sys
+import sqlite3
 import re
 
 #=============================================================================#
@@ -75,8 +77,6 @@ class editItemDialog(QDialog):
 		self.fuse_rating_drop_down.model().setData(j, 0, Qt.UserRole-1)
 
 
-		self.parent.parent.mainMenu.newItemButton.clicked.connect(self.populateDropDowns)
-
 		self.item_type_drop_down = QComboBox()
 
 		self.item_type_drop_down.addItem("Please select...")
@@ -96,6 +96,7 @@ class editItemDialog(QDialog):
 
 		j = self.location_drop_down.model().index(0,0)
 		self.location_drop_down.model().setData(j, 0, Qt.UserRole-1)
+
 
 
 		self.cancelButton = QPushButton("Cancel")
@@ -129,26 +130,11 @@ class editItemDialog(QDialog):
 		self.gridWidget.setLayout(grid)
 		self.gridWidget.setFixedHeight(400)
 
-		self.quantityGroup = QGroupBox("Duplicate Items:")
-
-		self.quantityLabel = QLabel("Quantity")
-		self.quantitySpinBox = QSpinBox()
-		self.quantitySpinBox.setRange(1,50)
-		self.quantitySpinBox.setValue(1)
-
-
-		self.quantityLayout = QHBoxLayout()
-		self.quantityLayout.addWidget(self.quantityLabel)
-		self.quantityLayout.addWidget(self.quantitySpinBox)
-
-		self.quantityGroup.setLayout(self.quantityLayout)
-
 
 		self.verticalLayout = QVBoxLayout()
 		self.verticalLayout.addWidget(self.heading)
 		self.verticalLayout.addStretch(1)
 		self.verticalLayout.addWidget(self.gridWidget)
-		self.verticalLayout.addWidget(self.quantityGroup)
 		self.verticalLayout.addWidget(self.smallPrint)
 
 		self.cancelButton = QPushButton("Exit")
@@ -260,6 +246,9 @@ class editItemDialog(QDialog):
 		self.connection = connection
 
 		self.connections()
+
+		self.populateDropDowns()
+
 		return True
 
 	def clearForm(self):
@@ -285,9 +274,39 @@ class editItemDialog(QDialog):
 		itemValue = str(self.data[2])
 		itemLoanRate = str(self.data[3])
 		itemClass = str(self.data[4])
-		fuseRating = self.data[5]
+		fuseRating = str(self.data[5])
 		itemType = self.data[6]
 		location = self.data[7]
+
+		if itemType == 1:
+			itemType = "Cabling"
+		elif itemType == 2:
+			itemType = "Storage/Hardware"
+		elif itemType == 3:
+			itemType = "Lighting"
+		elif itemType == 4:
+			itemType = "Power"
+		elif itemType == 5:
+			itemType = "Audio"
+		elif itemType == 6:
+			itemType = "Visual"
+		elif itemType == 7:
+			itemType = "Miscellaneous"
+		elif itemType == 8:
+			itemType = "Software"
+		elif itemType == 9:
+			itemType = "Staging"
+		elif itemType == 10:
+			itemType = "Control Desks"
+
+		if location == 1:
+			location = "St Bede's"
+		elif location == 2:
+			location = "Alpha Terrace"
+		elif location == 3:
+			location = "Cineworld"
+		elif location == 4:
+			location = "C3 Centre"
 
 		self.currentMemberId = currentId
 
@@ -370,7 +389,7 @@ class editItemDialog(QDialog):
 
 	def validateDropDowns(self):
 		valid_dropdowns = False
-		if self.item_type_preview == "" or self.location_preview == "" or self.item_class_preview == "" or self.fuse_rating_preview == "":
+		if self.item_type_drop_down.currentText() == "" or self.location_drop_down.currentText() == "" or self.item_class_drop_down.currentText() == "" or self.fuse_rating_drop_down.currentText() == "":
 			valid_dropdowns = False
 		else:
 			valid_dropdowns = True
@@ -452,7 +471,7 @@ class editItemDialog(QDialog):
 
 
 		
-#=============================================================================#
+#===================================================================================================================================================================================================#
 
 class editCustomerDialog(QDialog):
 		"""docstring for editCustomerDialog"""

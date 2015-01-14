@@ -131,7 +131,7 @@ class ManageItemsWidget(QWidget):
 				if numberOfRowsSelected == 1:
 						if self.currentRow != rows[0]:
 								self.currentRow = rows[0]
-								ID = int(self.currentRow) + 1
+								ID = int(self.currentRow) + 2
 								data = self.connection.getItemData(ID)
 
 								print(data)
