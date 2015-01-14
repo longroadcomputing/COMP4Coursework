@@ -174,6 +174,42 @@ I have chosen to build my system for this specification as this is the computer 
     \end{center}
 \end{figure}
 
+\newpage
+
+\begin{figure}[H]
+    \begin{center}
+    \includegraphics[width=500px]{./Design/top_down_design/inventory_system.pdf}
+    \caption{Object Diagram.} \label{fig:object_diagram}
+    \end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[H]
+    \begin{center}
+    \includegraphics[width=500px]{./Design/top_down_design/new_item.pdf}
+    \caption{Object Diagram.} \label{fig:object_diagram}
+    \end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[H]
+    \begin{center}
+    \includegraphics[width=500px]{./Design/top_down_design/manage_items.pdf}
+    \caption{Object Diagram.} \label{fig:object_diagram}
+    \end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[H]
+    \begin{center}
+    \includegraphics[height=380px]{./Design/top_down_design/new_customer.pdf}
+    \caption{Object Diagram.} \label{fig:object_diagram}
+    \end{center}
+\end{figure}
+
 \end{landscape}
 
 
@@ -247,22 +283,32 @@ I have chosen to build my system for this specification as this is the computer 
 
 \newpage
 
-\begin{landscape}
-    \section{Prototyping}
-    \begin{figure}[H]
-        \centerline{\includegraphics[width=500px]{./Design/Prototyping/Login_prototyping.pdf}}
-        \caption{Login Prototype.} \label{fig:relationship_diagram}
-    \end{figure}
-\end{landscape}
+\section{Prototyping}
 
+\subsection{\textbf{Prototype for login interface}}
 \begin{figure}[H]
-    \centerline{\includegraphics[width=300px]{./Design/Prototyping/Change_password_prototyping.pdf}}
+    \centerline{\includegraphics[width=300px]{./Design/Prototyping/Login_prototyping.pdf}}
+    \caption{Login Prototype.} \label{fig:relationship_diagram}
+\end{figure}
+
+\subsection{\textbf{Prototype for change password interface}}
+\begin{figure}[H]
+    \centerline{\includegraphics[width=250px]{./Design/Prototyping/Change_password_prototyping.pdf}}
     \caption{Change Password Prototype.} \label{fig:relationship_diagram}
 \end{figure}
 
+\subsection{\textbf{Prototype for printing interface}}
 \begin{figure}[H]
     \centerline{\includegraphics[width=300px]{./Design/Prototyping/Printing_prototyping.pdf}}
-    \caption{Change Password Prototype.} \label{fig:relationship_diagram}
+    \caption{Print Dialog.} \label{fig:relationship_diagram}
+\end{figure}
+
+
+\subsection{\textbf{Prototype for a loan invoice}}
+
+\begin{figure}[H]
+    \centerline{\includegraphics[width=400px]{./Design/Prototyping/invoice_preview.pdf}}
+    \caption{PDF Invoice Prototype.} \label{fig:relationship_diagram}
 \end{figure}
 
 \section{Definition of Data Requirements}
@@ -457,7 +503,7 @@ I have chosen to build my system for this specification as this is the computer 
 
 \subsection{Identification of appropriate storage media}
 
-My system will not need to be accessed by more than 5 people, storing the database file on the server won't be necessary as everyone will then have access to the database file. Therefore, I have chosen to store the database file and application on a single machine which can be accessed by the people who need to use it at any time. The computer is in a central location and easily accessible by those who need to use it and has multiple hard disk drives which I can make use of for storage and backup.  
+My system will not need to be accessed by more than 5 people, storing the database file on the server won't be necessary as everyone will then have access to the database file. Therefore, I have chosen to store the database file and application on a single machine which can be accessed by the people who need to use it at any time. The computer is in a central location and easily accessible by those who need to use it and has multiple hard disk drives which I can make use of for storage and backup. I will be using hard disk drives (HDD's) as my client already ownes them and they are cheaper than solid-state drives (SSD's).
 
 \newpage
 
@@ -649,7 +695,7 @@ My system will not need to be accessed by more than 5 people, storing the databa
 
 \section{SQL Queries}
 
-\subsubsection{Get Items from Item Table}
+\subsection{Get Items from Item Table}
 
 \textbf{SQL query getting all the items from the Item table in the database ready to be formatted and displayed on screen}
 
@@ -667,7 +713,7 @@ My system will not need to be accessed by more than 5 people, storing the databa
       WHERE Item.LocationID = Location.LocationID AND Item.ItemTypeId = ItemType.ItemTypeID
 \end{sql}
 
-\subsubsection{Get Items from Item Table}
+\subsection{Get Items from Item Table}
 
 \textbf{SQL query getting all the loans from the Loan table in the database ready to be formatted and displayed on screen}
 
@@ -682,6 +728,10 @@ My system will not need to be accessed by more than 5 people, storing the databa
     WHERE Loan.CustomerID = Customer.CustomerID
 \end{sql}
 
+\newpage
+
+\subsection{Get all Loan Items from LoanItem Table}
+
 \textbf{SQL query getting all the loan items from the LoanItem table in the database ready to be formatted and displayed on screen}
 
 \begin{sql}
@@ -694,6 +744,8 @@ My system will not need to be accessed by more than 5 people, storing the databa
     FROM LoanItem, Item
     WHERE LoanItem.ItemID = Item.ItemID
 \end{sql}
+
+\subsection{Get all Item Tests from ItemTest Table}
 
 \textbf{SQL query getting all the item tests from the ItemTest table in the database ready to be formatted and displayed on screen}
 
@@ -710,8 +762,11 @@ My system will not need to be accessed by more than 5 people, storing the databa
       WHERE ItemTest.ItemID = Item.ItemID
 \end{sql}
 
+\subsection{Search Item Table for Items}
+
 \textbf{SQL Query searching the database for Items at a specific Location then orders them A-Z by ItemName}
 Location and Item are tables in the database, Item ID, ItemName and ItemValue are attributes in the Item table. LocationID is an attribute in the Location table
+
 \begin{sql}
     SELECT 
     Item.ItemID,
@@ -723,6 +778,8 @@ Location and Item are tables in the database, Item ID, ItemName and ItemValue ar
     Location.LocationID = Item.LocationID
     ORDER BY ItemName ASC
 \end{sql}
+
+\subsection{Search Customer Table for Customers}
 
 \textbf{SQL Query searching the database for certain ItemTypes then orders them by ItemName from A-Z}
 Location and Item are tables in the database, Item ID, ItemName and ItemValue are attributes in the Item table. ItemTypeID is an attribute in the ItemType table
@@ -738,6 +795,8 @@ Location and Item are tables in the database, Item ID, ItemName and ItemValue ar
     ItemType.ItemTypeID = Item. ItemTypeID
     ORDER BY ItemName ASC
 \end{sql}
+
+\subsection{Search for loans taken out by a given Company}
 
 \textbf{SQL Query searching the database to display Loans taken out by a certain Company, ordered by date ascending}
 
@@ -758,7 +817,11 @@ Location and Item are tables in the database, Item ID, ItemName and ItemValue ar
 
 \subsection{Security and Integrity of Data}
 
-The system will store personal data referring to an individual or a company. This data will fall under the data protection acts. This will mean that the data will need to be kept up to date and would therefore need a way to edit the data. All the information stored in the database should therefore be encrypted to keep this data secure and only accessible through my program which will be protected with a password. I will need to make sure the data stored is valid and correct, to do this I will need to use validation algorithms to make sure they are feasible. I will also need to use referential integrity in my database to ensure that when adding, updating and removing data to the database, key information isn't missing from records.
+The system will store personal data referring to an individual or a company. This data will fall under the data protection acts. This will mean that the data will need to be kept up to date and would therefore need a way to edit the data. All the information stored in the database should therefore be encrypted to keep this data secure and only accessible through my program which will be protected with a password. I will need to make sure the data stored is valid and correct, to do this I will need to use validation algorithms to make sure they are feasible.\\
+
+\noindent I will also referential integrity in my database to make sure that when updating records such as Items, that the Location and ItemType records will not be affected by the changing of either LocationID or ItemTypeID in the Item table. This will take place in all the tables in the database that require foreign keys. I will use the "ON UPDATE CASCADE" SQL clause when updating the primary key of a record, records from other tables that use that primary key as a foreign key will also be updated.\\
+
+\noindent Furthermore, I will use the "ON DELETE SET NULL" SQL clause as it will set the foreign key of any record to NULL if the record with that primary key has been deleted. This will be especially useful for the Location table as there will be temporary locations and the records that reference to a temporary location will not be deleted if the location is. This enables the user to back into the database and update the location.
 
 \subsection{System Security}
 
@@ -829,11 +892,11 @@ In order to insure that information is not entered incorrectly, the system will 
     \begin{tabular}{|p{3cm}|p{3.5cm}|p{4cm}|p{6cm}|}
         \hline
         \textbf{Test Series} & \textbf{Purpose of Test Series} & \textbf{Testing Strategy} & \textbf{Strategy Rationale}\\ \hline
-        1 & Test the flow of control between interfaces      & Top-down testing     & \\ \hline
-        2 & Test data input validation works                 & Botton-up testing    & Test each component will commence when they have been developed\\ \hline
-        3 & Test data input is stored correctly              & Black box testing    & \\ \hline
-        4 & Test Algorithms and check output is correct      & White box testing    & \\ \hline
-        5.& Test system meets requirements                   & Acceptance Testing   & \\ \hline
+        1 & Test the flow of control between interfaces      & Top-down testing     & To make sure that user interfaces interact correctly and don't present graphical glitches or bugs\\ \hline
+        2 & Test data input validation works                 & Botton-up testing    & Testing of each component will commence when they have been developed\\ \hline
+        3 & Test data input is stored correctly              & Black box testing    & Ensure that data input by the user is stored at the correct locations within the database\\ \hline
+        4 & Test Algorithms and check output is correct      & White box testing    & Make sure calculations such as loan costs are calculated correctly when including VAT\\ \hline
+        5.& Test system meets requirements                   & Acceptance Testing   & Make sure the system meets the all the clients expectations and fulfils all primary objectives\\ \hline
     \end{tabular}
 \end{center}
 
