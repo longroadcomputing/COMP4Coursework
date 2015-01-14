@@ -4,6 +4,10 @@ from PyQt4.QtCore import *
 import sys
 import re
 
+#=============================================================================#
+
+#=============================================================================#
+
 class editCustomerDialog(QDialog):
 		"""docstring for editCustomerDialog"""
 		def __init__(self, parent):

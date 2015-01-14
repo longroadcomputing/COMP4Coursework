@@ -216,8 +216,50 @@ WHERE CustomerID = :CustomerID;
 
 		return query
 
+	def getItemSearchQuery(self, queryText):
 
-	def getSearchQuery(self, queryText):
+		searchText = queryText
+
+		if searchText == "":
+			query = self.initialCustomerTable()
+
+			return query
+		else:
+
+			query = QSqlQuery(self.db)
+
+			query.prepare("""SELECT * FROM Item WHERE
+	   Item.ItemName LIKE '%'||:searchString||'%' OR
+	   ItemType.ItemType LIKE '%'||:searchString2||'%' OR
+	   Location.Location LIKE '%'||:searchString3||'%' OR
+	   UNION "NONE"
+		""")
+		
+
+			query.bindValue(":searchString", searchText)
+			query.bindValue(":searchString2", searchText)
+			query.bindValue(":searchString3", searchText)
+			query.bindValue(":searchString4", searchText)
+			query.bindValue(":searchString5", searchText)
+			query.bindValue(":searchString6", searchText)
+			query.bindValue(":searchString7", searchText)
+			query.bindValue(":searchString8", searchText)
+			query.bindValue(":searchString9", searchText)
+			query.bindValue(":searchString10", searchText)
+
+			success = query.exec_()
+
+			if success:
+				return query
+			else:
+				
+				error =  query.lastError()
+				print(error.text())
+
+				return query
+
+
+	def getCustomerSearchQuery(self, queryText):
 
 		searchText = queryText
 

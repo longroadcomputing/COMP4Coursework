@@ -4,7 +4,7 @@ from PyQt4.QtSql import *
 
 
 from SQLConnection import *
-from editCustomerDialog import *
+from editDialog import *
 
 import re
 
@@ -146,7 +146,7 @@ class ManageCustomersWidget(QWidget):
 
 				queryText = self.searchField.text()
 
-				query = self.connection.getSearchQuery(queryText)
+				query = self.connection.getCustomerSearchQuery(queryText)
 
 				# if query:
 				# 	self.error_message_dialog = QMessageBox()
