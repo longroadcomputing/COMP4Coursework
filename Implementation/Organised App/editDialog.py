@@ -360,7 +360,7 @@ class editItemDialog(QDialog):
 		length = len(text)
 		valid_loan_rate = False
 		try:
-			loan_rate = int(text)
+			loan_rate = float(text)
 			if loan_rate:
 				valid_loan_rate = True
 		except ValueError:
@@ -369,7 +369,7 @@ class editItemDialog(QDialog):
 		if text == "" or text == '-':
 			valid_loan_rate = True
 
-		if valid_loan_rate == True or text == '':
+		if valid_loan_rate == True or text == '' or text == '0.0':
 			self.item_loan_rate_line_edit.setStyleSheet("background-color:#c4df9b")
 			return True
 		else:

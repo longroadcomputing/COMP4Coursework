@@ -52,17 +52,35 @@ class SQLConnection():
 
 		query.next()
 
-		password = query.value(0)
+		self.password = query.value(0)
 
 		#print(password)
 
-		return password
+		return self.password
+
+	def updatePassword(self, newPassword):
+		query = QSqlQuery(self.db)
+
+		query.prepare("""UPDATE Password SET Password = :NewPassword WHERE Password = :OldPassword""")
+
+		query.bindValue(":OldPassword",self.password)
+		query.bindValue(":NewPassword",newPassword)
+
+		success = query.exec_()
+
+		if success:
+			return True
+		else:
+			self.error = query.lastError().text()
+			return False
+
+		
 
 	def initialItemsTable(self):
 
 		query = QSqlQuery(self.db)
 		query.prepare("""SELECT Item.ItemName, Item.ItemValue, Item.LoanRate,
-                        Item.ItemClass, Item.FuseRating,  ItemType.ItemTypeID, Location.LocationID
+			Item.ItemClass, Item.FuseRating,  ItemType.ItemTypeID, Location.LocationID
 			FROM Item, ItemType, Location
 			WHERE Item.ItemTypeID = ItemType.ItemTypeID AND Item.LocationID = Location.LocationID
 			AND 1=0""")

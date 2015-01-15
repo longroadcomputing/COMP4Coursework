@@ -165,6 +165,7 @@ class loggedInWidget(QWidget):
 		self.manageItemsButton.clicked.connect(self.parent.swtichToManageItems)
 		self.manageCustomersButton.clicked.connect(self.parent.switchToManageCustomers)
 
+
 		return self.verticalLayout
 
 

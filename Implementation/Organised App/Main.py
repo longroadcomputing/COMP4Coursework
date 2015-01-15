@@ -16,7 +16,7 @@ from manageItems import *
 from manageCustomer import *
 
 from create_login_dialog import *
-
+from change_password_dialog import *
 
 class MainWindow(QMainWindow):
 	"""docstring for MainWindowQMainWindow"""
@@ -245,6 +245,7 @@ class MainWindow(QMainWindow):
 		self.close_application_button.clicked.connect(self.close)
 
 		self.mainMenu.logoutButton.clicked.connect(self.close_database)
+		self.mainMenu.changePasswordButton.clicked.connect(self.changePasswordDialog)
 
 		self.new_item_widget.cancelButton.clicked.connect(self.switchToMainMenu)
 		self.new_customer_widget.cancelButton.clicked.connect(self.switchToMainMenu)
@@ -469,6 +470,10 @@ class MainWindow(QMainWindow):
 		self.login_dialog = LoginDialog(self)
 		self.login_dialog.exec_()
 
+	def changePasswordDialog(self):
+		self.changePasswordWindow = ChangePasswordDialog(self,self.password)
+		self.changePasswordWindow.addConnection(self.connection)
+		self.changePasswordWindow.exec_()
 
 	def database_login(self):
 		while not self.access:
