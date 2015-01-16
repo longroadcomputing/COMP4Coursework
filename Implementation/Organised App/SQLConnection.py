@@ -376,7 +376,6 @@ WHERE CustomerID = :CustomerID;
 	   Mobile LIKE '%'||:searchString8||'%' OR
 	   Landline LIKE '%'||:searchString9||'%' OR
 	   Email LIKE '%'||:searchString10||'%'
-	   UNION "NONE"
 		""")
 		
 

@@ -59,12 +59,12 @@
 \BOOKMARK [2][-]{subsection.2.7.3}{Normalisation}{section.2.7}% 59
 \BOOKMARK [1][-]{section.2.8}{SQL Queries}{chapter.2}% 60
 \BOOKMARK [2][-]{subsection.2.8.1}{Get Items from Item Table}{section.2.8}% 61
-\BOOKMARK [2][-]{subsection.2.8.2}{Get Items from Item Table}{section.2.8}% 62
-\BOOKMARK [2][-]{subsection.2.8.3}{Get all Loan Items from LoanItem Table}{section.2.8}% 63
-\BOOKMARK [2][-]{subsection.2.8.4}{Get all Item Tests from ItemTest Table}{section.2.8}% 64
-\BOOKMARK [2][-]{subsection.2.8.5}{Search Item Table for Items}{section.2.8}% 65
-\BOOKMARK [2][-]{subsection.2.8.6}{Search Customer Table for Customers}{section.2.8}% 66
-\BOOKMARK [2][-]{subsection.2.8.7}{Search for loans taken out by a given Company}{section.2.8}% 67
+\BOOKMARK [2][-]{subsection.2.8.2}{Search Item Table for Items}{section.2.8}% 62
+\BOOKMARK [2][-]{subsection.2.8.3}{Get Loans from Loan Table}{section.2.8}% 63
+\BOOKMARK [2][-]{subsection.2.8.4}{Get all Loan Items from LoanItem Table}{section.2.8}% 64
+\BOOKMARK [2][-]{subsection.2.8.5}{Search for loans taken out by a given Company}{section.2.8}% 65
+\BOOKMARK [2][-]{subsection.2.8.6}{Get all Item Tests from ItemTest Table}{section.2.8}% 66
+\BOOKMARK [2][-]{subsection.2.8.7}{Search Customer Table for Customers}{section.2.8}% 67
 \BOOKMARK [1][-]{section.2.9}{Security and Integrity of the System and Data}{chapter.2}% 68
 \BOOKMARK [2][-]{subsection.2.9.1}{Security and Integrity of Data}{section.2.9}% 69
 \BOOKMARK [2][-]{subsection.2.9.2}{System Security}{section.2.9}% 70

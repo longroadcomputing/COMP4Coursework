@@ -759,9 +759,27 @@ My system will not need to be accessed by more than 5 people, storing the databa
       WHERE Item.LocationID = Location.LocationID AND Item.ItemTypeId = ItemType.ItemTypeID
 \end{sql}
 
-\subsection{Get Items from Item Table}
+\subsection{Search Item Table for Items}
 
-\textbf{SQL query getting all the loans from the Loan table in the database ready to be formatted and displayed on screen}
+\textbf{SQL Query searching the database for Items by matching the item name, location or item type with a search string given by the user}
+
+\begin{sql}
+    SELECT 
+    Item.ItemID,
+    Item.ItemName,
+    Item.ItemValue,
+    ItemType.ItemType
+    Location.Location
+    FROM Item, ItemType, Location
+    WHERE Item.ItemName LIKE '%'||:searchString||'%' OR Location.Location LIKE '%'||:searchString||'%'  OR ItemType.ItemType LIKE '%'||:searchString||'%' 
+    AND LocationID = ? AND
+    Location.LocationID = Item.LocationID
+    ORDER BY ItemName ASC
+\end{sql}
+
+\subsection{Get Loans from Loan Table}
+
+\textbf{SQL query getting all the Loans from the Loan table in the database ready to be formatted and displayed on screen}
 
 \begin{sql}
     SELECT
@@ -773,8 +791,6 @@ My system will not need to be accessed by more than 5 people, storing the databa
     FROM Loan, Customer
     WHERE Loan.CustomerID = Customer.CustomerID
 \end{sql}
-
-\newpage
 
 \subsection{Get all Loan Items from LoanItem Table}
 
@@ -791,9 +807,30 @@ My system will not need to be accessed by more than 5 people, storing the databa
     WHERE LoanItem.ItemID = Item.ItemID
 \end{sql}
 
+\newpage
+
+\subsection{Search for loans taken out by a given Company}
+
+\textbf{SQL Query searching the database to display Loans taken out by a certain person or company by matching the firstname or company fields with a search string entered by the user, ordered by date ascending}
+
+\begin{sql}
+    SELECT
+    Loan.LoanID
+    Customer.Company,
+    Item.ItemName
+    Item.LoanRate
+    LoanItem.Quantity,
+    Loan.StartDate,
+    Loan.LoanLength,
+    FROM Loan, Customer, Item
+    WHERE Customer.FirstName LIKE '%'||:searchString||'%' OR Customer.Company LIKE '%'||:searchString3||'%' OR
+    AND Customer.CustomerID = Loan.CustomerID AND Loan.LoanItemID = LoanItem.LoanItemID AND LoanItem.ItemID = Item.ItemID
+    ORDER BY Loan.StartDate ASC
+\end{sql}
+
 \subsection{Get all Item Tests from ItemTest Table}
 
-\textbf{SQL query getting all the item tests from the ItemTest table in the database ready to be formatted and displayed on screen}
+\textbf{SQL query getting all the Item Tests from the ItemTest table in the database ready to be formatted and displayed on screen}
 
 \begin{sql}
       SELECT
@@ -808,56 +845,26 @@ My system will not need to be accessed by more than 5 people, storing the databa
       WHERE ItemTest.ItemID = Item.ItemID
 \end{sql}
 
-\subsection{Search Item Table for Items}
-
-\textbf{SQL Query searching the database for Items at a specific Location then orders them A-Z by ItemName}
-Location and Item are tables in the database, Item ID, ItemName and ItemValue are attributes in the Item table. LocationID is an attribute in the Location table
-
-\begin{sql}
-    SELECT 
-    Item.ItemID,
-    Item.ItemName,
-    Item.ItemValue,
-    Location.LocationID
-    FROM Item, Location
-    WHERE LocationID = ? AND
-    Location.LocationID = Item.LocationID
-    ORDER BY ItemName ASC
-\end{sql}
 
 \subsection{Search Customer Table for Customers}
 
-\textbf{SQL Query searching the database for certain ItemTypes then orders them by ItemName from A-Z}
-Location and Item are tables in the database, Item ID, ItemName and ItemValue are attributes in the Item table. ItemTypeID is an attribute in the ItemType table
+\textbf{SQL Query searching the database for certain Customer Records by matching any of the text fields within the record with a search string specified by the user}
 
 \begin{sql}
-    SELECT 
-    Item.ItemID,
-    Item.ItemName,
-    Item.ItemValue,
-    ItemType.ItemTypeID
-    FROM Item, Location
-    WHERE ItemTypeID = ? AND
-    ItemType.ItemTypeID = Item. ItemTypeID
-    ORDER BY ItemName ASC
+    SELECT * FROM Customer WHERE
+	FirstName LIKE '%'||:searchString||'%' OR
+	LastName LIKE '%'||:searchString2||'%' OR
+	Company LIKE '%'||:searchString3||'%' OR
+	Street LIKE '%'||:searchString4||'%' OR
+	Town LIKE '%'||:searchString5||'%' OR
+	County LIKE '%'||:searchString6||'%' OR
+	PostCode LIKE '%'||:searchString7||'%' OR
+	Mobile LIKE '%'||:searchString8||'%' OR
+	Landline LIKE '%'||:searchString9||'%' OR
+	Email LIKE '%'||:searchString10||'%'
 \end{sql}
 
-\subsection{Search for loans taken out by a given Company}
-
-\textbf{SQL Query searching the database to display Loans taken out by a certain Company, ordered by date ascending}
-
-\begin{sql}
-    SELECT
-    Loan.LoanID
-    Customer.Company,
-    Item.ItemName
-    Item.LoanRate
-    LoanItem.Quantity,
-    Loan.StartDate,
-    Loan.LoanLength,
-    FROM Loan, Customer, Item
-    WHERE Customer.CustomerID = Loan.CustomerID AND Loan.LoanItemID = LoanItem.LoanItemID AND LoanItem.ItemID = Item.ItemID
-\end{sql}
+\newpage
 
 \section{Security and Integrity of the System and Data}
 
