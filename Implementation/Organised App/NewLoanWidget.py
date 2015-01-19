@@ -21,6 +21,7 @@ class newLoanWidget(QWidget):
 		self.parent = parent
 		
 		self.leftWidget = QWidget()
+		self.leftWidget.setFixedWidth(300)
 
 		self.leftTopWidget = QWidget()
 		self.leftBottomWidget = QTabWidget()
@@ -61,6 +62,17 @@ class newLoanWidget(QWidget):
 		self.newLoanHeading.setGraphicsEffect(self.shadow)
 		self.newLoanHeading.setStyleSheet("font-size:20px")
 
+		self.date_label = QLabel("Date Started:")
+
+		self.datePopup = DateWidget()
+
+		self.selectionLayout = QHBoxLayout()
+		self.selectionLayout.addWidget(self.date_label)
+		self.selectionLayout.addWidget(self.datePopup)
+
+		self.selectionWidget = QWidget()
+		self.selectionWidget.setLayout(self.selectionLayout)
+
 		self.customerLabel = QLabel("Customer:*")
 
 		self.customerDropDown = QComboBox()
@@ -80,6 +92,7 @@ class newLoanWidget(QWidget):
 		self.LoanLengthSpinBox.setSuffix(" Days")
 
 		self.spacerWidget = QWidget()
+		self.spacerWidget.setFixedHeight(10)
 
 		self.ItemDropDown = QComboBox()
 		self.ItemDropDown.addItem("Please select...")
@@ -91,20 +104,29 @@ class newLoanWidget(QWidget):
 
 		self.loanRate = QLineEdit()
 
+		self.addItemTestButton = QPushButton("+")
+		self.addItemTestButton.setFixedWidth(30)
+		self.addItemTestButton.setFixedHeight(30)
+
 		grid = QGridLayout()
 		grid.setSpacing(10)
 
 		grid.addWidget(self.customerLabel,0,0)
 		grid.addWidget(self.customerDropDown,0,1)
 
+
+
 		grid.addWidget(self.LoanLengthLabel,1,0)
 		grid.addWidget(self.LoanLengthSpinBox,1,1)
+
+
 
 		self.gridWidget = QWidget()
 		self.gridWidget.setLayout(grid)
 
 		self.verticalLayout = QVBoxLayout()
 		self.verticalLayout.addWidget(self.newLoanHeading)
+		self.verticalLayout.addWidget(self.selectionWidget)
 		self.verticalLayout.addWidget(self.gridWidget)
 
 		self.cancelButton = QPushButton("Cancel")

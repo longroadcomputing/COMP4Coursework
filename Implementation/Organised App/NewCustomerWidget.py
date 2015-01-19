@@ -148,7 +148,7 @@ class newCustomerWidget(QWidget):
 		self.verticalLayout.addWidget(self.addcustomerTitleText)
 		self.verticalLayout.addStretch(1)
 		self.verticalLayout.addWidget(self.gridWidget)
-		self.verticalLayout.addWidget(smallPrint)
+		#self.verticalLayout.addWidget(smallPrint)
 
 		self.cancelButton = QPushButton("Cancel")
 		self.cancelButton.setShortcut('Esc')
@@ -181,8 +181,6 @@ class newCustomerWidget(QWidget):
 		self.customerLandline.textChanged.connect(self.validateUKLandline)
 
 		self.confirmButton.clicked.connect(self.switchToPreviewWidget)
-
-		self.clearForm()
 
 		return self.verticalLayout
 
@@ -323,8 +321,6 @@ class newCustomerWidget(QWidget):
 			self.rightWidget.close()
 			self.rightWidget = QWidget()
 			self.mainLayout.addWidget(self.rightWidget)
-			self.rightWidget.setFixedWidth(300)
-			self.rightWidget.setFixedHeight(600)
 
 		#set preview widget layout
 		self.rightLayout = self.previewNewCustomer()

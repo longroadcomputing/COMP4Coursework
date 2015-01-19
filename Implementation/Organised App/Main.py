@@ -24,7 +24,7 @@ class MainWindow(QMainWindow):
 		super( ).__init__()
 
 		self.setWindowTitle("C3 Media Database Management Systems")
-		self.move(200,250)
+		self.move(150,150)
 		self.centerOnScreen()
 
 		self.icon = QIcon(QPixmap("./c3_logo_black.png"))
@@ -199,7 +199,7 @@ class MainWindow(QMainWindow):
 		self.toolBar.addAction(self.logout_action)
 		self.toolBar.setMovable(False)
 
-		self.addToolBar(Qt.TopToolBarArea, self.toolBar)
+		self.addToolBar(Qt.LeftToolBarArea, self.toolBar)
 
 		#OS X translusency
 		self.toolBar.setStyleSheet('background: transparent')
