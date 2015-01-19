@@ -82,10 +82,19 @@ class ManageCustomersWidget(QWidget):
 				self.results_table.setSelectionBehavior(QAbstractItemView.SelectRows)
 
 				self.showAllCustomersButton = QPushButton("Show All Customers")
+				self.showAllCustomersButton.setMaximumWidth(170)
 				self.backButton = QPushButton("<- Back")
 				self.backButton.setShortcut('Esc')
 				self.backButton.setMaximumWidth(75)
-				self.showAllCustomersButton.setMaximumWidth(200)
+				self.newRecordButton = QPushButton("New Customer")
+
+				self.buttonsLayout = QHBoxLayout()
+				self.buttonsLayout.addWidget(self.backButton)
+				self.buttonsLayout.addWidget(self.newRecordButton)
+				self.buttonsLayout.setAlignment(self.newRecordButton, Qt.AlignRight)
+
+				self.buttonsWidget = QWidget()
+				self.buttonsWidget.setLayout(self.buttonsLayout)
 
 				self.viewCustomersLayout = QVBoxLayout()
 				self.viewCustomersLayout.addWidget(self.results_table)
@@ -100,7 +109,7 @@ class ManageCustomersWidget(QWidget):
 				self.groupWidget.setLayout(self.groupL)
 
 				self.vBoxLayout = QVBoxLayout()
-				self.vBoxLayout.addWidget(self.backButton)
+				self.vBoxLayout.addWidget(self.buttonsWidget)
 				self.vBoxLayout.addWidget(self.searchWidget)
 				self.vBoxLayout.addWidget(self.groupWidget)
 
@@ -112,6 +121,8 @@ class ManageCustomersWidget(QWidget):
 				self.editCustomerDialog.clearForm()
 				self.editCustomerDialog.populateEditFields(data)
 				self.editCustomerDialog.exec_()
+				self.searchCustomersGroup.setEnabled(True)
+				self.tableGroup.setEnabled(True)
 
 		def changeFormFields(self):
 
@@ -134,8 +145,6 @@ class ManageCustomersWidget(QWidget):
 								ID = int(self.currentRow) + 1
 								data = self.connection.getCustomerData(ID)
 
-								print(data)
-
 								self.searchCustomersGroup.setEnabled(False)
 								self.tableGroup.setEnabled(False)
 
@@ -147,8 +156,6 @@ class ManageCustomersWidget(QWidget):
 				queryText = self.searchField.text()
 
 				query = self.connection.getCustomerSearchQuery(queryText)
-
-				print(query)
 
 				# if query:
 				# 	self.error_message_dialog = QMessageBox()
@@ -180,6 +187,7 @@ class ManageCustomersWidget(QWidget):
 
 				
 		def showAllCustomersInTable(self):
+				self.searchField.clear()
 
 				query = self.connection.getAllCustomers()
 
@@ -224,11 +232,13 @@ class ManageCustomersWidget(QWidget):
 				self.results_table.selectionModel().selectionChanged.connect(self.changeFormFields)
 				
 		def connections(self):
+				self.searchField.returnPressed.connect(self.searchDatabase)
 				self.searchButton.clicked.connect(self.searchDatabase)
 				self.showAllCustomersButton.clicked.connect(self.showAllCustomersInTable)
 				self.parent.mainMenu.manageCustomersButton.clicked.connect(self.showAllCustomersInTable)
 				self.parent.manage_customer.triggered.connect(self.showAllCustomersInTable)
 				self.backButton.clicked.connect(self.parent.switchToMainMenu)
+				self.newRecordButton.clicked.connect(self.parent.switchToNewCustomer)
 				#self.results_table.selectionModel().selectionChanged.connect(self.changeFormFields)
 				
 

@@ -58,6 +58,8 @@ class ManageItemsWidget(QWidget):
 				self.searchItemsGroup = QGroupBox("Search Items:")
 				self.searchField = QLineEdit()
 				self.searchButton = QPushButton("Search")
+				self.searchButton.setAutoDefault(True)
+				self.searchButton.setDefault(True)
 
 				self.searchLayout = QHBoxLayout()
 				self.searchLayout.addWidget(self.searchField)
@@ -82,10 +84,19 @@ class ManageItemsWidget(QWidget):
 				self.results_table.setSelectionBehavior(QAbstractItemView.SelectRows)
 
 				self.showAllItemsButton = QPushButton("Show All Items")
+				self.showAllItemsButton.setMaximumWidth(130)
 				self.backButton = QPushButton("<- Back")
 				self.backButton.setShortcut('Esc')
 				self.backButton.setMaximumWidth(75)
-				self.showAllItemsButton.setMaximumWidth(200)
+				self.newRecordButton = QPushButton("New Item")
+
+				self.buttonsLayout = QHBoxLayout()
+				self.buttonsLayout.addWidget(self.backButton)
+				self.buttonsLayout.addWidget(self.newRecordButton)
+				self.buttonsLayout.setAlignment(self.newRecordButton, Qt.AlignRight)
+
+				self.buttonsWidget = QWidget()
+				self.buttonsWidget.setLayout(self.buttonsLayout)
 
 				self.viewItemsLayout = QVBoxLayout()
 				self.viewItemsLayout.addWidget(self.results_table)
@@ -100,7 +111,7 @@ class ManageItemsWidget(QWidget):
 				self.groupWidget.setLayout(self.groupL)
 
 				self.vBoxLayout = QVBoxLayout()
-				self.vBoxLayout.addWidget(self.backButton)
+				self.vBoxLayout.addWidget(self.buttonsWidget)
 				self.vBoxLayout.addWidget(self.searchWidget)
 				self.vBoxLayout.addWidget(self.groupWidget)
 
@@ -112,6 +123,8 @@ class ManageItemsWidget(QWidget):
 				self.editItemDialog.clearForm()
 				self.editItemDialog.populateEditFields(data)
 				self.editItemDialog.exec_()
+				self.searchItemsGroup.setEnabled(True)
+				self.tableGroup.setEnabled(True)
 
 		def changeFormFields(self):
 
@@ -134,8 +147,6 @@ class ManageItemsWidget(QWidget):
 								ID = int(self.currentRow) + 2
 								data = self.connection.getItemData(ID)
 
-								print(data)
-
 								self.searchItemsGroup.setEnabled(False)
 								self.tableGroup.setEnabled(False)
 
@@ -147,8 +158,6 @@ class ManageItemsWidget(QWidget):
 				queryText = self.searchField.text()
 
 				query = self.connection.getItemSearchQuery(queryText)
-
-				print(query)
 
 				# if query:
 				# 	self.error_message_dialog = QMessageBox()
@@ -180,6 +189,7 @@ class ManageItemsWidget(QWidget):
 
 				
 		def showAllItemsInTable(self):
+				self.searchField.clear()
 
 				query = self.connection.getAllItems()
 
@@ -215,7 +225,6 @@ class ManageItemsWidget(QWidget):
 				
 
 		def showResults(self, query):
-				
 				self.model.setQuery(query)
 				self.results_table.setModel(self.model)
 				self.results_table.setSortingEnabled(True)
@@ -224,11 +233,13 @@ class ManageItemsWidget(QWidget):
 				self.results_table.selectionModel().selectionChanged.connect(self.changeFormFields)
 				
 		def connections(self):
+				self.searchField.returnPressed.connect(self.searchDatabase)
 				self.searchButton.clicked.connect(self.searchDatabase)
 				self.showAllItemsButton.clicked.connect(self.showAllItemsInTable)
 				self.parent.mainMenu.manageItemsButton.clicked.connect(self.showAllItemsInTable)
 				self.parent.manage_item.triggered.connect(self.showAllItemsInTable)
 				self.backButton.clicked.connect(self.parent.switchToMainMenu)
+				self.newRecordButton.clicked.connect(self.parent.switchToNewItem)
 				#self.results_table.selectionModel().selectionChanged.connect(self.changeFormFields)
 				
 

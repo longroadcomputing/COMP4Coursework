@@ -19,6 +19,8 @@ class newLoanWidget(QWidget):
 		self.connection = None
 
 		self.parent = parent
+
+		self.model = QSqlTableModel()
 		
 		self.leftWidget = QWidget()
 		self.leftWidget.setFixedWidth(300)
@@ -26,8 +28,8 @@ class newLoanWidget(QWidget):
 		self.leftTopWidget = QWidget()
 		self.leftBottomWidget = QTabWidget()
 
-		self.leftTopWidget.setFixedHeight(200)
-		self.leftBottomWidget.setFixedHeight(200)
+		#self.leftTopWidget.setFixedHeight(200)
+		#self.leftBottomWidget.setFixedHeight(200)
 
 		self.leftLayout = QVBoxLayout()
 		self.leftLayout.addWidget(self.leftTopWidget)
@@ -36,8 +38,9 @@ class newLoanWidget(QWidget):
 		self.leftWidget.setLayout(self.leftLayout)
 
 		self.leftTopLayout = self.newLoanLayout()
-
 		self.leftTopWidget.setLayout(self.leftTopLayout)
+
+		self.leftBottomLayout = self.loanItemTableView()
 
 		self.rightWidget = QWidget()
 		self.rightWidget.setFixedWidth(300)
@@ -104,9 +107,16 @@ class newLoanWidget(QWidget):
 
 		self.loanRate = QLineEdit()
 
-		self.addItemTestButton = QPushButton("+")
-		self.addItemTestButton.setFixedWidth(30)
-		self.addItemTestButton.setFixedHeight(30)
+		self.addItemButton = QPushButton("+")
+		self.addItemButton.setFixedWidth(30)
+		self.addItemButton.setFixedHeight(30)
+
+		#Uncomment the lines below to add the above button to its separate layout and widget
+		# self.newItemButtonLayout = QHBoxLayout()
+		# self.newItemButtonLayout.addWidget(self.addItemButton)
+
+		# self.newItemButtonWidget = QWidget()
+		# self.newItemButtonWidget.setLayout(self.newItemButtonLayout)
 
 		grid = QGridLayout()
 		grid.setSpacing(10)
@@ -128,6 +138,8 @@ class newLoanWidget(QWidget):
 		self.verticalLayout.addWidget(self.newLoanHeading)
 		self.verticalLayout.addWidget(self.selectionWidget)
 		self.verticalLayout.addWidget(self.gridWidget)
+		self.verticalLayout.addWidget(self.addItemButton)
+		self.verticalLayout.setAlignment(self.addItemButton, Qt.AlignRight)
 
 		self.cancelButton = QPushButton("Cancel")
 		self.cancelButton.setShortcut('Esc')
@@ -152,7 +164,16 @@ class newLoanWidget(QWidget):
 		#connections
 		self.cancelButton.clicked.connect(self.parent.switchToMainMenu)
 
+		self.addItemButton.clicked.connect(self.selectItem)
+
 		return self.verticalLayout
+
+	def selectItem(self):
+		self.newLoanItemSelectionDialog = SelectItemDialog(self)
+		self.newLoanItemSelectionDialog.addConnection(self.connection)
+		self.newLoanItemSelectionDialog.showAllItemsInTable()
+		self.newLoanItemSelectionDialog.exec_()
+
 
 	def populateDropDowns(self):
 		with sqlite3.connect(self.connection.path) as db:
@@ -164,7 +185,16 @@ class newLoanWidget(QWidget):
 			for customer in self.customers:
 				self.customerDropDown.addItem("{0} {1} {2} ({3}): [{4} {5} {6} {7}]".format(customer[1], customer[2], customer[3], customer[4], customer[5], customer[6], customer[7], customer[8]))
 
-	def selectItem(self):
-		Date = "1"
-		self.selectItemDialog = selectItemDialog(Date)
-		self.selectItemDialog.exec_()
+	def loanItemTableView(self):
+
+		self.loanItemTable = QTableView()
+
+		self.layout = QHBoxLayout()
+		self.layout.addWidget(self.loanItemTable)
+
+		return self.layout
+
+	def addToLoan(self, data):
+		print(data)
+
+

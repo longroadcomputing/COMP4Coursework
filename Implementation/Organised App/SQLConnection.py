@@ -98,6 +98,16 @@ class SQLConnection():
 
 		return query
 
+	def getAllItemsForLoan(self):
+		
+		query = QSqlQuery(self.db)
+
+		query.prepare("SELECT ItemName, ItemValue, LoanRate FROM Item")
+
+		query.exec_()
+
+		return query
+
 	def getItemData(self, ID):
 		
 		# QSqlQuery doesn't support indexing
@@ -115,6 +125,18 @@ class SQLConnection():
 
 			cursor = db.cursor()
 			sql = """SELECT * FROM Item WHERE ItemID = ?"""
+			values = (ID,)
+			cursor.execute(sql, values)
+			data = cursor.fetchone()
+			db.commit()
+
+			return data
+
+	def getItemDataForLoan(self, ID):
+		with sqlite3.connect(self.path) as db:
+
+			cursor = db.cursor()
+			sql = """SELECT ItemName, ItemValue, LoanRate FROM Item WHERE ItemID = ?"""
 			values = (ID,)
 			cursor.execute(sql, values)
 			data = cursor.fetchone()
@@ -207,15 +229,11 @@ WHERE ItemID = :ItemID;
 			query = QSqlQuery(self.db)
 
 			query.prepare("""SELECT * FROM Item WHERE
-	   Item.ItemName LIKE '%'||:searchString||'%' OR
-	   ItemType.ItemType LIKE '%'||:searchString2||'%' OR
-	   Location.Location LIKE '%'||:searchString3||'%'
+	   Item.ItemName LIKE '%'||:searchString||'%'
 		""")
 		
 
 			query.bindValue(":searchString", searchText)
-			query.bindValue(":searchString2", searchText)
-			query.bindValue(":searchString3", searchText)
 
 			success = query.exec_()
 

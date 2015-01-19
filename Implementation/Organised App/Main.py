@@ -4,6 +4,8 @@ from PyQt4.QtCore import *
 import sys
 import time
 
+from TableSelectionDialog import *
+
 from SQLConnection import *
 from loggedInWidget import *
 
@@ -212,6 +214,8 @@ class MainWindow(QMainWindow):
 
 		self.setStatusBar(self.statusBar)
 
+		self.unifiedTitleAndToolBarOnMac()
+
 
 	def createActionShortcuts(self):
 		#file menu shortcuts
@@ -230,6 +234,7 @@ class MainWindow(QMainWindow):
 	def connections(self):
 		#menubar connections
 		self.open.triggered.connect(self.open_database)
+		self.new.triggered.connect(self.SelectNewRecordTableDialog)
 		self.close_window.triggered.connect(self.close)
 
 		#toolbar actions
@@ -347,9 +352,9 @@ class MainWindow(QMainWindow):
 
 		if opened:
 			self.password = self.connection.getPassword()
-			self.database_login()
+			#self.database_login()
 			self.stacked_layout.setCurrentIndex(1)
-			#self.enable_actions()
+			self.enable_actions()
 			self.statusBar.showMessage("Database opened: {0}".format(path))
 
 	def close_database(self):
@@ -358,13 +363,18 @@ class MainWindow(QMainWindow):
 
 			if closed:
 				self.statusBar.showMessage("Database has been closed.")
-				#self.disable_actions()
-				self.logout()
-				#self.stacked_layout.setCurrentIndex(0)
+				self.disable_actions()
+				self.stacked_layout.setCurrentIndex(0)
+				self.access = False
 			else:
 				self.statusBar.showMessage("An error occured!")
 		else:
 			self.statusBar.showMessage("No Database to close.")
+
+	def SelectNewRecordTableDialog(self):
+		self.selectTableDialogBox = RadioButtonWidget("Create New Record", "Please select a table", ("Item", "Customer", "Loan", "PAT-Test"), self)
+		self.selectTableDialogBox.exec_()
+
 
 
 	def initialCentralWidget(self):
@@ -492,12 +502,6 @@ class MainWindow(QMainWindow):
 		self.stacked_layout.setCurrentIndex(1)
 		if self.access == False:
 			self.close_database()
-
-	def logout(self):
-		self.access = False
-		self.stacked_layout.setCurrentIndex(0)
-		self.close_database()
-		self.disable_actions()
 
 	def closeEvent(self, event):
 		self.deleteLater()
