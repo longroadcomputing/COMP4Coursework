@@ -75,7 +75,7 @@ class MainWindow(QMainWindow):
 	def addDbConnectionsToWidgets(self):
 		self.new_item_widget.addConnection(self.connection)
 		self.new_customer_widget.addConnection(self.connection)
-		#self.new_loan_widget.addConnection(self.connection)
+		self.new_loan_widget.addConnection(self.connection)
 		#self.new_pat_test_widget.addConnection(self.connection)
 
 		self.manageItems.addConnection(self.connection)
