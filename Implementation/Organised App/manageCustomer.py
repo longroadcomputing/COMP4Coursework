@@ -97,9 +97,9 @@ class ManageCustomersWidget(QWidget):
 				self.buttonsWidget.setLayout(self.buttonsLayout)
 
 				self.viewCustomersLayout = QVBoxLayout()
-				self.viewCustomersLayout.addWidget(self.results_table)
 				self.viewCustomersLayout.addWidget(self.showAllCustomersButton)
-
+				self.viewCustomersLayout.addWidget(self.results_table)
+				
 				self.tableGroup.setLayout(self.viewCustomersLayout)
 
 				self.groupL = QVBoxLayout()

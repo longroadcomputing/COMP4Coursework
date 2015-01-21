@@ -428,7 +428,7 @@ class MainWindow(QMainWindow):
 
 	def switchToNewLoan(self):
 		if hasattr(self, 'new_loan_widget'):
-			pass
+			self.new_loan_widget.clearForm()
 		self.stacked_layout.setCurrentIndex(4)
 
 	def switchToNewPatTest(self):

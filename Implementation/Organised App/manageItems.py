@@ -99,9 +99,9 @@ class ManageItemsWidget(QWidget):
 				self.buttonsWidget.setLayout(self.buttonsLayout)
 
 				self.viewItemsLayout = QVBoxLayout()
-				self.viewItemsLayout.addWidget(self.results_table)
 				self.viewItemsLayout.addWidget(self.showAllItemsButton)
-
+				self.viewItemsLayout.addWidget(self.results_table)
+				
 				self.tableGroup.setLayout(self.viewItemsLayout)
 
 				self.groupL = QVBoxLayout()
@@ -123,6 +123,7 @@ class ManageItemsWidget(QWidget):
 				self.editItemDialog.clearForm()
 				self.editItemDialog.populateEditFields(data)
 				self.editItemDialog.exec_()
+				self.results_table.selectionModel().clearSelection()
 				self.searchItemsGroup.setEnabled(True)
 				self.tableGroup.setEnabled(True)
 
