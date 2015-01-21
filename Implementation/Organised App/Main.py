@@ -351,9 +351,9 @@ class MainWindow(QMainWindow):
 
 		if opened:
 			self.password = self.connection.getPassword()
-			self.database_login()
-			#self.stacked_layout.setCurrentIndex(1)
-			#self.enable_actions()
+			#self.database_login()
+			self.stacked_layout.setCurrentIndex(1)
+			self.enable_actions()
 			self.statusBar.showMessage("Database opened: {0}".format(path))
 
 	def close_database(self):
@@ -526,7 +526,7 @@ def showSplash():
 
 if __name__ == "__main__":
 	app = QApplication(sys.argv)
-	showSplash()
+	#showSplash()
 	window = MainWindow()
 	window.show()
 	window.raise_()
