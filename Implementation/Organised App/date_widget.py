@@ -13,7 +13,9 @@ class DateWidget(QDateEdit):
 		self.setCalendarPopup(True)
 		self.setDisplayFormat('dd/MM/yyyy')
 		self.cal = self.calendarWidget()
+		#self.cal.SingleSelection()
 		self.cal.setFirstDayOfWeek(Qt.Monday)
 		self.cal.setHorizontalHeaderFormat(QCalendarWidget.SingleLetterDayNames)
 		self.cal.setVerticalHeaderFormat(QCalendarWidget.NoVerticalHeader)
 		self.cal.setGridVisible(True)
+

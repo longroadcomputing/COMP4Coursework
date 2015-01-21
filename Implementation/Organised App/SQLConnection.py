@@ -419,5 +419,13 @@ WHERE CustomerID = :CustomerID;
 
 				return query
 
+	def addLoan(self, data):
+                pass
 
-				
+
+	def addLoanItem(self, data):
+                pass
+##                query = QSqlQuery(self.db)
+##
+##                query.prepare("""INSERT INTO LoanItem(
+##                                 """)

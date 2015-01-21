@@ -10,7 +10,7 @@ class NewLoanWidget(QWidget):
 
 		self.setProperty("newLoanClass", "True")
 
-		self.parent = parent
+		#self.parent = parent
 
 		self.setFixedWidth(800)
 

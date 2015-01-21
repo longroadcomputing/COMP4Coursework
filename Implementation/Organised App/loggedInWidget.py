@@ -162,7 +162,7 @@ class loggedInWidget(QWidget):
 		self.newLoanButton.clicked.connect(self.parent.switchToNewLoan)
 		self.newPatTestButton.clicked.connect(self.parent.switchToNewPatTest)
 
-		self.manageItemsButton.clicked.connect(self.parent.swtichToManageItems)
+		self.manageItemsButton.clicked.connect(self.parent.switchToManageItems)
 		self.manageCustomersButton.clicked.connect(self.parent.switchToManageCustomers)
 
 

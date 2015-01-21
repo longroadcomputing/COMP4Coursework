@@ -243,6 +243,7 @@ class MainWindow(QMainWindow):
 		self.add_loan.triggered.connect(self.switchToNewLoan)
 		self.add_pat_test.triggered.connect(self.switchToNewPatTest)
 
+		self.manage_item.triggered.connect(self.switchToManageItems)
 		self.manage_customer.triggered.connect(self.switchToManageCustomers)
 
 		#button connections
@@ -254,8 +255,8 @@ class MainWindow(QMainWindow):
 
 		self.new_item_widget.cancelButton.clicked.connect(self.switchToMainMenu)
 		self.new_customer_widget.cancelButton.clicked.connect(self.switchToMainMenu)
-		# self.new_loan_widget.cancelButton.clicked.connect(self.switchToMainMenu)
-		self.new_pat_test_widget.cancelButton.clicked.connect(self.switchToMainMenu)
+		self.new_loan_widget.cancelButton.clicked.connect(self.switchToMainMenu)
+		# self.new_pat_test_widget.cancelButton.clicked.connect(self.switchToMainMenu)
 
 		#login connections
 		# self.login_dialog.login_button.clicked.connect(self.database_login)
@@ -433,7 +434,7 @@ class MainWindow(QMainWindow):
 	def switchToNewPatTest(self):
 		self.stacked_layout.setCurrentIndex(5)
 
-	def swtichToManageItems(self):
+	def switchToManageItems(self):
 		self.stacked_layout.setCurrentIndex(6)
 
 	def switchToManageCustomers(self):
