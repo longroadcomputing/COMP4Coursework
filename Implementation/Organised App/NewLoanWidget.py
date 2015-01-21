@@ -230,7 +230,7 @@ class newLoanWidget(QWidget):
         def populateDropDowns(self):
                 with sqlite3.connect(self.connection.path) as db:
                         cursor = db.cursor()
-                        sql = ("""SELECT CustomerID, Title, FirstName, LastName, Company, FROM Customer ORDER BY FirstName ASC""")
+                        sql = ("""SELECT CustomerID, Title, FirstName, LastName, Company FROM Customer ORDER BY FirstName ASC""")
                         cursor.execute(sql)
                         self.customers = cursor.fetchall()
 
