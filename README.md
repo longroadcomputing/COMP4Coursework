@@ -40,7 +40,7 @@ Below are links to **guidance notes** and **deadlines** for each section.
     - Minor Improvements - Friday 17th April
 
 ##LaTeX
-It is **strongly recommended** that you use LaTeX for your coursework write-up - some reasons for this are listed on the [styling guidance][10] page. LaTeX templates and examples are provided in this repository to make working with this system easier.
+It is **strongly recommended** that you use LaTeX for your coursework write-up - some reasons for this are listed on the [installation and styling guidance][10] page. LaTeX templates and examples are provided in this repository to make working with this system easier.
 
 LaTeX is used widely in the academic world and you may find yourself using it at University. Getting a head start learning the syntax this year will be provide you with invaluable experience.
 
