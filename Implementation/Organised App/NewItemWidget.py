@@ -365,6 +365,7 @@ class NewItemWidget(QWidget):
 		self.item_loan_rate_line_edit.clear()
 		self.item_class_drop_down.setCurrentIndex(0)
 		self.fuse_rating_drop_down.setCurrentIndex(0)
+		
 		self.item_type_drop_down.setCurrentIndex(0)
 		self.location_drop_down.setCurrentIndex(0)
 

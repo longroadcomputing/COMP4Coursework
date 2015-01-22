@@ -160,25 +160,6 @@ class ManageItemsWidget(QWidget):
 
 				query = self.connection.getItemSearchQuery(queryText)
 
-				# if query:
-				# 	self.error_message_dialog = QMessageBox()
-				# 	self.error_message_dialog.setFixedWidth(200)
-				# 	self.error_message_dialog.setWindowTitle("Database Error")
-				# 	self.error_message_dialog.setText("Error! A record with that search parameter \n"
-				# 										"cannot be found. \n"
-				# 										"Would you like to search again or enter a new record?")
-				# 	self.error_message_dialog.setDetailedText("Database Error:\n \n "
-				# 									  "{0}".format(self.connection.error))
-				# 	self.error_message_dialog.setIcon(QMessageBox.Question)
-				# 	self.seach_again = self.error_message_dialog.addButton(self.parent.tr("Search Again"), QMessageBox.AcceptRole)
-				# 	self.new_record = self.error_message_dialog.addButton(self.parent.tr("Enter New Record"), QMessageBox.AcceptRole)
-				# 	self.error_message_dialog.setEscapeButton(self.seach_again)
-				# 	self.error_message_dialog.setDefaultButton(self.new_record)
-				# 	self.seach_again.clicked.connect(self.searchAgain)
-				# 	self.new_record.clicked.connect(self.newRecord)
-				# 	self.error_message_dialog.exec_()
-
-				# print(queryText)
 
 				self.showResults(query)
 

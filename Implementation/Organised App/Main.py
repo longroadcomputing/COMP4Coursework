@@ -357,6 +357,8 @@ class MainWindow(QMainWindow):
 			self.stacked_layout.setCurrentIndex(1)
 			self.enable_actions()
 			self.statusBar.showMessage("Database opened: {0}".format(path))
+			time.sleep(2)
+			self.statusBar.showMessage("")
 
 	def close_database(self):
 		if self.connection:
