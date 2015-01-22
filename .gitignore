@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+/.project
+=======
 /Testing/testing.aux
 /settings.aux
 /Manual/manual.aux
@@ -11,3 +14,4 @@
 /coursework.log
 /coursework.aux
 /Analysis/analysis.aux
+>>>>>>> FETCH_HEAD

@@ -1,0 +1,2860 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.1)  1 DEC 2014 15:15
+entering extended mode
+**U:/Github/COMP4Coursework/coursework.tex
+(U:/Github/COMP4Coursework/coursework.tex
+LaTeX2e <2014/05/01>
+Babel <3.9l> and hyphenation patterns for 68 languages loaded.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\report.cls"
+Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size12.clo"
+File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+\@input{settings.aux}
+(U:\Github\COMP4Coursework\settings.tex
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+Package: inputenc 2014/04/30 v1.2b Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
+File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
+Now handling font encoding OML ...
+... no UTF-8 mapping file for font encoding OML
+Now handling font encoding T1 ...
+... processing UTF-8 mapping file for font encoding T1
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
+File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00BB (decimal 187)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C0 (decimal 192)
+   defining Unicode char U+00C1 (decimal 193)
+   defining Unicode char U+00C2 (decimal 194)
+   defining Unicode char U+00C3 (decimal 195)
+   defining Unicode char U+00C4 (decimal 196)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00C7 (decimal 199)
+   defining Unicode char U+00C8 (decimal 200)
+   defining Unicode char U+00C9 (decimal 201)
+   defining Unicode char U+00CA (decimal 202)
+   defining Unicode char U+00CB (decimal 203)
+   defining Unicode char U+00CC (decimal 204)
+   defining Unicode char U+00CD (decimal 205)
+   defining Unicode char U+00CE (decimal 206)
+   defining Unicode char U+00CF (decimal 207)
+   defining Unicode char U+00D0 (decimal 208)
+   defining Unicode char U+00D1 (decimal 209)
+   defining Unicode char U+00D2 (decimal 210)
+   defining Unicode char U+00D3 (decimal 211)
+   defining Unicode char U+00D4 (decimal 212)
+   defining Unicode char U+00D5 (decimal 213)
+   defining Unicode char U+00D6 (decimal 214)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00D9 (decimal 217)
+   defining Unicode char U+00DA (decimal 218)
+   defining Unicode char U+00DB (decimal 219)
+   defining Unicode char U+00DC (decimal 220)
+   defining Unicode char U+00DD (decimal 221)
+   defining Unicode char U+00DE (decimal 222)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E0 (decimal 224)
+   defining Unicode char U+00E1 (decimal 225)
+   defining Unicode char U+00E2 (decimal 226)
+   defining Unicode char U+00E3 (decimal 227)
+   defining Unicode char U+00E4 (decimal 228)
+   defining Unicode char U+00E5 (decimal 229)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00E7 (decimal 231)
+   defining Unicode char U+00E8 (decimal 232)
+   defining Unicode char U+00E9 (decimal 233)
+   defining Unicode char U+00EA (decimal 234)
+   defining Unicode char U+00EB (decimal 235)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F0 (decimal 240)
+   defining Unicode char U+00F1 (decimal 241)
+   defining Unicode char U+00F2 (decimal 242)
+   defining Unicode char U+00F3 (decimal 243)
+   defining Unicode char U+00F4 (decimal 244)
+   defining Unicode char U+00F5 (decimal 245)
+   defining Unicode char U+00F6 (decimal 246)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+00F9 (decimal 249)
+   defining Unicode char U+00FA (decimal 250)
+   defining Unicode char U+00FB (decimal 251)
+   defining Unicode char U+00FC (decimal 252)
+   defining Unicode char U+00FD (decimal 253)
+   defining Unicode char U+00FE (decimal 254)
+   defining Unicode char U+00FF (decimal 255)
+   defining Unicode char U+0102 (decimal 258)
+   defining Unicode char U+0103 (decimal 259)
+   defining Unicode char U+0104 (decimal 260)
+   defining Unicode char U+0105 (decimal 261)
+   defining Unicode char U+0106 (decimal 262)
+   defining Unicode char U+0107 (decimal 263)
+   defining Unicode char U+010C (decimal 268)
+   defining Unicode char U+010D (decimal 269)
+   defining Unicode char U+010E (decimal 270)
+   defining Unicode char U+010F (decimal 271)
+   defining Unicode char U+0110 (decimal 272)
+   defining Unicode char U+0111 (decimal 273)
+   defining Unicode char U+0118 (decimal 280)
+   defining Unicode char U+0119 (decimal 281)
+   defining Unicode char U+011A (decimal 282)
+   defining Unicode char U+011B (decimal 283)
+   defining Unicode char U+011E (decimal 286)
+   defining Unicode char U+011F (decimal 287)
+   defining Unicode char U+0130 (decimal 304)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0132 (decimal 306)
+   defining Unicode char U+0133 (decimal 307)
+   defining Unicode char U+0139 (decimal 313)
+   defining Unicode char U+013A (decimal 314)
+   defining Unicode char U+013D (decimal 317)
+   defining Unicode char U+013E (decimal 318)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0143 (decimal 323)
+   defining Unicode char U+0144 (decimal 324)
+   defining Unicode char U+0147 (decimal 327)
+   defining Unicode char U+0148 (decimal 328)
+   defining Unicode char U+014A (decimal 330)
+   defining Unicode char U+014B (decimal 331)
+   defining Unicode char U+0150 (decimal 336)
+   defining Unicode char U+0151 (decimal 337)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0154 (decimal 340)
+   defining Unicode char U+0155 (decimal 341)
+   defining Unicode char U+0158 (decimal 344)
+   defining Unicode char U+0159 (decimal 345)
+   defining Unicode char U+015A (decimal 346)
+   defining Unicode char U+015B (decimal 347)
+   defining Unicode char U+015E (decimal 350)
+   defining Unicode char U+015F (decimal 351)
+   defining Unicode char U+0160 (decimal 352)
+   defining Unicode char U+0161 (decimal 353)
+   defining Unicode char U+0162 (decimal 354)
+   defining Unicode char U+0163 (decimal 355)
+   defining Unicode char U+0164 (decimal 356)
+   defining Unicode char U+0165 (decimal 357)
+   defining Unicode char U+016E (decimal 366)
+   defining Unicode char U+016F (decimal 367)
+   defining Unicode char U+0170 (decimal 368)
+   defining Unicode char U+0171 (decimal 369)
+   defining Unicode char U+0178 (decimal 376)
+   defining Unicode char U+0179 (decimal 377)
+   defining Unicode char U+017A (decimal 378)
+   defining Unicode char U+017B (decimal 379)
+   defining Unicode char U+017C (decimal 380)
+   defining Unicode char U+017D (decimal 381)
+   defining Unicode char U+017E (decimal 382)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201A (decimal 8218)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+   defining Unicode char U+201E (decimal 8222)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+2039 (decimal 8249)
+   defining Unicode char U+203A (decimal 8250)
+   defining Unicode char U+2423 (decimal 9251)
+)
+Now handling font encoding OT1 ...
+... processing UTF-8 mapping file for font encoding OT1
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
+File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00B8 (decimal 184)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+)
+Now handling font encoding OMS ...
+... processing UTF-8 mapping file for font encoding OMS
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
+File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+)
+Now handling font encoding OMX ...
+... no UTF-8 mapping file for font encoding OMX
+Now handling font encoding U ...
+... no UTF-8 mapping file for font encoding U
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+02C6 (decimal 710)
+   defining Unicode char U+02DC (decimal 732)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2026 (decimal 8230)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2423 (decimal 9251)
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 2014/05/08 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+\lst@mode=\count88
+\lst@gtempboxa=\box26
+\lst@token=\toks17
+\lst@length=\count89
+\lst@currlwidth=\dimen103
+\lst@column=\count90
+\lst@pos=\count91
+\lst@lostspace=\dimen104
+\lst@width=\dimen105
+\lst@newlines=\count92
+\lst@lineno=\count93
+\lst@maxwidth=\dimen106
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
+File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
+\c@lstnumber=\count94
+\lst@skipnumbers=\count95
+\lst@framebox=\box27
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.cfg"
+File: listings.cfg 2014/09/06 1.5e listings configuration
+))
+Package: listings 2014/09/06 1.5e (Carsten Heinz)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fancybox\fancybox.sty"
+Package: fancybox 2010/05/15 1.4
+
+Style option: `fancybox' v1.4 <2010/05/15> (tvz)
+\@fancybox=\box28
+\shadowsize=\dimen107
+\@Sbox=\box29
+\do@VerbBox=\toks18
+\the@fancyput=\toks19
+\this@fancyput=\toks20
+\EndVerbatimTokens=\toks21
+\Verbatim@Outfile=\write3
+\Verbatim@Infile=\read1
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 2014/04/25 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count96
+))
+\Gin@req@height=\dimen108
+\Gin@req@width=\dimen109
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ltxmisc\parskip.sty"
+Package: parskip 2001/04/09 non-zero parskip adjustments
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\mathtools\mathtools.sty"
+Package: mathtools 2014/07/16 v1.15 mathematical typesetting tools
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\calc.sty"
+Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count97
+\calc@Bcount=\count98
+\calc@Adimen=\dimen110
+\calc@Bdimen=\dimen111
+\calc@Askip=\skip43
+\calc@Bskip=\skip44
+LaTeX Info: Redefining \setlength on input line 75.
+LaTeX Info: Redefining \addtolength on input line 76.
+\calc@Ccount=\count99
+\calc@Cskip=\skip45
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\mathtools\mhsetup.sty"
+Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip46
+
+For additional information on amsmath, use the `?' option.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks22
+\ex@=\dimen112
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen113
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count100
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count101
+\leftroot@=\count102
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count103
+\DOTSCASE@=\count104
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box30
+\strutbox@=\box31
+\big@size=\dimen114
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count105
+\c@MaxMatrixCols=\count106
+\dotsspace@=\muskip10
+\c@parentequation=\count107
+\dspbrk@lvl=\count108
+\tag@help=\toks23
+\row@=\count109
+\column@=\count110
+\maxfields@=\count111
+\andhelp@=\toks24
+\eqnshift@=\dimen115
+\alignsep@=\dimen116
+\tagshift@=\dimen117
+\tagwidth@=\dimen118
+\totwidth@=\dimen119
+\lineht@=\dimen120
+\@envbody=\toks25
+\multlinegap=\skip47
+\multlinetaggap=\skip48
+\mathdisplay@stack=\toks26
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
+\g_MT_multlinerow_int=\count112
+\l_MT_multwidth_dim=\dimen121
+\origjot=\skip49
+\l_MT_shortvdotswithinadjustabove_dim=\dimen122
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen123
+\l_MT_above_intertext_sep=\dimen124
+\l_MT_below_intertext_sep=\dimen125
+\l_MT_above_shortintertext_sep=\dimen126
+\l_MT_below_shortintertext_sep=\dimen127
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
+Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
+Package: hobsub-hyperref 2012/04/25 v1.12 Bundle oberdiek, subset hyperref (HO)
+
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty"
+Package: hobsub-generic 2012/04/25 v1.12 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/04/25 v1.12 Construct package bundles (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO
+)
+Package: bitset 2011/01/30 v1.1 Handle bit-vector datatype (HO)
+Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
+Package: hopatch 2011/06/24 v1.1 Wrapper for package hooks (HO)
+Package: xcolor-patch 2011/01/30 xcolor patch
+Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
+Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty"
+Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+)
+\@linkdim=\dimen128
+\Hy@linkcounter=\count113
+\Hy@pagecounter=\count114
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
+File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+\Hy@SavedSpaceFactor=\count115
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4443.
+Package hyperref Info: Link nesting OFF on input line 4448.
+Package hyperref Info: Hyper index ON on input line 4451.
+Package hyperref Info: Plain pages OFF on input line 4458.
+Package hyperref Info: Backreferencing OFF on input line 4463.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4688.
+\c@Hy@tempcnt=\count116
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\url\url.sty"
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5041.
+\XeTeXLinkMargin=\dimen129
+\Fld@menulength=\count117
+\Field@Width=\dimen130
+\Fld@charsize=\dimen131
+Package hyperref Info: Hyper figures OFF on input line 6295.
+Package hyperref Info: Link nesting OFF on input line 6300.
+Package hyperref Info: Hyper index ON on input line 6303.
+Package hyperref Info: backreferencing OFF on input line 6310.
+Package hyperref Info: Link coloring OFF on input line 6315.
+Package hyperref Info: Link coloring with OCG OFF on input line 6320.
+Package hyperref Info: PDF/A mode OFF on input line 6325.
+LaTeX Info: Redefining \ref on input line 6365.
+LaTeX Info: Redefining \pageref on input line 6369.
+\Hy@abspage=\count118
+\c@Item=\count119
+\c@Hfootnote=\count120
+)
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
+File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
+\Fld@listcount=\count121
+\c@bookmark@seq@number=\count122
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
+Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip50
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\marvosym\marvosym.sty"
+Package: marvosym 2011/07/20 v2.2 Martin Vogel's Symbols font definitions
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\enumitem\enumitem.sty"
+Package: enumitem 2011/09/28 v3.5.2 Customized lists
+\labelindent=\skip51
+\enit@outerparindent=\dimen132
+\enit@toks=\toks27
+\enit@inbox=\box32
+\enitdp@description=\count123
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count124
+\float@exts=\toks28
+\float@box=\box33
+\@float@everytoks=\toks29
+\@floatcapt=\box34
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\algorithmicx\algpseudocode.sty"
+Package: algpseudocode 
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\algorithmicx\algorithmicx.sty"
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count125
+\c@ALG@rem=\count126
+\c@ALG@nested=\count127
+\ALG@tlm=\skip52
+\ALG@thistlm=\skip53
+\c@ALG@Lnr=\count128
+\c@ALG@blocknr=\count129
+\c@ALG@storecount=\count130
+\c@ALG@tmpcounter=\count131
+\ALG@tmplength=\skip54
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (C:\Users\34771\AppData\Roaming\MiKTeX\2.9\tex\latex\algorithms\algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+\@float@every@algorithm=\toks30
+\c@algorithm=\count132
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\comment\comment.sty"
+\CommentStream=\write4
+
+Excluding comment 'comment')
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\longtable.sty"
+Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip55
+\LTright=\skip56
+\LTpre=\skip57
+\LTpost=\skip58
+\LTchunksize=\count133
+\LTcapwidth=\dimen133
+\LT@head=\box35
+\LT@firsthead=\box36
+\LT@foot=\box37
+\LT@lastfoot=\box38
+\LT@cols=\count134
+\LT@rows=\count135
+\c@LT@tables=\count136
+\c@LT@chunks=\count137
+\LT@p@ftn=\toks31
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\pdflscape.sty"
+Package: pdflscape 2008/08/11 v0.10 Display of landscape pages in PDF (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\lscape.sty"
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 80.
+)
+(C:\Users\34771\AppData\Roaming\MiKTeX\2.9\tex\latex\pdfpages\pdfpages.sty
+Package: pdfpages 2013/08/25 v0.4v Insert pages of external PDF documents (AM)
+
+(C:\Users\34771\AppData\Roaming\MiKTeX\2.9\tex\latex\eso-pic\eso-pic.sty
+Package: eso-pic 2013/10/06 v2.0d eso-pic (RN)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+))
+(C:\Users\34771\AppData\Roaming\MiKTeX\2.9\tex\latex\pdfpages\pppdftex.def
+File: pppdftex.def 2013/08/25 v0.4v Pdfpages driver for pdfTeX (AM)
+)
+\AM@pagebox=\box39
+\AM@toc@title=\toks32
+\c@AM@survey=\count138
+\AM@templatesizebox=\box40
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty"
+\fancy@headwidth=\skip59
+\f@ncyO@elh=\skip60
+\f@ncyO@erh=\skip61
+\f@ncyO@olh=\skip62
+\f@ncyO@orh=\skip63
+\f@ncyO@elf=\skip64
+\f@ncyO@erf=\skip65
+\f@ncyO@olf=\skip66
+\f@ncyO@orf=\skip67
+))
+(U:\Github\COMP4Coursework\coursework.aux
+(U:\Github\COMP4Coursework\Analysis\analysis.aux
+
+LaTeX Warning: Label `fig: Interview Questions' multiply defined.
+
+
+LaTeX Warning: Label `fig: Interview Questions' multiply defined.
+
+
+LaTeX Warning: Label `fig:print_function_result' multiply defined.
+
+
+LaTeX Warning: Label `fig:print_function_result' multiply defined.
+
+
+LaTeX Warning: Label `fig:print_function_result' multiply defined.
+
+
+LaTeX Warning: Label `fig:print_function_result' multiply defined.
+
+
+LaTeX Warning: Label `fig:print_function_result' multiply defined.
+
+
+LaTeX Warning: Label `fig:print_function_result' multiply defined.
+
+
+LaTeX Warning: Label `fig:print_function_result' multiply defined.
+
+
+LaTeX Warning: Label `fig:print_function_result' multiply defined.
+
+
+LaTeX Warning: Label `fig:print_function_result' multiply defined.
+
+
+LaTeX Warning: Label `fig:ER Diagrams' multiply defined.
+
+
+LaTeX Warning: Label `fig:relationship_diagram' multiply defined.
+
+
+LaTeX Warning: Label `fig:relationship_diagram' multiply defined.
+
+) (U:\Github\COMP4Coursework\Design\design.aux
+
+LaTeX Warning: Label `fig:print_function_result' multiply defined.
+
+
+LaTeX Warning: Label `fig:print_function_result' multiply defined.
+
+
+LaTeX Warning: Label `fig:print_function_result' multiply defined.
+
+
+LaTeX Warning: Label `fig:print_function_result' multiply defined.
+
+
+LaTeX Warning: Label `fig:print_function_result' multiply defined.
+
+
+LaTeX Warning: Label `fig:print_function_result' multiply defined.
+
+
+LaTeX Warning: Label `fig:print_function_result' multiply defined.
+
+
+LaTeX Warning: Label `fig:print_function_result' multiply defined.
+
+
+LaTeX Warning: Label `fig:print_function_result' multiply defined.
+
+
+LaTeX Warning: Label `fig:print_function_result' multiply defined.
+
+
+LaTeX Warning: Label `fig:print_function_result' multiply defined.
+
+
+LaTeX Warning: Label `fig:print_function_result' multiply defined.
+
+
+LaTeX Warning: Label `fig:object_diagram' multiply defined.
+
+
+LaTeX Warning: Label `fig:relationship_diagram' multiply defined.
+
+
+LaTeX Warning: Label `fig:relationship_diagram' multiply defined.
+
+
+LaTeX Warning: Label `fig:relationship_diagram' multiply defined.
+
+
+LaTeX Warning: Label `fig:relationship_diagram' multiply defined.
+
+
+LaTeX Warning: Label `fig:relationship_diagram' multiply defined.
+
+
+LaTeX Warning: Label `fig:ER Diagrams' multiply defined.
+
+) (U:\Github\COMP4Coursework\Testing\testing.aux)
+(U:\Github\COMP4Coursework\Maintenance\maintenance.aux)
+(U:\Github\COMP4Coursework\Manual\manual.aux)
+(U:\Github\COMP4Coursework\Evaluation\evaluation.aux))
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+\c@lstlisting=\count139
+
+(C:\Users\34771\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count140
+\scratchdimen=\dimen134
+\scratchbox=\box41
+\nofMPsegments=\count141
+\nofMParguments=\count142
+\everyMPshowfont=\toks33
+\MPscratchCnt=\count143
+\MPscratchDim=\dimen135
+\MPnumerator=\count144
+\makeMPintoPDFobject=\count145
+\everyMPtoPDFconversion=\toks34
+)
+\AtBeginShipoutBox=\box42
+Package hyperref Info: Link coloring OFF on input line 3.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
+Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
+Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
+)
+\c@section@level=\count146
+)
+LaTeX Info: Redefining \ref on input line 3.
+LaTeX Info: Redefining \pageref on input line 3.
+LaTeX Info: Redefining \nameref on input line 3.
+
+(U:\Github\COMP4Coursework\coursework.out)
+(U:\Github\COMP4Coursework\coursework.out)
+\@outlinefile=\write5
+ [1
+
+
+
+{C:/Users/34771/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (U:\Github\
+COMP4Coursework\coursework.tocpdfTeX warning (ext4): destination with the same 
+identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.41 ...ternative solutions}{35}{subsection.1.8.1}
+                                                   [1
+
+]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[2]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[3])
+\tf@toc=\write6
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[4] (U:\Github\COMP4Coursework\Analysis\analysis.tex
+Chapter 1.
+
+Underfull \hbox (badness 10000) in paragraph at lines 7--8
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--10
+
+ []
+
+[5
+
+
+]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[6]
+<./Analysis/Interview/interview_questions.pdf, id=733, page=1, 597.50786pt x 84
+5.01837pt>
+File: ./Analysis/Interview/interview_questions.pdf Graphic file (type pdf)
+ <use ./Analysis/Interview/interview_questions.pdf, page 1>
+Package pdftex.def Info: ./Analysis/Interview/interview_questions.pdf, page1 us
+ed on input line 29.
+(pdftex.def)             Requested size: 390.0pt x 551.55055pt.
+
+<./Analysis/Interview/interview_questions.pdf, id=734, page=2, 597.50786pt x 84
+5.01837pt>
+File: ./Analysis/Interview/interview_questions.pdf Graphic file (type pdf)
+ <use ./Analysis/Interview/interview_questions.pdf, page 2>
+Package pdftex.def Info: ./Analysis/Interview/interview_questions.pdf, page2 us
+ed on input line 34.
+(pdftex.def)             Requested size: 390.0pt x 551.55055pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[7pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1}
+) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.36 
+      <U:/Github/COMP4Coursework/Analysis/Interview/interview_questions.pdf>]
+<./Analysis/Interview/interview_questions.pdf, id=766, page=3, 597.50786pt x 84
+5.01837pt>
+File: ./Analysis/Interview/interview_questions.pdf Graphic file (type pdf)
+ <use ./Analysis/Interview/interview_questions.pdf, page 3>
+Package pdftex.def Info: ./Analysis/Interview/interview_questions.pdf, page3 us
+ed on input line 39.
+(pdftex.def)             Requested size: 390.0pt x 551.55055pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[8pdfTeX warning (ext4): destination with the same identifier (name{figure.1.2}
+) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.41 
+      <U:/Github/COMP4Coursework/Analysis/Interview/interview_questions.pdf>]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[9pdfTeX warning (ext4): destination with the same identifier (name{figure.1.3}
+) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.47 
+      <U:/Github/COMP4Coursework/Analysis/Interview/interview_questions.pdf>]
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 54.
+
+<./Analysis/Dataflow/DFD_analysis_key.pdf, id=793, 545.94707pt x 151.24966pt>
+File: ./Analysis/Dataflow/DFD_analysis_key.pdf Graphic file (type pdf)
+
+<use ./Analysis/Dataflow/DFD_analysis_key.pdf>
+Package pdftex.def Info: ./Analysis/Dataflow/DFD_analysis_key.pdf used on input
+ line 82.
+(pdftex.def)             Requested size: 390.0pt x 108.04575pt.
+
+<./Analysis/Dataflow/Old_System/Old_Sys_DFD_analysis_new_item.pdf, id=794, 529.
+11967pt x 99.41963pt>
+File: ./Analysis/Dataflow/Old_System/Old_Sys_DFD_analysis_new_item.pdf Graphic 
+file (type pdf)
+
+<use ./Analysis/Dataflow/Old_System/Old_Sys_DFD_analysis_new_item.pdf>
+Package pdftex.def Info: ./Analysis/Dataflow/Old_System/Old_Sys_DFD_analysis_ne
+w_item.pdf used on input line 87.
+(pdftex.def)             Requested size: 390.0pt x 73.28265pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[10]
+<./Analysis/Dataflow/Old_System/Old_Sys_Data_flow_update.pdf, id=805, 535.80609
+pt x 235.78319pt>
+File: ./Analysis/Dataflow/Old_System/Old_Sys_Data_flow_update.pdf Graphic file 
+(type pdf)
+
+<use ./Analysis/Dataflow/Old_System/Old_Sys_Data_flow_update.pdf>
+Package pdftex.def Info: ./Analysis/Dataflow/Old_System/Old_Sys_Data_flow_updat
+e.pdf used on input line 92.
+(pdftex.def)             Requested size: 390.0pt x 171.6274pt.
+
+<./Analysis/Dataflow/Old_System/Old_Sys_Data_flow_quote.pdf, id=806, 525.84009p
+t x 250.41415pt>
+File: ./Analysis/Dataflow/Old_System/Old_Sys_Data_flow_quote.pdf Graphic file (
+type pdf)
+
+<use ./Analysis/Dataflow/Old_System/Old_Sys_Data_flow_quote.pdf>
+Package pdftex.def Info: ./Analysis/Dataflow/Old_System/Old_Sys_Data_flow_quote
+.pdf used on input line 97.
+(pdftex.def)             Requested size: 390.0pt x 185.7315pt.
+
+<./Analysis/Dataflow/Old_System/Old_Sys_Data_flow_invoice.pdf, id=807, 531.5060
+9pt x 256.2101pt>
+File: ./Analysis/Dataflow/Old_System/Old_Sys_Data_flow_invoice.pdf Graphic file
+ (type pdf)
+
+<use ./Analysis/Dataflow/Old_System/Old_Sys_Data_flow_invoice.pdf>
+Package pdftex.def Info: ./Analysis/Dataflow/Old_System/Old_Sys_Data_flow_invoi
+ce.pdf used on input line 102.
+(pdftex.def)             Requested size: 390.0pt x 187.99744pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[11pdfTeX warning (ext4): destination with the same identifier (name{figure.1.4
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.104     \end{figure}
+                      pdfTeX warning (ext4): destination with the same identifi
+er (name{figure.1.5}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.104     \end{figure}
+                      pdfTeX warning (ext4): destination with the same identifi
+er (name{figure.1.6}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.104     \end{figure}
+                       <U:/Github/COMP4Coursework/Analysis/Dataflow/DFD_analysi
+s_key.pdf> <U:/Github/COMP4Coursework/Analysis/Dataflow/Old_System/Old_Sys_DFD_
+analysis_new_item.pdf> <U:/Github/COMP4Coursework/Analysis/Dataflow/Old_System/
+Old_Sys_Data_flow_update.pdf>]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[12pdfTeX warning (ext4): destination with the same identifier (name{figure.1.7
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.107 \newpage
+              pdfTeX warning (ext4): destination with the same identifier (name
+{figure.1.8}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.107 \newpage
+               <U:/Github/COMP4Coursework/Analysis/Dataflow/Old_System/Old_Sys_
+Data_flow_quote.pdf> <U:/Github/COMP4Coursework/Analysis/Dataflow/Old_System/Ol
+d_Sys_Data_flow_invoice.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 111--112
+
+ []
+
+<./Analysis/Forms/enter_data.png, id=913, 1196.47pt x 986.68625pt>
+File: ./Analysis/Forms/enter_data.png Graphic file (type png)
+
+<use ./Analysis/Forms/enter_data.png>
+Package pdftex.def Info: ./Analysis/Forms/enter_data.png used on input line 114
+.
+(pdftex.def)             Requested size: 390.0pt x 321.61774pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[13pdfTeX warning (ext4): destination with the same identifier (name{figure.1.9
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.118 \newpage
+               <U:/Github/COMP4Coursework/Analysis/Forms/enter_data.png>]
+<./Analysis/Forms/sub_total_calc.png, id=922, 1192.455pt x 984.67876pt>
+File: ./Analysis/Forms/sub_total_calc.png Graphic file (type png)
+
+<use ./Analysis/Forms/sub_total_calc.png>
+Package pdftex.def Info: ./Analysis/Forms/sub_total_calc.png used on input line
+ 123.
+(pdftex.def)             Requested size: 390.0pt x 322.04517pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 144--144
+\OT1/cmr/m/n/12 Item-Type
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+[]\OT1/cmr/m/n/12 Database
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[14pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1
+0}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.152 \end{center}
+                   <U:/Github/COMP4Coursework/Analysis/Forms/sub_total_calc.png
+>]
+Underfull \hbox (badness 10000) in paragraph at lines 158--158
+[]\OT1/cmr/m/n/12 Database -
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 158--158
+\OT1/cmr/m/n/12 Loan-List-ing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--159
+[]\OT1/cmr/m/n/12 Database -
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--159
+\OT1/cmr/m/n/12 Loan-List-ing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 160--160
+[]\OT1/cmr/m/n/12 Database -
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 160--160
+\OT1/cmr/m/n/12 Loan-List-ing
+ []
+
+
+Overfull \hbox (16.439pt too wide) in paragraph at lines 162--162
+[]\OT1/cmr/bx/n/12 CustomerLoanID| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 163--163
+\OT1/cmr/m/n/12 Cus-tomer
+ []
+
+
+Overfull \hbox (10.82132pt too wide) in paragraph at lines 165--165
+[]\OT1/cmr/m/n/12 LoanLength(Days)| 
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[15]
+Overfull \vbox (63.69952pt too high) has occurred while \output is active []
+
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 186--186
+[]\OT1/cmr/m/n/12 Database -
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 187--187
+[]\OT1/cmr/m/n/12 Database
+ []
+
+
+Underfull \hbox (badness 4084) in paragraph at lines 187--187
+\OT1/cmr/m/n/12 - PAT-test
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 187--187
+[]\OT1/cmr/m/n/12 Database -
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 188--188
+[]\OT1/cmr/m/n/12 Database -
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 189--189
+[]\OT1/cmr/m/n/12 Database -
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 190--190
+[]\OT1/cmr/m/n/12 Database -
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 191--191
+[]\OT1/cmr/m/n/12 Database -
+ []
+
+
+Overfull \hbox (16.37402pt too wide) in paragraph at lines 192--192
+[]\OT1/cmr/m/n/12 ProtectiveCondTest| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 192--192
+[]\OT1/cmr/m/n/12 Database -
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 193--193
+[]\OT1/cmr/m/n/12 Database -
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 194--194
+[]\OT1/cmr/m/n/12 Database -
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 195--195
+[]\OT1/cmr/m/n/12 Database -
+ []
+
+File: ./Analysis/Dataflow/DFD_analysis_key.pdf Graphic file (type pdf)
+<use ./Analysis/Dataflow/DFD_analysis_key.pdf>
+Package pdftex.def Info: ./Analysis/Dataflow/DFD_analysis_key.pdf used on input
+ line 206.
+(pdftex.def)             Requested size: 390.0pt x 108.04575pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[17]
+<./Analysis/Dataflow/New_System/Data_flow_new.pdf, id=943, 522.17055pt x 235.02
+545pt>
+File: ./Analysis/Dataflow/New_System/Data_flow_new.pdf Graphic file (type pdf)
+ <use ./Analysis/Dataflow/New_System/Data_flow_new.pdf>
+Package pdftex.def Info: ./Analysis/Dataflow/New_System/Data_flow_new.pdf used 
+on input line 212.
+(pdftex.def)             Requested size: 390.0pt x 175.54063pt.
+
+<./Analysis/Dataflow/New_System/Data_flow_update.pdf, id=944, 520.2321pt x 229.
+90974pt>
+File: ./Analysis/Dataflow/New_System/Data_flow_update.pdf Graphic file (type pd
+f)
+ <use ./Analysis/Dataflow/New_System/Data_flow_update.pdf>
+Package pdftex.def Info: ./Analysis/Dataflow/New_System/Data_flow_update.pdf us
+ed on input line 216.
+(pdftex.def)             Requested size: 390.0pt x 172.3582pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[18pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1
+1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.219 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+1.12}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.219 
+       <U:/Github/COMP4Coursework/Analysis/Dataflow/New_System/Data_flow_new.pd
+f>]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[19pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1
+3}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.224 \begin{landscape}
+                        <U:/Github/COMP4Coursework/Analysis/Dataflow/New_System
+/Data_flow_update.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 233--233
+[]\OT1/cmr/bx/n/12 Data
+ []
+
+
+Overfull \hbox (3.53894pt too wide) in paragraph at lines 233--233
+[]\OT1/cmr/bx/n/12 Validation| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 233--233
+[]\OT1/cmr/bx/n/12 Example
+ []
+
+
+Underfull \hbox (badness 1708) in paragraph at lines 234--234
+\OT1/cmr/m/n/12 for-eign key for the Item
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 235--235
+[]\OT1/cmr/m/n/12 Arkaos
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 237--237
+[]\OT1/cmr/m/n/12 Main
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[20
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 247--247
+[]\OT1/cmr/bx/n/12 Data
+ []
+
+
+Overfull \hbox (3.53894pt too wide) in paragraph at lines 247--247
+[]\OT1/cmr/bx/n/12 Validation| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 247--247
+[]\OT1/cmr/bx/n/12 Example
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 249--249
+[]\OT1/cmr/m/n/12 Arkaos
+ []
+
+
+Underfull \hbox (badness 2744) in paragraph at lines 250--250
+[]\OT1/cmr/m/n/12 This holds the data for
+ []
+
+
+Underfull \hbox (badness 4048) in paragraph at lines 252--252
+\OT1/cmr/m/n/12 item by mul-ti-ply-ing the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 253--253
+[]\OT1/cmr/m/n/12 Status
+ []
+
+
+Underfull \hbox (badness 4673) in paragraph at lines 253--253
+[]\OT1/cmr/m/n/12 This holds the data of
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[21
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 263--263
+[]\OT1/cmr/bx/n/12 Data
+ []
+
+
+Overfull \hbox (3.53894pt too wide) in paragraph at lines 263--263
+[]\OT1/cmr/bx/n/12 Validation| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 263--263
+[]\OT1/cmr/bx/n/12 Example
+ []
+
+
+Overfull \hbox (3.14917pt too wide) in paragraph at lines 266--266
+[]\OT1/cmr/m/n/12 CustomerLoanID| 
+ []
+
+
+Underfull \hbox (badness 4543) in paragraph at lines 268--268
+[]\OT1/cmr/m/n/12 Holds the data for the
+ []
+
+
+Underfull \hbox (badness 4543) in paragraph at lines 269--269
+[]\OT1/cmr/m/n/12 Holds the data for the
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[22
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 279--279
+[]\OT1/cmr/bx/n/12 Data
+ []
+
+
+Overfull \hbox (3.53894pt too wide) in paragraph at lines 279--279
+[]\OT1/cmr/bx/n/12 Validation| 
+ []
+
+
+Underfull \hbox (badness 1048) in paragraph at lines 281--281
+[]\OT1/cmr/m/n/12 A field for the cus-
+ []
+
+
+Underfull \hbox (badness 1048) in paragraph at lines 282--282
+[]\OT1/cmr/m/n/12 A field for the cus-
+ []
+
+
+Overfull \hbox (10.92445pt too wide) in paragraph at lines 288--288
+[]\OT1/cmr/m/n/12 MobileNumber| 
+ []
+
+
+Underfull \hbox (badness 1048) in paragraph at lines 288--288
+[]\OT1/cmr/m/n/12 A field for the cus-
+ []
+
+
+Underfull \hbox (badness 1048) in paragraph at lines 289--289
+[]\OT1/cmr/m/n/12 A field for the cus-
+ []
+
+
+Underfull \hbox (badness 1048) in paragraph at lines 290--290
+[]\OT1/cmr/m/n/12 A field for the cus-
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[23
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 300--300
+[]\OT1/cmr/bx/n/12 Data
+ []
+
+
+Overfull \hbox (3.53894pt too wide) in paragraph at lines 300--300
+[]\OT1/cmr/bx/n/12 Validation| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 302--302
+[]\OT1/cmr/m/n/12 3-400
+ []
+
+
+Underfull \hbox (badness 3895) in paragraph at lines 303--303
+[]\OT1/cmr/m/n/12 1 Char-ac-
+ []
+
+
+Underfull \hbox (badness 6675) in paragraph at lines 304--304
+[]\OT1/cmr/m/n/12 1-3 Char-
+ []
+
+
+Overfull \hbox (4.9931pt too wide) in paragraph at lines 306--306
+[]\OT1/cmr/m/n/12 ProtectiveCondTest| 
+ []
+
+
+Underfull \hbox (badness 3895) in paragraph at lines 306--306
+[]\OT1/cmr/m/n/12 4 Char-ac-
+ []
+
+
+Underfull \hbox (badness 3895) in paragraph at lines 307--307
+[]\OT1/cmr/m/n/12 3 Char-ac-
+ []
+
+
+Underfull \hbox (badness 3895) in paragraph at lines 308--308
+[]\OT1/cmr/m/n/12 4 Char-ac-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 309--309
+[]\OT1/cmr/m/n/12 Presence
+ []
+
+
+Overfull \hbox (3.53049pt too wide) in paragraph at lines 298--311
+ [] 
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[24
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 318--318
+[]\OT1/cmr/bx/n/12 Data
+ []
+
+
+Overfull \hbox (3.53894pt too wide) in paragraph at lines 318--318
+[]\OT1/cmr/bx/n/12 Validation| 
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[25
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 329--330
+
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 344.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 344.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[26
+
+]
+<./Analysis/ER_Diagrams/Loan_ER_Diagrams.pdf, id=1039, 508.82544pt x 483.15816p
+t>
+File: ./Analysis/ER_Diagrams/Loan_ER_Diagrams.pdf Graphic file (type pdf)
+ <use ./Analysis/ER_Diagrams/Loan_ER_Diagrams.pdf>
+Package pdftex.def Info: ./Analysis/ER_Diagrams/Loan_ER_Diagrams.pdf used on in
+put line 399.
+(pdftex.def)             Requested size: 200.75073pt x 190.6279pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[27]
+<./Analysis/ER_Diagrams/PAT_Test_ER_Diagrams.pdf, id=1044, 508.77557pt x 481.37
+743pt>
+File: ./Analysis/ER_Diagrams/PAT_Test_ER_Diagrams.pdf Graphic file (type pdf)
+ <use ./Analysis/ER_Diagrams/PAT_Test_ER_Diagrams.pdf>
+Package pdftex.def Info: ./Analysis/ER_Diagrams/PAT_Test_ER_Diagrams.pdf used o
+n input line 404.
+(pdftex.def)             Requested size: 200.75073pt x 189.94pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 410--411
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[28pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1
+4}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.412 \noindent
+                \textbf{Location}(\underline{LocationID}, Location)\\pdfTeX war
+ning (ext4): destination with the same identifier (name{figure.1.15}) has been 
+already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.412 \noindent
+                \textbf{Location}(\underline{LocationID}, Location)\\ <U:/Githu
+b/COMP4Coursework/Analysis/ER_Diagrams/Loan_ER_Diagrams.pdf> <U:/Github/COMP4Co
+ursework/Analysis/ER_Diagrams/PAT_Test_ER_Diagrams.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 412--413
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 414--416
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 417--418
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 419--420
+
+ []
+
+
+Overfull \hbox (17.92834pt too wide) in paragraph at lines 421--423
+\OT1/cmr/bx/n/12 Customer\OT1/cmr/m/n/12 ($[]$, Fore-name, Last-name, Com-pany,
+ Street, Town, County, 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 421--423
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 424--425
+
+ []
+
+
+Overfull \hbox (1.28487pt too wide) in paragraph at lines 426--428
+\OT1/cmr/m/n/12 FuseRating, Tes-tUsed, Pro-tec-tive-CondTest, In-su-la-tion-Tes
+t, Leak-age, TestRe-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 426--428
+
+ []
+
+
+<./Analysis/Relationship_Diagrams/Relationships_diagrams.pdf, id=1075, 510.7417
+4pt x 481.90007pt>
+File: ./Analysis/Relationship_Diagrams/Relationships_diagrams.pdf Graphic file 
+(type pdf)
+
+<use ./Analysis/Relationship_Diagrams/Relationships_diagrams.pdf>
+Package pdftex.def Info: ./Analysis/Relationship_Diagrams/Relationships_diagram
+s.pdf used on input line 442.
+(pdftex.def)             Requested size: 390.0pt x 367.99057pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[29]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[30pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1
+6}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.446 \newpage
+               <U:/Github/COMP4Coursework/Analysis/Relationship_Diagrams/Relati
+onships_diagrams.pdf>]
+<./Analysis/Class_Definitions/Class_definition_key.pdf, id=1098, 100.375pt x 11
+2.42pt>
+File: ./Analysis/Class_Definitions/Class_definition_key.pdf Graphic file (type 
+pdf)
+ <use ./Analysis/Class_Definitions/Class_definition_key.pdf>
+Package pdftex.def Info: ./Analysis/Class_Definitions/Class_definition_key.pdf 
+used on input line 453.
+(pdftex.def)             Requested size: 50.18768pt x 56.21156pt.
+
+<./Analysis/Class_Definitions/Class_diagrams.pdf, id=1099, 642.74811pt x 321.28
+139pt>
+File: ./Analysis/Class_Definitions/Class_diagrams.pdf Graphic file (type pdf)
+ <use ./Analysis/Class_Definitions/Class_diagrams.pdf>
+Package pdftex.def Info: ./Analysis/Class_Definitions/Class_diagrams.pdf used o
+n input line 458.
+(pdftex.def)             Requested size: 451.68915pt x 225.78766pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[31
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1.17})
+ has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.461 \end{landscape}
+                     pdfTeX warning (ext4): destination with the same identifie
+r (name{figure.1.18}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.461 \end{landscape}
+                      <U:/Github/COMP4Coursework/Analysis/Class_Definitions/Cla
+ss_definition_key.pdf> <U:/Github/COMP4Coursework/Analysis/Class_Definitions/Cl
+ass_diagrams.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 471--472
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 485--486
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 487--488
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 489--490
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[32
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 501--502
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 503--504
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[33]
+Underfull \hbox (badness 10000) in paragraph at lines 509--510
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[34]
+Underfull \hbox (badness 10000) in paragraph at lines 530--530
+[]\OT1/cmr/bx/n/12 Alternative
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 531--531
+[]\OT1/cmr/m/n/12 Custom made
+ []
+
+
+Underfull \hbox (badness 1546) in paragraph at lines 531--531
+[]\OT1/cmr/m/n/12 No need to in-stall ad-di-
+ []
+
+
+Underfull \hbox (badness 1460) in paragraph at lines 532--532
+[]\OT1/cmr/m/n/12 Web based ap-
+ []
+
+
+Underfull \hbox (badness 3668) in paragraph at lines 532--532
+[]\OT1/cmr/m/n/12 Can have 'Cloud based'
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 532--532
+[]\OT1/cmr/m/n/12 More ad-vanced se-cu-rity
+ []
+
+
+Underfull \hbox (badness 1253) in paragraph at lines 532--532
+\OT1/cmr/m/n/12 meth-ods will be re-quired
+ []
+
+
+Underfull \hbox (badness 1178) in paragraph at lines 532--532
+\OT1/cmr/m/n/12 due to the sys-tem be-ing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 532--532
+\OT1/cmr/m/n/12 con-stantly on-line and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 532--532
+\OT1/cmr/m/n/12 there-fore vul-ner-a-ble to
+ []
+
+
+Underfull \hbox (badness 1990) in paragraph at lines 532--532
+[]\OT1/cmr/m/n/12 Better net-work-ing knowl-
+ []
+
+
+Overfull \hbox (72.7913pt too wide) in paragraph at lines 528--534
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 539--539
+[]\OT1/cmr/bx/n/12 Alternative
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 540--540
+[]\OT1/cmr/m/n/12 Terminal or
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 540--540
+[]\OT1/cmr/m/n/12 Careful er-ror han-dling
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 540--540
+\OT1/cmr/m/n/12 en-ter any known/-valid
+ []
+
+
+Underfull \hbox (badness 2856) in paragraph at lines 540--540
+\OT1/cmr/m/n/12 about that could po-ten-
+ []
+
+
+Underfull \hbox (badness 1102) in paragraph at lines 541--541
+[]\OT1/cmr/m/n/12 Minimal er-ror with ra-dio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 541--541
+[]\OT1/cmr/m/n/12 More time needed to
+ []
+
+
+Underfull \hbox (badness 7238) in paragraph at lines 541--541
+\OT1/cmr/m/n/12 build the in-ter-face and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 541--541
+\OT1/cmr/m/n/12 sql database com-pared
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 541--541
+\OT1/cmr/m/n/12 to a com-mand based
+ []
+
+
+Overfull \hbox (72.7913pt too wide) in paragraph at lines 537--543
+ [] 
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[35]
+Underfull \hbox (badness 10000) in paragraph at lines 548--549
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[36])
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[37] (U:\Github\COMP4Coursework\Design\design.tex
+Chapter 2.
+[38
+
+
+
+]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[39]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[40]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[41]
+<./Design/system_flowcharts/PDFs/main_system_flowchart.pdf, id=1168, 541.44171p
+t x 764.9056pt>
+File: ./Design/system_flowcharts/PDFs/main_system_flowchart.pdf Graphic file (t
+ype pdf)
+
+<use ./Design/system_flowcharts/PDFs/main_system_flowchart.pdf>
+Package pdftex.def Info: ./Design/system_flowcharts/PDFs/main_system_flowchart.
+pdf used on input line 72.
+(pdftex.def)             Requested size: 356.33255pt x 503.39198pt.
+
+<./Design/system_flowcharts/PDFs/add_records_flowchart.pdf, id=1169, 561.5009pt
+ x 524.84454pt>
+File: ./Design/system_flowcharts/PDFs/add_records_flowchart.pdf Graphic file (t
+ype pdf)
+
+<use ./Design/system_flowcharts/PDFs/add_records_flowchart.pdf>
+Package pdftex.def Info: ./Design/system_flowcharts/PDFs/add_records_flowchart.
+pdf used on input line 79.
+(pdftex.def)             Requested size: 356.33255pt x 333.08838pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[42pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.83 
+      <U:/Github/COMP4Coursework/Design/system_flowcharts/PDFs/main_system_flow
+chart.pdf>]
+<./Design/system_flowcharts/PDFs/display_records_flowchart.pdf, id=1188, 521.25
+244pt x 263.26155pt>
+File: ./Design/system_flowcharts/PDFs/display_records_flowchart.pdf Graphic fil
+e (type pdf)
+
+<use ./Design/system_flowcharts/PDFs/display_records_flowchart.pdf>
+Package pdftex.def Info: ./Design/system_flowcharts/PDFs/display_records_flowch
+art.pdf used on input line 86.
+(pdftex.def)             Requested size: 356.33255pt x 179.96751pt.
+
+<./Design/system_flowcharts/PDFs/search_records_flowchart.pdf, id=1189, 555.102
+11pt x 544.27603pt>
+File: ./Design/system_flowcharts/PDFs/search_records_flowchart.pdf Graphic file
+ (type pdf)
+
+<use ./Design/system_flowcharts/PDFs/search_records_flowchart.pdf>
+Package pdftex.def Info: ./Design/system_flowcharts/PDFs/search_records_flowcha
+rt.pdf used on input line 93.
+(pdftex.def)             Requested size: 356.33255pt x 349.3819pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[43pdfTeX warning (ext4): destination with the same identifier (name{figure.2.2
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.97 
+     pdfTeX warning (ext4): destination with the same identifier (name{figure.2
+.3}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.97 
+      <U:/Github/COMP4Coursework/Design/system_flowcharts/PDFs/add_records_flow
+chart.pdf> <U:/Github/COMP4Coursework/Design/system_flowcharts/PDFs/display_rec
+ords_flowchart.pdf>]
+<./Design/system_flowcharts/PDFs/edit_records_flowchart.pdf, id=1220, 597.23125
+pt x 845.1575pt>
+File: ./Design/system_flowcharts/PDFs/edit_records_flowchart.pdf Graphic file (
+type pdf)
+
+<use ./Design/system_flowcharts/PDFs/edit_records_flowchart.pdf>
+Package pdftex.def Info: ./Design/system_flowcharts/PDFs/edit_records_flowchart
+.pdf used on input line 100.
+(pdftex.def)             Requested size: 356.33255pt x 504.26129pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[44pdfTeX warning (ext4): destination with the same identifier (name{figure.2.4
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.104 
+       <U:/Github/COMP4Coursework/Design/system_flowcharts/PDFs/search_records_
+flowchart.pdf>]
+<./Design/system_flowcharts/PDFs/delete_records_flowchart.pdf, id=1238, 532.581
+76pt x 547.00258pt>
+File: ./Design/system_flowcharts/PDFs/delete_records_flowchart.pdf Graphic file
+ (type pdf)
+
+<use ./Design/system_flowcharts/PDFs/delete_records_flowchart.pdf>
+Package pdftex.def Info: ./Design/system_flowcharts/PDFs/delete_records_flowcha
+rt.pdf used on input line 107.
+(pdftex.def)             Requested size: 356.33255pt x 365.98903pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[45pdfTeX warning (ext4): destination with the same identifier (name{figure.2.5
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.111 
+       <U:/Github/COMP4Coursework/Design/system_flowcharts/PDFs/edit_records_fl
+owchart.pdf>]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[46pdfTeX warning (ext4): destination with the same identifier (name{figure.2.6
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.116 \begin{landscape}
+                        <U:/Github/COMP4Coursework/Design/system_flowcharts/PDF
+s/delete_records_flowchart.pdf>]
+<./Design/user_interface/login_interface.pdf, id=1268, 766.23134pt x 528.01207p
+t>
+File: ./Design/user_interface/login_interface.pdf Graphic file (type pdf)
+ <use ./Design/user_interface/login_interface.pdf>
+Package pdftex.def Info: ./Design/user_interface/login_interface.pdf used on in
+put line 122.
+(pdftex.def)             Requested size: 421.57654pt x 290.51227pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[47
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2.7}) 
+has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.131 \newpage
+               <U:/Github/COMP4Coursework/Design/user_interface/login_interface
+.pdf>]
+<./Design/user_interface/Add_item_record_interface.pdf, id=1286, 764.33688pt x 
+519.09528pt>
+File: ./Design/user_interface/Add_item_record_interface.pdf Graphic file (type 
+pdf)
+ <use ./Design/user_interface/Add_item_record_interface.pdf>
+Package pdftex.def Info: ./Design/user_interface/Add_item_record_interface.pdf 
+used on input line 135.
+(pdftex.def)             Requested size: 501.87683pt x 340.85344pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[48pdfTeX warning (ext4): destination with the same identifier (name{figure.2.8
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.140 \newpage
+               <U:/Github/COMP4Coursework/Design/user_interface/Add_item_record
+_interface.pdf>]
+<./Design/user_interface/Add_loan_record_interface.pdf, id=1317, 778.57782pt x 
+538.42249pt>
+File: ./Design/user_interface/Add_loan_record_interface.pdf Graphic file (type 
+pdf)
+ <use ./Design/user_interface/Add_loan_record_interface.pdf>
+Package pdftex.def Info: ./Design/user_interface/Add_loan_record_interface.pdf 
+used on input line 144.
+(pdftex.def)             Requested size: 501.87683pt x 347.07034pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[49pdfTeX warning (ext4): destination with the same identifier (name{figure.2.9
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.149 \newpage
+               <U:/Github/COMP4Coursework/Design/user_interface/Add_loan_record
+_interface.pdf>]
+<./Design/user_interface/Add_customer_record_interface.pdf, id=1353, 765.15273p
+t x 530.39893pt>
+File: ./Design/user_interface/Add_customer_record_interface.pdf Graphic file (t
+ype pdf)
+
+<use ./Design/user_interface/Add_customer_record_interface.pdf>
+Package pdftex.def Info: ./Design/user_interface/Add_customer_record_interface.
+pdf used on input line 153.
+(pdftex.def)             Requested size: 501.87683pt x 347.90347pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[50pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1
+0}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.158 \newpage
+               <U:/Github/COMP4Coursework/Design/user_interface/Add_customer_re
+cord_interface.pdf>]
+<./Design/user_interface/Add_pat_test_record_interface.pdf, id=1377, 769.37334p
+t x 564.77754pt>
+File: ./Design/user_interface/Add_pat_test_record_interface.pdf Graphic file (t
+ype pdf)
+
+<use ./Design/user_interface/Add_pat_test_record_interface.pdf>
+Package pdftex.def Info: ./Design/user_interface/Add_pat_test_record_interface.
+pdf used on input line 162.
+(pdftex.def)             Requested size: 501.87683pt x 368.42819pt.
+
+Overfull \vbox (5.2615pt too high) has occurred while \output is active []
+
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[51pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1
+1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.166 
+       <U:/Github/COMP4Coursework/Design/user_interface/Add_pat_test_record_int
+erface.pdf>]
+<./Design/user_interface/Display_item_records_interface.pdf, id=1414, 780.15433
+pt x 525.78287pt>
+File: ./Design/user_interface/Display_item_records_interface.pdf Graphic file (
+type pdf)
+
+<use ./Design/user_interface/Display_item_records_interface.pdf>
+Package pdftex.def Info: ./Design/user_interface/Display_item_records_interface
+.pdf used on input line 171.
+(pdftex.def)             Requested size: 501.87683pt x 338.24886pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[52pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1
+2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.176 \end{landscape}
+                      <U:/Github/COMP4Coursework/Design/user_interface/Display_
+item_records_interface.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 188--189
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[53
+
+]
+<./Design/top_down_design/Top_down_design.pdf, id=1461, 434.05865pt x 225.18831
+pt>
+File: ./Design/top_down_design/Top_down_design.pdf Graphic file (type pdf)
+ <use ./Design/top_down_design/Top_down_design.pdf>
+Package pdftex.def Info: ./Design/top_down_design/Top_down_design.pdf used on i
+nput line 201.
+(pdftex.def)             Requested size: 501.87683pt x 260.38707pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[54
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2.13})
+ has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.206 \end{landscape}
+                      <U:/Github/COMP4Coursework/Design/top_down_design/Top_dow
+n_design.pdf>]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[55
+
+]
+<./Design/Object_Diagrams/Object_diagrams.pdf, id=1479, 781.90863pt x 434.5264p
+t>
+File: ./Design/Object_Diagrams/Object_diagrams.pdf Graphic file (type pdf)
+ <use ./Design/Object_Diagrams/Object_diagrams.pdf>
+Package pdftex.def Info: ./Design/Object_Diagrams/Object_diagrams.pdf used on i
+nput line 217.
+(pdftex.def)             Requested size: 501.87683pt x 278.90483pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[56
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2.14})
+ has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.222 \newpage
+               <U:/Github/COMP4Coursework/Design/Object_Diagrams/Object_diagram
+s.pdf>]
+<./Design/Class_Definitions/Class_definition_key.pdf, id=1497, 100.375pt x 112.
+42pt>
+File: ./Design/Class_Definitions/Class_definition_key.pdf Graphic file (type pd
+f)
+ <use ./Design/Class_Definitions/Class_definition_key.pdf>
+Package pdftex.def Info: ./Design/Class_Definitions/Class_definition_key.pdf us
+ed on input line 227.
+(pdftex.def)             Requested size: 50.18768pt x 56.21156pt.
+
+<./Design/Class_Definitions/Class_definitions.pdf, id=1498, 610.28735pt x 277.8
+059pt>
+File: ./Design/Class_Definitions/Class_definitions.pdf Graphic file (type pdf)
+ <use ./Design/Class_Definitions/Class_definitions.pdf>
+Package pdftex.def Info: ./Design/Class_Definitions/Class_definitions.pdf used 
+on input line 232.
+(pdftex.def)             Requested size: 451.68915pt x 205.61128pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[57pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1
+5}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.237 \end{landscape}
+                     pdfTeX warning (ext4): destination with the same identifie
+r (name{figure.2.16}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.237 \end{landscape}
+                      <U:/Github/COMP4Coursework/Design/Class_Definitions/Class
+_definition_key.pdf> <U:/Github/COMP4Coursework/Design/Class_Definitions/Class_
+definitions.pdf>]
+<./Design/Prototyping/Login_prototyping.pdf, id=1535, 520.07446pt x 319.73935pt
+>
+File: ./Design/Prototyping/Login_prototyping.pdf Graphic file (type pdf)
+ <use ./Design/Prototyping/Login_prototyping.pdf>
+Package pdftex.def Info: ./Design/Prototyping/Login_prototyping.pdf used on inp
+ut line 244.
+(pdftex.def)             Requested size: 501.87683pt x 308.55629pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[58
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2.17})
+ has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.247 \end{landscape}
+                      <U:/Github/COMP4Coursework/Design/Prototyping/Login_proto
+typing.pdf>]
+<./Design/Prototyping/Change_password_prototyping.pdf, id=1568, 529.3271pt x 52
+8.09644pt>
+File: ./Design/Prototyping/Change_password_prototyping.pdf Graphic file (type p
+df)
+ <use ./Design/Prototyping/Change_password_prototyping.pdf>
+Package pdftex.def Info: ./Design/Prototyping/Change_password_prototyping.pdf u
+sed on input line 250.
+(pdftex.def)             Requested size: 301.1261pt x 300.42986pt.
+
+<./Design/Prototyping/Printing_prototyping.pdf, id=1569, 495.71524pt x 313.0501
+7pt>
+File: ./Design/Prototyping/Printing_prototyping.pdf Graphic file (type pdf)
+ <use ./Design/Prototyping/Printing_prototyping.pdf>
+Package pdftex.def Info: ./Design/Prototyping/Printing_prototyping.pdf used on 
+input line 255.
+(pdftex.def)             Requested size: 301.1261pt x 190.17215pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[59
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2.18})
+ has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.272 \newpage
+              pdfTeX warning (ext4): destination with the same identifier (name
+{figure.2.19}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.272 \newpage
+               <U:/Github/COMP4Coursework/Design/Prototyping/Change_password_pr
+ototyping.pdf> <U:/Github/COMP4Coursework/Design/Prototyping/Printing_prototypi
+ng.pdf>]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[60] <./Design/ER_Diagrams/ER_Diagram.pdf, id=1639, 770.44925pt x 403.3446pt>
+File: ./Design/ER_Diagrams/ER_Diagram.pdf Graphic file (type pdf)
+
+<use ./Design/ER_Diagrams/ER_Diagram.pdf>
+Package pdftex.def Info: ./Design/ER_Diagrams/ER_Diagram.pdf used on input line
+ 281.
+(pdftex.def)             Requested size: 552.06451pt x 289.01697pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[61
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2.20})
+ has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.285 \end{landscape}
+                      <U:/Github/COMP4Coursework/Design/ER_Diagrams/ER_Diagram.
+pdf>]
+Overfull \hbox (2.25674pt too wide) in paragraph at lines 303--304
+\OT1/cmr/bx/n/12 ItemTest\OT1/cmr/m/n/12 ($[]$, \OT1/cmr/m/it/12 PAT-testID\OT1
+/cmr/m/n/12 , \OT1/cmr/m/it/12 ItemID\OT1/cmr/m/n/12 , PAT-test-Notes, Com-po-n
+ent-Type,
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[62
+
+]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[63]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[64]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[65]
+Overfull \vbox (12.98251pt too high) has occurred while \output is active []
+
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[66] ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+File: lstlang1.sty 2014/09/06 1.5e listings language file
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
+File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
+)
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 467.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
+File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
+File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
+)
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[67]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[68]
+Underfull \hbox (badness 6927) in paragraph at lines 518--518
+[]\OT1/cmr/bx/n/12 Test Se-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 528--528
+[]|\OT1/cmr/bx/n/12 Test
+ []
+
+
+Underfull \hbox (badness 3568) in paragraph at lines 528--528
+[]|\OT1/cmr/bx/n/12 Purpose of
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 528--528
+[]|\OT1/cmr/bx/n/12 Test De-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 528--528
+[]|\OT1/cmr/bx/n/12 Test
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 528--528
+\OT1/cmr/bx/n/12 Data
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 528--528
+\OT1/cmr/bx/n/12 Type
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 528--528
+\OT1/cmr/bx/n/12 (Nor-mal/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 528--528
+\OT1/cmr/bx/n/12 Er-ro-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 528--528
+\OT1/cmr/bx/n/12 neous/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 528--528
+\OT1/cmr/bx/n/12 Bound-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 528--528
+[]|\OT1/cmr/bx/n/12 Expected
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 528--528
+[]|\OT1/cmr/bx/n/12 Actual
+ []
+
+
+Overfull \hbox (2.19681pt too wide) in paragraph at lines 529--529
+[]|\OT1/cmr/m/n/12 Example| 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 530
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[69
+
+]) (U:\Github\COMP4Coursework\Testing\testing.tex
+Chapter 3.
+[70
+
+
+
+
+]
+Underfull \hbox (badness 6927) in paragraph at lines 11--11
+[]\OT1/cmr/bx/n/12 Test Se-
+ []
+
+
+Underfull \hbox (badness 6927) in paragraph at lines 21--21
+[]\OT1/cmr/bx/n/12 Test Se-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
+[]|\OT1/cmr/bx/n/12 Test
+ []
+
+
+Underfull \hbox (badness 3568) in paragraph at lines 31--31
+[]|\OT1/cmr/bx/n/12 Purpose of
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
+[]|\OT1/cmr/bx/n/12 Test De-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
+[]|\OT1/cmr/bx/n/12 Test
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
+\OT1/cmr/bx/n/12 Data
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
+\OT1/cmr/bx/n/12 Type
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
+\OT1/cmr/bx/n/12 (Nor-mal/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
+\OT1/cmr/bx/n/12 Er-ro-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
+\OT1/cmr/bx/n/12 neous/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
+\OT1/cmr/bx/n/12 Bound-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
+[]|\OT1/cmr/bx/n/12 Expected
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
+[]|\OT1/cmr/bx/n/12 Actual
+ []
+
+
+Overfull \hbox (2.19681pt too wide) in paragraph at lines 32--32
+[]|\OT1/cmr/m/n/12 Example| 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 33
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[71
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+[]|\OT1/cmr/bx/n/12 Test
+ []
+
+
+Underfull \hbox (badness 3568) in paragraph at lines 41--41
+[]|\OT1/cmr/bx/n/12 Purpose of
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+[]|\OT1/cmr/bx/n/12 Test De-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+[]|\OT1/cmr/bx/n/12 Test
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+\OT1/cmr/bx/n/12 Data
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+\OT1/cmr/bx/n/12 Type
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+\OT1/cmr/bx/n/12 (Nor-mal/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+\OT1/cmr/bx/n/12 Er-ro-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+\OT1/cmr/bx/n/12 neous/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+\OT1/cmr/bx/n/12 Bound-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+[]|\OT1/cmr/bx/n/12 Expected
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+[]|\OT1/cmr/bx/n/12 Actual
+ []
+
+
+Overfull \hbox (2.19681pt too wide) in paragraph at lines 42--42
+[]|\OT1/cmr/m/n/12 Example| 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 43
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[72]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[73])
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[74
+
+] (U:\Github\COMP4Coursework\Maintenance\maintenance.tex
+Chapter 4.
+Excluding 'comment' comment. [75
+
+
+
+]
+Overfull \vbox (481.19345pt too high) has occurred while \output is active []
+
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[76] Excluding 'comment' comment.
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[77
+
+]) (U:\Github\COMP4Coursework\Manual\manual.tex
+Chapter 5.
+) [78
+
+
+
+
+]
+Overfull \vbox (356.46672pt too high) has occurred while \output is active []
+
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[79] (U:\Github\COMP4Coursework\Evaluation\evaluation.tex
+Chapter 6.
+) [80
+
+
+
+]
+Overfull \vbox (57.43343pt too high) has occurred while \output is active []
+
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[81]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 17.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 17.
+ (U:\Github\COMP4Coursework\coursework.aux
+(U:\Github\COMP4Coursework\Analysis\analysis.aux)
+(U:\Github\COMP4Coursework\Design\design.aux)
+(U:\Github\COMP4Coursework\Testing\testing.aux)
+(U:\Github\COMP4Coursework\Maintenance\maintenance.aux)
+(U:\Github\COMP4Coursework\Manual\manual.aux)
+(U:\Github\COMP4Coursework\Evaluation\evaluation.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 17.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 17.
+Package rerunfilecheck Info: File `coursework.out' has not changed.
+(rerunfilecheck)             Checksum: 830BDC16BC0CE84AE5C995F525067C31;9757.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 17.
+ ) 
+Here is how much of TeX's memory you used:
+ 11577 strings out of 493705
+ 171073 string characters out of 3142200
+ 296937 words of memory out of 3000000
+ 14339 multiletter control sequences out of 15000+200000
+ 11055 words of font info for 40 fonts, out of 3000000 for 9000
+ 1025 hyphenation exceptions out of 8191
+ 41i,12n,45p,796b,2273s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C
+:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/P
+rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Prog
+ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program
+ Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Fil
+es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (
+x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x8
+6)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files (x86)
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on coursework.pdf (82 pages, 1438822 bytes).
+PDF statistics:
+ 1880 PDF objects out of 2073 (max. 8388607)
+ 308 named destinations out of 1000 (max. 500000)
+ 1298 words of extra memory for PDF output out of 10000 (max. 10000000)
+

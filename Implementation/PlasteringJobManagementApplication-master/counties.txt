@@ -1,0 +1,86 @@
+Aberdeenshire
+Angus
+Argyll and Bute
+Ayrshire
+Ayrshire and Arran
+Banffshire
+Bedfordshire
+Berkshire
+Berwickshire
+Buckinghamshire
+Caithness
+Cambridgeshire
+Ceredigion
+Cheshire
+City of Bristol
+City of Edinburgh
+City of Glasgow
+Clwyd
+Cornwall
+Cumbria
+Denbighshire
+Derbyshire
+Devon
+Dorset
+Dumbartonshire
+Dumfries
+Durham
+Dyfed
+East Lothian
+East Sussex
+East Yorkshire
+Essex
+Ettrick and Lauderdale
+Fife
+Gloucestershire
+Greater London
+Greater Manchester
+Gwent
+Gwynedd
+Hampshire
+Herefordshire
+Hertfordshire
+Highlands
+Inverness
+Isle of Skye
+Isle of Wight
+Kent
+Lanarkshire
+Lancashire
+Leicestershire
+Lincolnshire
+Merseyside
+Mid Glamorgan
+Morayshire
+Norfolk
+North Yorkshire
+Northamptonshire
+Northumberland
+Nottinghamshire
+Orkney
+Oxfordshire
+Perth and Kinross
+Powys
+Renfrewshire
+Roxburgh
+Shetland
+Shropshire
+Somerset
+South Glamorgan
+South Yorkshire
+Staffordshire
+Stirling and Falkirk
+Suffolk
+Surrey
+Sutherland
+Tweeddale
+Tyne and Wear
+Warwickshire
+West Glamorgan
+West Lothian
+West Midlands
+West Sussex
+West Yorkshire
+Western Isles
+Wiltshire
+Worcestershire

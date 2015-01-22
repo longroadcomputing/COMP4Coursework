@@ -1,0 +1,265 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.18)  20 OCT 2014 12:02
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**tables.tex
+(./tables.tex
+LaTeX2e <2014/05/01>
+Babel <3.9k> and hyphenation patterns for 78 languages loaded.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/Users/joelbutcher/Dropbox/Apps/Texpad/Computing/Github/COMP4Coursework/Latex 
+Examples/.texpadtmp/tables.aux)
+\openout1 = `tables.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 10.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 10.
+
+
+./tables.tex:14: LaTeX Error: Environment python undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14         {\begin{python}
+                            [frame=none,numbers=none]
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+./tables.tex:15: Missing $ inserted.
+<inserted text> 
+                $
+l.15 def get_
+             formatted_name(first, last, gender):
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+./tables.tex:23: LaTeX Error: \begin{tabular} on input line 10 ended by \end{py
+thon}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.23         \end{python}
+                         }
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+./tables.tex:23: Missing $ inserted.
+<inserted text> 
+                $
+l.23         \end{python}
+                         }
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--25
+[]\OT1/cmr/m/n/10 [frame=none,numbers=none] def
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--25
+\OT1/cmr/m/n/10 get$[]\OML/cmm/m/it/10 ormatted[]ame\OT1/cmr/m/n/10 (\OML/cmm/m
+/it/10 first; last; gender\OT1/cmr/m/n/10 ) :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--25
+\OML/cmm/m/it/10 ifgender \OT1/cmr/m/n/10 == "\OML/cmm/m/it/10 F\OT1/cmr/m/n/10
+ " : \OML/cmm/m/it/10 name \OT1/cmr/m/n/10 =
+ []
+
+
+Underfull \hbox (badness 1571) in paragraph at lines 14--25
+\OT1/cmr/m/n/10 "\OML/cmm/m/it/10 Ms:\OT1/cmr/m/n/10 01"\OML/cmm/m/it/10 :forma
+t\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 first; last\OT1/cmr/m/n/10 )\OML/cmm/m/it/10
+ elifgender \OT1/cmr/m/n/10 == "\OML/cmm/m/it/10 M\OT1/cmr/m/n/10 " :
+ []
+
+
+Overfull \hbox (34.65944pt too wide) in paragraph at lines 10--27
+ [] 
+ []
+
+./tables.tex:34: Undefined control sequence.
+<recently read> \pythoninline 
+                              
+l.34     \pythoninline
+                      {range(stop)} & \pythoninline{range(6)} & \pythoninlin...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./tables.tex:34: Undefined control sequence.
+l.34 ...\pythoninline{range(stop)} & \pythoninline
+                                                  {range(6)} & \pythoninline...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./tables.tex:34: Undefined control sequence.
+l.34 ... & \pythoninline{range(6)} & \pythoninline
+                                                  {[0,1,2,3,4,5]} \\ \hline
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./tables.tex:35: Undefined control sequence.
+<recently read> \pythoninline 
+                              
+l.35     \pythoninline
+                      {range(start,stop)} & \pythoninline{range(2,7)} & \pyt...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./tables.tex:35: Undefined control sequence.
+l.35 ...ninline{range(start,stop)} & \pythoninline
+                                                  {range(2,7)} & \pythoninli...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./tables.tex:35: Undefined control sequence.
+l.35 ... \pythoninline{range(2,7)} & \pythoninline
+                                                  {[2,3,4,5,6]} \\ \hline
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./tables.tex:36: Undefined control sequence.
+<recently read> \pythoninline 
+                              
+l.36     \pythoninline
+                      {range(start,stop,step)} & \pythoninline{range(0,10,3)...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./tables.tex:36: Undefined control sequence.
+l.36 ...ne{range(start,stop,step)} & \pythoninline
+                                                  {range(0,10,3)} & \pythoni...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./tables.tex:36: Undefined control sequence.
+l.36 ...ythoninline{range(0,10,3)} & \pythoninline
+                                                  {[0,3,6,9]} \\ \hline
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./tables.tex:37: Undefined control sequence.
+<recently read> \pythoninline 
+                              
+l.37     \pythoninline
+                      {range(start,stop,-step)} & \pythoninline{range(5,0,-1...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./tables.tex:37: Undefined control sequence.
+l.37 ...e{range(start,stop,-step)} & \pythoninline
+                                                  {range(5,0,-1)} & \pythoni...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./tables.tex:37: Undefined control sequence.
+l.37 ...ythoninline{range(5,0,-1)} & \pythoninline
+                                                  {[5,4,3,2,1]} \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[1
+
+{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+(/Users/joelbutcher/Dropbox/Apps/Texpad/Computing/Github/COMP4Coursework/Latex 
+Examples/.texpadtmp/tables.aux) ) 
+Here is how much of TeX's memory you used:
+ 228 strings out of 493117
+ 3128 string characters out of 6135432
+ 55909 words of memory out of 5000000
+ 3775 multiletter control sequences out of 15000+600000
+ 3948 words of font info for 15 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 23i,10n,17p,122b,211s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2014/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmr10.pfb>
+Output written on "/Users/joelbutcher/Dropbox/Apps/Texpad/Computing/Github/COMP
+4Coursework/Latex Examples/.texpadtmp/tables.pdf" (1 page, 48783 bytes).
+PDF statistics:
+ 24 PDF objects out of 1000 (max. 8388607)
+ 16 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+
