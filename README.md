@@ -28,7 +28,7 @@ Below are links to **guidance notes** and **deadlines** for each section.
     - **Final** - Friday 13th February
 4. [**Testing**][4]
     - **Final** - Friday 27th February
-    - Minor Improvements - Friday 6th March
+    - Minor Improvements - Friday 13th March
 5. [**System Maintenance**][5]
     - **Final** - Friday 6th March
     - Minor Improvements - Friday 20th March
