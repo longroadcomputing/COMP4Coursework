@@ -18,7 +18,7 @@ There are **20 marks** available for this section.
 
 ##Program Listing
 
-###From System Maintenance Marking Section 3
+###From System Maintenance Marking Section (Code listing/Structure)
 
 |**Strengths**||
 |-|-|
@@ -28,7 +28,7 @@ There are **20 marks** available for this section.
 
 ##Samples of annotated ‘design views’ (showing details of application-generated forms, reports, queries, buttons, cross-tabulations)
 
-###From System Maintenance Marking Section 5
+###From System Maintenance Marking - System Evidence Section
 
 |**Strengths**||
 |-|-|
@@ -38,7 +38,7 @@ There are **20 marks** available for this section.
 
 ##Any Other Reported Evidence
 
-###From Testing Marking Sections 1-3
+###From Testing Marking Sections - Outline Plan/Detailed Plan/Test Data
 
 |**Strengths**||
 |-|-|
@@ -46,7 +46,7 @@ There are **20 marks** available for this section.
 |**Weaknesses**||
 || |
 
-###From Testing Marking Section 4
+###From Testing Marking Section Evaluation
 
 |**Strengths**||
 |-|-|
